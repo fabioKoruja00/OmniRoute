@@ -133,7 +133,7 @@ describe("memory-embedding-static-potion loader against the repo file names", ()
     assert.equal(model.vocab["world"], 6);
   });
 
-  it("#16444 retries a transient model download failure without restarting the process", async () => {
+  it("retries a transient model download failure without restarting (#16444)", async () => {
     // Make only the tokenizer download fail; avoid a racing weights write
     // from the parallel Promise.all download affecting this retry test.
     const modelDir = path.join(cacheDir, "potion-base-8M");
@@ -160,7 +160,7 @@ describe("memory-embedding-static-potion loader against the repo file names", ()
     assert.equal(tokenizerRequests, 2, "a fresh load must retry the missing tokenizer");
   });
 
-  it("#16444 deduplicates concurrent failed loads and allows a later successful retry", async () => {
+  it("deduplicates concurrent failed loads and permits a later retry (#16444)", async () => {
     // Make only the tokenizer download fail; avoid a racing weights write
     // from the parallel Promise.all download affecting this retry test.
     const modelDir = path.join(cacheDir, "potion-base-8M");
