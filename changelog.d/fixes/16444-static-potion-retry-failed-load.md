@@ -1,0 +1,1 @@
+- **fix(memory):** clear a rejected static Potion embedding load promise so temporary model download/cache failures can recover on a later request without restarting OmniRoute; keep concurrent loads deduplicated (refs [#16444](https://github.com/diegosouzapw/OmniRoute/issues/16444)) — thanks @fabioKoruja00
