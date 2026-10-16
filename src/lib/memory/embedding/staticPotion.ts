@@ -143,11 +143,20 @@ async function loadModel(): Promise<PotionModel> {
 export function getOrLoadModel(): Promise<PotionModel> {
   if (_model) return Promise.resolve(_model);
   if (_loading) return _loading;
-  _loading = loadModel().then((m) => {
-    _model = m;
-    _loading = null;
-    return m;
-  });
+  _loading = loadModel().then(
+    (m) => {
+      _model = m;
+      _loading = null;
+      return m;
+    },
+    (error: unknown) => {
+      // A transient CDN/network error or a malformed cached file must not
+      // poison the in-process promise for the rest of the server's lifetime.
+      // Callers still receive this failure; the next request may retry.
+      _loading = null;
+      throw error;
+    }
+  );
   return _loading;
 }
 
