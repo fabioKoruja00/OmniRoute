@@ -134,6 +134,11 @@ describe("memory-embedding-static-potion loader against the repo file names", ()
   });
 
   it("#16444 retries a transient model download failure without restarting the process", async () => {
+    // Make only the tokenizer download fail; avoid a racing weights write
+    // from the parallel Promise.all download affecting this retry test.
+    const modelDir = path.join(cacheDir, "potion-base-8M");
+    await fs.mkdir(modelDir, { recursive: true });
+    await fs.writeFile(path.join(modelDir, "model.safetensors"), HF_FILES["model.safetensors"]);
     const firstFetch = globalThis.fetch;
     let tokenizerRequests = 0;
     globalThis.fetch = (async (input: string | URL | Request) => {
@@ -156,6 +161,11 @@ describe("memory-embedding-static-potion loader against the repo file names", ()
   });
 
   it("#16444 deduplicates concurrent failed loads and allows a later successful retry", async () => {
+    // Make only the tokenizer download fail; avoid a racing weights write
+    // from the parallel Promise.all download affecting this retry test.
+    const modelDir = path.join(cacheDir, "potion-base-8M");
+    await fs.mkdir(modelDir, { recursive: true });
+    await fs.writeFile(path.join(modelDir, "model.safetensors"), HF_FILES["model.safetensors"]);
     const firstFetch = globalThis.fetch;
     let tokenizerRequests = 0;
     globalThis.fetch = (async (input: string | URL | Request) => {
