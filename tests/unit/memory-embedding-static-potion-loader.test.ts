@@ -133,6 +133,52 @@ describe("memory-embedding-static-potion loader against the repo file names", ()
     assert.equal(model.vocab["world"], 6);
   });
 
+  it("#16444 retries a transient model download failure without restarting the process", async () => {
+    const firstFetch = globalThis.fetch;
+    let tokenizerRequests = 0;
+    globalThis.fetch = (async (input: string | URL | Request) => {
+      if (String(input).endsWith("/tokenizer.json") && ++tokenizerRequests === 1) {
+        return new Response("Temporarily unavailable", { status: 503 });
+      }
+      return firstFetch(input);
+    }) as typeof fetch;
+
+    const first = await embedStatic("hello");
+    assert.equal("vector" in first, false);
+    if ("vector" in first) assert.fail("initial download should have failed");
+    assert.equal(first.reason, "model_load_failed");
+
+    // Without a reset/restart this previously re-awaited a cached rejected Promise.
+    const second = await embedStatic("hello");
+    assert.ok("vector" in second, JSON.stringify(second));
+    assert.deepEqual(Array.from(second.vector), [5, 0, 0, 0]);
+    assert.equal(tokenizerRequests, 2, "a fresh load must retry the missing tokenizer");
+  });
+
+  it("#16444 deduplicates concurrent failed loads and allows a later successful retry", async () => {
+    const firstFetch = globalThis.fetch;
+    let tokenizerRequests = 0;
+    globalThis.fetch = (async (input: string | URL | Request) => {
+      if (String(input).endsWith("/tokenizer.json") && ++tokenizerRequests === 1) {
+        return new Response("Temporarily unavailable", { status: 503 });
+      }
+      return firstFetch(input);
+    }) as typeof fetch;
+
+    const firstWave = await Promise.allSettled([getOrLoadModel(), getOrLoadModel()]);
+    assert.deepEqual(
+      firstWave.map((entry) => entry.status),
+      ["rejected", "rejected"]
+    );
+    assert.equal(tokenizerRequests, 1, "concurrent callers must share one first load");
+
+    const model = await getOrLoadModel();
+    assert.equal(model.vocab["hello"], 5);
+    assert.equal(tokenizerRequests, 2);
+    const cached = await getOrLoadModel();
+    assert.equal(cached, model, "after successful retry the loaded model stays cached");
+  });
+
   const NOT_A_WORDPIECE_VOCAB: Array<[string, unknown]> = [
     ["no model.vocab at all", { model: { type: "Unigram" } }],
     [
