@@ -51,7 +51,8 @@ Core capabilities:
 - Domain layer: cost rules, fallback policy, lockout policy
 - Context Relay: session handoff summaries for account rotation continuity
 - Domain state persistence (SQLite write-through cache for fallbacks, budgets, lockouts, circuit breakers)
-- Policy engine for centralized request evaluation (lockout → budget → fallback)
+- Runtime API-key/target admission gates in route and SSE handlers; a separately
+  tested domain policy-engine contract is not wired into request dispatch
 - Request telemetry with p50/p95/p99 latency aggregation
 - Combo target telemetry and historical combo target health via `combo_execution_key` / `combo_step_id`
 - Correlation ID (X-Request-Id) for end-to-end tracing
@@ -310,9 +311,10 @@ Domain layer modules:
 
 - Cost rules/budgets: `src/domain/costRules.ts`
 - Fallback policy: `src/domain/fallbackPolicy.ts`
-- Combo resolver: `src/domain/comboResolver.ts`
+- Combo resolver contract: `src/domain/comboResolver.ts` (tested, not on the live request path)
 - Lockout policy: `src/domain/lockoutPolicy.ts`
-- Policy engine: `src/domain/policyEngine.ts` — centralized lockout → budget → fallback evaluation
+- Policy-engine contract: `src/domain/policyEngine.ts` — tested lockout → budget →
+  fallback evaluation, not invoked by live chat dispatch
 - Error codes catalog: `src/shared/constants/errorCodes.ts`
 - Request ID: `src/shared/utils/requestId.ts`
 - Fetch timeout: `src/shared/utils/fetchTimeout.ts`
@@ -360,7 +362,8 @@ relying on a static combo definition. It powers the `auto/*` model prefix family
 
 - Engine entry: `open-sse/services/autoCombo/` (`autoComboEngine.ts`,
   `scoringEngine.ts`, `virtualFactory.ts`, `modePacks.ts`)
-- Resolver: `src/domain/comboResolver.ts` (auto-detection of `auto/` prefix)
+- Live combo target resolution: `open-sse/services/combo.ts` (`resolveComboTargets()`);
+  `src/domain/comboResolver.ts` is a separate, currently disconnected contract
 - Dashboard: `/dashboard/auto-combo`
 - Telemetry: `auto_combo_decisions` SQLite table
 
@@ -423,17 +426,19 @@ For ruleset authoring and threshold tuning, see
 
 ### D. Domain Layer
 
-The `src/domain/` namespace centralizes policy decisions so route handlers do not
-have to assemble lockout/budget/fallback logic themselves.
+The `src/domain/` namespace includes reusable domain rules, alongside tested
+policy and combo contracts that have not been wired into the live chat path.
+Some domain helpers (including `quotaCache.ts` and `costRules.ts`) do have
+production importers; that does not make every module in this directory live.
 
-- Policy engine: `src/domain/policyEngine.ts` — single entry point for
-  pre-execution evaluation (lockout → budget → fallback ordering)
+- Policy-engine contract: `src/domain/policyEngine.ts` — tested pre-execution
+  evaluator (lockout → budget → fallback); **not a live request entry point**
 - Cost rules: `src/domain/costRules.ts`
 - Fallback policy: `src/domain/fallbackPolicy.ts`
 - Lockout policy: `src/domain/lockoutPolicy.ts`
 - Tag-based routing: `src/domain/tagRouter.ts`
-- Combo resolver: `src/domain/comboResolver.ts` — resolves combo names, auto/\*
-  prefixes, and wildcard model targets to concrete execution plans
+- Combo resolver contract: `src/domain/comboResolver.ts` — tested resolver;
+  **not used by the active combo dispatcher**
 - Connection/model rule joiner: `src/domain/connectionModelRules.ts`
 - Model availability snapshots: `src/domain/modelAvailability.ts`
 - Provider expiration tracking: `src/domain/providerExpiration.ts`
@@ -442,6 +447,13 @@ have to assemble lockout/budget/fallback logic themselves.
 - Configuration audit: `src/domain/configAudit.ts`
 - OmniRoute response metadata builder: `src/domain/omnirouteResponseMeta.ts`
 - Assessment subsystem: `src/domain/assessment/` — periodic evaluation jobs
+
+**Current request path:** `src/shared/utils/apiKeyPolicy.ts` is used for
+API-key enforcement; `src/sse/handlers/chat/resolvedModelPolicy.ts` handles
+effective-model authorization; and `open-sse/services/combo.ts` resolves combo
+targets. `src/lib/container.ts` registers the domain `policyEngine` but has
+no production importer; `src/domain/comboResolver.ts` likewise has no production
+caller. Editing either contract alone does not alter live routing.
 
 ### E. Authorization Pipeline
 
