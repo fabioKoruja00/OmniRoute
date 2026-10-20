@@ -118,7 +118,7 @@ OmniRoute/
 src/
 ├── app/                 # App Router (pages + API routes + status pages + landing)
 ├── lib/                 # Core libraries / domain modules (80 subdirs + ~70 top-level files)
-├── domain/              # Pure domain logic (policy engine, fallback, cost, lockout, comboResolver, assessment)
+├── domain/              # Live helpers + tested policy/combo contracts (not all wired into dispatch)
 ├── server/              # Server-only modules (authz pipeline, cors, auth middleware) — cannot import from client
 ├── shared/              # Shared between server and client where safe (constants, types, validation, contracts, utils)
 ├── i18n/                # next-intl config + per-locale message JSON (67 locales)
@@ -220,14 +220,21 @@ src/
 
 | Module                 | Purpose                                            |
 | ---------------------- | -------------------------------------------------- |
-| `policy.ts`            | Policy engine                                      |
+| `policyEngine.ts`      | Tested policy contract (not live chat path)        |
 | `fallbackPolicy.ts`    | Fallback decision tree                             |
 | `costRules.ts`         | Cost calculation rules                             |
 | `lockoutPolicy.ts`     | Model/connection lockout policy                    |
 | `tagRouter.ts`         | Tag-based routing                                  |
-| `comboResolver.ts`     | Combo resolution (used by combo engine)            |
+| `comboResolver.ts`     | Tested resolver contract (not live combo dispatch) |
 | `modelAvailability.ts` | Per-model availability check                       |
 | `assessment/`          | Model assessment (Phase 1 of RFC-AUTO-ASSESSMENT ) |
+
+> `policyEngine.ts` is registered by `src/lib/container.ts`, which has no
+> production importer; `comboResolver.ts` is also not imported by the live
+> request path. Both modules have tests, but changing them alone cannot affect
+> request routing. The current chat gates use `src/shared/utils/apiKeyPolicy.ts`
+> and `src/sse/handlers/chat/resolvedModelPolicy.ts`, while combo target
+> selection runs through `open-sse/services/combo.ts`.
 
 ### `src/server/`
 
