@@ -297,7 +297,7 @@ src/                        # TypeScript (.ts / .tsx)
 │   ├── (dashboard)/        # Dashboard pages (23 sections)
 │   ├── api/                # API routes (51 directories)
 │   └── login/              # Auth pages (.tsx)
-├── domain/                 # Policy engine (policyEngine, comboResolver, costRules, etc.)
+├── domain/                 # Domain helpers; policyEngine/comboResolver are tested, not live-dispatched
 ├── lib/                    # Core business logic (.ts)
 │   ├── a2a/                # Agent-to-Agent v0.3 protocol server
 │   ├── acp/                # Agent Communication Protocol registry
