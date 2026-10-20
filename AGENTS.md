@@ -38,7 +38,8 @@ Running tests: see [Testing](#testing) below (run the most focused test for chan
 - Transformer — `open-sse/transformer/` (Responses API ↔ Chat Completions)
 - Services — `open-sse/services/` (combo routing, rate limits, caching, etc)
 - Database — `src/lib/db/` (SQLite domain modules, 209 migrations)
-- Domain/Policy — `src/domain/` (policy engine, cost rules, fallback logic)
+- Domain/Policy — `src/domain/` (shared rules plus tested, disconnected
+  `policyEngine.ts` and `comboResolver.ts` contracts)
 - MCP Server — `open-sse/mcp-server/` (110 tools: 45 canonical + memory/skill/GitHub/pool/gamification/plugin/Notion/Obsidian/local-corpus/RTK modules; 3 transports: stdio / SSE / Streamable HTTP; 33 scopes)
 - A2A Server — `src/lib/a2a/` (JSON-RPC 2.0 agent protocol)
 - Skills — `src/lib/skills/` (extensible skill framework); Memory — `src/lib/memory/` (persistent conversational memory)
@@ -62,6 +63,14 @@ Client → /v1/chat/completions (Next.js route)
 ```
 
 API routes follow a consistent pattern: `Route → CORS preflight → Zod body validation → Optional auth (extractApiKey/isValidApiKey) → API key policy enforcement → Handler delegation (open-sse)`. No global Next.js middleware — interception is route-specific.
+
+**Live policy/combo call sites:** `src/shared/utils/apiKeyPolicy.ts` enforces API-key
+policy; `src/sse/handlers/chat/resolvedModelPolicy.ts` handles effective-model
+admission; and `open-sse/services/combo.ts` resolves combo targets for dispatch.
+`src/domain/policyEngine.ts` and `src/domain/comboResolver.ts` are tested,
+but **neither is imported into the live chat request path**. The
+`src/lib/container.ts` registration of `policyEngine` has no production importer.
+Do not edit those disconnected modules expecting live routing behavior to change.
 
 **Combo routing** (`open-sse/services/combo.ts`): 20 public strategies (priority, weighted, fill-first, round-robin, p2c, random, least-used, cost-optimized, reset-aware, reset-window, headroom, quota-weighted, strict-random, auto, lkgp, context-optimized, cache-optimized, context-relay, fusion, pipeline). Each target calls `handleSingleModel()` (wraps `handleChatCore()` with per-target error handling + circuit breaker checks); the `fusion` strategy instead fans out to a panel of models in parallel and a judge model synthesizes one final answer (`open-sse/services/fusion.ts`). 16-factor Auto-Combo scoring + full strategy table: `docs/routing/AUTO-COMBO.md`; the 3 resilience layers: `docs/architecture/RESILIENCE_GUIDE.md`.
 
