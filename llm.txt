@@ -395,7 +395,14 @@ diagnostics) plus **memory**, **skill**, **agentSkill**, **githubSkill**, **pool
 
 11. **Memory/Skills cross-cutting systems:** Memory and Skills affect the MCP tools, request pipeline, and A2A skills. Memory provides persistent context across sessions; Skills provide extensible tool execution with sandbox isolation.
 
-12. **Domain contracts vs live routing:** `src/domain/` contains both runtime helpers (including `quotaCache.ts`, `costRules.ts` and `connectionModelRules.ts`) and tested but disconnected contracts (`policyEngine.ts`, `comboResolver.ts`). The container that registers `policyEngine` has no production importer. Live chat policy is enforced via `src/shared/utils/apiKeyPolicy.ts` and `src/sse/handlers/chat/resolvedModelPolicy.ts`; combo targets are resolved by `open-sse/services/combo.ts`. Changes to the disconnected contracts do not affect live dispatch.
+12. **Domain contracts vs live routing:** `src/domain/` contains runtime helpers
+    (`quotaCache.ts`, `costRules.ts`, `connectionModelRules.ts`) and separately
+    tested contracts (`policyEngine.ts`, `comboResolver.ts`) without a live
+    request-path importer. The container registering `policyEngine` has no
+    production importer. Live chat policy uses `src/shared/utils/apiKeyPolicy.ts`
+    and `src/sse/handlers/chat/resolvedModelPolicy.ts`; combo targets are
+    resolved by `open-sse/services/combo.ts`. Changing the disconnected
+    contracts alone does not affect live dispatch.
 
 13. **Provider constants validated at load:** All provider definitions validated via Zod schemas at module load time (`src/shared/validation/providerSchema.ts`). Invalid providers fail fast.
 
