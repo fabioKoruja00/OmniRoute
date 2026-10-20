@@ -81,9 +81,9 @@ OmniRoute solves the problem of managing multiple AI provider subscriptions, quo
 │   │   ├── forgot-password/      # Password recovery
 │   │   ├── status/               # Status page
 │   │   └── docs/                 # In-app documentation
-│   ├── domain/                   # Domain types and policy engine
-│   │   ├── policyEngine.ts       # Central policy engine
-│   │   ├── comboResolver.ts      # Combo resolution logic
+│   ├── domain/                   # Domain helpers and non-dispatched contracts
+│   │   ├── policyEngine.ts       # Tested policy contract; not live dispatch
+│   │   ├── comboResolver.ts      # Tested combo contract; not live dispatch
 │   │   ├── costRules.ts          # Cost calculation rules
 │   │   ├── degradation.ts        # Graceful degradation
 │   │   ├── fallbackPolicy.ts     # Fallback behavior
@@ -395,7 +395,7 @@ diagnostics) plus **memory**, **skill**, **agentSkill**, **githubSkill**, **pool
 
 11. **Memory/Skills cross-cutting systems:** Memory and Skills affect the MCP tools, request pipeline, and A2A skills. Memory provides persistent context across sessions; Skills provide extensible tool execution with sandbox isolation.
 
-12. **Domain policy engine:** `src/domain/` contains policy engine modules (policyEngine, comboResolver, costRules, degradation, fallbackPolicy, lockoutPolicy, modelAvailability, providerExpiration, quotaCache, configAudit) that govern routing decisions independently from the pipeline.
+12. **Domain contracts vs live routing:** `src/domain/` contains both runtime helpers (including `quotaCache.ts`, `costRules.ts` and `connectionModelRules.ts`) and tested but disconnected contracts (`policyEngine.ts`, `comboResolver.ts`). The container that registers `policyEngine` has no production importer. Live chat policy is enforced via `src/shared/utils/apiKeyPolicy.ts` and `src/sse/handlers/chat/resolvedModelPolicy.ts`; combo targets are resolved by `open-sse/services/combo.ts`. Changes to the disconnected contracts do not affect live dispatch.
 
 13. **Provider constants validated at load:** All provider definitions validated via Zod schemas at module load time (`src/shared/validation/providerSchema.ts`). Invalid providers fail fast.
 
