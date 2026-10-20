@@ -371,16 +371,17 @@ Tables created across the migrations (123 total):
 
 ### 3.3 `src/domain/` — Domain layer
 
-Pure business logic, no I/O. Imported by routes and handlers.
+Domain helpers and policy contracts. Some modules are imported by live handlers;
+others are tested contracts with no production request-path importer.
 
 | File                                       | Purpose                                           |
 | ------------------------------------------ | ------------------------------------------------- |
-| `policyEngine.ts`                          | Top-level policy resolver                         |
+| `policyEngine.ts`                          | Tested policy contract, not live request resolver |
 | `fallbackPolicy.ts`                        | Fallback decision tree                            |
 | `costRules.ts`                             | Cost calculation rules                            |
 | `lockoutPolicy.ts`                         | Model lockout decisions                           |
 | `tagRouter.ts`                             | Tag-based routing                                 |
-| `comboResolver.ts`                         | Combo resolution from request → target list       |
+| `comboResolver.ts`                         | Tested combo contract, not live dispatcher        |
 | `connectionModelRules.ts`                  | Per-connection model filters                      |
 | `modelAvailability.ts`                     | Model availability check                          |
 | `degradation.ts`                           | Degraded-mode transitions                         |
@@ -390,6 +391,14 @@ Pure business logic, no I/O. Imported by routes and handlers.
 | `configAudit.ts`                           | Config change audit                               |
 | `assessment/`                              | Model assessment (per RFC, partially implemented) |
 | `types.ts`                                 | Shared domain types                               |
+
+> **Reachability:** `src/lib/container.ts` registers `policyEngine`, but the
+> container has no production importer; `comboResolver.ts` has no production
+> importer either. These modules have tests and must not be described as
+> abandoned, but modifying them alone does not change the chat request path.
+> Active enforcement occurs in `src/shared/utils/apiKeyPolicy.ts` and
+> `src/sse/handlers/chat/resolvedModelPolicy.ts`; live combo target resolution
+> uses `open-sse/services/combo.ts` (`resolveComboTargets()`).
 
 ### 3.4 `src/server/` — Server-only
 
@@ -705,13 +714,14 @@ Client request
      CORS preflight check
      Zod validation (chatCompletionsSchema in shared/validation/schemas.ts)
      Auth (extractApiKey + isValidApiKey OR requireManagementAuth)
-     Policy engine (src/server/authz/pipeline.ts)
+     Authorization pipeline (src/server/authz/pipeline.ts)
+     API-key policy (src/shared/utils/apiKeyPolicy.ts; in the chat handler)
      Guardrails (PII masker, prompt injection, vision bridge)
   → handleChatCore() (open-sse/handlers/chatCore.ts)
      Cache check (semantic + read cache)
      Rate limit (rateLimitManager, accountSemaphore)
      Combo routing (if model resolves to a combo)
-       comboResolver → loop per target → handleSingleModel()
+       resolveComboTargets() (open-sse/services/combo.ts) → handleSingleModel() per target
      translateRequest()  (open-sse/translator/request/*)
      getExecutor(providerId).execute()  (open-sse/executors/*)
        fetch upstream → retry/backoff via accountFallback
