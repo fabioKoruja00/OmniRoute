@@ -9,8 +9,8 @@ Este arquivo define as fontes, a disponibilidade e as regras de uso das skills a
 | Domínios definidos no mapa | **298** |
 | Padrões de comandos | **14** |
 | Skills nativas em `skills/<nome>/SKILL.md` | **46** |
-| Skills externas instaladas em `.claude/skills/<nome>/SKILL.md` | **37** |
-| Total de skills disponíveis | **83** |
+| Skills externas instaladas em `.claude/skills/<nome>/SKILL.md` | **57** |
+| Total de skills disponíveis | **103** |
 | Referências de skills ausentes no mapa | **0** |
 | Elementos em `sem_arquivo` | **0** |
 
@@ -79,7 +79,37 @@ A referência de `vitest-skill` já existia no catálogo central. A origem de `i
 
 ### Candidatas rejeitadas ou adiadas
 
-Não foram instaladas `a11y-audit`, `api-test-suite-builder` e `api-design-reviewer` do catálogo central porque suas versões locais apontavam para scripts ou referências que não estavam presentes. A `jest-skill` não foi selecionada como padrão porque o projeto separa Node nativo e Vitest. `frontend-ui-engineering` e `web-quality-audit` também exigiriam corrigir recursos auxiliares ausentes antes de considerar uma instalação íntegra. Esses nomes não constam no mapa como skills disponíveis e `sem_arquivo` está vazio.
+Não foi instalada `a11y-audit` do catálogo central porque sua cópia local não inclui as referências que anuncia. `api-test-suite-builder` e `api-design-reviewer` foram obtidas diretamente da origem com os arquivos de apoio necessários. A `jest-skill` não foi selecionada como padrão porque o projeto separa Node nativo e Vitest. `web-quality-audit` ainda exige corrigir recursos auxiliares ausentes antes de uma instalação íntegra; `frontend-ui-engineering` foi obtida diretamente da origem, que disponibiliza a skill como arquivo único. Esses nomes não constam no mapa como skills disponíveis e `sem_arquivo` está vazio.
+
+## Pilhas complementares por domínio (ampliação de 30/10/2026)
+
+A auditoria aprofundada constatou que as 298 regras eram insuficientemente especializadas: 79 apontavam para uma única skill e outras 70 para duas. A versão corrigida associa **3 a 6 skills por domínio** e **4 por padrão de comando**, sem referências ausentes ou skills órfãs. Isso é **cobertura de competências**, e não ordem para executar indiscriminadamente todas as skills de cada caminho. Selecionar apenas as adequadas à operação, preservando a regra de aplicar as essenciais de governança, segurança e testes. As skills de produto em `skills/` continuam preservadas e são complementadas por orientação de documentação, auditoria e integridade.
+
+| Competências | Complementos instalados | Função |
+| --- | --- | --- |
+| Revisão de mudanças | `code-reviewer`, `testing-strategy`, `test-gap-audit` | Contratos de revisão, estratégia e lacunas de testes |
+| API e contratos | `api-design-reviewer`, `api-test-suite-builder` | Compatibilidade, design e testes de endpoints |
+| Node e tipagem | `node-testing`, `node-typescript`, `node-ci` | Runners Node/Vitest, TypeScript e CI |
+| Dependências e skills | `node-supply-chain`, `agent-supply-chain`, `secret-scanning` | Integridade, riscos de dependências e segredos |
+| Next.js e UI | `nextjs-quality`, `frontend-ui-engineering`, `frontend-a11y`, `frontend-excellence`, `responsiveness-check` | RSC, acessibilidade, integração visual, responsividade |
+| Performance | `performance-optimization` | Gargalos de frontend/backend, métricas e consultas |
+| Redes e Zero Trust | `networking`, `cloudflare-one` | Diagnóstico de DNS, túneis, proxy e segurança perimetral |
+| Documentação | `docs-sync-audit` | Comparação sistemática de documentação com código |
+
+**Procedência das 20 skills externas adicionadas nesta ampliação:**
+
+- `google-gemini/gemini-cli` (Apache-2.0): `code-reviewer`, origem `.gemini/skills/code-reviewer/`.
+- `shinpr/agentic-code` (MIT): `testing-strategy`, origem `.agents/skills/testing-strategy/`.
+- `alirezarezvani/claude-skills` (MIT): `api-design-reviewer` e `api-test-suite-builder`; scripts e referências originais preservados.
+- `github/awesome-copilot` (MIT): `secret-scanning`, `test-gap-audit`, `docs-sync-audit` e `agent-supply-chain`; recursos auxiliares preservados quando existentes.
+- `Paldom/node-skills` (MIT): `node-ci`, `node-testing`, `node-typescript`, `nextjs-quality`, `node-supply-chain`, com playbooks, scripts e avaliações empacotados.
+- `addyosmani/agent-skills`: `frontend-ui-engineering` e `performance-optimization`; referência de otimizações incluída.
+- `cloudflare/skills` via catálogo central: `cloudflare-one`.
+- `iuliandita/skills` via catálogo central: `networking`, com referências de DNS, VPN, proxy, rede e diagnóstico.
+- `jezweb/claude-skills` via catálogo central: `responsiveness-check`, com critérios de breakpoints e relatório.
+- Catálogo central do `grnet-monitor`: cópias de `frontend-a11y` e `frontend-excellence`.
+
+**Auditoria estrutural:** 46 `SKILL.md` nativos mais 57 externos encontrados na árvore atual; todas as 103 skills são referenciadas em pelo menos uma regra ou comando, e cada referência aponta para um arquivo real. Os 298 padrões de caminho compilam. Isso não equivale à execução de todos os scripts, ao teste funcional do produto nem à aprovação de CI.
 
 ## Regra de invocação
 
