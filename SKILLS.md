@@ -24,6 +24,14 @@ O mapeamento por caminho de código está em `.claude/skill-dominios.json`, segu
 | `secrets-management` | `grnet-monitor/.claude/skills/secrets-management/SKILL.md` |
 | `writing-guidelines` | `grnet-monitor/.claude/skills/writing-guidelines/SKILL.md` |
 
+## Auditoria ampliada (30/10/2026)
+
+A árvore verificada contém 46 skills nativas em `skills/` (incluindo 22 skills de CLI e a skill `ponytail`), que possuem finalidades de operação do produto; elas não substituem skills de engenharia. O mapa foi ampliado para contemplar comandos CLI, agentes, internacionalização, testes de integração, segurança, scripts operacionais, backend e UI. O catálogo central do monitor foi consultado antes da seleção externa.
+
+**Skills adicionais copiadas e verificadas do monitor:** `git-workflow`, `github-ops`, `writing-guidelines`, `backend-patterns`, `error-handling`, `frontend-patterns`, `accessibility`, `e2e-testing`, `secrets-management`, `sql-code-review`, `jwt-validate`, `linux-administration`, `api-health-monitoring`, `api-ratelimit-helper`, `api-security-patterns`, `deprecation-and-migration`, `perf-lighthouse`, `backup-recovery`, `python-code-style`, `python-anti-patterns`, `web-design-guidelines`, `frontend-design`.
+
+**Verificação de origem e ressalvas:** essas cópias provêm das versões já catalogadas em `grnet-monitor/.claude/skills/`; antes de executar quaisquer scripts ou comandos, consultar as instruções e revisar efeitos colaterais. A cópia de `api-ratelimit-helper` e `api-security-patterns` tem seu campo `name` corrigido para coincidir com a pasta. Skills com dependências de arquivos adicionais ainda não integradas permanecem em `sem_arquivo`. Uma skill de uso do produto não deve ser tratada automaticamente como validação de implementação.
+
 ## Uso e governança
 
 1. Identificar o domínio pelo caminho no mapa; consultar os `SKILL.md` efetivamente disponíveis, em `skills/` e, quando instalados, `.claude/skills/`.
