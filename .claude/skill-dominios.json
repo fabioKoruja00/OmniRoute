@@ -114,7 +114,9 @@
       "caminho": "^/(src/app/(?!api/)|src/(?:hooks|store|i18n)/|packages/ui-kit/|public/)",
       "skills": [
         "frontend-patterns",
-        "a11y-audit"
+        "frontend-design",
+        "accessibility",
+        "responsive-patterns"
       ]
     },
     {
@@ -129,8 +131,8 @@
       "dominio": "testes",
       "caminho": "^/tests/",
       "skills": [
-        "jest-skill",
-        "api-test-suite-builder"
+        "nodejs-boas-praticas",
+        "constraint-driven-development"
       ]
     },
     {
@@ -162,7 +164,8 @@
       "caminho": "^/(docker/|deploy/|Dockerfile|docker-compose)",
       "skills": [
         "linux-administration",
-        "secrets-management"
+        "secrets-management",
+        "backup-recovery"
       ]
     },
     {
@@ -225,8 +228,9 @@
       "dominio": "testes-end-to-end",
       "caminho": "^/tests/(?:e2e|integration|homolog|live|system)/",
       "skills": [
+        "playwright-skill",
         "e2e-testing",
-        "api-test-suite-builder"
+        "accessibility"
       ]
     },
     {
@@ -241,8 +245,8 @@
       "dominio": "testes-desempenho",
       "caminho": "^/tests/(?:load|benchmarks)/",
       "skills": [
-        "perf-lighthouse",
-        "performance-optimization"
+        "nodejs-boas-praticas",
+        "constraint-driven-development"
       ]
     },
     {
@@ -269,7 +273,8 @@
       "skills": [
         "secrets-management",
         "jwt-validate",
-        "api-security-patterns"
+        "api-security-patterns",
+        "env-secrets-manager"
       ]
     },
     {
@@ -286,7 +291,7 @@
       "skills": [
         "frontend-patterns",
         "accessibility",
-        "web-design-guidelines"
+        "responsive-patterns"
       ]
     },
     {
@@ -294,7 +299,8 @@
       "caminho": "^/(?:src/i18n/|scripts/i18n/|src/app/.*/messages/)",
       "skills": [
         "frontend-patterns",
-        "writing-guidelines"
+        "writing-guidelines",
+        "i18n-expert"
       ]
     },
     {
@@ -310,9 +316,9 @@
       "dominio": "qualidade",
       "caminho": "^/(?:scripts/(?:quality|check|perf|build)/|config/quality/)",
       "skills": [
-        "deprecation-and-migration",
-        "backend-patterns",
-        "perf-lighthouse"
+        "constraint-driven-development",
+        "nodejs-boas-praticas",
+        "deprecation-and-migration"
       ]
     },
     {
@@ -353,11 +359,7 @@
       "dominio": "skills-cli-comandos",
       "caminho": "^/skills/cli-",
       "skills": [
-        "cli-chat",
-        "cli-models",
-        "cli-serve",
-        "cli-mcp",
-        "cli-routing"
+        "omni-github-skills"
       ]
     },
     {
@@ -370,147 +372,147 @@
     },
     {
       "dominio": "nativa-cli-a2a",
-      "caminho": "^/(?:src/lib/(?:a2a|acp)/|skills/cli-a2a/)",
+      "caminho": "^/skills/cli-a2a/",
       "skills": [
         "cli-a2a"
       ]
     },
     {
       "dominio": "nativa-cli-backup-sync",
-      "caminho": "^/(?:src/lib/(?:db|sync|cloudSync)/|skills/cli-backup-sync/)",
+      "caminho": "^/skills/cli-backup-sync/",
       "skills": [
         "cli-backup-sync"
       ]
     },
     {
       "dominio": "nativa-cli-batches",
-      "caminho": "^/(?:src/lib/(?:batches|jobs|jobRegistry)/|skills/cli-batches/)",
+      "caminho": "^/skills/cli-batches/",
       "skills": [
         "cli-batches"
       ]
     },
     {
       "dominio": "nativa-cli-chat",
-      "caminho": "^/(?:src/app/api/v1/chat/|open-sse/handlers/|skills/cli-chat/)",
+      "caminho": "^/skills/cli-chat/",
       "skills": [
         "cli-chat"
       ]
     },
     {
       "dominio": "nativa-cli-compression",
-      "caminho": "^/(?:src/lib/compression/|skills/cli-compression/)",
+      "caminho": "^/skills/cli-compression/",
       "skills": [
         "cli-compression"
       ]
     },
     {
       "dominio": "nativa-cli-contexts",
-      "caminho": "^/(?:src/lib/(?:memory|localCorpus)/|skills/cli-contexts/)",
+      "caminho": "^/skills/cli-contexts/",
       "skills": [
         "cli-contexts"
       ]
     },
     {
       "dominio": "nativa-cli-cost-usage",
-      "caminho": "^/(?:src/lib/(?:spend|usage)/|skills/cli-cost-usage/)",
+      "caminho": "^/skills/cli-cost-usage/",
       "skills": [
         "cli-cost-usage"
       ]
     },
     {
       "dominio": "nativa-cli-eval",
-      "caminho": "^/(?:src/lib/(?:evals|routerEval)/|skills/cli-eval/)",
+      "caminho": "^/skills/cli-eval/",
       "skills": [
         "cli-eval"
       ]
     },
     {
       "dominio": "nativa-cli-health",
-      "caminho": "^/(?:src/lib/(?:monitoring|credentialHealth)/|skills/cli-health/)",
+      "caminho": "^/skills/cli-health/",
       "skills": [
         "cli-health"
       ]
     },
     {
       "dominio": "nativa-cli-keys",
-      "caminho": "^/(?:src/lib/(?:auth|accessTokens)/|skills/cli-keys/)",
+      "caminho": "^/skills/cli-keys/",
       "skills": [
         "cli-keys"
       ]
     },
     {
       "dominio": "nativa-cli-mcp",
-      "caminho": "^/(?:open-sse/mcp-server/|skills/cli-mcp/)",
+      "caminho": "^/skills/cli-mcp/",
       "skills": [
         "cli-mcp"
       ]
     },
     {
       "dominio": "nativa-cli-models",
-      "caminho": "^/(?:src/lib/(?:modelsDevSync|modelValidation)/|skills/cli-models/)",
+      "caminho": "^/skills/cli-models/",
       "skills": [
         "cli-models"
       ]
     },
     {
       "dominio": "nativa-cli-plugins-skills",
-      "caminho": "^/(?:src/lib/(?:plugins|agentSkills|skills)/|skills/cli-plugins-skills/)",
+      "caminho": "^/skills/cli-plugins-skills/",
       "skills": [
         "cli-plugins-skills"
       ]
     },
     {
       "dominio": "nativa-cli-policy-audit",
-      "caminho": "^/(?:src/lib/(?:audit|compliance|guardrails)/|skills/cli-policy-audit/)",
+      "caminho": "^/skills/cli-policy-audit/",
       "skills": [
         "cli-policy-audit"
       ]
     },
     {
       "dominio": "nativa-cli-providers",
-      "caminho": "^/(?:src/lib/(?:providers|providerModels)/|skills/cli-providers/)",
+      "caminho": "^/skills/cli-providers/",
       "skills": [
         "cli-providers"
       ]
     },
     {
       "dominio": "nativa-cli-resilience",
-      "caminho": "^/(?:src/lib/(?:resilience|chaos)/|skills/cli-resilience/)",
+      "caminho": "^/skills/cli-resilience/",
       "skills": [
         "cli-resilience"
       ]
     },
     {
       "dominio": "nativa-cli-routing",
-      "caminho": "^/(?:src/lib/(?:routing|combos|reasoningRouting)/|skills/cli-routing/)",
+      "caminho": "^/skills/cli-routing/",
       "skills": [
         "cli-routing"
       ]
     },
     {
       "dominio": "nativa-cli-serve",
-      "caminho": "^/(?:src/lib/(?:runtime|serverLifecycle)/|skills/cli-serve/)",
+      "caminho": "^/skills/cli-serve/",
       "skills": [
         "cli-serve"
       ]
     },
     {
       "dominio": "nativa-cli-setup",
-      "caminho": "^/(?:scripts/postinstall|skills/cli-setup/)",
+      "caminho": "^/skills/cli-setup/",
       "skills": [
         "cli-setup"
       ]
     },
     {
       "dominio": "nativa-cli-skill-collector",
-      "caminho": "^/(?:src/lib/agentSkills/|skills/cli-skill-collector/)",
+      "caminho": "^/skills/cli-skill-collector/",
       "skills": [
         "cli-skill-collector"
       ]
     },
     {
       "dominio": "nativa-cli-tunnel",
-      "caminho": "^/(?:src/lib/(?:cloudflaredTunnel|ngrokTunnel|tailscaleTunnel|proxy)/|skills/cli-tunnel/)",
+      "caminho": "^/skills/cli-tunnel/",
       "skills": [
         "cli-tunnel"
       ]
@@ -524,7 +526,7 @@
     },
     {
       "dominio": "nativa-omni-settings",
-      "caminho": "^/(?:src/lib/config/|skills/omni-settings/)",
+      "caminho": "^/skills/omni-settings/",
       "skills": [
         "omni-settings"
       ]
@@ -535,17 +537,2027 @@
       "skills": [
         "ponytail"
       ]
+    },
+    {
+      "dominio": "raiz-codigo-tipos",
+      "caminho": "^/src/(?:types/|proxy\\.ts$|instrumentation[^/]*\\.ts$|scripts/)",
+      "skills": [
+        "nodejs-boas-praticas",
+        "backend-patterns",
+        "api-security-patterns"
+      ]
+    },
+    {
+      "dominio": "tipagem-compartilhada",
+      "caminho": "^/src/(?:shared/(?:types|contracts|schemas|validation)/|types/)",
+      "skills": [
+        "nodejs-boas-praticas",
+        "api-security-patterns"
+      ]
+    },
+    {
+      "dominio": "componentes-compartilhados",
+      "caminho": "^/src/(?:shared/(?:components|hooks|utils)/|hooks/|store/)",
+      "skills": [
+        "frontend-patterns",
+        "accessibility",
+        "responsive-patterns"
+      ]
+    },
+    {
+      "dominio": "servidor-authorization",
+      "caminho": "^/src/(?:server/authz/|lib/(?:auth|oauth|accessTokens|pii|security|guardrails|compliance)/)",
+      "skills": [
+        "omni-auth",
+        "api-security-patterns",
+        "jwt-validate"
+      ]
+    },
+    {
+      "dominio": "servidor-middleware",
+      "caminho": "^/src/(?:middleware/|shared/(?:middleware|http|network|platform)/|proxy\\.ts$)",
+      "skills": [
+        "api-security-patterns",
+        "error-handling",
+        "nodejs-boas-praticas"
+      ]
+    },
+    {
+      "dominio": "sse-streaming",
+      "caminho": "^/src/sse/",
+      "skills": [
+        "omni-inference",
+        "error-handling",
+        "nodejs-boas-praticas"
+      ]
+    },
+    {
+      "dominio": "seguranca-mitm-tls",
+      "caminho": "^/src/mitm/",
+      "skills": [
+        "api-security-patterns",
+        "secrets-management",
+        "omni-proxies"
+      ]
+    },
+    {
+      "dominio": "dominio-negocio",
+      "caminho": "^/src/domain/",
+      "skills": [
+        "backend-patterns",
+        "constraint-driven-development"
+      ]
+    },
+    {
+      "dominio": "internacionalizacao-interface",
+      "caminho": "^/src/i18n/",
+      "skills": [
+        "frontend-patterns",
+        "writing-guidelines",
+        "i18n-expert"
+      ]
+    },
+    {
+      "dominio": "observabilidade-node",
+      "caminho": "^/src/(?:instrumentation(?:-node)?\\.ts$|lib/(?:monitoring|audit|logExport)/)",
+      "skills": [
+        "nodejs-boas-praticas",
+        "api-health-monitoring",
+        "error-handling"
+      ]
+    },
+    {
+      "dominio": "lib-autenticacao-oauth",
+      "caminho": "^/src/lib/(?:auth|oauth|accessTokens|zed-oauth|cursor|kimi|security|env|compliance)(?:/|\\.|$)",
+      "skills": [
+        "omni-auth",
+        "jwt-validate",
+        "api-security-patterns",
+        "secrets-management"
+      ]
+    },
+    {
+      "dominio": "lib-pii-guardrails",
+      "caminho": "^/src/lib/(?:pii|guardrails|audit)(?:/|\\.|$)",
+      "skills": [
+        "api-security-patterns",
+        "secrets-management",
+        "error-handling"
+      ]
+    },
+    {
+      "dominio": "lib-modelos-provedores",
+      "caminho": "^/src/lib/(?:providers|providerModels|modelValidation|modelsDevSync|catalog|freeProxyProviders|radar|discovery)(?:/|\\.|$)",
+      "skills": [
+        "omni-providers",
+        "omni-models",
+        "backend-patterns"
+      ]
+    },
+    {
+      "dominio": "lib-roteamento-combos",
+      "caminho": "^/src/lib/(?:combos|routing|reasoningRouting|headroom|quota)(?:/|\\.|$)",
+      "skills": [
+        "omni-combos-routing",
+        "omni-resilience",
+        "nodejs-boas-praticas"
+      ]
+    },
+    {
+      "dominio": "lib-token-sessoes",
+      "caminho": "^/src/lib/(?:credentialHealth|warmupScheduler|proxyHealth|proxySubscription)(?:/|\\.|$)",
+      "skills": [
+        "omni-resilience",
+        "api-health-monitoring",
+        "secrets-management"
+      ]
+    },
+    {
+      "dominio": "lib-cache-semantico",
+      "caminho": "^/src/lib/(?:cache|promptCache|semanticCache)(?:/|\\.|$)",
+      "skills": [
+        "omni-cache",
+        "nodejs-boas-praticas"
+      ]
+    },
+    {
+      "dominio": "lib-bancos-persistencia",
+      "caminho": "^/src/lib/(?:db|usage|logExport|spend)(?:/|\\.|$)",
+      "skills": [
+        "omni-db-backups",
+        "sqlite-ops",
+        "sql-code-review"
+      ]
+    },
+    {
+      "dominio": "lib-compressao-contexto",
+      "caminho": "^/src/lib/(?:compression|contextWindowResolver|conductor|localCorpus)(?:/|\\.|$)",
+      "skills": [
+        "omni-compression",
+        "omni-context-rtk",
+        "backend-patterns"
+      ]
+    },
+    {
+      "dominio": "lib-ia-agentes",
+      "caminho": "^/src/lib/(?:a2a|acp|agentSkills|cloudAgent|issueAgent|copilot|vscode)(?:/|\\.|$)",
+      "skills": [
+        "omni-agents-a2a",
+        "omni-mcp",
+        "api-security-patterns"
+      ]
+    },
+    {
+      "dominio": "lib-memoria-conhecimento",
+      "caminho": "^/src/lib/(?:memory|obsidian|notion|search|embeddings)(?:/|\\.|$)",
+      "skills": [
+        "omni-agents-a2a",
+        "backend-patterns",
+        "api-security-patterns"
+      ]
+    },
+    {
+      "dominio": "lib-skills-plugins",
+      "caminho": "^/src/lib/(?:skills|plugins)(?:/|\\.|$)",
+      "skills": [
+        "omni-github-skills",
+        "api-security-patterns",
+        "backend-patterns"
+      ]
+    },
+    {
+      "dominio": "lib-proxy-rede",
+      "caminho": "^/src/lib/(?:proxyRelay|proxySubscription|proxyHealth|proxyEvents|proxyEgress|cliproxyCompat|transfer|vncSession)(?:/|\\.|$)",
+      "skills": [
+        "omni-proxies",
+        "omni-tunnels",
+        "api-security-patterns"
+      ]
+    },
+    {
+      "dominio": "lib-integracoes-eventos",
+      "caminho": "^/src/lib/(?:telegram|events|webhooks|sync|cloudSync)(?:/|\\.|$)",
+      "skills": [
+        "omni-webhooks",
+        "omni-sync-cloud",
+        "api-security-patterns"
+      ]
+    },
+    {
+      "dominio": "lib-operacao-background",
+      "caminho": "^/src/lib/(?:jobs|jobRegistry|batches|system|startup|runtime|deploy)(?:/|\\.|$)",
+      "skills": [
+        "backend-patterns",
+        "nodejs-boas-praticas",
+        "graceful-shutdown"
+      ]
+    },
+    {
+      "dominio": "lib-cli-editor",
+      "caminho": "^/src/lib/(?:cliTools|cli-helper|versionManager)(?:/|\\.|$)",
+      "skills": [
+        "omni-cli-tools",
+        "omni-version-manager",
+        "nodejs-boas-praticas"
+      ]
+    },
+    {
+      "dominio": "lib-midia-busca",
+      "caminho": "^/src/lib/(?:images|media|embeddings|search|playground)(?:/|\\.|$)",
+      "skills": [
+        "omni-inference",
+        "backend-patterns",
+        "api-security-patterns"
+      ]
+    },
+    {
+      "dominio": "lib-avaliacoes-chaos",
+      "caminho": "^/src/lib/(?:evals|routerEval|chaos|inspector)(?:/|\\.|$)",
+      "skills": [
+        "constraint-driven-development",
+        "omni-resilience",
+        "nodejs-boas-praticas"
+      ]
+    },
+    {
+      "dominio": "lib-config-runtime",
+      "caminho": "^/src/lib/(?:config|build-profile|middleware|services|display)(?:/|\\.|$)",
+      "skills": [
+        "nodejs-boas-praticas",
+        "backend-patterns",
+        "error-handling"
+      ]
+    },
+    {
+      "dominio": "lib-gamificacao",
+      "caminho": "^/src/lib/(?:gamification)(?:/|\\.|$)",
+      "skills": [
+        "backend-patterns",
+        "nodejs-boas-praticas"
+      ]
+    },
+    {
+      "dominio": "lib-avaliacao-tokens",
+      "caminho": "^/src/lib/(?:quota|headroom|usage|credentialHealth)(?:/|\\.|$)",
+      "skills": [
+        "omni-budget",
+        "omni-usage-logs",
+        "omni-resilience"
+      ]
+    },
+    {
+      "dominio": "lib-registro-pacotes",
+      "caminho": "^/src/lib/(?:versionManager|deploy|transfer)(?:/|\\.|$)",
+      "skills": [
+        "omni-version-manager",
+        "nodejs-boas-praticas"
+      ]
+    },
+    {
+      "dominio": "lib-arquivos-isolados",
+      "caminho": "^/src/lib/[^/]+\\.(?:ts|tsx|js|mjs|cjs)$",
+      "skills": [
+        "backend-patterns",
+        "nodejs-boas-praticas"
+      ]
+    },
+    {
+      "dominio": "api-rotas-seguranca",
+      "caminho": "^/src/app/api/",
+      "skills": [
+        "api-security-patterns",
+        "api-ratelimit-helper",
+        "error-handling"
+      ]
+    },
+    {
+      "dominio": "api-autenticacao-identidade",
+      "caminho": "^/src/app/api/(?:auth|oauth|keys|teams|admin|internal)/",
+      "skills": [
+        "omni-auth",
+        "omni-api-keys",
+        "jwt-validate"
+      ]
+    },
+    {
+      "dominio": "api-provedores-modelos",
+      "caminho": "^/src/app/api/(?:providers|provider-models|provider-nodes|models|model-combo-mappings|pricing|radar|discovery)/",
+      "skills": [
+        "omni-providers",
+        "omni-models",
+        "api-security-patterns"
+      ]
+    },
+    {
+      "dominio": "api-roteamento-resiliencia",
+      "caminho": "^/src/app/api/(?:combos|resilience|chaos|quota|headroom|monitoring|health)/",
+      "skills": [
+        "omni-combos-routing",
+        "omni-resilience",
+        "api-health-monitoring"
+      ]
+    },
+    {
+      "dominio": "api-inferencia-midias",
+      "caminho": "^/src/app/api/(?:v0|v1|v1beta|modality-bridge|translator|relay)/",
+      "skills": [
+        "omni-inference",
+        "omni-providers",
+        "error-handling"
+      ]
+    },
+    {
+      "dominio": "api-memoria-contexto",
+      "caminho": "^/src/app/api/(?:context|memory|conversations|search|compression|conductor|cache)/",
+      "skills": [
+        "omni-context-rtk",
+        "omni-cache",
+        "api-security-patterns"
+      ]
+    },
+    {
+      "dominio": "api-agentes-integracoes",
+      "caminho": "^/src/app/api/(?:mcp|a2a|plugins|skills|agent-skills|cloud|sync|webhooks)/",
+      "skills": [
+        "omni-mcp",
+        "omni-agents-a2a",
+        "omni-webhooks"
+      ]
+    },
+    {
+      "dominio": "api-dados-uso",
+      "caminho": "^/src/app/api/(?:usage|analytics|logs|log-export|db-backups|batches|jobs|evals)/",
+      "skills": [
+        "omni-usage-logs",
+        "omni-db-backups",
+        "api-security-patterns"
+      ]
+    },
+    {
+      "dominio": "api-controle-local",
+      "caminho": "^/src/app/api/(?:cli-tools|cli|tools|tunnels|local|system|services|session-pools|vnc-session)/",
+      "skills": [
+        "omni-cli-tools",
+        "omni-tunnels",
+        "api-security-patterns"
+      ]
+    },
+    {
+      "dominio": "api-painel-operacao",
+      "caminho": "^/src/app/api/(?:settings|playground|gamification|version-manager|omniroute|api-endpoints)/",
+      "skills": [
+        "backend-patterns",
+        "api-security-patterns"
+      ]
+    },
+    {
+      "dominio": "painel-dashboard",
+      "caminho": "^/src/app/\\(dashboard\\)/dashboard/",
+      "skills": [
+        "frontend-patterns",
+        "accessibility",
+        "responsive-patterns"
+      ]
+    },
+    {
+      "dominio": "painel-provedores-modelos",
+      "caminho": "^/src/app/\\(dashboard\\)/dashboard/(?:providers|models|media-providers|provider-stats|api-manager|free-provider-rankings|free-tiers|radar)/",
+      "skills": [
+        "omni-providers",
+        "omni-models",
+        "frontend-patterns"
+      ]
+    },
+    {
+      "dominio": "painel-roteamento",
+      "caminho": "^/src/app/\\(dashboard\\)/dashboard/(?:combos|auto-combo|orchestration|endpoint|resilience|chaos|relay)/",
+      "skills": [
+        "omni-combos-routing",
+        "omni-resilience",
+        "frontend-patterns"
+      ]
+    },
+    {
+      "dominio": "painel-uso-custos",
+      "caminho": "^/src/app/\\(dashboard\\)/dashboard/(?:usage|costs|analytics|activity|logs|log-export|limits|leaderboard)/",
+      "skills": [
+        "omni-usage-logs",
+        "omni-budget",
+        "frontend-patterns"
+      ]
+    },
+    {
+      "dominio": "painel-contexto-memoria",
+      "caminho": "^/src/app/\\(dashboard\\)/dashboard/(?:context|memory|compression|cache|conversations|conductor)/",
+      "skills": [
+        "omni-context-rtk",
+        "omni-compression",
+        "frontend-patterns"
+      ]
+    },
+    {
+      "dominio": "painel-agentes-plugins",
+      "caminho": "^/src/app/\\(dashboard\\)/dashboard/(?:agent-skills|omni-skills|plugins|cloud-agents|cli-agents|cli-code|a2a|acp-agents|mcp)/",
+      "skills": [
+        "omni-agents-a2a",
+        "omni-mcp",
+        "omni-github-skills"
+      ]
+    },
+    {
+      "dominio": "painel-ferramentas-integracoes",
+      "caminho": "^/src/app/\\(dashboard\\)/dashboard/(?:tools|playground|translator|batch|search-tools|discovery|webhooks|api-endpoints)/",
+      "skills": [
+        "omni-inference",
+        "omni-webhooks",
+        "frontend-patterns"
+      ]
+    },
+    {
+      "dominio": "painel-configuracao",
+      "caminho": "^/src/app/\\(dashboard\\)/dashboard/(?:settings|profile|onboarding|system|runtime)/",
+      "skills": [
+        "omni-settings",
+        "frontend-patterns",
+        "accessibility"
+      ]
+    },
+    {
+      "dominio": "painel-operacao-seguranca",
+      "caminho": "^/src/app/\\(dashboard\\)/dashboard/(?:audit|health|resilience|chaos)/",
+      "skills": [
+        "omni-resilience",
+        "api-security-patterns",
+        "frontend-patterns"
+      ]
+    },
+    {
+      "dominio": "painel-outros",
+      "caminho": "^/src/app/\\(dashboard\\)/dashboard/(?:gamification|changelog)/",
+      "skills": [
+        "frontend-patterns",
+        "writing-guidelines"
+      ]
+    },
+    {
+      "dominio": "frontend-autenticacao-rotas",
+      "caminho": "^/src/app/(?:login|auth|authorize|callback|connect|forgot-password|forbidden)/",
+      "skills": [
+        "omni-auth",
+        "frontend-patterns",
+        "accessibility"
+      ]
+    },
+    {
+      "dominio": "frontend-documentacao-rotas",
+      "caminho": "^/src/app/(?:docs|privacy|terms|landing)/",
+      "skills": [
+        "writing-guidelines",
+        "frontend-patterns",
+        "accessibility"
+      ]
+    },
+    {
+      "dominio": "frontend-erros-resiliencia",
+      "caminho": "^/src/app/(?:400|401|403|408|429|500|502|503|offline|maintenance|healthz|livez|readyz|status)/",
+      "skills": [
+        "omni-resilience",
+        "frontend-patterns",
+        "accessibility"
+      ]
+    },
+    {
+      "dominio": "frontend-miniapp",
+      "caminho": "^/src/app/(?:miniapp|a2a|\\.well-known)/",
+      "skills": [
+        "omni-mcp",
+        "frontend-patterns",
+        "api-security-patterns"
+      ]
+    },
+    {
+      "dominio": "frontend-estilos",
+      "caminho": "^/(?:src/app/[^/]*\\.css$|packages/ui-kit/.*\\.css$|src/app/globals\\.css$)",
+      "skills": [
+        "frontend-design",
+        "responsive-patterns",
+        "accessibility"
+      ]
+    },
+    {
+      "dominio": "ui-kit-componentes",
+      "caminho": "^/packages/ui-kit/",
+      "skills": [
+        "frontend-patterns",
+        "frontend-design",
+        "accessibility",
+        "responsive-patterns"
+      ]
+    },
+    {
+      "dominio": "browser-pool-automacao",
+      "caminho": "^/packages/browser-pool/",
+      "skills": [
+        "playwright-skill",
+        "api-security-patterns",
+        "nodejs-boas-praticas"
+      ]
+    },
+    {
+      "dominio": "electron-processos",
+      "caminho": "^/electron/(?:main|preload|lib/|processTree|remoteServer|sqlite-inspection)",
+      "skills": [
+        "nodejs-boas-praticas",
+        "api-security-patterns",
+        "graceful-shutdown"
+      ]
+    },
+    {
+      "dominio": "electron-pacotes",
+      "caminho": "^/electron/(?:package(?:-lock)?\\.json|assets/|.*\\.html$)",
+      "skills": [
+        "nodejs-boas-praticas",
+        "secrets-management"
+      ]
+    },
+    {
+      "dominio": "opencode-plugins",
+      "caminho": "^/@omniroute/opencode-(?:plugin|plugin-v2|provider)/",
+      "skills": [
+        "omni-providers",
+        "omni-combos-routing",
+        "nodejs-boas-praticas"
+      ]
+    },
+    {
+      "dominio": "opencode-testes",
+      "caminho": "^/@omniroute/[^/]+/tests/",
+      "skills": [
+        "nodejs-boas-praticas",
+        "constraint-driven-development"
+      ]
+    },
+    {
+      "dominio": "opencode-segredos",
+      "caminho": "^/@omniroute/[^/]+/src/(?:credentials|auth|management|telemetry)",
+      "skills": [
+        "secrets-management",
+        "api-security-patterns"
+      ]
+    },
+    {
+      "dominio": "opencode-release",
+      "caminho": "^/@omniroute/[^/]+/(?:package(?:-lock)?\\.json|tsup\\.config\\.ts|RELEASE\\.md)",
+      "skills": [
+        "nodejs-boas-praticas",
+        "git-workflow",
+        "deprecation-and-migration"
+      ]
+    },
+    {
+      "dominio": "open-sse-core",
+      "caminho": "^/open-sse/(?:index\\.ts$|shared/|lib/|utils/|types\\.d\\.ts$)",
+      "skills": [
+        "omni-inference",
+        "backend-patterns",
+        "error-handling"
+      ]
+    },
+    {
+      "dominio": "open-sse-executores",
+      "caminho": "^/open-sse/executors/",
+      "skills": [
+        "omni-providers",
+        "omni-resilience",
+        "api-security-patterns"
+      ]
+    },
+    {
+      "dominio": "open-sse-provider-config",
+      "caminho": "^/open-sse/config/providers/",
+      "skills": [
+        "omni-providers",
+        "omni-models",
+        "nodejs-boas-praticas"
+      ]
+    },
+    {
+      "dominio": "open-sse-model-registry",
+      "caminho": "^/open-sse/config/",
+      "skills": [
+        "omni-models",
+        "omni-providers",
+        "nodejs-boas-praticas"
+      ]
+    },
+    {
+      "dominio": "open-sse-chat-core",
+      "caminho": "^/open-sse/handlers/chatCore/",
+      "skills": [
+        "omni-inference",
+        "error-handling",
+        "api-security-patterns"
+      ]
+    },
+    {
+      "dominio": "open-sse-multimodal",
+      "caminho": "^/open-sse/handlers/(?:imageGeneration|imageUpscale|videoGeneration|mediaGeneration|search)/",
+      "skills": [
+        "omni-inference",
+        "omni-providers",
+        "api-security-patterns"
+      ]
+    },
+    {
+      "dominio": "open-sse-sanitizacao",
+      "caminho": "^/open-sse/handlers/(?:responseSanitizer|sseParser)/",
+      "skills": [
+        "api-security-patterns",
+        "error-handling",
+        "omni-inference"
+      ]
+    },
+    {
+      "dominio": "open-sse-translator",
+      "caminho": "^/open-sse/translator/",
+      "skills": [
+        "omni-inference",
+        "omni-models",
+        "error-handling"
+      ]
+    },
+    {
+      "dominio": "open-sse-mcp",
+      "caminho": "^/open-sse/mcp-server/",
+      "skills": [
+        "omni-mcp",
+        "omni-agents-a2a",
+        "api-security-patterns"
+      ]
+    },
+    {
+      "dominio": "open-sse-vendor",
+      "caminho": "^/open-sse/vendor/",
+      "skills": [
+        "omni-providers",
+        "api-security-patterns",
+        "nodejs-boas-praticas"
+      ]
+    },
+    {
+      "dominio": "open-sse-services",
+      "caminho": "^/open-sse/services/",
+      "skills": [
+        "backend-patterns",
+        "error-handling",
+        "nodejs-boas-praticas"
+      ]
+    },
+    {
+      "dominio": "sse-servicos-roteamento",
+      "caminho": "^/open-sse/services/(?:combo|autoCombo|routing|accountFallback)(?:/|\\.|$)",
+      "skills": [
+        "omni-combos-routing",
+        "omni-resilience",
+        "nodejs-boas-praticas"
+      ]
+    },
+    {
+      "dominio": "sse-servicos-compressao",
+      "caminho": "^/open-sse/services/(?:compression)(?:/|\\.|$)",
+      "skills": [
+        "omni-compression",
+        "omni-context-rtk",
+        "nodejs-boas-praticas"
+      ]
+    },
+    {
+      "dominio": "sse-servicos-cotas-uso",
+      "caminho": "^/open-sse/services/(?:usage|rateLimitManager|admission)(?:/|\\.|$)",
+      "skills": [
+        "omni-usage-logs",
+        "omni-budget",
+        "api-ratelimit-helper"
+      ]
+    },
+    {
+      "dominio": "sse-servicos-sessoes-tokens",
+      "caminho": "^/open-sse/services/(?:sessionPool|tokenRefresh|codexAccount)(?:/|\\.|$)",
+      "skills": [
+        "omni-auth",
+        "omni-resilience",
+        "secrets-management"
+      ]
+    },
+    {
+      "dominio": "sse-servicos-cache",
+      "caminho": "^/open-sse/services/(?:cache)(?:/|\\.|$)",
+      "skills": [
+        "omni-cache",
+        "nodejs-boas-praticas"
+      ]
+    },
+    {
+      "dominio": "sse-servicos-browser",
+      "caminho": "^/open-sse/services/(?:browserBackedChat)(?:/|\\.|$)",
+      "skills": [
+        "playwright-skill",
+        "api-security-patterns"
+      ]
+    },
+    {
+      "dominio": "sse-servicos-testes",
+      "caminho": "^/open-sse/(?:services|mcp-server)/__tests__/",
+      "skills": [
+        "nodejs-boas-praticas",
+        "constraint-driven-development",
+        "vitest-skill"
+      ]
+    },
+    {
+      "dominio": "node-unit-testes",
+      "caminho": "^/tests/unit/",
+      "skills": [
+        "nodejs-boas-praticas",
+        "constraint-driven-development"
+      ]
+    },
+    {
+      "dominio": "testes-ui-componentes",
+      "caminho": "^/tests/unit/(?:ui|dashboard|shared)/",
+      "skills": [
+        "frontend-patterns",
+        "accessibility",
+        "nodejs-boas-praticas"
+      ]
+    },
+    {
+      "dominio": "testes-compressao-roteamento",
+      "caminho": "^/tests/unit/(?:compression|combo|autoCombo|correctness|translator|chatcore)/",
+      "skills": [
+        "omni-compression",
+        "omni-combos-routing",
+        "nodejs-boas-praticas"
+      ]
+    },
+    {
+      "dominio": "testes-autenticacao-seguranca",
+      "caminho": "^/tests/unit/(?:guardrails|security|auth|authz|cors)/",
+      "skills": [
+        "api-security-patterns",
+        "jwt-validate",
+        "secrets-management"
+      ]
+    },
+    {
+      "dominio": "testes-banco",
+      "caminho": "^/tests/unit/(?:db|db-adapters|memory|usage)/",
+      "skills": [
+        "sqlite-ops",
+        "sql-code-review",
+        "nodejs-boas-praticas"
+      ]
+    },
+    {
+      "dominio": "testes-api-mcp",
+      "caminho": "^/tests/unit/(?:api|mcp|services)/",
+      "skills": [
+        "omni-inference",
+        "omni-mcp",
+        "nodejs-boas-praticas"
+      ]
+    },
+    {
+      "dominio": "testes-build-cli",
+      "caminho": "^/tests/unit/(?:build|cli|cli-helper|runtime|settings)/",
+      "skills": [
+        "nodejs-boas-praticas",
+        "constraint-driven-development"
+      ]
+    },
+    {
+      "dominio": "testes-documentacao",
+      "caminho": "^/tests/unit/(?:docs|feature-triage)/",
+      "skills": [
+        "writing-guidelines",
+        "constraint-driven-development"
+      ]
+    },
+    {
+      "dominio": "testes-integracao",
+      "caminho": "^/tests/(?:integration|live|boundary|system|homolog)/",
+      "skills": [
+        "e2e-testing",
+        "nodejs-boas-praticas",
+        "api-security-patterns"
+      ]
+    },
+    {
+      "dominio": "testes-navegador-playwright",
+      "caminho": "^/tests/e2e/",
+      "skills": [
+        "playwright-skill",
+        "e2e-testing",
+        "accessibility",
+        "responsive-design"
+      ]
+    },
+    {
+      "dominio": "testes-seguranca-llm",
+      "caminho": "^/tests/(?:security|llm-security)/",
+      "skills": [
+        "api-security-patterns",
+        "constraint-driven-development"
+      ]
+    },
+    {
+      "dominio": "testes-propriedades-mutation",
+      "caminho": "^/tests/(?:golden-set|snapshots|fixtures)/",
+      "skills": [
+        "constraint-driven-development",
+        "nodejs-boas-praticas"
+      ]
+    },
+    {
+      "dominio": "testes-carga-benchmark",
+      "caminho": "^/tests/(?:load|benchmarks)/",
+      "skills": [
+        "nodejs-boas-praticas",
+        "constraint-driven-development"
+      ]
+    },
+    {
+      "dominio": "testes-harness-config",
+      "caminho": "^/tests/(?:_setup|_helpers|helpers|_run|_cp_)/",
+      "skills": [
+        "nodejs-boas-praticas",
+        "constraint-driven-development"
+      ]
+    },
+    {
+      "dominio": "qualidade-test-runner",
+      "caminho": "^/(?:vitest\\.config\\.[cm]?[jt]s|playwright\\.config\\.[cm]?[jt]s|tests/.*\\.config\\.[cm]?[jt]s)",
+      "skills": [
+        "nodejs-boas-praticas",
+        "playwright-skill",
+        "vitest-skill"
+      ]
+    },
+    {
+      "dominio": "scripts-build-release",
+      "caminho": "^/scripts/(?:build|release|packs)/",
+      "skills": [
+        "nodejs-boas-praticas",
+        "deprecation-and-migration",
+        "git-workflow"
+      ]
+    },
+    {
+      "dominio": "scripts-qualidade",
+      "caminho": "^/scripts/(?:check|quality)/",
+      "skills": [
+        "constraint-driven-development",
+        "nodejs-boas-praticas"
+      ]
+    },
+    {
+      "dominio": "scripts-ci",
+      "caminho": "^/scripts/ci/",
+      "skills": [
+        "github-actions-hardening",
+        "github-actions-efficiency",
+        "nodejs-boas-praticas"
+      ]
+    },
+    {
+      "dominio": "scripts-docs-i18n",
+      "caminho": "^/scripts/(?:i18n|docs)/",
+      "skills": [
+        "writing-guidelines",
+        "nodejs-boas-praticas",
+        "i18n-expert"
+      ]
+    },
+    {
+      "dominio": "scripts-performance",
+      "caminho": "^/scripts/(?:perf|router-eval|compression-eval|compression)/",
+      "skills": [
+        "nodejs-boas-praticas",
+        "constraint-driven-development",
+        "omni-resilience"
+      ]
+    },
+    {
+      "dominio": "scripts-ops-homolog",
+      "caminho": "^/scripts/(?:ops|vps|homolog|sre|docker)/",
+      "skills": [
+        "linux-administration",
+        "nodejs-boas-praticas",
+        "systemd-services"
+      ]
+    },
+    {
+      "dominio": "scripts-desenv",
+      "caminho": "^/scripts/(?:dev|ad-hoc|features|research|test)/",
+      "skills": [
+        "nodejs-boas-praticas",
+        "constraint-driven-development"
+      ]
+    },
+    {
+      "dominio": "scripts-cli",
+      "caminho": "^/scripts/cli/",
+      "skills": [
+        "omni-cli-tools",
+        "nodejs-boas-praticas"
+      ]
+    },
+    {
+      "dominio": "scripts-shell",
+      "caminho": "^/scripts/.*\\.sh$",
+      "skills": [
+        "bats-testing-patterns",
+        "linux-administration"
+      ]
+    },
+    {
+      "dominio": "scripts-python",
+      "caminho": "^/scripts/.*\\.py$",
+      "skills": [
+        "python-code-style",
+        "python-anti-patterns"
+      ]
+    },
+    {
+      "dominio": "infra-configuracoes",
+      "caminho": "^/(?:config/|Dockerfile[^/]*$|docker/|deploy/|docker-compose[^/]*)",
+      "skills": [
+        "linux-administration",
+        "nodejs-boas-praticas",
+        "secrets-management"
+      ]
+    },
+    {
+      "dominio": "infra-servicos-processos",
+      "caminho": "^/(?:deploy/|docker/|scripts/ops/).*?(?:service|systemd|pm2|init)",
+      "skills": [
+        "systemd-services",
+        "graceful-shutdown",
+        "linux-administration"
+      ]
+    },
+    {
+      "dominio": "ci-pipelines",
+      "caminho": "^/\\.github/workflows/",
+      "skills": [
+        "github-actions-hardening",
+        "github-actions-efficiency"
+      ]
+    },
+    {
+      "dominio": "ci-seguranca-codeql",
+      "caminho": "^/\\.github/(?:workflows/(?:codeql|semgrep|scorecard|dast-smoke|nightly-llm-security)\\.yml|dependabot\\.yml)$",
+      "skills": [
+        "github-actions-hardening",
+        "secrets-management",
+        "api-security-patterns"
+      ]
+    },
+    {
+      "dominio": "ci-publicacao-release",
+      "caminho": "^/\\.github/workflows/(?:npm-publish|electron-release|docker-publish|release-acceptance|deploy-vps)\\.yml$",
+      "skills": [
+        "github-actions-hardening",
+        "git-workflow",
+        "nodejs-boas-praticas"
+      ]
+    },
+    {
+      "dominio": "ci-metadata-contribuicao",
+      "caminho": "^/\\.github/(?:ISSUE_TEMPLATE/|PULL_REQUEST_TEMPLATE/|CODEOWNERS|copilot-instructions|dependabot|labels)",
+      "skills": [
+        "github-ops",
+        "git-workflow",
+        "writing-guidelines"
+      ]
+    },
+    {
+      "dominio": "githooks-formatacao",
+      "caminho": "^/(?:\\.husky/|\\.gitattributes$|\\.gitignore$|\\.editorconfig$|\\.lintstagedrc|eslint\\.config)",
+      "skills": [
+        "git-workflow",
+        "nodejs-boas-praticas"
+      ]
+    },
+    {
+      "dominio": "typescript-config",
+      "caminho": "^/(?:tsconfig[^/]*\\.json$|[^/]+\\.config\\.(?:ts|js|mjs|cjs)$|pnpm[^/]*|package(?:-lock)?\\.json$)",
+      "skills": [
+        "nodejs-boas-praticas",
+        "constraint-driven-development"
+      ]
+    },
+    {
+      "dominio": "conteiner-deploy",
+      "caminho": "^/(?:Dockerfile(?:\\.[^/]*)?$|docker/|deploy/|(?:docker-)?compose[^/]*)",
+      "skills": [
+        "linux-administration",
+        "secrets-management",
+        "systemd-services"
+      ]
+    },
+    {
+      "dominio": "monorepo-pacotes",
+      "caminho": "^/(?:packages/|@omniroute/|pnpm-workspace\\.yaml$)",
+      "skills": [
+        "nodejs-boas-praticas",
+        "backend-patterns"
+      ]
+    },
+    {
+      "dominio": "arquivos-exemplos",
+      "caminho": "^/(?:examples/|contrib/)",
+      "skills": [
+        "nodejs-boas-praticas",
+        "api-security-patterns",
+        "writing-guidelines"
+      ]
+    },
+    {
+      "dominio": "documentacao-i18n",
+      "caminho": "^/docs/i18n/",
+      "skills": [
+        "writing-guidelines",
+        "frontend-patterns",
+        "i18n-expert"
+      ]
+    },
+    {
+      "dominio": "documentacao-arquitetura",
+      "caminho": "^/docs/(?:architecture|security|ops|guides|frameworks|comparison|compression)/",
+      "skills": [
+        "writing-guidelines",
+        "backend-patterns",
+        "api-security-patterns"
+      ]
+    },
+    {
+      "dominio": "documentacao-metadados",
+      "caminho": "^/docs/(?:[^/]+/)*meta\\.json$",
+      "skills": [
+        "writing-guidelines",
+        "nodejs-boas-praticas"
+      ]
+    },
+    {
+      "dominio": "documentacao-changelog",
+      "caminho": "^/(?:changelog\\.d/|docs/changelog/|CHANGELOG)",
+      "skills": [
+        "writing-guidelines",
+        "git-workflow"
+      ]
+    },
+    {
+      "dominio": "documentacao-llm-txt",
+      "caminho": "^/(?:docs/i18n/[^/]+/(?:llm|CONTRIBUTING)\\.txt|llm\\.txt$)",
+      "skills": [
+        "writing-guidelines",
+        "frontend-patterns",
+        "i18n-expert"
+      ]
+    },
+    {
+      "dominio": "documentacao-governanca",
+      "caminho": "^/(?:AGENTS|CLAUDE|GEMINI|CONTRIBUTING|README|SKILLS)\\.md$",
+      "skills": [
+        "writing-guidelines",
+        "git-workflow"
+      ]
+    },
+    {
+      "dominio": "documentacao-tecnica-apoio",
+      "caminho": "^/docs/",
+      "skills": [
+        "writing-guidelines"
+      ]
+    },
+    {
+      "dominio": "artefatos-projeto",
+      "caminho": "^/(?:\\.cbmignore|\\.dockerignore|\\.npmignore|\\.nvmrc|\\.npmrc|\\.vale/|\\.vscode/|\\.editorconfig|\\.gitignore)",
+      "skills": [
+        "nodejs-boas-praticas",
+        "git-workflow"
+      ]
+    },
+    {
+      "dominio": "skills-externas-instale",
+      "caminho": "^/\\.claude/skills/",
+      "skills": [
+        "git-workflow",
+        "writing-guidelines"
+      ]
+    },
+    {
+      "dominio": "cli-produto-bin",
+      "caminho": "^/bin/",
+      "skills": [
+        "omni-cli-tools",
+        "nodejs-boas-praticas"
+      ]
+    },
+    {
+      "dominio": "skills-product-operations",
+      "caminho": "^/skills/",
+      "skills": [
+        "omni-github-skills",
+        "writing-guidelines"
+      ]
+    },
+    {
+      "dominio": "scripts-operacionais-raiz",
+      "caminho": "^/(?:scripts/|bin/)",
+      "skills": [
+        "nodejs-boas-praticas",
+        "constraint-driven-development"
+      ]
+    },
+    {
+      "dominio": "skill-nativa-cli-a2a",
+      "caminho": "^/skills/cli-a2a/",
+      "skills": [
+        "cli-a2a"
+      ]
+    },
+    {
+      "dominio": "skill-nativa-cli-backup-sync",
+      "caminho": "^/skills/cli-backup-sync/",
+      "skills": [
+        "cli-backup-sync"
+      ]
+    },
+    {
+      "dominio": "skill-nativa-cli-batches",
+      "caminho": "^/skills/cli-batches/",
+      "skills": [
+        "cli-batches"
+      ]
+    },
+    {
+      "dominio": "skill-nativa-cli-chat",
+      "caminho": "^/skills/cli-chat/",
+      "skills": [
+        "cli-chat"
+      ]
+    },
+    {
+      "dominio": "skill-nativa-cli-compression",
+      "caminho": "^/skills/cli-compression/",
+      "skills": [
+        "cli-compression"
+      ]
+    },
+    {
+      "dominio": "skill-nativa-cli-contexts",
+      "caminho": "^/skills/cli-contexts/",
+      "skills": [
+        "cli-contexts"
+      ]
+    },
+    {
+      "dominio": "skill-nativa-cli-cost-usage",
+      "caminho": "^/skills/cli-cost-usage/",
+      "skills": [
+        "cli-cost-usage"
+      ]
+    },
+    {
+      "dominio": "skill-nativa-cli-eval",
+      "caminho": "^/skills/cli-eval/",
+      "skills": [
+        "cli-eval"
+      ]
+    },
+    {
+      "dominio": "skill-nativa-cli-health",
+      "caminho": "^/skills/cli-health/",
+      "skills": [
+        "cli-health"
+      ]
+    },
+    {
+      "dominio": "skill-nativa-cli-keys",
+      "caminho": "^/skills/cli-keys/",
+      "skills": [
+        "cli-keys"
+      ]
+    },
+    {
+      "dominio": "skill-nativa-cli-mcp",
+      "caminho": "^/skills/cli-mcp/",
+      "skills": [
+        "cli-mcp"
+      ]
+    },
+    {
+      "dominio": "skill-nativa-cli-models",
+      "caminho": "^/skills/cli-models/",
+      "skills": [
+        "cli-models"
+      ]
+    },
+    {
+      "dominio": "skill-nativa-cli-plugins-skills",
+      "caminho": "^/skills/cli-plugins-skills/",
+      "skills": [
+        "cli-plugins-skills"
+      ]
+    },
+    {
+      "dominio": "skill-nativa-cli-policy-audit",
+      "caminho": "^/skills/cli-policy-audit/",
+      "skills": [
+        "cli-policy-audit"
+      ]
+    },
+    {
+      "dominio": "skill-nativa-cli-providers",
+      "caminho": "^/skills/cli-providers/",
+      "skills": [
+        "cli-providers"
+      ]
+    },
+    {
+      "dominio": "skill-nativa-cli-resilience",
+      "caminho": "^/skills/cli-resilience/",
+      "skills": [
+        "cli-resilience"
+      ]
+    },
+    {
+      "dominio": "skill-nativa-cli-routing",
+      "caminho": "^/skills/cli-routing/",
+      "skills": [
+        "cli-routing"
+      ]
+    },
+    {
+      "dominio": "skill-nativa-cli-serve",
+      "caminho": "^/skills/cli-serve/",
+      "skills": [
+        "cli-serve"
+      ]
+    },
+    {
+      "dominio": "skill-nativa-cli-setup",
+      "caminho": "^/skills/cli-setup/",
+      "skills": [
+        "cli-setup"
+      ]
+    },
+    {
+      "dominio": "skill-nativa-cli-skill-collector",
+      "caminho": "^/skills/cli-skill-collector/",
+      "skills": [
+        "cli-skill-collector"
+      ]
+    },
+    {
+      "dominio": "skill-nativa-cli-tunnel",
+      "caminho": "^/skills/cli-tunnel/",
+      "skills": [
+        "cli-tunnel"
+      ]
+    },
+    {
+      "dominio": "skill-nativa-config-codex-cli",
+      "caminho": "^/skills/config-codex-cli/",
+      "skills": [
+        "config-codex-cli"
+      ]
+    },
+    {
+      "dominio": "skill-nativa-omni-agents-a2a",
+      "caminho": "^/skills/omni-agents-a2a/",
+      "skills": [
+        "omni-agents-a2a"
+      ]
+    },
+    {
+      "dominio": "skill-nativa-omni-api-keys",
+      "caminho": "^/skills/omni-api-keys/",
+      "skills": [
+        "omni-api-keys"
+      ]
+    },
+    {
+      "dominio": "skill-nativa-omni-auth",
+      "caminho": "^/skills/omni-auth/",
+      "skills": [
+        "omni-auth"
+      ]
+    },
+    {
+      "dominio": "skill-nativa-omni-budget",
+      "caminho": "^/skills/omni-budget/",
+      "skills": [
+        "omni-budget"
+      ]
+    },
+    {
+      "dominio": "skill-nativa-omni-cache",
+      "caminho": "^/skills/omni-cache/",
+      "skills": [
+        "omni-cache"
+      ]
+    },
+    {
+      "dominio": "skill-nativa-omni-cli-tools",
+      "caminho": "^/skills/omni-cli-tools/",
+      "skills": [
+        "omni-cli-tools"
+      ]
+    },
+    {
+      "dominio": "skill-nativa-omni-combos-routing",
+      "caminho": "^/skills/omni-combos-routing/",
+      "skills": [
+        "omni-combos-routing"
+      ]
+    },
+    {
+      "dominio": "skill-nativa-omni-compression",
+      "caminho": "^/skills/omni-compression/",
+      "skills": [
+        "omni-compression"
+      ]
+    },
+    {
+      "dominio": "skill-nativa-omni-context-rtk",
+      "caminho": "^/skills/omni-context-rtk/",
+      "skills": [
+        "omni-context-rtk"
+      ]
+    },
+    {
+      "dominio": "skill-nativa-omni-db-backups",
+      "caminho": "^/skills/omni-db-backups/",
+      "skills": [
+        "omni-db-backups"
+      ]
+    },
+    {
+      "dominio": "skill-nativa-omni-github-skills",
+      "caminho": "^/skills/omni-github-skills/",
+      "skills": [
+        "omni-github-skills"
+      ]
+    },
+    {
+      "dominio": "skill-nativa-omni-inference",
+      "caminho": "^/skills/omni-inference/",
+      "skills": [
+        "omni-inference"
+      ]
+    },
+    {
+      "dominio": "skill-nativa-omni-mcp",
+      "caminho": "^/skills/omni-mcp/",
+      "skills": [
+        "omni-mcp"
+      ]
+    },
+    {
+      "dominio": "skill-nativa-omni-models",
+      "caminho": "^/skills/omni-models/",
+      "skills": [
+        "omni-models"
+      ]
+    },
+    {
+      "dominio": "skill-nativa-omni-providers",
+      "caminho": "^/skills/omni-providers/",
+      "skills": [
+        "omni-providers"
+      ]
+    },
+    {
+      "dominio": "skill-nativa-omni-proxies",
+      "caminho": "^/skills/omni-proxies/",
+      "skills": [
+        "omni-proxies"
+      ]
+    },
+    {
+      "dominio": "skill-nativa-omni-resilience",
+      "caminho": "^/skills/omni-resilience/",
+      "skills": [
+        "omni-resilience"
+      ]
+    },
+    {
+      "dominio": "skill-nativa-omni-settings",
+      "caminho": "^/skills/omni-settings/",
+      "skills": [
+        "omni-settings"
+      ]
+    },
+    {
+      "dominio": "skill-nativa-omni-sync-cloud",
+      "caminho": "^/skills/omni-sync-cloud/",
+      "skills": [
+        "omni-sync-cloud"
+      ]
+    },
+    {
+      "dominio": "skill-nativa-omni-tunnels",
+      "caminho": "^/skills/omni-tunnels/",
+      "skills": [
+        "omni-tunnels"
+      ]
+    },
+    {
+      "dominio": "skill-nativa-omni-usage-logs",
+      "caminho": "^/skills/omni-usage-logs/",
+      "skills": [
+        "omni-usage-logs"
+      ]
+    },
+    {
+      "dominio": "skill-nativa-omni-version-manager",
+      "caminho": "^/skills/omni-version-manager/",
+      "skills": [
+        "omni-version-manager"
+      ]
+    },
+    {
+      "dominio": "skill-nativa-omni-webhooks",
+      "caminho": "^/skills/omni-webhooks/",
+      "skills": [
+        "omni-webhooks"
+      ]
+    },
+    {
+      "dominio": "skill-nativa-ponytail",
+      "caminho": "^/skills/ponytail/",
+      "skills": [
+        "ponytail"
+      ]
+    },
+    {
+      "dominio": "localizacao-traducoes",
+      "caminho": "^/(?:docs/i18n/|src/i18n/|scripts/i18n/|tests/unit/i18n|src/app/.*(?:locale|i18n|translation|intl))",
+      "skills": [
+        "i18n-expert",
+        "writing-guidelines",
+        "nodejs-boas-praticas"
+      ]
+    },
+    {
+      "dominio": "vitest-config",
+      "caminho": "^/vitest(?:\\.[^/]*)?\\.config\\.(?:ts|mts|js|mjs)$",
+      "skills": [
+        "vitest-skill",
+        "nodejs-boas-praticas"
+      ]
+    },
+    {
+      "dominio": "vitest-suite",
+      "caminho": "^/(?:src/(?:app|shared|lib)/.*?/__tests__/.*\\.test\\.tsx?$|open-sse/.*?/__tests__/.*\\.test\\.ts$|tests/unit/.*\\.test\\.tsx$|tests/unit/encryption\\.test\\.ts$)",
+      "skills": [
+        "vitest-skill",
+        "nodejs-boas-praticas"
+      ]
+    },
+    {
+      "dominio": "vitest-setup",
+      "caminho": "^/tests/_setup/vitestUiPolyfills\\.ts$",
+      "skills": [
+        "vitest-skill",
+        "frontend-patterns"
+      ]
+    },
+    {
+      "dominio": "painel-home-controle",
+      "caminho": "^/src/app/\\(dashboard\\)/(?:home/|dashboard/(?:quota|tokens)/)",
+      "skills": [
+        "frontend-patterns",
+        "omni-usage-logs",
+        "responsive-patterns"
+      ]
+    },
+    {
+      "dominio": "frontend-shell-main",
+      "caminho": "^/src/app/(?:[^/]+\\.(?:tsx|ts|css)$|\\(dashboard\\)/[^/]+\\.tsx?$)",
+      "skills": [
+        "frontend-patterns",
+        "frontend-design",
+        "accessibility"
+      ]
+    },
+    {
+      "dominio": "frontend-assets-publicos",
+      "caminho": "^/(?:public/|images/|docs/assets/|electron/assets/)",
+      "skills": [
+        "frontend-design",
+        "accessibility",
+        "web-design-guidelines"
+      ]
+    },
+    {
+      "dominio": "scripts-opencode",
+      "caminho": "^/(?:scripts/ad-hoc/.*(?:opencode|plugin)|@omniroute/[^/]+/)",
+      "skills": [
+        "nodejs-boas-praticas",
+        "omni-providers"
+      ]
+    },
+    {
+      "dominio": "docs-licencas-fontes",
+      "caminho": "^/(?:LICENSE(?:\\.[^/]*)?$|NOTICE|COPYRIGHT|\\.github/FUNDING\\.yml)",
+      "skills": [
+        "writing-guidelines",
+        "git-workflow"
+      ]
+    },
+    {
+      "dominio": "src-api-rotas-fallback",
+      "caminho": "^/src/app/api/[^/]+/",
+      "skills": [
+        "api-security-patterns",
+        "backend-patterns",
+        "error-handling"
+      ]
+    },
+    {
+      "dominio": "src-lib-sistema-componente",
+      "caminho": "^/src/lib/(?:serverLifecycle|healthzLag|gracefulShutdown|sessionObservability|tokenHealthCheck|warmupScheduler|proxyHealth)",
+      "skills": [
+        "graceful-shutdown",
+        "api-health-monitoring",
+        "omni-resilience"
+      ]
+    },
+    {
+      "dominio": "src-lib-documentacao-helper",
+      "caminho": "^/src/lib/(?:docs|log|console|dataPaths|source|wellKnown)",
+      "skills": [
+        "nodejs-boas-praticas",
+        "writing-guidelines"
+      ]
+    },
+    {
+      "dominio": "testes-nome-provedores",
+      "caminho": "^/tests/unit/[^/]*(?:provider|Provider|executor|Executor|model|Model|catalog|Catalog|alias|Alias|nvidia|Nvidia|bedrock|Bedrock|vertex|Vertex|ollama|Ollama|openrouter|OpenRouter|antigravity|Antigravity|codex|Codex|claude|Claude|gemini|Gemini|grok|Grok|deepseek|Deepseek|perplexity|Perplexity|kiro|Kiro|qwen|Qwen)[^/]*\\.(?:test|spec)\\.(?:ts|tsx|js|mjs)$",
+      "skills": [
+        "omni-providers",
+        "omni-models",
+        "nodejs-boas-praticas"
+      ]
+    },
+    {
+      "dominio": "testes-nome-autenticacao",
+      "caminho": "^/tests/unit/[^/]*(?:auth|Auth|oauth|OAuth|token|Token|credent|Credent|apiKey|ApiKey|keys|Keys|cookie|Cookie|session|Session|login|Login|signin|refresh|Refresh|password|Password)[^/]*\\.(?:test|spec)\\.(?:ts|tsx|js|mjs)$",
+      "skills": [
+        "omni-auth",
+        "jwt-validate",
+        "secrets-management"
+      ]
+    },
+    {
+      "dominio": "testes-nome-seguranca",
+      "caminho": "^/tests/unit/[^/]*(?:security|Security|guard|Guard|pii|Pii|saniti|Saniti|cors|Cors|xss|Xss|csrf|Csrf|injection|Injection|policy|Policy|secret|Secret|validation|Validation|permission|Permission|vuln|Vuln)[^/]*\\.(?:test|spec)\\.(?:ts|tsx|js|mjs)$",
+      "skills": [
+        "api-security-patterns",
+        "secrets-management",
+        "nodejs-boas-praticas"
+      ]
+    },
+    {
+      "dominio": "testes-nome-roteamento",
+      "caminho": "^/tests/unit/[^/]*(?:combo|Combo|routing|Routing|route|Route|fallback|Fallback|failover|Failover|round|Round|random|Random|priority|Priority|selector|Selector|pool|Pool|quota|Quota|balance|Balance|breaker|Breaker|resilience|Resilience|admission|Admission)[^/]*\\.(?:test|spec)\\.(?:ts|tsx|js|mjs)$",
+      "skills": [
+        "omni-combos-routing",
+        "omni-resilience",
+        "nodejs-boas-praticas"
+      ]
+    },
+    {
+      "dominio": "testes-nome-cache",
+      "caminho": "^/tests/unit/[^/]*(?:cache|Cache|memoiz|Memoiz|ttl|TTL|lru|LRU)[^/]*\\.(?:test|spec)\\.(?:ts|tsx|js|mjs)$",
+      "skills": [
+        "omni-cache",
+        "nodejs-boas-praticas"
+      ]
+    },
+    {
+      "dominio": "testes-nome-custos-uso",
+      "caminho": "^/tests/unit/[^/]*(?:usage|Usage|cost|Cost|price|Price|pricing|Pricing|spend|Spend|budget|Budget|billing|Billing|credits|Credits|tier|Tier|limit|Limit)[^/]*\\.(?:test|spec)\\.(?:ts|tsx|js|mjs)$",
+      "skills": [
+        "omni-usage-logs",
+        "omni-budget",
+        "nodejs-boas-praticas"
+      ]
+    },
+    {
+      "dominio": "testes-nome-multimodal",
+      "caminho": "^/tests/unit/[^/]*(?:image|Image|video|Video|audio|Audio|vision|Vision|media|Media|ocr|OCR|speech|Speech|embedding|Embedding)[^/]*\\.(?:test|spec)\\.(?:ts|tsx|js|mjs)$",
+      "skills": [
+        "omni-inference",
+        "omni-models",
+        "nodejs-boas-praticas"
+      ]
+    },
+    {
+      "dominio": "testes-nome-mcp-a2a",
+      "caminho": "^/tests/unit/[^/]*(?:mcp|Mcp|MCP|a2a|A2A|agent|Agent|skill|Skill|plugin|Plugin|tool|Tool|functionCall|FunctionCall)[^/]*\\.(?:test|spec)\\.(?:ts|tsx|js|mjs)$",
+      "skills": [
+        "omni-mcp",
+        "omni-github-skills",
+        "api-security-patterns"
+      ]
+    },
+    {
+      "dominio": "testes-nome-contexto",
+      "caminho": "^/tests/unit/[^/]*(?:compression|Compression|context|Context|memory|Memory|search|Search|conductor|Conductor|semantic|Semantic|reasoning|Reasoning)[^/]*\\.(?:test|spec)\\.(?:ts|tsx|js|mjs)$",
+      "skills": [
+        "omni-compression",
+        "omni-context-rtk",
+        "nodejs-boas-praticas"
+      ]
+    },
+    {
+      "dominio": "testes-nome-streaming",
+      "caminho": "^/tests/unit/[^/]*(?:sse|Sse|SSE|stream|Stream|websocket|Websocket|response|Response|translator|Translator|chatcore|Chatcore)[^/]*\\.(?:test|spec)\\.(?:ts|tsx|js|mjs)$",
+      "skills": [
+        "omni-inference",
+        "error-handling",
+        "nodejs-boas-praticas"
+      ]
+    },
+    {
+      "dominio": "testes-nome-conectividade",
+      "caminho": "^/tests/unit/[^/]*(?:proxy|Proxy|tunnel|Tunnel|mitm|Mitm|tls|Tls|dns|Dns|network|Network|http|Http|egress|Egress)[^/]*\\.(?:test|spec)\\.(?:ts|tsx|js|mjs)$",
+      "skills": [
+        "omni-proxies",
+        "omni-tunnels",
+        "api-security-patterns"
+      ]
+    },
+    {
+      "dominio": "testes-nome-banco",
+      "caminho": "^/tests/unit/[^/]*(?:db|Db|sqlite|Sqlite|database|Database|migration|Migration|schema|Schema|backup|Backup|restore|Restore|transaction|Transaction)[^/]*\\.(?:test|spec)\\.(?:ts|tsx|js|mjs)$",
+      "skills": [
+        "sqlite-ops",
+        "sql-code-review",
+        "nodejs-boas-praticas"
+      ]
+    },
+    {
+      "dominio": "testes-nome-ui",
+      "caminho": "^/tests/unit/[^/]*(?:dashboard|Dashboard|sidebar|Sidebar|layout|Layout|component|Component|a11y|A11y|responsive|Responsive|viewport|Viewport|theme|Theme|homePage|HomePage|accessib|Accessib)[^/]*\\.(?:test|spec)\\.(?:ts|tsx|js|mjs)$",
+      "skills": [
+        "frontend-patterns",
+        "accessibility",
+        "responsive-patterns"
+      ]
+    },
+    {
+      "dominio": "testes-nome-i18n",
+      "caminho": "^/tests/unit/[^/]*(?:i18n|I18n|locale|Locale|translation|Translation|rtl|Rtl|icu|ICU|language|Language)[^/]*\\.(?:test|spec)\\.(?:ts|tsx|js|mjs)$",
+      "skills": [
+        "i18n-expert",
+        "writing-guidelines"
+      ]
+    },
+    {
+      "dominio": "testes-nome-telemetria",
+      "caminho": "^/tests/unit/[^/]*(?:logger|Logger|logging|Logging|health|Health|monitor|Monitor|trace|Trace|observability|Observability|metric|Metric|audit|Audit|telemetry|Telemetry)[^/]*\\.(?:test|spec)\\.(?:ts|tsx|js|mjs)$",
+      "skills": [
+        "api-health-monitoring",
+        "omni-usage-logs",
+        "nodejs-boas-praticas"
+      ]
+    },
+    {
+      "dominio": "testes-nome-concorrencia",
+      "caminho": "^/tests/unit/[^/]*(?:race|Race|concurr|Concurr|retry|Retry|repro|Repro|stress|Stress|chaos|Chaos|parallel|Parallel|deadlock|Deadlock|timeout|Timeout|latency|Latency)[^/]*\\.(?:test|spec)\\.(?:ts|tsx|js|mjs)$",
+      "skills": [
+        "omni-resilience",
+        "constraint-driven-development",
+        "nodejs-boas-praticas"
+      ]
+    },
+    {
+      "dominio": "testes-nome-build-release",
+      "caminho": "^/tests/unit/[^/]*(?:release|Release|build|Build|package|Package|docker|Docker|electron|Electron|installer|Installer|cli|Cli|npm|Npm|check|Check)[^/]*\\.(?:test|spec)\\.(?:ts|tsx|js|mjs)$",
+      "skills": [
+        "nodejs-boas-praticas",
+        "github-actions-hardening",
+        "git-workflow"
+      ]
+    },
+    {
+      "dominio": "sse-arquivos-roteamento",
+      "caminho": "^/open-sse/services/[^/]*(?:combo|Combo|routing|Routing|fallback|Fallback|quota|Quota|cooldown|Cooldown|admission|Admission|retry|Retry|sessionPool|SessionPool)[^/]*\\.(?:ts|tsx|js|mjs)$",
+      "skills": [
+        "omni-combos-routing",
+        "omni-resilience",
+        "nodejs-boas-praticas"
+      ]
+    },
+    {
+      "dominio": "sse-arquivos-seguranca",
+      "caminho": "^/open-sse/services/[^/]*(?:auth|Auth|oauth|OAuth|credential|Credential|token|Token|password|Password|account|Account)[^/]*\\.(?:ts|tsx|js|mjs)$",
+      "skills": [
+        "omni-auth",
+        "api-security-patterns",
+        "secrets-management"
+      ]
+    },
+    {
+      "dominio": "sse-arquivos-provedores",
+      "caminho": "^/open-sse/services/[^/]*(?:provider|Provider|model|Model|catalog|Catalog|client|Client|web|Web|chat|Chat|codex|Codex|antigravity|Antigravity)[^/]*\\.(?:ts|tsx|js|mjs)$",
+      "skills": [
+        "omni-providers",
+        "omni-models",
+        "backend-patterns"
+      ]
+    },
+    {
+      "dominio": "sse-arquivos-uso",
+      "caminho": "^/open-sse/services/[^/]*(?:usage|Usage|pricing|Pricing|cost|Cost|budget|Budget|billing|Billing|rateLimit|RateLimit)[^/]*\\.(?:ts|tsx|js|mjs)$",
+      "skills": [
+        "omni-usage-logs",
+        "omni-budget",
+        "api-ratelimit-helper"
+      ]
+    },
+    {
+      "dominio": "sse-arquivos-streaming",
+      "caminho": "^/open-sse/services/[^/]*(?:stream|Stream|sse|SSE|response|Response|completion|Completion|error|Error|translat|Translat)[^/]*\\.(?:ts|tsx|js|mjs)$",
+      "skills": [
+        "omni-inference",
+        "error-handling",
+        "nodejs-boas-praticas"
+      ]
+    },
+    {
+      "dominio": "sse-arquivos-cache",
+      "caminho": "^/open-sse/services/[^/]*(?:cache|Cache|prompt|Prompt|context|Context|compression|Compression)[^/]*\\.(?:ts|tsx|js|mjs)$",
+      "skills": [
+        "omni-cache",
+        "omni-compression",
+        "nodejs-boas-praticas"
+      ]
+    },
+    {
+      "dominio": "lib-arquivos-provedores",
+      "caminho": "^/src/lib/[^/]*(?:provider|Provider|model|Model|catalog|Catalog|radar|Radar|pricing|Pricing|alias|Alias)[^/]*\\.(?:ts|tsx|js|mjs)$",
+      "skills": [
+        "omni-providers",
+        "omni-models",
+        "nodejs-boas-praticas"
+      ]
+    },
+    {
+      "dominio": "lib-arquivos-seguranca",
+      "caminho": "^/src/lib/[^/]*(?:auth|Auth|oauth|OAuth|token|Token|key|Key|credential|Credential|pii|Pii|saniti|Saniti)[^/]*\\.(?:ts|tsx|js|mjs)$",
+      "skills": [
+        "api-security-patterns",
+        "secrets-management",
+        "omni-auth"
+      ]
+    },
+    {
+      "dominio": "lib-arquivos-roteamento",
+      "caminho": "^/src/lib/[^/]*(?:combo|Combo|routing|Routing|quota|Quota|admission|Admission|fallback|Fallback|headroom|Headroom|resilience|Resilience)[^/]*\\.(?:ts|tsx|js|mjs)$",
+      "skills": [
+        "omni-combos-routing",
+        "omni-resilience",
+        "nodejs-boas-praticas"
+      ]
+    },
+    {
+      "dominio": "lib-arquivos-cache",
+      "caminho": "^/src/lib/[^/]*(?:cache|Cache|compression|Compression|context|Context|memory|Memory)[^/]*\\.(?:ts|tsx|js|mjs)$",
+      "skills": [
+        "omni-cache",
+        "omni-context-rtk",
+        "nodejs-boas-praticas"
+      ]
+    },
+    {
+      "dominio": "lib-arquivos-proxy",
+      "caminho": "^/src/lib/[^/]*(?:proxy|Proxy|tunnel|Tunnel|sync|Sync|webhook|Webhook|vnc|Vnc)[^/]*\\.(?:ts|tsx|js|mjs)$",
+      "skills": [
+        "omni-proxies",
+        "omni-sync-cloud",
+        "api-security-patterns"
+      ]
+    },
+    {
+      "dominio": "lib-arquivos-operacao",
+      "caminho": "^/src/lib/[^/]*(?:log|Log|monitor|Monitor|health|Health|lifecycle|Lifecycle|startup|Startup|graceful|Graceful)[^/]*\\.(?:ts|tsx|js|mjs)$",
+      "skills": [
+        "graceful-shutdown",
+        "api-health-monitoring",
+        "nodejs-boas-praticas"
+      ]
+    },
+    {
+      "dominio": "dash-telemetria-alertas",
+      "caminho": "^/src/app/\\(dashboard\\)/dashboard/(?:tokens|quota|activity|logs|log-export|costs|analytics|usage)/",
+      "skills": [
+        "omni-usage-logs",
+        "frontend-patterns",
+        "accessibility"
+      ]
+    },
+    {
+      "dominio": "backend-servidor-express",
+      "caminho": "^/(?:src/lib/(?:apiBridgeServer|serverLifecycle)\\.ts$|src/server/|open-sse/index\\.ts$)",
+      "skills": [
+        "nodejs-express-server",
+        "graceful-shutdown",
+        "api-security-patterns"
+      ]
+    },
+    {
+      "dominio": "performance-lighthouse-ui",
+      "caminho": "^/(?:scripts/perf/|tests/e2e/.*(?:perf|responsive|smoke)|src/app/landing/|src/app/page\\.tsx$)",
+      "skills": [
+        "perf-lighthouse",
+        "frontend-patterns",
+        "responsive-patterns"
+      ]
+    },
+    {
+      "dominio": "config-governanca-revisao",
+      "caminho": "^/(?:\\.coderabbit\\.yaml|\\.mergify\\.yml|\\.mailmap|\\.zizmor\\.yml)$",
+      "skills": [
+        "github-ops",
+        "github-actions-hardening",
+        "git-workflow"
+      ]
+    },
+    {
+      "dominio": "config-varredura-seguranca",
+      "caminho": "^/(?:\\.gitleaks\\.toml|\\.trivyignore|\\.zizmor\\.yml)$",
+      "skills": [
+        "secrets-management",
+        "github-actions-hardening",
+        "api-security-patterns"
+      ]
+    },
+    {
+      "dominio": "config-documentacao-estilo",
+      "caminho": "^/(?:\\.markdownlint\\.json|\\.prettierignore|\\.vale\\.ini)$",
+      "skills": [
+        "writing-guidelines",
+        "git-workflow"
+      ]
+    },
+    {
+      "dominio": "config-runtime-linux-nix",
+      "caminho": "^/(?:\\.node-version|Makefile|flake\\.(?:nix|lock)|fly\\.toml|socket\\.yml)$",
+      "skills": [
+        "nodejs-boas-praticas",
+        "linux-administration",
+        "systemd-services"
+      ]
+    },
+    {
+      "dominio": "config-cobertura-mutacao",
+      "caminho": "^/(?:codecov\\.yml|\\.size-limit\\.json|knip\\.json|sonar-project\\.properties|stryker\\.(?:conf|disablebail)\\.json|promptfooconfig\\.yaml)$",
+      "skills": [
+        "constraint-driven-development",
+        "nodejs-boas-praticas",
+        "api-security-patterns"
+      ]
+    },
+    {
+      "dominio": "config-noticias-traducoes",
+      "caminho": "^/(?:\\.i18n-state\\.json|news\\.json)$",
+      "skills": [
+        "i18n-expert",
+        "writing-guidelines"
+      ]
     }
   ],
-  "comandos": [],
-  "sem_arquivo": [
-    "a11y-audit",
-    "nodejs-boas-praticas",
-    "jest-skill",
-    "api-test-suite-builder",
-    "constraint-driven-development",
-    "github-actions-hardening",
-    "github-actions-efficiency"
+  "comandos": [
+    {
+      "dominio": "testes-unitarios",
+      "comando": "(?:npm|pnpm)\\s+(?:run\\s+)?test:(?:unit|vitest|coverage|integration|scoped)",
+      "skills": [
+        "nodejs-boas-praticas",
+        "constraint-driven-development"
+      ]
+    },
+    {
+      "dominio": "testes-e2e",
+      "comando": "(?:npm|pnpm)\\s+(?:run\\s+)?test:(?:e2e|protocols:e2e|ecosystem)|\\bnpx\\s+playwright\\b",
+      "skills": [
+        "playwright-skill",
+        "e2e-testing"
+      ]
+    },
+    {
+      "dominio": "testes-banco",
+      "comando": "(?:npm|pnpm)\\s+(?:run\\s+)?test:(?:bun:db|plan3)",
+      "skills": [
+        "sqlite-ops",
+        "sql-code-review"
+      ]
+    },
+    {
+      "dominio": "qualidade",
+      "comando": "(?:npm|pnpm)\\s+(?:run\\s+)?(?:check:|quality:|lint\\b|typecheck:)",
+      "skills": [
+        "constraint-driven-development",
+        "nodejs-boas-praticas"
+      ]
+    },
+    {
+      "dominio": "compilacao",
+      "comando": "(?:npm|pnpm)\\s+(?:run\\s+)?(?:build|build:|electron:build)",
+      "skills": [
+        "nodejs-boas-praticas",
+        "linux-administration"
+      ]
+    },
+    {
+      "dominio": "traducoes",
+      "comando": "(?:npm|pnpm)\\s+(?:run\\s+)?i18n:",
+      "skills": [
+        "writing-guidelines",
+        "nodejs-boas-praticas"
+      ]
+    },
+    {
+      "dominio": "publicacao",
+      "comando": "(?:npm|pnpm)\\s+(?:run\\s+)?(?:release:|check:pack|check:install)",
+      "skills": [
+        "git-workflow",
+        "nodejs-boas-praticas"
+      ]
+    },
+    {
+      "dominio": "docker",
+      "comando": "\\b(?:docker\\s+(?:build|compose|run)|docker-compose)\\b",
+      "skills": [
+        "linux-administration",
+        "secrets-management"
+      ]
+    },
+    {
+      "dominio": "shell",
+      "comando": "\\b(?:bash|sh)\\s+scripts/",
+      "skills": [
+        "bats-testing-patterns",
+        "linux-administration"
+      ]
+    },
+    {
+      "dominio": "python",
+      "comando": "\\bpython3?\\s+(?:scripts|tests)/",
+      "skills": [
+        "python-code-style",
+        "python-anti-patterns"
+      ]
+    },
+    {
+      "dominio": "git-contribuicao",
+      "comando": "\\b(?:git|gh)\\s+(?:pull|push|commit|merge|rebase|pr)\\b",
+      "skills": [
+        "git-workflow",
+        "github-ops"
+      ]
+    },
+    {
+      "dominio": "dev-servidor",
+      "comando": "(?:npm|pnpm)\\s+(?:run\\s+)?(?:dev|start)\\b",
+      "skills": [
+        "nodejs-boas-praticas",
+        "graceful-shutdown"
+      ]
+    },
+    {
+      "dominio": "vitest",
+      "comando": "(?:npm|pnpm)\\s+(?:run\\s+)?test:vitest\\b|\\bnpx\\s+vitest\\b",
+      "skills": [
+        "vitest-skill",
+        "nodejs-boas-praticas"
+      ]
+    },
+    {
+      "dominio": "i18n-verificador",
+      "comando": "(?:npm|pnpm)\\s+(?:run\\s+)?(?:i18n:|check:ui-icu)|i18n_audit\\.py",
+      "skills": [
+        "i18n-expert",
+        "writing-guidelines"
+      ]
+    }
   ],
+  "sem_arquivo": [],
   "revisado_em": "30/10/2026"
 }
