@@ -107,7 +107,10 @@ A auditoria aprofundada constatou que as 298 regras eram insuficientemente espec
 - `cloudflare/skills` via catálogo central: `cloudflare-one`.
 - `iuliandita/skills` via catálogo central: `networking`, com referências de DNS, VPN, proxy, rede e diagnóstico.
 - `jezweb/claude-skills` via catálogo central: `responsiveness-check`, com critérios de breakpoints e relatório.
-- Catálogo central do `grnet-monitor`: cópias de `frontend-a11y` e `frontend-excellence`.
+- `ysyecust/everything-claude-code` (MIT): `frontend-a11y`; cópia identificada por blob SHA exato da origem, com LICENSE recuperada.
+- `rohitg00/awesome-claude-code-toolkit` (Apache-2.0): `frontend-excellence`; cópia identificada por blob SHA exato da origem, com LICENSE recuperada.
+
+**Licenças adicionais:** `cloudflare-one` (Apache-2.0), `frontend-a11y` (MIT) e `frontend-excellence` (Apache-2.0) tiveram os arquivos de licença originais incorporados após a revisão de proveniência.
 
 **Auditoria estrutural:** 46 `SKILL.md` nativos mais 57 externos encontrados na árvore atual; todas as 103 skills são referenciadas em pelo menos uma regra ou comando, e cada referência aponta para um arquivo real. Os 298 padrões de caminho compilam. Isso não equivale à execução de todos os scripts, ao teste funcional do produto nem à aprovação de CI.
 
