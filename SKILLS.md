@@ -32,6 +32,10 @@ A árvore verificada contém 46 skills nativas em `skills/` (incluindo 22 skills
 
 **Verificação de origem e ressalvas:** essas cópias provêm das versões já catalogadas em `grnet-monitor/.claude/skills/`; antes de executar quaisquer scripts ou comandos, consultar as instruções e revisar efeitos colaterais. A cópia de `api-ratelimit-helper` e `api-security-patterns` tem seu campo `name` corrigido para coincidir com a pasta. Skills com dependências de arquivos adicionais ainda não integradas permanecem em `sem_arquivo`. Uma skill de uso do produto não deve ser tratada automaticamente como validação de implementação.
 
+## Política de correspondência e verificação
+
+A correspondência é **aditiva**: vários domínios podem incidir sobre um caminho, e cada skill relevante é consultada sem que a ordem do JSON seja usada como prioridade. Skills de CLI explicam como operar o produto; para corrigir implementação, aplicar também as skills de engenharia. A lista `sem_arquivo` é de referências ainda **não instaladas** e não deve ser carregada como arquivo nem tratada como falha de execução. Módulos sem regra específica recebem cobertura transversal; a cobertura numérica não comprova adequação sem inspeção por arquivo. Antes do merge, revisar cada script, caminho de referência e licença das skills copiadas.
+
 ## Uso e governança
 
 1. Identificar o domínio pelo caminho no mapa; consultar os `SKILL.md` efetivamente disponíveis, em `skills/` e, quando instalados, `.claude/skills/`.

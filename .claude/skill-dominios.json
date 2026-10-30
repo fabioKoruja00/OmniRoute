@@ -196,7 +196,7 @@
     },
     {
       "dominio": "backend-geral",
-      "caminho": "^/(src/(?:lib|shared|server|sse|middleware|instrumentation)|open-sse/(?:services|utils|lib|vendor|index)|packages/browser-pool/)",
+      "caminho": "^/(?:src/(?:lib|server|sse|middleware|instrumentation)|open-sse/(?:services|utils|lib|vendor|index)|packages/browser-pool/)",
       "skills": [
         "backend-patterns",
         "error-handling",
