@@ -2444,19 +2444,18 @@
       ]
     },
     {
-      "dominio": "shared-runtime-contratos",
-      "caminho": "^/src/shared/(?:constants|contracts|discovery|lib|platform|providers|reasoning|resilience|services|types|utils)/",
+      "dominio": "shared-servicos-backend",
+      "caminho": "^/src/shared/(?:services/(?:bifrost/|cliRuntime\\.ts$|apiKeyResolver\\.ts$|backupService\\.ts$)|network/(?:dnsPinnedFetch|outboundUrlGuard|privateHost|providerNodeHost))",
       "skills": [
         "backend-patterns",
+        "api-security-patterns",
         "nodejs-boas-praticas"
       ]
     },
     {
-      "dominio": "shared-rede-validacao",
-      "caminho": "^/src/shared/(?:http|middleware|network|schemas|validation)/",
+      "dominio": "shared-contratos-agnosticos",
+      "caminho": "^/src/shared/(?:constants|contracts|discovery|http|lib|platform|providers|reasoning|resilience|schemas|types|utils|validation)/",
       "skills": [
-        "backend-patterns",
-        "api-security-patterns",
         "nodejs-boas-praticas"
       ]
     }
