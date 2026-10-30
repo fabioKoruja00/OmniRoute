@@ -287,7 +287,7 @@
     },
     {
       "dominio": "design-system",
-      "caminho": "^/(?:src/shared/|packages/ui-kit/)",
+      "caminho": "^/(?:src/shared/components/|packages/ui-kit/)",
       "skills": [
         "frontend-patterns",
         "accessibility",
@@ -557,7 +557,7 @@
     },
     {
       "dominio": "componentes-compartilhados",
-      "caminho": "^/src/(?:shared/(?:components|hooks|utils)/|hooks/|store/)",
+      "caminho": "^/src/(?:shared/(?:components|hooks)/|hooks/|store/)",
       "skills": [
         "frontend-patterns",
         "accessibility",
@@ -2441,6 +2441,23 @@
       "skills": [
         "i18n-expert",
         "writing-guidelines"
+      ]
+    },
+    {
+      "dominio": "shared-runtime-contratos",
+      "caminho": "^/src/shared/(?:constants|contracts|discovery|lib|platform|providers|reasoning|resilience|services|types|utils)/",
+      "skills": [
+        "backend-patterns",
+        "nodejs-boas-praticas"
+      ]
+    },
+    {
+      "dominio": "shared-rede-validacao",
+      "caminho": "^/src/shared/(?:http|middleware|network|schemas|validation)/",
+      "skills": [
+        "backend-patterns",
+        "api-security-patterns",
+        "nodejs-boas-praticas"
       ]
     }
   ],
