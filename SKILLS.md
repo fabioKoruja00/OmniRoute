@@ -114,6 +114,10 @@ A auditoria aprofundada constatou que as 298 regras eram insuficientemente espec
 
 **Auditoria estrutural:** 46 `SKILL.md` nativos mais 57 externos encontrados na árvore atual; todas as 103 skills são referenciadas em pelo menos uma regra ou comando, e cada referência aponta para um arquivo real. Os 298 padrões de caminho compilam. Isso não equivale à execução de todos os scripts, ao teste funcional do produto nem à aprovação de CI.
 
+## Governance and provenance synchronization
+
+The canonical policy for this repository is [AGENTS.md](AGENTS.md#skills-and-contribution-governance-repository-wide); contributor preflight is in [CONTRIBUTING.md](CONTRIBUTING.md#mandatory-skills-and-governance-preflight). These apply to the current 46 product skills and 57 external engineering skills. Skills actually **installed** in a repository must be distinguished from skills referenced only in the monitor's catalog. A new installed skill requires a matching domain (or a justified `sem_arquivo` decision) and a traceable origin in the central monitor catalog. Always keep the map, this inventory, module governance and contribution documentation synchronized in the same PR. Verify current upstream state before editing; independent review and final CI must be reported accurately rather than assumed.
+
 ## Regra de invocação
 
 1. Consultar `AGENTS.md` e a governança do módulo antes de modificar arquivos. Não alterar `skills/**/SKILL.md` sem autorização específica.

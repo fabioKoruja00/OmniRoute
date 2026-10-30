@@ -9,6 +9,14 @@ coverage, and reconciliation steps.
 
 ---
 
+## Mandatory skills and governance preflight
+
+Before any code, documentation, test or maintenance contribution, follow [the repository-wide skills and contribution governance](AGENTS.md#skills-and-contribution-governance-repository-wide). `.claude/skill-dominios.json` selects skills by real file path and command; `SKILLS.md` records source and availability. The 46 product skills in `skills/` are different from the 57 externally sourced engineering skills in `.claude/skills/`.
+
+Sync the fork against upstream first; inspect the applicable skill sources and project/module rules; update related documentation in the same PR; run the relevant validation and obtain an actual independent review. Keep PRs Ready for review, finish the requested issue scope, and track CI to its final result. Add the provenance of newly installed external skills to the central `fabioKoruja00/grnet-monitor/SKILLS.md`. Preserve established OmniRoute build, testing, worktree and changelog rules.
+
+---
+
 ## Development Setup
 
 ### Prerequisites

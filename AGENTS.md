@@ -6,6 +6,23 @@
 > and point back here. When a rule needs to change, change it HERE — never re-fork it into an
 > assistant-specific file.
 
+## Skills and contribution governance (repository-wide)
+
+This section is the canonical governance for skills-based contributions, adapted from the GRNET monitor workflow. It supplements, but **does not override**, the project's existing Hard Rules, the golden contribution path, worktree isolation, security gates, or upstream maintainer decisions.
+
+1. **Synchronize before changing anything.** Confirm the latest upstream target branch and reconcile the fork before starting corrections. Do not rewrite shared history or force-push others' work; reuse the active PR for the same coherent scope.
+2. **Skill preflight for every operation.** Before analysing or modifying a file or running a related command, inspect `.claude/skill-dominios.json`, collect *all* matching file/command domains, read the relevant `SKILL.md` in `.claude/skills/` and `skills/`, and apply only those pertinent to the task. Do not claim a skill was used without reading it. Announce each actual invocation as `skill: <name> — <short action>` in the tool/action description when supported.
+3. **Source of truth and installation.** Check the central `fabioKoruja00/grnet-monitor/SKILLS.md` first. If a needed competency lacks an origin, discover candidates with `find-skill` or verifiable GitHub sources. Inspect license, frontmatter, references, bundled scripts, network effects and dependency requirements before installation. Every new installation in any repository also records its verified origin in the central monitor catalog, preferably in the *same coordinated delivery*.
+4. **No false coverage.** `skills/` contains 46 product-facing manifests (API/CLI/configuration and `ponytail`); `.claude/skills/` contains the 57 external engineering skills in the current map. Both are distinct from merely *catalogued* references in the monitor. Domain-regex coverage proves path matching, not that an implementation has been semantically audited.
+5. **Update the complete governance trail.** Changing `.claude/skills/`, `skills/` or `.claude/skill-dominios.json` requires reconciling real file paths, every referenced entry, glob pattern, `sem_arquivo`, `SKILLS.md`, relevant agent instructions and `CONTRIBUTING.md` in the same PR. Keep changelog handling consistent with `changelog.d/` and the existing repository policy; do **not** edit generated release history merely to note documentation.
+6. **Implementation and review discipline.** Complete the issue's accepted scope, using small self-contained commits/lots for large changes. After each meaningful lot, request an independent OmniRoute review; reviewers advise, but do not edit, push, deploy, or merge. Apply concrete findings and repeat until resolved. Never claim review success without an actual final opinion.
+7. **Tests, CI and PR readiness.** Use focused tests first, then quality/coverage/documentation checks applicable to the changed area. Open or maintain PRs as **Ready for review**, not Draft; provide issue linkage, rationale, validation checklist and remaining limitations. Follow each CI run to a terminal result; fix introduced failures and rerun. Existing inherited failures must be clearly distinguished, not concealed or bypassed. Never change CI runners without explicit approval.
+8. **Preserve upstream governance.** The OmniRoute repository is an upstream-facing fork: do not import monitor-specific constraints about Vault, PM2, SCP, live devices, network addresses, mirror jobs or VM deployment. Do not alter workflow files, publish releases or merge the upstream PR without the appropriate authorization. Follow the nearest module `AGENTS.md` and the project's own Hard Rules.
+
+**Closing checklist:** upstream synced; applicable skills read and announced; code and documentation consistent; skills and central catalog aligned; scripts inspected before execution; relevant tests run; independent review result recorded; CI terminal and assessed; PR Ready for review with accurate status. Any unmet item must be stated explicitly, not checked off as completed.
+
+---
+
 ## Quick Start
 
 ```bash
