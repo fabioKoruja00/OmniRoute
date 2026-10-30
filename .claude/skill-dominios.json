@@ -5,7 +5,11 @@
       "caminho": "^/(open-sse/services/(?:combo|fusion|accountFallback)|src/(?:domain/|lib/(?:routing|combos|reasoningRouting|quota|headroom)/))",
       "skills": [
         "omni-combos-routing",
-        "omni-resilience"
+        "omni-resilience",
+        "performance-optimization",
+        "node-testing",
+        "testing-strategy",
+        "test-gap-audit"
       ]
     },
     {
@@ -13,7 +17,10 @@
       "caminho": "^/(open-sse/(?:executors|translator|transformer|config)/|src/(?:models/|lib/(?:providers|providerModels|catalog|modelValidation|modelAlias|providerNodePrefixes)))",
       "skills": [
         "omni-providers",
-        "omni-models"
+        "omni-models",
+        "code-reviewer",
+        "node-testing",
+        "api-design-reviewer"
       ]
     },
     {
@@ -21,7 +28,11 @@
       "caminho": "^/(src/app/api/|open-sse/handlers/|src/lib/api/)",
       "skills": [
         "omni-inference",
-        "omni-auth"
+        "omni-auth",
+        "api-design-reviewer",
+        "api-test-suite-builder",
+        "api-security-patterns",
+        "testing-strategy"
       ]
     },
     {
@@ -29,7 +40,11 @@
       "caminho": "^/src/(?:lib/(?:auth|oauth|guardrails|compliance|security|pii|accessTokens)/|server/authz/)",
       "skills": [
         "omni-auth",
-        "omni-api-keys"
+        "omni-api-keys",
+        "secret-scanning",
+        "api-security-patterns",
+        "testing-strategy",
+        "code-reviewer"
       ]
     },
     {
@@ -37,28 +52,46 @@
       "caminho": "^/(open-sse/mcp-server/|src/lib/(?:a2a|acp|cloudAgent|agentSkills)/)",
       "skills": [
         "omni-mcp",
-        "omni-agents-a2a"
+        "omni-agents-a2a",
+        "api-design-reviewer",
+        "api-test-suite-builder",
+        "api-security-patterns",
+        "testing-strategy"
       ]
     },
     {
       "dominio": "banco-backup",
       "caminho": "^/src/lib/(?:db|usageDb|logExport)/",
       "skills": [
-        "omni-db-backups"
+        "omni-db-backups",
+        "sqlite-ops",
+        "sql-code-review",
+        "backup-recovery",
+        "node-testing",
+        "testing-strategy"
       ]
     },
     {
       "dominio": "cache",
       "caminho": "^/src/lib/(?:cache|promptCache|semanticCache)",
       "skills": [
-        "omni-cache"
+        "omni-cache",
+        "performance-optimization",
+        "node-testing",
+        "testing-strategy",
+        "test-gap-audit",
+        "api-health-monitoring"
       ]
     },
     {
       "dominio": "resiliencia",
       "caminho": "^/src/lib/(?:resilience|monitoring|credentialHealth|proxyHealth|tokenHealth)",
       "skills": [
-        "omni-resilience"
+        "omni-resilience",
+        "performance-optimization",
+        "node-testing",
+        "testing-strategy",
+        "test-gap-audit"
       ]
     },
     {
@@ -66,7 +99,10 @@
       "caminho": "^/src/lib/(?:spend|quota|usage|headroom)/",
       "skills": [
         "omni-budget",
-        "omni-usage-logs"
+        "omni-usage-logs",
+        "performance-optimization",
+        "node-testing",
+        "testing-strategy"
       ]
     },
     {
@@ -74,7 +110,10 @@
       "caminho": "^/(src/lib/(?:compression|contextWindowResolver|conductor)/|scripts/(?:compression|compression-eval|router-eval)/)",
       "skills": [
         "omni-compression",
-        "omni-context-rtk"
+        "omni-context-rtk",
+        "performance-optimization",
+        "node-testing",
+        "testing-strategy"
       ]
     },
     {
@@ -82,7 +121,10 @@
       "caminho": "^/(src/lib/(?:skills|agentSkills|plugins|memory|localCorpus|issueAgent)/|scripts/skills/)",
       "skills": [
         "omni-github-skills",
-        "omni-agents-a2a"
+        "omni-agents-a2a",
+        "agent-supply-chain",
+        "docs-sync-audit",
+        "writing-guidelines"
       ]
     },
     {
@@ -90,7 +132,11 @@
       "caminho": "^/(src/(?:mitm/|lib/(?:proxy|cloudflaredTunnel|ngrokTunnel|tailscaleTunnel|vncSession|sync)/))",
       "skills": [
         "omni-tunnels",
-        "omni-proxies"
+        "omni-proxies",
+        "networking",
+        "cloudflare-one",
+        "secret-scanning",
+        "node-testing"
       ]
     },
     {
@@ -98,7 +144,11 @@
       "caminho": "^/src/lib/(?:cloudSync|sync|webhooks|webhookDispatcher|events)/",
       "skills": [
         "omni-sync-cloud",
-        "omni-webhooks"
+        "omni-webhooks",
+        "api-design-reviewer",
+        "api-test-suite-builder",
+        "api-security-patterns",
+        "testing-strategy"
       ]
     },
     {
@@ -106,7 +156,10 @@
       "caminho": "^/(bin/|scripts/cli/|src/lib/(?:cliTools|cli-helper|versionManager)/)",
       "skills": [
         "omni-cli-tools",
-        "omni-version-manager"
+        "omni-version-manager",
+        "node-typescript",
+        "code-reviewer",
+        "node-testing"
       ]
     },
     {
@@ -116,7 +169,8 @@
         "frontend-patterns",
         "frontend-design",
         "accessibility",
-        "responsive-patterns"
+        "responsive-patterns",
+        "frontend-ui-engineering"
       ]
     },
     {
@@ -124,7 +178,10 @@
       "caminho": "^/electron/",
       "skills": [
         "nodejs-boas-praticas",
-        "error-handling"
+        "error-handling",
+        "networking",
+        "cloudflare-one",
+        "secret-scanning"
       ]
     },
     {
@@ -132,7 +189,11 @@
       "caminho": "^/tests/",
       "skills": [
         "nodejs-boas-praticas",
-        "constraint-driven-development"
+        "constraint-driven-development",
+        "node-testing",
+        "testing-strategy",
+        "test-gap-audit",
+        "code-reviewer"
       ]
     },
     {
@@ -140,7 +201,10 @@
       "caminho": "^/(scripts/|config/quality/)",
       "skills": [
         "nodejs-boas-praticas",
-        "constraint-driven-development"
+        "constraint-driven-development",
+        "node-typescript",
+        "code-reviewer",
+        "node-testing"
       ]
     },
     {
@@ -148,7 +212,11 @@
       "caminho": "^/\\.github/workflows/",
       "skills": [
         "github-actions-hardening",
-        "github-actions-efficiency"
+        "github-actions-efficiency",
+        "node-ci",
+        "node-supply-chain",
+        "github-ops",
+        "secret-scanning"
       ]
     },
     {
@@ -156,7 +224,10 @@
       "caminho": "^/(\\.github/|\\.husky/)",
       "skills": [
         "github-ops",
-        "git-workflow"
+        "git-workflow",
+        "node-ci",
+        "node-supply-chain",
+        "secret-scanning"
       ]
     },
     {
@@ -165,14 +236,18 @@
       "skills": [
         "linux-administration",
         "secrets-management",
-        "backup-recovery"
+        "backup-recovery",
+        "networking",
+        "cloudflare-one"
       ]
     },
     {
       "dominio": "documentacao",
       "caminho": "\\.md$|^/llm\\.txt$",
       "skills": [
-        "writing-guidelines"
+        "writing-guidelines",
+        "docs-sync-audit",
+        "git-workflow"
       ]
     },
     {
@@ -180,21 +255,32 @@
       "caminho": "^/\\.claude/skill-dominios\\.json$|^/SKILLS\\.md$",
       "skills": [
         "git-workflow",
-        "writing-guidelines"
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit",
+        "code-reviewer"
       ]
     },
     {
       "dominio": "skills-nativas",
       "caminho": "^/skills/",
       "skills": [
-        "omni-github-skills"
+        "omni-github-skills",
+        "agent-supply-chain",
+        "docs-sync-audit",
+        "writing-guidelines",
+        "git-workflow"
       ]
     },
     {
       "dominio": "configuracao",
       "caminho": "^/(config/|package(?:-lock)?\\.json$|pnpm|.*\\.config\\.)",
       "skills": [
-        "nodejs-boas-praticas"
+        "nodejs-boas-praticas",
+        "node-typescript",
+        "code-reviewer",
+        "node-testing",
+        "testing-strategy"
       ]
     },
     {
@@ -203,7 +289,9 @@
       "skills": [
         "backend-patterns",
         "error-handling",
-        "nodejs-boas-praticas"
+        "nodejs-boas-praticas",
+        "node-typescript",
+        "code-reviewer"
       ]
     },
     {
@@ -212,7 +300,10 @@
       "skills": [
         "api-security-patterns",
         "api-ratelimit-helper",
-        "api-health-monitoring"
+        "api-health-monitoring",
+        "api-design-reviewer",
+        "api-test-suite-builder",
+        "testing-strategy"
       ]
     },
     {
@@ -221,7 +312,10 @@
       "skills": [
         "nodejs-boas-praticas",
         "secrets-management",
-        "error-handling"
+        "error-handling",
+        "secret-scanning",
+        "api-security-patterns",
+        "testing-strategy"
       ]
     },
     {
@@ -230,7 +324,10 @@
       "skills": [
         "playwright-skill",
         "e2e-testing",
-        "accessibility"
+        "accessibility",
+        "node-testing",
+        "testing-strategy",
+        "test-gap-audit"
       ]
     },
     {
@@ -238,7 +335,11 @@
       "caminho": "^/tests/(?:security|llm-security)/",
       "skills": [
         "api-security-patterns",
-        "secrets-management"
+        "secrets-management",
+        "node-testing",
+        "testing-strategy",
+        "test-gap-audit",
+        "code-reviewer"
       ]
     },
     {
@@ -246,7 +347,11 @@
       "caminho": "^/tests/(?:load|benchmarks)/",
       "skills": [
         "nodejs-boas-praticas",
-        "constraint-driven-development"
+        "constraint-driven-development",
+        "node-testing",
+        "testing-strategy",
+        "test-gap-audit",
+        "code-reviewer"
       ]
     },
     {
@@ -255,7 +360,10 @@
       "skills": [
         "python-code-style",
         "python-anti-patterns",
-        "bats-testing-patterns"
+        "bats-testing-patterns",
+        "node-testing",
+        "testing-strategy",
+        "test-gap-audit"
       ]
     },
     {
@@ -264,7 +372,9 @@
       "skills": [
         "linux-administration",
         "backup-recovery",
-        "secrets-management"
+        "secrets-management",
+        "node-typescript",
+        "code-reviewer"
       ]
     },
     {
@@ -274,7 +384,9 @@
         "secrets-management",
         "jwt-validate",
         "api-security-patterns",
-        "env-secrets-manager"
+        "env-secrets-manager",
+        "secret-scanning",
+        "testing-strategy"
       ]
     },
     {
@@ -282,7 +394,10 @@
       "caminho": "\\.sql$|^/src/lib/(?:db|usageDb|logExport)/",
       "skills": [
         "sql-code-review",
-        "sqlite-ops"
+        "sqlite-ops",
+        "backup-recovery",
+        "node-testing",
+        "testing-strategy"
       ]
     },
     {
@@ -291,7 +406,9 @@
       "skills": [
         "frontend-patterns",
         "accessibility",
-        "responsive-patterns"
+        "responsive-patterns",
+        "frontend-ui-engineering",
+        "frontend-a11y"
       ]
     },
     {
@@ -300,7 +417,9 @@
       "skills": [
         "frontend-patterns",
         "writing-guidelines",
-        "i18n-expert"
+        "i18n-expert",
+        "docs-sync-audit",
+        "git-workflow"
       ]
     },
     {
@@ -309,7 +428,9 @@
       "skills": [
         "frontend-patterns",
         "accessibility",
-        "frontend-design"
+        "frontend-design",
+        "nextjs-quality",
+        "frontend-excellence"
       ]
     },
     {
@@ -318,7 +439,9 @@
       "skills": [
         "constraint-driven-development",
         "nodejs-boas-praticas",
-        "deprecation-and-migration"
+        "deprecation-and-migration",
+        "node-testing",
+        "testing-strategy"
       ]
     },
     {
@@ -326,7 +449,10 @@
       "caminho": "^/\\.github/dependabot\\.yml$",
       "skills": [
         "github-ops",
-        "secrets-management"
+        "secrets-management",
+        "node-ci",
+        "node-supply-chain",
+        "secret-scanning"
       ]
     },
     {
@@ -334,7 +460,10 @@
       "caminho": "^/(?:packages/|pnpm-workspace\\.yaml$|package(?:-lock)?\\.json$)",
       "skills": [
         "nodejs-boas-praticas",
-        "backend-patterns"
+        "backend-patterns",
+        "node-typescript",
+        "code-reviewer",
+        "node-testing"
       ]
     },
     {
@@ -343,7 +472,9 @@
       "skills": [
         "linux-administration",
         "secrets-management",
-        "backup-recovery"
+        "backup-recovery",
+        "networking",
+        "cloudflare-one"
       ]
     },
     {
@@ -352,14 +483,21 @@
       "skills": [
         "backend-patterns",
         "error-handling",
-        "api-health-monitoring"
+        "api-health-monitoring",
+        "api-design-reviewer",
+        "api-test-suite-builder",
+        "api-security-patterns"
       ]
     },
     {
       "dominio": "skills-cli-comandos",
       "caminho": "^/skills/cli-",
       "skills": [
-        "omni-github-skills"
+        "omni-github-skills",
+        "agent-supply-chain",
+        "docs-sync-audit",
+        "writing-guidelines",
+        "git-workflow"
       ]
     },
     {
@@ -367,175 +505,248 @@
       "caminho": "^/(?:AGENTS|CLAUDE|GEMINI|CONTRIBUTING|README|SKILLS)\\.md$",
       "skills": [
         "writing-guidelines",
-        "git-workflow"
+        "git-workflow",
+        "docs-sync-audit"
       ]
     },
     {
       "dominio": "nativa-cli-a2a",
       "caminho": "^/skills/cli-a2a/",
       "skills": [
-        "cli-a2a"
+        "cli-a2a",
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
       "dominio": "nativa-cli-backup-sync",
       "caminho": "^/skills/cli-backup-sync/",
       "skills": [
-        "cli-backup-sync"
+        "cli-backup-sync",
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
       "dominio": "nativa-cli-batches",
       "caminho": "^/skills/cli-batches/",
       "skills": [
-        "cli-batches"
+        "cli-batches",
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
       "dominio": "nativa-cli-chat",
       "caminho": "^/skills/cli-chat/",
       "skills": [
-        "cli-chat"
+        "cli-chat",
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
       "dominio": "nativa-cli-compression",
       "caminho": "^/skills/cli-compression/",
       "skills": [
-        "cli-compression"
+        "cli-compression",
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
       "dominio": "nativa-cli-contexts",
       "caminho": "^/skills/cli-contexts/",
       "skills": [
-        "cli-contexts"
+        "cli-contexts",
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
       "dominio": "nativa-cli-cost-usage",
       "caminho": "^/skills/cli-cost-usage/",
       "skills": [
-        "cli-cost-usage"
+        "cli-cost-usage",
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
       "dominio": "nativa-cli-eval",
       "caminho": "^/skills/cli-eval/",
       "skills": [
-        "cli-eval"
+        "cli-eval",
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
       "dominio": "nativa-cli-health",
       "caminho": "^/skills/cli-health/",
       "skills": [
-        "cli-health"
+        "cli-health",
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
       "dominio": "nativa-cli-keys",
       "caminho": "^/skills/cli-keys/",
       "skills": [
-        "cli-keys"
+        "cli-keys",
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
       "dominio": "nativa-cli-mcp",
       "caminho": "^/skills/cli-mcp/",
       "skills": [
-        "cli-mcp"
+        "cli-mcp",
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
       "dominio": "nativa-cli-models",
       "caminho": "^/skills/cli-models/",
       "skills": [
-        "cli-models"
+        "cli-models",
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
       "dominio": "nativa-cli-plugins-skills",
       "caminho": "^/skills/cli-plugins-skills/",
       "skills": [
-        "cli-plugins-skills"
+        "cli-plugins-skills",
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
       "dominio": "nativa-cli-policy-audit",
       "caminho": "^/skills/cli-policy-audit/",
       "skills": [
-        "cli-policy-audit"
+        "cli-policy-audit",
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
       "dominio": "nativa-cli-providers",
       "caminho": "^/skills/cli-providers/",
       "skills": [
-        "cli-providers"
+        "cli-providers",
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
       "dominio": "nativa-cli-resilience",
       "caminho": "^/skills/cli-resilience/",
       "skills": [
-        "cli-resilience"
+        "cli-resilience",
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
       "dominio": "nativa-cli-routing",
       "caminho": "^/skills/cli-routing/",
       "skills": [
-        "cli-routing"
+        "cli-routing",
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
       "dominio": "nativa-cli-serve",
       "caminho": "^/skills/cli-serve/",
       "skills": [
-        "cli-serve"
+        "cli-serve",
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
       "dominio": "nativa-cli-setup",
       "caminho": "^/skills/cli-setup/",
       "skills": [
-        "cli-setup"
+        "cli-setup",
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
       "dominio": "nativa-cli-skill-collector",
       "caminho": "^/skills/cli-skill-collector/",
       "skills": [
-        "cli-skill-collector"
+        "cli-skill-collector",
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
       "dominio": "nativa-cli-tunnel",
       "caminho": "^/skills/cli-tunnel/",
       "skills": [
-        "cli-tunnel"
+        "cli-tunnel",
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
       "dominio": "nativa-config-codex-cli",
       "caminho": "^/skills/config-codex-cli/",
       "skills": [
-        "config-codex-cli"
+        "config-codex-cli",
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
       "dominio": "nativa-omni-settings",
       "caminho": "^/skills/omni-settings/",
       "skills": [
-        "omni-settings"
+        "omni-settings",
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
       "dominio": "nativa-ponytail",
       "caminho": "^/skills/ponytail/",
       "skills": [
-        "ponytail"
+        "ponytail",
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
@@ -544,7 +755,9 @@
       "skills": [
         "nodejs-boas-praticas",
         "backend-patterns",
-        "api-security-patterns"
+        "api-security-patterns",
+        "node-typescript",
+        "code-reviewer"
       ]
     },
     {
@@ -552,7 +765,10 @@
       "caminho": "^/src/(?:shared/(?:types|contracts|schemas|validation)/|types/)",
       "skills": [
         "nodejs-boas-praticas",
-        "api-security-patterns"
+        "api-security-patterns",
+        "node-typescript",
+        "code-reviewer",
+        "node-testing"
       ]
     },
     {
@@ -561,7 +777,9 @@
       "skills": [
         "frontend-patterns",
         "accessibility",
-        "responsive-patterns"
+        "responsive-patterns",
+        "frontend-ui-engineering",
+        "frontend-a11y"
       ]
     },
     {
@@ -570,7 +788,10 @@
       "skills": [
         "omni-auth",
         "api-security-patterns",
-        "jwt-validate"
+        "jwt-validate",
+        "secret-scanning",
+        "testing-strategy",
+        "code-reviewer"
       ]
     },
     {
@@ -579,7 +800,9 @@
       "skills": [
         "api-security-patterns",
         "error-handling",
-        "nodejs-boas-praticas"
+        "nodejs-boas-praticas",
+        "node-typescript",
+        "code-reviewer"
       ]
     },
     {
@@ -588,7 +811,10 @@
       "skills": [
         "omni-inference",
         "error-handling",
-        "nodejs-boas-praticas"
+        "nodejs-boas-praticas",
+        "api-design-reviewer",
+        "api-test-suite-builder",
+        "api-security-patterns"
       ]
     },
     {
@@ -597,7 +823,10 @@
       "skills": [
         "api-security-patterns",
         "secrets-management",
-        "omni-proxies"
+        "omni-proxies",
+        "secret-scanning",
+        "testing-strategy",
+        "code-reviewer"
       ]
     },
     {
@@ -605,7 +834,10 @@
       "caminho": "^/src/domain/",
       "skills": [
         "backend-patterns",
-        "constraint-driven-development"
+        "constraint-driven-development",
+        "node-typescript",
+        "code-reviewer",
+        "node-testing"
       ]
     },
     {
@@ -614,7 +846,9 @@
       "skills": [
         "frontend-patterns",
         "writing-guidelines",
-        "i18n-expert"
+        "i18n-expert",
+        "docs-sync-audit",
+        "git-workflow"
       ]
     },
     {
@@ -623,7 +857,9 @@
       "skills": [
         "nodejs-boas-praticas",
         "api-health-monitoring",
-        "error-handling"
+        "error-handling",
+        "node-typescript",
+        "code-reviewer"
       ]
     },
     {
@@ -633,7 +869,9 @@
         "omni-auth",
         "jwt-validate",
         "api-security-patterns",
-        "secrets-management"
+        "secrets-management",
+        "secret-scanning",
+        "testing-strategy"
       ]
     },
     {
@@ -642,7 +880,9 @@
       "skills": [
         "api-security-patterns",
         "secrets-management",
-        "error-handling"
+        "error-handling",
+        "secret-scanning",
+        "testing-strategy"
       ]
     },
     {
@@ -651,7 +891,9 @@
       "skills": [
         "omni-providers",
         "omni-models",
-        "backend-patterns"
+        "backend-patterns",
+        "code-reviewer",
+        "node-testing"
       ]
     },
     {
@@ -660,7 +902,10 @@
       "skills": [
         "omni-combos-routing",
         "omni-resilience",
-        "nodejs-boas-praticas"
+        "nodejs-boas-praticas",
+        "performance-optimization",
+        "node-testing",
+        "testing-strategy"
       ]
     },
     {
@@ -669,7 +914,9 @@
       "skills": [
         "omni-resilience",
         "api-health-monitoring",
-        "secrets-management"
+        "secrets-management",
+        "secret-scanning",
+        "api-security-patterns"
       ]
     },
     {
@@ -677,7 +924,11 @@
       "caminho": "^/src/lib/(?:cache|promptCache|semanticCache)(?:/|\\.|$)",
       "skills": [
         "omni-cache",
-        "nodejs-boas-praticas"
+        "nodejs-boas-praticas",
+        "performance-optimization",
+        "node-testing",
+        "testing-strategy",
+        "test-gap-audit"
       ]
     },
     {
@@ -686,7 +937,10 @@
       "skills": [
         "omni-db-backups",
         "sqlite-ops",
-        "sql-code-review"
+        "sql-code-review",
+        "backup-recovery",
+        "node-testing",
+        "testing-strategy"
       ]
     },
     {
@@ -695,7 +949,9 @@
       "skills": [
         "omni-compression",
         "omni-context-rtk",
-        "backend-patterns"
+        "backend-patterns",
+        "performance-optimization",
+        "node-testing"
       ]
     },
     {
@@ -704,7 +960,9 @@
       "skills": [
         "omni-agents-a2a",
         "omni-mcp",
-        "api-security-patterns"
+        "api-security-patterns",
+        "node-typescript",
+        "code-reviewer"
       ]
     },
     {
@@ -713,7 +971,9 @@
       "skills": [
         "omni-agents-a2a",
         "backend-patterns",
-        "api-security-patterns"
+        "api-security-patterns",
+        "node-typescript",
+        "code-reviewer"
       ]
     },
     {
@@ -722,7 +982,9 @@
       "skills": [
         "omni-github-skills",
         "api-security-patterns",
-        "backend-patterns"
+        "backend-patterns",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
@@ -731,7 +993,10 @@
       "skills": [
         "omni-proxies",
         "omni-tunnels",
-        "api-security-patterns"
+        "api-security-patterns",
+        "networking",
+        "cloudflare-one",
+        "secret-scanning"
       ]
     },
     {
@@ -740,7 +1005,9 @@
       "skills": [
         "omni-webhooks",
         "omni-sync-cloud",
-        "api-security-patterns"
+        "api-security-patterns",
+        "api-design-reviewer",
+        "api-test-suite-builder"
       ]
     },
     {
@@ -749,7 +1016,9 @@
       "skills": [
         "backend-patterns",
         "nodejs-boas-praticas",
-        "graceful-shutdown"
+        "graceful-shutdown",
+        "networking",
+        "cloudflare-one"
       ]
     },
     {
@@ -758,7 +1027,9 @@
       "skills": [
         "omni-cli-tools",
         "omni-version-manager",
-        "nodejs-boas-praticas"
+        "nodejs-boas-praticas",
+        "node-typescript",
+        "code-reviewer"
       ]
     },
     {
@@ -767,7 +1038,9 @@
       "skills": [
         "omni-inference",
         "backend-patterns",
-        "api-security-patterns"
+        "api-security-patterns",
+        "node-typescript",
+        "code-reviewer"
       ]
     },
     {
@@ -776,7 +1049,9 @@
       "skills": [
         "constraint-driven-development",
         "omni-resilience",
-        "nodejs-boas-praticas"
+        "nodejs-boas-praticas",
+        "node-typescript",
+        "code-reviewer"
       ]
     },
     {
@@ -785,7 +1060,9 @@
       "skills": [
         "nodejs-boas-praticas",
         "backend-patterns",
-        "error-handling"
+        "error-handling",
+        "node-typescript",
+        "code-reviewer"
       ]
     },
     {
@@ -793,7 +1070,10 @@
       "caminho": "^/src/lib/(?:gamification)(?:/|\\.|$)",
       "skills": [
         "backend-patterns",
-        "nodejs-boas-praticas"
+        "nodejs-boas-praticas",
+        "node-typescript",
+        "code-reviewer",
+        "node-testing"
       ]
     },
     {
@@ -802,7 +1082,9 @@
       "skills": [
         "omni-budget",
         "omni-usage-logs",
-        "omni-resilience"
+        "omni-resilience",
+        "secret-scanning",
+        "api-security-patterns"
       ]
     },
     {
@@ -810,7 +1092,10 @@
       "caminho": "^/src/lib/(?:versionManager|deploy|transfer)(?:/|\\.|$)",
       "skills": [
         "omni-version-manager",
-        "nodejs-boas-praticas"
+        "nodejs-boas-praticas",
+        "node-typescript",
+        "code-reviewer",
+        "node-testing"
       ]
     },
     {
@@ -818,7 +1103,10 @@
       "caminho": "^/src/lib/[^/]+\\.(?:ts|tsx|js|mjs|cjs)$",
       "skills": [
         "backend-patterns",
-        "nodejs-boas-praticas"
+        "nodejs-boas-praticas",
+        "node-typescript",
+        "code-reviewer",
+        "node-testing"
       ]
     },
     {
@@ -827,7 +1115,10 @@
       "skills": [
         "api-security-patterns",
         "api-ratelimit-helper",
-        "error-handling"
+        "error-handling",
+        "api-design-reviewer",
+        "api-test-suite-builder",
+        "testing-strategy"
       ]
     },
     {
@@ -836,7 +1127,10 @@
       "skills": [
         "omni-auth",
         "omni-api-keys",
-        "jwt-validate"
+        "jwt-validate",
+        "api-design-reviewer",
+        "api-test-suite-builder",
+        "api-security-patterns"
       ]
     },
     {
@@ -845,7 +1139,10 @@
       "skills": [
         "omni-providers",
         "omni-models",
-        "api-security-patterns"
+        "api-security-patterns",
+        "api-design-reviewer",
+        "api-test-suite-builder",
+        "testing-strategy"
       ]
     },
     {
@@ -854,7 +1151,10 @@
       "skills": [
         "omni-combos-routing",
         "omni-resilience",
-        "api-health-monitoring"
+        "api-health-monitoring",
+        "api-design-reviewer",
+        "api-test-suite-builder",
+        "api-security-patterns"
       ]
     },
     {
@@ -863,7 +1163,10 @@
       "skills": [
         "omni-inference",
         "omni-providers",
-        "error-handling"
+        "error-handling",
+        "api-design-reviewer",
+        "api-test-suite-builder",
+        "api-security-patterns"
       ]
     },
     {
@@ -872,7 +1175,10 @@
       "skills": [
         "omni-context-rtk",
         "omni-cache",
-        "api-security-patterns"
+        "api-security-patterns",
+        "api-design-reviewer",
+        "api-test-suite-builder",
+        "testing-strategy"
       ]
     },
     {
@@ -881,7 +1187,10 @@
       "skills": [
         "omni-mcp",
         "omni-agents-a2a",
-        "omni-webhooks"
+        "omni-webhooks",
+        "api-design-reviewer",
+        "api-test-suite-builder",
+        "api-security-patterns"
       ]
     },
     {
@@ -890,7 +1199,10 @@
       "skills": [
         "omni-usage-logs",
         "omni-db-backups",
-        "api-security-patterns"
+        "api-security-patterns",
+        "api-design-reviewer",
+        "api-test-suite-builder",
+        "testing-strategy"
       ]
     },
     {
@@ -899,7 +1211,10 @@
       "skills": [
         "omni-cli-tools",
         "omni-tunnels",
-        "api-security-patterns"
+        "api-security-patterns",
+        "api-design-reviewer",
+        "api-test-suite-builder",
+        "testing-strategy"
       ]
     },
     {
@@ -907,7 +1222,11 @@
       "caminho": "^/src/app/api/(?:settings|playground|gamification|version-manager|omniroute|api-endpoints)/",
       "skills": [
         "backend-patterns",
-        "api-security-patterns"
+        "api-security-patterns",
+        "frontend-ui-engineering",
+        "frontend-a11y",
+        "nextjs-quality",
+        "responsiveness-check"
       ]
     },
     {
@@ -916,7 +1235,10 @@
       "skills": [
         "frontend-patterns",
         "accessibility",
-        "responsive-patterns"
+        "responsive-patterns",
+        "frontend-ui-engineering",
+        "frontend-a11y",
+        "nextjs-quality"
       ]
     },
     {
@@ -925,7 +1247,10 @@
       "skills": [
         "omni-providers",
         "omni-models",
-        "frontend-patterns"
+        "frontend-patterns",
+        "frontend-ui-engineering",
+        "frontend-a11y",
+        "nextjs-quality"
       ]
     },
     {
@@ -934,7 +1259,10 @@
       "skills": [
         "omni-combos-routing",
         "omni-resilience",
-        "frontend-patterns"
+        "frontend-patterns",
+        "frontend-ui-engineering",
+        "frontend-a11y",
+        "nextjs-quality"
       ]
     },
     {
@@ -943,7 +1271,10 @@
       "skills": [
         "omni-usage-logs",
         "omni-budget",
-        "frontend-patterns"
+        "frontend-patterns",
+        "frontend-ui-engineering",
+        "frontend-a11y",
+        "nextjs-quality"
       ]
     },
     {
@@ -952,7 +1283,10 @@
       "skills": [
         "omni-context-rtk",
         "omni-compression",
-        "frontend-patterns"
+        "frontend-patterns",
+        "frontend-ui-engineering",
+        "frontend-a11y",
+        "nextjs-quality"
       ]
     },
     {
@@ -961,7 +1295,10 @@
       "skills": [
         "omni-agents-a2a",
         "omni-mcp",
-        "omni-github-skills"
+        "omni-github-skills",
+        "frontend-ui-engineering",
+        "frontend-a11y",
+        "nextjs-quality"
       ]
     },
     {
@@ -970,7 +1307,10 @@
       "skills": [
         "omni-inference",
         "omni-webhooks",
-        "frontend-patterns"
+        "frontend-patterns",
+        "frontend-ui-engineering",
+        "frontend-a11y",
+        "nextjs-quality"
       ]
     },
     {
@@ -979,7 +1319,10 @@
       "skills": [
         "omni-settings",
         "frontend-patterns",
-        "accessibility"
+        "accessibility",
+        "frontend-ui-engineering",
+        "frontend-a11y",
+        "nextjs-quality"
       ]
     },
     {
@@ -988,7 +1331,10 @@
       "skills": [
         "omni-resilience",
         "api-security-patterns",
-        "frontend-patterns"
+        "frontend-patterns",
+        "frontend-ui-engineering",
+        "frontend-a11y",
+        "nextjs-quality"
       ]
     },
     {
@@ -996,7 +1342,11 @@
       "caminho": "^/src/app/\\(dashboard\\)/dashboard/(?:gamification|changelog)/",
       "skills": [
         "frontend-patterns",
-        "writing-guidelines"
+        "writing-guidelines",
+        "frontend-ui-engineering",
+        "frontend-a11y",
+        "nextjs-quality",
+        "responsiveness-check"
       ]
     },
     {
@@ -1005,7 +1355,10 @@
       "skills": [
         "omni-auth",
         "frontend-patterns",
-        "accessibility"
+        "accessibility",
+        "frontend-ui-engineering",
+        "frontend-a11y",
+        "nextjs-quality"
       ]
     },
     {
@@ -1014,7 +1367,10 @@
       "skills": [
         "writing-guidelines",
         "frontend-patterns",
-        "accessibility"
+        "accessibility",
+        "docs-sync-audit",
+        "git-workflow",
+        "i18n-expert"
       ]
     },
     {
@@ -1023,7 +1379,10 @@
       "skills": [
         "omni-resilience",
         "frontend-patterns",
-        "accessibility"
+        "accessibility",
+        "frontend-ui-engineering",
+        "frontend-a11y",
+        "nextjs-quality"
       ]
     },
     {
@@ -1032,7 +1391,10 @@
       "skills": [
         "omni-mcp",
         "frontend-patterns",
-        "api-security-patterns"
+        "api-security-patterns",
+        "frontend-ui-engineering",
+        "frontend-a11y",
+        "nextjs-quality"
       ]
     },
     {
@@ -1041,7 +1403,10 @@
       "skills": [
         "frontend-design",
         "responsive-patterns",
-        "accessibility"
+        "accessibility",
+        "frontend-ui-engineering",
+        "frontend-a11y",
+        "nextjs-quality"
       ]
     },
     {
@@ -1051,7 +1416,8 @@
         "frontend-patterns",
         "frontend-design",
         "accessibility",
-        "responsive-patterns"
+        "responsive-patterns",
+        "frontend-ui-engineering"
       ]
     },
     {
@@ -1060,7 +1426,9 @@
       "skills": [
         "playwright-skill",
         "api-security-patterns",
-        "nodejs-boas-praticas"
+        "nodejs-boas-praticas",
+        "code-reviewer",
+        "testing-strategy"
       ]
     },
     {
@@ -1069,7 +1437,9 @@
       "skills": [
         "nodejs-boas-praticas",
         "api-security-patterns",
-        "graceful-shutdown"
+        "graceful-shutdown",
+        "networking",
+        "cloudflare-one"
       ]
     },
     {
@@ -1077,7 +1447,10 @@
       "caminho": "^/electron/(?:package(?:-lock)?\\.json|assets/|.*\\.html$)",
       "skills": [
         "nodejs-boas-praticas",
-        "secrets-management"
+        "secrets-management",
+        "networking",
+        "cloudflare-one",
+        "secret-scanning"
       ]
     },
     {
@@ -1086,7 +1459,9 @@
       "skills": [
         "omni-providers",
         "omni-combos-routing",
-        "nodejs-boas-praticas"
+        "nodejs-boas-praticas",
+        "code-reviewer",
+        "node-testing"
       ]
     },
     {
@@ -1094,7 +1469,11 @@
       "caminho": "^/@omniroute/[^/]+/tests/",
       "skills": [
         "nodejs-boas-praticas",
-        "constraint-driven-development"
+        "constraint-driven-development",
+        "node-testing",
+        "testing-strategy",
+        "test-gap-audit",
+        "code-reviewer"
       ]
     },
     {
@@ -1102,7 +1481,10 @@
       "caminho": "^/@omniroute/[^/]+/src/(?:credentials|auth|management|telemetry)",
       "skills": [
         "secrets-management",
-        "api-security-patterns"
+        "api-security-patterns",
+        "code-reviewer",
+        "node-testing",
+        "api-design-reviewer"
       ]
     },
     {
@@ -1111,7 +1493,9 @@
       "skills": [
         "nodejs-boas-praticas",
         "git-workflow",
-        "deprecation-and-migration"
+        "deprecation-and-migration",
+        "node-ci",
+        "node-supply-chain"
       ]
     },
     {
@@ -1120,7 +1504,10 @@
       "skills": [
         "omni-inference",
         "backend-patterns",
-        "error-handling"
+        "error-handling",
+        "api-design-reviewer",
+        "api-test-suite-builder",
+        "api-security-patterns"
       ]
     },
     {
@@ -1129,7 +1516,10 @@
       "skills": [
         "omni-providers",
         "omni-resilience",
-        "api-security-patterns"
+        "api-security-patterns",
+        "api-design-reviewer",
+        "api-test-suite-builder",
+        "testing-strategy"
       ]
     },
     {
@@ -1138,7 +1528,10 @@
       "skills": [
         "omni-providers",
         "omni-models",
-        "nodejs-boas-praticas"
+        "nodejs-boas-praticas",
+        "api-design-reviewer",
+        "api-test-suite-builder",
+        "api-security-patterns"
       ]
     },
     {
@@ -1147,7 +1540,10 @@
       "skills": [
         "omni-models",
         "omni-providers",
-        "nodejs-boas-praticas"
+        "nodejs-boas-praticas",
+        "api-design-reviewer",
+        "api-test-suite-builder",
+        "api-security-patterns"
       ]
     },
     {
@@ -1156,7 +1552,10 @@
       "skills": [
         "omni-inference",
         "error-handling",
-        "api-security-patterns"
+        "api-security-patterns",
+        "api-design-reviewer",
+        "api-test-suite-builder",
+        "testing-strategy"
       ]
     },
     {
@@ -1165,7 +1564,10 @@
       "skills": [
         "omni-inference",
         "omni-providers",
-        "api-security-patterns"
+        "api-security-patterns",
+        "api-design-reviewer",
+        "api-test-suite-builder",
+        "testing-strategy"
       ]
     },
     {
@@ -1174,7 +1576,10 @@
       "skills": [
         "api-security-patterns",
         "error-handling",
-        "omni-inference"
+        "omni-inference",
+        "api-design-reviewer",
+        "api-test-suite-builder",
+        "testing-strategy"
       ]
     },
     {
@@ -1183,7 +1588,10 @@
       "skills": [
         "omni-inference",
         "omni-models",
-        "error-handling"
+        "error-handling",
+        "api-design-reviewer",
+        "api-test-suite-builder",
+        "api-security-patterns"
       ]
     },
     {
@@ -1192,7 +1600,10 @@
       "skills": [
         "omni-mcp",
         "omni-agents-a2a",
-        "api-security-patterns"
+        "api-security-patterns",
+        "api-design-reviewer",
+        "api-test-suite-builder",
+        "testing-strategy"
       ]
     },
     {
@@ -1201,7 +1612,10 @@
       "skills": [
         "omni-providers",
         "api-security-patterns",
-        "nodejs-boas-praticas"
+        "nodejs-boas-praticas",
+        "api-design-reviewer",
+        "api-test-suite-builder",
+        "testing-strategy"
       ]
     },
     {
@@ -1210,7 +1624,10 @@
       "skills": [
         "backend-patterns",
         "error-handling",
-        "nodejs-boas-praticas"
+        "nodejs-boas-praticas",
+        "api-design-reviewer",
+        "api-test-suite-builder",
+        "api-security-patterns"
       ]
     },
     {
@@ -1219,7 +1636,10 @@
       "skills": [
         "omni-combos-routing",
         "omni-resilience",
-        "nodejs-boas-praticas"
+        "nodejs-boas-praticas",
+        "api-design-reviewer",
+        "api-test-suite-builder",
+        "api-security-patterns"
       ]
     },
     {
@@ -1228,7 +1648,10 @@
       "skills": [
         "omni-compression",
         "omni-context-rtk",
-        "nodejs-boas-praticas"
+        "nodejs-boas-praticas",
+        "api-design-reviewer",
+        "api-test-suite-builder",
+        "api-security-patterns"
       ]
     },
     {
@@ -1237,7 +1660,10 @@
       "skills": [
         "omni-usage-logs",
         "omni-budget",
-        "api-ratelimit-helper"
+        "api-ratelimit-helper",
+        "api-design-reviewer",
+        "api-test-suite-builder",
+        "api-security-patterns"
       ]
     },
     {
@@ -1246,7 +1672,10 @@
       "skills": [
         "omni-auth",
         "omni-resilience",
-        "secrets-management"
+        "secrets-management",
+        "api-design-reviewer",
+        "api-test-suite-builder",
+        "api-security-patterns"
       ]
     },
     {
@@ -1254,7 +1683,11 @@
       "caminho": "^/open-sse/services/(?:cache)(?:/|\\.|$)",
       "skills": [
         "omni-cache",
-        "nodejs-boas-praticas"
+        "nodejs-boas-praticas",
+        "api-design-reviewer",
+        "api-test-suite-builder",
+        "api-security-patterns",
+        "testing-strategy"
       ]
     },
     {
@@ -1262,7 +1695,11 @@
       "caminho": "^/open-sse/services/(?:browserBackedChat)(?:/|\\.|$)",
       "skills": [
         "playwright-skill",
-        "api-security-patterns"
+        "api-security-patterns",
+        "api-design-reviewer",
+        "api-test-suite-builder",
+        "testing-strategy",
+        "code-reviewer"
       ]
     },
     {
@@ -1271,7 +1708,10 @@
       "skills": [
         "nodejs-boas-praticas",
         "constraint-driven-development",
-        "vitest-skill"
+        "vitest-skill",
+        "node-testing",
+        "testing-strategy",
+        "test-gap-audit"
       ]
     },
     {
@@ -1279,7 +1719,11 @@
       "caminho": "^/tests/unit/",
       "skills": [
         "nodejs-boas-praticas",
-        "constraint-driven-development"
+        "constraint-driven-development",
+        "node-testing",
+        "testing-strategy",
+        "test-gap-audit",
+        "code-reviewer"
       ]
     },
     {
@@ -1288,7 +1732,10 @@
       "skills": [
         "frontend-patterns",
         "accessibility",
-        "nodejs-boas-praticas"
+        "nodejs-boas-praticas",
+        "node-testing",
+        "testing-strategy",
+        "test-gap-audit"
       ]
     },
     {
@@ -1297,7 +1744,10 @@
       "skills": [
         "omni-compression",
         "omni-combos-routing",
-        "nodejs-boas-praticas"
+        "nodejs-boas-praticas",
+        "node-testing",
+        "testing-strategy",
+        "test-gap-audit"
       ]
     },
     {
@@ -1306,7 +1756,10 @@
       "skills": [
         "api-security-patterns",
         "jwt-validate",
-        "secrets-management"
+        "secrets-management",
+        "node-testing",
+        "testing-strategy",
+        "test-gap-audit"
       ]
     },
     {
@@ -1315,7 +1768,10 @@
       "skills": [
         "sqlite-ops",
         "sql-code-review",
-        "nodejs-boas-praticas"
+        "nodejs-boas-praticas",
+        "node-testing",
+        "testing-strategy",
+        "test-gap-audit"
       ]
     },
     {
@@ -1324,7 +1780,10 @@
       "skills": [
         "omni-inference",
         "omni-mcp",
-        "nodejs-boas-praticas"
+        "nodejs-boas-praticas",
+        "node-testing",
+        "testing-strategy",
+        "test-gap-audit"
       ]
     },
     {
@@ -1332,7 +1791,11 @@
       "caminho": "^/tests/unit/(?:build|cli|cli-helper|runtime|settings)/",
       "skills": [
         "nodejs-boas-praticas",
-        "constraint-driven-development"
+        "constraint-driven-development",
+        "node-testing",
+        "testing-strategy",
+        "test-gap-audit",
+        "code-reviewer"
       ]
     },
     {
@@ -1340,7 +1803,11 @@
       "caminho": "^/tests/unit/(?:docs|feature-triage)/",
       "skills": [
         "writing-guidelines",
-        "constraint-driven-development"
+        "constraint-driven-development",
+        "docs-sync-audit",
+        "git-workflow",
+        "i18n-expert",
+        "node-testing"
       ]
     },
     {
@@ -1349,7 +1816,10 @@
       "skills": [
         "e2e-testing",
         "nodejs-boas-praticas",
-        "api-security-patterns"
+        "api-security-patterns",
+        "node-testing",
+        "testing-strategy",
+        "test-gap-audit"
       ]
     },
     {
@@ -1359,7 +1829,9 @@
         "playwright-skill",
         "e2e-testing",
         "accessibility",
-        "responsive-design"
+        "responsive-design",
+        "node-testing",
+        "testing-strategy"
       ]
     },
     {
@@ -1367,7 +1839,11 @@
       "caminho": "^/tests/(?:security|llm-security)/",
       "skills": [
         "api-security-patterns",
-        "constraint-driven-development"
+        "constraint-driven-development",
+        "node-testing",
+        "testing-strategy",
+        "test-gap-audit",
+        "code-reviewer"
       ]
     },
     {
@@ -1375,7 +1851,11 @@
       "caminho": "^/tests/(?:golden-set|snapshots|fixtures)/",
       "skills": [
         "constraint-driven-development",
-        "nodejs-boas-praticas"
+        "nodejs-boas-praticas",
+        "node-testing",
+        "testing-strategy",
+        "test-gap-audit",
+        "code-reviewer"
       ]
     },
     {
@@ -1383,7 +1863,11 @@
       "caminho": "^/tests/(?:load|benchmarks)/",
       "skills": [
         "nodejs-boas-praticas",
-        "constraint-driven-development"
+        "constraint-driven-development",
+        "node-testing",
+        "testing-strategy",
+        "test-gap-audit",
+        "code-reviewer"
       ]
     },
     {
@@ -1391,7 +1875,11 @@
       "caminho": "^/tests/(?:_setup|_helpers|helpers|_run|_cp_)/",
       "skills": [
         "nodejs-boas-praticas",
-        "constraint-driven-development"
+        "constraint-driven-development",
+        "node-testing",
+        "testing-strategy",
+        "test-gap-audit",
+        "code-reviewer"
       ]
     },
     {
@@ -1400,7 +1888,10 @@
       "skills": [
         "nodejs-boas-praticas",
         "playwright-skill",
-        "vitest-skill"
+        "vitest-skill",
+        "node-testing",
+        "testing-strategy",
+        "test-gap-audit"
       ]
     },
     {
@@ -1409,7 +1900,9 @@
       "skills": [
         "nodejs-boas-praticas",
         "deprecation-and-migration",
-        "git-workflow"
+        "git-workflow",
+        "node-ci",
+        "node-supply-chain"
       ]
     },
     {
@@ -1417,7 +1910,10 @@
       "caminho": "^/scripts/(?:check|quality)/",
       "skills": [
         "constraint-driven-development",
-        "nodejs-boas-praticas"
+        "nodejs-boas-praticas",
+        "node-testing",
+        "testing-strategy",
+        "test-gap-audit"
       ]
     },
     {
@@ -1426,7 +1922,9 @@
       "skills": [
         "github-actions-hardening",
         "github-actions-efficiency",
-        "nodejs-boas-praticas"
+        "nodejs-boas-praticas",
+        "node-ci",
+        "node-supply-chain"
       ]
     },
     {
@@ -1435,7 +1933,9 @@
       "skills": [
         "writing-guidelines",
         "nodejs-boas-praticas",
-        "i18n-expert"
+        "i18n-expert",
+        "docs-sync-audit",
+        "git-workflow"
       ]
     },
     {
@@ -1444,7 +1944,9 @@
       "skills": [
         "nodejs-boas-praticas",
         "constraint-driven-development",
-        "omni-resilience"
+        "omni-resilience",
+        "performance-optimization",
+        "node-testing"
       ]
     },
     {
@@ -1453,7 +1955,9 @@
       "skills": [
         "linux-administration",
         "nodejs-boas-praticas",
-        "systemd-services"
+        "systemd-services",
+        "node-typescript",
+        "code-reviewer"
       ]
     },
     {
@@ -1461,7 +1965,10 @@
       "caminho": "^/scripts/(?:dev|ad-hoc|features|research|test)/",
       "skills": [
         "nodejs-boas-praticas",
-        "constraint-driven-development"
+        "constraint-driven-development",
+        "secret-scanning",
+        "api-security-patterns",
+        "testing-strategy"
       ]
     },
     {
@@ -1469,7 +1976,10 @@
       "caminho": "^/scripts/cli/",
       "skills": [
         "omni-cli-tools",
-        "nodejs-boas-praticas"
+        "nodejs-boas-praticas",
+        "node-typescript",
+        "code-reviewer",
+        "node-testing"
       ]
     },
     {
@@ -1477,7 +1987,10 @@
       "caminho": "^/scripts/.*\\.sh$",
       "skills": [
         "bats-testing-patterns",
-        "linux-administration"
+        "linux-administration",
+        "node-typescript",
+        "code-reviewer",
+        "node-testing"
       ]
     },
     {
@@ -1485,7 +1998,10 @@
       "caminho": "^/scripts/.*\\.py$",
       "skills": [
         "python-code-style",
-        "python-anti-patterns"
+        "python-anti-patterns",
+        "node-typescript",
+        "code-reviewer",
+        "node-testing"
       ]
     },
     {
@@ -1494,7 +2010,9 @@
       "skills": [
         "linux-administration",
         "nodejs-boas-praticas",
-        "secrets-management"
+        "secrets-management",
+        "networking",
+        "cloudflare-one"
       ]
     },
     {
@@ -1503,7 +2021,9 @@
       "skills": [
         "systemd-services",
         "graceful-shutdown",
-        "linux-administration"
+        "linux-administration",
+        "networking",
+        "cloudflare-one"
       ]
     },
     {
@@ -1511,7 +2031,11 @@
       "caminho": "^/\\.github/workflows/",
       "skills": [
         "github-actions-hardening",
-        "github-actions-efficiency"
+        "github-actions-efficiency",
+        "node-ci",
+        "node-supply-chain",
+        "github-ops",
+        "secret-scanning"
       ]
     },
     {
@@ -1520,7 +2044,10 @@
       "skills": [
         "github-actions-hardening",
         "secrets-management",
-        "api-security-patterns"
+        "api-security-patterns",
+        "secret-scanning",
+        "testing-strategy",
+        "code-reviewer"
       ]
     },
     {
@@ -1529,7 +2056,10 @@
       "skills": [
         "github-actions-hardening",
         "git-workflow",
-        "nodejs-boas-praticas"
+        "nodejs-boas-praticas",
+        "node-ci",
+        "node-supply-chain",
+        "github-ops"
       ]
     },
     {
@@ -1538,7 +2068,10 @@
       "skills": [
         "github-ops",
         "git-workflow",
-        "writing-guidelines"
+        "writing-guidelines",
+        "node-ci",
+        "node-supply-chain",
+        "secret-scanning"
       ]
     },
     {
@@ -1546,7 +2079,10 @@
       "caminho": "^/(?:\\.husky/|\\.gitattributes$|\\.gitignore$|\\.editorconfig$|\\.lintstagedrc|eslint\\.config)",
       "skills": [
         "git-workflow",
-        "nodejs-boas-praticas"
+        "nodejs-boas-praticas",
+        "node-ci",
+        "node-supply-chain",
+        "github-ops"
       ]
     },
     {
@@ -1554,7 +2090,10 @@
       "caminho": "^/(?:tsconfig[^/]*\\.json$|[^/]+\\.config\\.(?:ts|js|mjs|cjs)$|pnpm[^/]*|package(?:-lock)?\\.json$)",
       "skills": [
         "nodejs-boas-praticas",
-        "constraint-driven-development"
+        "constraint-driven-development",
+        "node-typescript",
+        "code-reviewer",
+        "node-testing"
       ]
     },
     {
@@ -1563,7 +2102,9 @@
       "skills": [
         "linux-administration",
         "secrets-management",
-        "systemd-services"
+        "systemd-services",
+        "networking",
+        "cloudflare-one"
       ]
     },
     {
@@ -1571,7 +2112,10 @@
       "caminho": "^/(?:packages/|@omniroute/|pnpm-workspace\\.yaml$)",
       "skills": [
         "nodejs-boas-praticas",
-        "backend-patterns"
+        "backend-patterns",
+        "node-typescript",
+        "code-reviewer",
+        "node-testing"
       ]
     },
     {
@@ -1580,7 +2124,9 @@
       "skills": [
         "nodejs-boas-praticas",
         "api-security-patterns",
-        "writing-guidelines"
+        "writing-guidelines",
+        "code-reviewer",
+        "testing-strategy"
       ]
     },
     {
@@ -1606,7 +2152,8 @@
       "caminho": "^/docs/(?:[^/]+/)*meta\\.json$",
       "skills": [
         "writing-guidelines",
-        "nodejs-boas-praticas"
+        "nodejs-boas-praticas",
+        "docs-sync-audit"
       ]
     },
     {
@@ -1614,7 +2161,8 @@
       "caminho": "^/(?:changelog\\.d/|docs/changelog/|CHANGELOG)",
       "skills": [
         "writing-guidelines",
-        "git-workflow"
+        "git-workflow",
+        "docs-sync-audit"
       ]
     },
     {
@@ -1631,14 +2179,17 @@
       "caminho": "^/(?:AGENTS|CLAUDE|GEMINI|CONTRIBUTING|README|SKILLS)\\.md$",
       "skills": [
         "writing-guidelines",
-        "git-workflow"
+        "git-workflow",
+        "docs-sync-audit"
       ]
     },
     {
       "dominio": "documentacao-tecnica-apoio",
       "caminho": "^/docs/",
       "skills": [
-        "writing-guidelines"
+        "writing-guidelines",
+        "docs-sync-audit",
+        "git-workflow"
       ]
     },
     {
@@ -1646,7 +2197,10 @@
       "caminho": "^/(?:\\.cbmignore|\\.dockerignore|\\.npmignore|\\.nvmrc|\\.npmrc|\\.vale/|\\.vscode/|\\.editorconfig|\\.gitignore)",
       "skills": [
         "nodejs-boas-praticas",
-        "git-workflow"
+        "git-workflow",
+        "code-reviewer",
+        "testing-strategy",
+        "node-testing"
       ]
     },
     {
@@ -1654,7 +2208,10 @@
       "caminho": "^/\\.claude/skills/",
       "skills": [
         "git-workflow",
-        "writing-guidelines"
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit",
+        "code-reviewer"
       ]
     },
     {
@@ -1662,7 +2219,10 @@
       "caminho": "^/bin/",
       "skills": [
         "omni-cli-tools",
-        "nodejs-boas-praticas"
+        "nodejs-boas-praticas",
+        "node-typescript",
+        "code-reviewer",
+        "node-testing"
       ]
     },
     {
@@ -1670,7 +2230,10 @@
       "caminho": "^/skills/",
       "skills": [
         "omni-github-skills",
-        "writing-guidelines"
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit",
+        "git-workflow"
       ]
     },
     {
@@ -1678,329 +2241,470 @@
       "caminho": "^/(?:scripts/|bin/)",
       "skills": [
         "nodejs-boas-praticas",
-        "constraint-driven-development"
+        "constraint-driven-development",
+        "node-typescript",
+        "code-reviewer",
+        "node-testing"
       ]
     },
     {
       "dominio": "skill-nativa-cli-a2a",
       "caminho": "^/skills/cli-a2a/",
       "skills": [
-        "cli-a2a"
+        "cli-a2a",
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
       "dominio": "skill-nativa-cli-backup-sync",
       "caminho": "^/skills/cli-backup-sync/",
       "skills": [
-        "cli-backup-sync"
+        "cli-backup-sync",
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
       "dominio": "skill-nativa-cli-batches",
       "caminho": "^/skills/cli-batches/",
       "skills": [
-        "cli-batches"
+        "cli-batches",
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
       "dominio": "skill-nativa-cli-chat",
       "caminho": "^/skills/cli-chat/",
       "skills": [
-        "cli-chat"
+        "cli-chat",
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
       "dominio": "skill-nativa-cli-compression",
       "caminho": "^/skills/cli-compression/",
       "skills": [
-        "cli-compression"
+        "cli-compression",
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
       "dominio": "skill-nativa-cli-contexts",
       "caminho": "^/skills/cli-contexts/",
       "skills": [
-        "cli-contexts"
+        "cli-contexts",
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
       "dominio": "skill-nativa-cli-cost-usage",
       "caminho": "^/skills/cli-cost-usage/",
       "skills": [
-        "cli-cost-usage"
+        "cli-cost-usage",
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
       "dominio": "skill-nativa-cli-eval",
       "caminho": "^/skills/cli-eval/",
       "skills": [
-        "cli-eval"
+        "cli-eval",
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
       "dominio": "skill-nativa-cli-health",
       "caminho": "^/skills/cli-health/",
       "skills": [
-        "cli-health"
+        "cli-health",
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
       "dominio": "skill-nativa-cli-keys",
       "caminho": "^/skills/cli-keys/",
       "skills": [
-        "cli-keys"
+        "cli-keys",
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
       "dominio": "skill-nativa-cli-mcp",
       "caminho": "^/skills/cli-mcp/",
       "skills": [
-        "cli-mcp"
+        "cli-mcp",
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
       "dominio": "skill-nativa-cli-models",
       "caminho": "^/skills/cli-models/",
       "skills": [
-        "cli-models"
+        "cli-models",
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
       "dominio": "skill-nativa-cli-plugins-skills",
       "caminho": "^/skills/cli-plugins-skills/",
       "skills": [
-        "cli-plugins-skills"
+        "cli-plugins-skills",
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
       "dominio": "skill-nativa-cli-policy-audit",
       "caminho": "^/skills/cli-policy-audit/",
       "skills": [
-        "cli-policy-audit"
+        "cli-policy-audit",
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
       "dominio": "skill-nativa-cli-providers",
       "caminho": "^/skills/cli-providers/",
       "skills": [
-        "cli-providers"
+        "cli-providers",
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
       "dominio": "skill-nativa-cli-resilience",
       "caminho": "^/skills/cli-resilience/",
       "skills": [
-        "cli-resilience"
+        "cli-resilience",
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
       "dominio": "skill-nativa-cli-routing",
       "caminho": "^/skills/cli-routing/",
       "skills": [
-        "cli-routing"
+        "cli-routing",
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
       "dominio": "skill-nativa-cli-serve",
       "caminho": "^/skills/cli-serve/",
       "skills": [
-        "cli-serve"
+        "cli-serve",
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
       "dominio": "skill-nativa-cli-setup",
       "caminho": "^/skills/cli-setup/",
       "skills": [
-        "cli-setup"
+        "cli-setup",
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
       "dominio": "skill-nativa-cli-skill-collector",
       "caminho": "^/skills/cli-skill-collector/",
       "skills": [
-        "cli-skill-collector"
+        "cli-skill-collector",
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
       "dominio": "skill-nativa-cli-tunnel",
       "caminho": "^/skills/cli-tunnel/",
       "skills": [
-        "cli-tunnel"
+        "cli-tunnel",
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
       "dominio": "skill-nativa-config-codex-cli",
       "caminho": "^/skills/config-codex-cli/",
       "skills": [
-        "config-codex-cli"
+        "config-codex-cli",
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
       "dominio": "skill-nativa-omni-agents-a2a",
       "caminho": "^/skills/omni-agents-a2a/",
       "skills": [
-        "omni-agents-a2a"
+        "omni-agents-a2a",
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
       "dominio": "skill-nativa-omni-api-keys",
       "caminho": "^/skills/omni-api-keys/",
       "skills": [
-        "omni-api-keys"
+        "omni-api-keys",
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
       "dominio": "skill-nativa-omni-auth",
       "caminho": "^/skills/omni-auth/",
       "skills": [
-        "omni-auth"
+        "omni-auth",
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
       "dominio": "skill-nativa-omni-budget",
       "caminho": "^/skills/omni-budget/",
       "skills": [
-        "omni-budget"
+        "omni-budget",
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
       "dominio": "skill-nativa-omni-cache",
       "caminho": "^/skills/omni-cache/",
       "skills": [
-        "omni-cache"
+        "omni-cache",
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
       "dominio": "skill-nativa-omni-cli-tools",
       "caminho": "^/skills/omni-cli-tools/",
       "skills": [
-        "omni-cli-tools"
+        "omni-cli-tools",
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
       "dominio": "skill-nativa-omni-combos-routing",
       "caminho": "^/skills/omni-combos-routing/",
       "skills": [
-        "omni-combos-routing"
+        "omni-combos-routing",
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
       "dominio": "skill-nativa-omni-compression",
       "caminho": "^/skills/omni-compression/",
       "skills": [
-        "omni-compression"
+        "omni-compression",
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
       "dominio": "skill-nativa-omni-context-rtk",
       "caminho": "^/skills/omni-context-rtk/",
       "skills": [
-        "omni-context-rtk"
+        "omni-context-rtk",
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
       "dominio": "skill-nativa-omni-db-backups",
       "caminho": "^/skills/omni-db-backups/",
       "skills": [
-        "omni-db-backups"
+        "omni-db-backups",
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
       "dominio": "skill-nativa-omni-github-skills",
       "caminho": "^/skills/omni-github-skills/",
       "skills": [
-        "omni-github-skills"
+        "omni-github-skills",
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
       "dominio": "skill-nativa-omni-inference",
       "caminho": "^/skills/omni-inference/",
       "skills": [
-        "omni-inference"
+        "omni-inference",
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
       "dominio": "skill-nativa-omni-mcp",
       "caminho": "^/skills/omni-mcp/",
       "skills": [
-        "omni-mcp"
+        "omni-mcp",
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
       "dominio": "skill-nativa-omni-models",
       "caminho": "^/skills/omni-models/",
       "skills": [
-        "omni-models"
+        "omni-models",
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
       "dominio": "skill-nativa-omni-providers",
       "caminho": "^/skills/omni-providers/",
       "skills": [
-        "omni-providers"
+        "omni-providers",
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
       "dominio": "skill-nativa-omni-proxies",
       "caminho": "^/skills/omni-proxies/",
       "skills": [
-        "omni-proxies"
+        "omni-proxies",
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
       "dominio": "skill-nativa-omni-resilience",
       "caminho": "^/skills/omni-resilience/",
       "skills": [
-        "omni-resilience"
+        "omni-resilience",
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
       "dominio": "skill-nativa-omni-settings",
       "caminho": "^/skills/omni-settings/",
       "skills": [
-        "omni-settings"
+        "omni-settings",
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
       "dominio": "skill-nativa-omni-sync-cloud",
       "caminho": "^/skills/omni-sync-cloud/",
       "skills": [
-        "omni-sync-cloud"
+        "omni-sync-cloud",
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
       "dominio": "skill-nativa-omni-tunnels",
       "caminho": "^/skills/omni-tunnels/",
       "skills": [
-        "omni-tunnels"
+        "omni-tunnels",
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
       "dominio": "skill-nativa-omni-usage-logs",
       "caminho": "^/skills/omni-usage-logs/",
       "skills": [
-        "omni-usage-logs"
+        "omni-usage-logs",
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
       "dominio": "skill-nativa-omni-version-manager",
       "caminho": "^/skills/omni-version-manager/",
       "skills": [
-        "omni-version-manager"
+        "omni-version-manager",
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
       "dominio": "skill-nativa-omni-webhooks",
       "caminho": "^/skills/omni-webhooks/",
       "skills": [
-        "omni-webhooks"
+        "omni-webhooks",
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
       "dominio": "skill-nativa-ponytail",
       "caminho": "^/skills/ponytail/",
       "skills": [
-        "ponytail"
+        "ponytail",
+        "writing-guidelines",
+        "agent-supply-chain",
+        "docs-sync-audit"
       ]
     },
     {
@@ -2009,7 +2713,9 @@
       "skills": [
         "i18n-expert",
         "writing-guidelines",
-        "nodejs-boas-praticas"
+        "nodejs-boas-praticas",
+        "docs-sync-audit",
+        "git-workflow"
       ]
     },
     {
@@ -2017,7 +2723,11 @@
       "caminho": "^/vitest(?:\\.[^/]*)?\\.config\\.(?:ts|mts|js|mjs)$",
       "skills": [
         "vitest-skill",
-        "nodejs-boas-praticas"
+        "nodejs-boas-praticas",
+        "node-testing",
+        "testing-strategy",
+        "test-gap-audit",
+        "code-reviewer"
       ]
     },
     {
@@ -2025,7 +2735,11 @@
       "caminho": "^/(?:src/(?:app|shared|lib)/.*?/__tests__/.*\\.test\\.tsx?$|open-sse/.*?/__tests__/.*\\.test\\.ts$|tests/unit/.*\\.test\\.tsx$|tests/unit/encryption\\.test\\.ts$)",
       "skills": [
         "vitest-skill",
-        "nodejs-boas-praticas"
+        "nodejs-boas-praticas",
+        "node-testing",
+        "testing-strategy",
+        "test-gap-audit",
+        "code-reviewer"
       ]
     },
     {
@@ -2033,7 +2747,11 @@
       "caminho": "^/tests/_setup/vitestUiPolyfills\\.ts$",
       "skills": [
         "vitest-skill",
-        "frontend-patterns"
+        "frontend-patterns",
+        "node-testing",
+        "testing-strategy",
+        "test-gap-audit",
+        "code-reviewer"
       ]
     },
     {
@@ -2042,7 +2760,10 @@
       "skills": [
         "frontend-patterns",
         "omni-usage-logs",
-        "responsive-patterns"
+        "responsive-patterns",
+        "frontend-ui-engineering",
+        "frontend-a11y",
+        "nextjs-quality"
       ]
     },
     {
@@ -2051,7 +2772,10 @@
       "skills": [
         "frontend-patterns",
         "frontend-design",
-        "accessibility"
+        "accessibility",
+        "frontend-ui-engineering",
+        "frontend-a11y",
+        "nextjs-quality"
       ]
     },
     {
@@ -2060,7 +2784,10 @@
       "skills": [
         "frontend-design",
         "accessibility",
-        "web-design-guidelines"
+        "web-design-guidelines",
+        "frontend-ui-engineering",
+        "frontend-a11y",
+        "nextjs-quality"
       ]
     },
     {
@@ -2068,7 +2795,10 @@
       "caminho": "^/(?:scripts/ad-hoc/.*(?:opencode|plugin)|@omniroute/[^/]+/)",
       "skills": [
         "nodejs-boas-praticas",
-        "omni-providers"
+        "omni-providers",
+        "code-reviewer",
+        "node-testing",
+        "api-design-reviewer"
       ]
     },
     {
@@ -2076,7 +2806,8 @@
       "caminho": "^/(?:LICENSE(?:\\.[^/]*)?$|NOTICE|COPYRIGHT|\\.github/FUNDING\\.yml)",
       "skills": [
         "writing-guidelines",
-        "git-workflow"
+        "git-workflow",
+        "docs-sync-audit"
       ]
     },
     {
@@ -2085,7 +2816,10 @@
       "skills": [
         "api-security-patterns",
         "backend-patterns",
-        "error-handling"
+        "error-handling",
+        "api-design-reviewer",
+        "api-test-suite-builder",
+        "testing-strategy"
       ]
     },
     {
@@ -2094,7 +2828,9 @@
       "skills": [
         "graceful-shutdown",
         "api-health-monitoring",
-        "omni-resilience"
+        "omni-resilience",
+        "node-typescript",
+        "code-reviewer"
       ]
     },
     {
@@ -2102,7 +2838,10 @@
       "caminho": "^/src/lib/(?:docs|log|console|dataPaths|source|wellKnown)",
       "skills": [
         "nodejs-boas-praticas",
-        "writing-guidelines"
+        "writing-guidelines",
+        "docs-sync-audit",
+        "git-workflow",
+        "i18n-expert"
       ]
     },
     {
@@ -2111,7 +2850,10 @@
       "skills": [
         "omni-providers",
         "omni-models",
-        "nodejs-boas-praticas"
+        "nodejs-boas-praticas",
+        "node-testing",
+        "testing-strategy",
+        "test-gap-audit"
       ]
     },
     {
@@ -2120,7 +2862,10 @@
       "skills": [
         "omni-auth",
         "jwt-validate",
-        "secrets-management"
+        "secrets-management",
+        "node-testing",
+        "testing-strategy",
+        "test-gap-audit"
       ]
     },
     {
@@ -2129,7 +2874,10 @@
       "skills": [
         "api-security-patterns",
         "secrets-management",
-        "nodejs-boas-praticas"
+        "nodejs-boas-praticas",
+        "node-testing",
+        "testing-strategy",
+        "test-gap-audit"
       ]
     },
     {
@@ -2138,7 +2886,10 @@
       "skills": [
         "omni-combos-routing",
         "omni-resilience",
-        "nodejs-boas-praticas"
+        "nodejs-boas-praticas",
+        "node-testing",
+        "testing-strategy",
+        "test-gap-audit"
       ]
     },
     {
@@ -2146,7 +2897,11 @@
       "caminho": "^/tests/unit/[^/]*(?:cache|Cache|memoiz|Memoiz|ttl|TTL|lru|LRU)[^/]*\\.(?:test|spec)\\.(?:ts|tsx|js|mjs)$",
       "skills": [
         "omni-cache",
-        "nodejs-boas-praticas"
+        "nodejs-boas-praticas",
+        "node-testing",
+        "testing-strategy",
+        "test-gap-audit",
+        "code-reviewer"
       ]
     },
     {
@@ -2155,7 +2910,10 @@
       "skills": [
         "omni-usage-logs",
         "omni-budget",
-        "nodejs-boas-praticas"
+        "nodejs-boas-praticas",
+        "node-testing",
+        "testing-strategy",
+        "test-gap-audit"
       ]
     },
     {
@@ -2164,7 +2922,10 @@
       "skills": [
         "omni-inference",
         "omni-models",
-        "nodejs-boas-praticas"
+        "nodejs-boas-praticas",
+        "node-testing",
+        "testing-strategy",
+        "test-gap-audit"
       ]
     },
     {
@@ -2173,7 +2934,10 @@
       "skills": [
         "omni-mcp",
         "omni-github-skills",
-        "api-security-patterns"
+        "api-security-patterns",
+        "node-testing",
+        "testing-strategy",
+        "test-gap-audit"
       ]
     },
     {
@@ -2182,7 +2946,10 @@
       "skills": [
         "omni-compression",
         "omni-context-rtk",
-        "nodejs-boas-praticas"
+        "nodejs-boas-praticas",
+        "node-testing",
+        "testing-strategy",
+        "test-gap-audit"
       ]
     },
     {
@@ -2191,7 +2958,10 @@
       "skills": [
         "omni-inference",
         "error-handling",
-        "nodejs-boas-praticas"
+        "nodejs-boas-praticas",
+        "node-testing",
+        "testing-strategy",
+        "test-gap-audit"
       ]
     },
     {
@@ -2200,7 +2970,10 @@
       "skills": [
         "omni-proxies",
         "omni-tunnels",
-        "api-security-patterns"
+        "api-security-patterns",
+        "node-testing",
+        "testing-strategy",
+        "test-gap-audit"
       ]
     },
     {
@@ -2209,7 +2982,10 @@
       "skills": [
         "sqlite-ops",
         "sql-code-review",
-        "nodejs-boas-praticas"
+        "nodejs-boas-praticas",
+        "node-testing",
+        "testing-strategy",
+        "test-gap-audit"
       ]
     },
     {
@@ -2218,7 +2994,10 @@
       "skills": [
         "frontend-patterns",
         "accessibility",
-        "responsive-patterns"
+        "responsive-patterns",
+        "node-testing",
+        "testing-strategy",
+        "test-gap-audit"
       ]
     },
     {
@@ -2226,7 +3005,11 @@
       "caminho": "^/tests/unit/[^/]*(?:i18n|I18n|locale|Locale|translation|Translation|rtl|Rtl|icu|ICU|language|Language)[^/]*\\.(?:test|spec)\\.(?:ts|tsx|js|mjs)$",
       "skills": [
         "i18n-expert",
-        "writing-guidelines"
+        "writing-guidelines",
+        "docs-sync-audit",
+        "git-workflow",
+        "node-testing",
+        "testing-strategy"
       ]
     },
     {
@@ -2235,7 +3018,10 @@
       "skills": [
         "api-health-monitoring",
         "omni-usage-logs",
-        "nodejs-boas-praticas"
+        "nodejs-boas-praticas",
+        "node-testing",
+        "testing-strategy",
+        "test-gap-audit"
       ]
     },
     {
@@ -2244,7 +3030,10 @@
       "skills": [
         "omni-resilience",
         "constraint-driven-development",
-        "nodejs-boas-praticas"
+        "nodejs-boas-praticas",
+        "node-testing",
+        "testing-strategy",
+        "test-gap-audit"
       ]
     },
     {
@@ -2253,7 +3042,10 @@
       "skills": [
         "nodejs-boas-praticas",
         "github-actions-hardening",
-        "git-workflow"
+        "git-workflow",
+        "node-testing",
+        "testing-strategy",
+        "test-gap-audit"
       ]
     },
     {
@@ -2262,7 +3054,10 @@
       "skills": [
         "omni-combos-routing",
         "omni-resilience",
-        "nodejs-boas-praticas"
+        "nodejs-boas-praticas",
+        "api-design-reviewer",
+        "api-test-suite-builder",
+        "api-security-patterns"
       ]
     },
     {
@@ -2271,7 +3066,10 @@
       "skills": [
         "omni-auth",
         "api-security-patterns",
-        "secrets-management"
+        "secrets-management",
+        "api-design-reviewer",
+        "api-test-suite-builder",
+        "testing-strategy"
       ]
     },
     {
@@ -2280,7 +3078,10 @@
       "skills": [
         "omni-providers",
         "omni-models",
-        "backend-patterns"
+        "backend-patterns",
+        "api-design-reviewer",
+        "api-test-suite-builder",
+        "api-security-patterns"
       ]
     },
     {
@@ -2289,7 +3090,10 @@
       "skills": [
         "omni-usage-logs",
         "omni-budget",
-        "api-ratelimit-helper"
+        "api-ratelimit-helper",
+        "api-design-reviewer",
+        "api-test-suite-builder",
+        "api-security-patterns"
       ]
     },
     {
@@ -2298,7 +3102,10 @@
       "skills": [
         "omni-inference",
         "error-handling",
-        "nodejs-boas-praticas"
+        "nodejs-boas-praticas",
+        "api-design-reviewer",
+        "api-test-suite-builder",
+        "api-security-patterns"
       ]
     },
     {
@@ -2307,7 +3114,10 @@
       "skills": [
         "omni-cache",
         "omni-compression",
-        "nodejs-boas-praticas"
+        "nodejs-boas-praticas",
+        "api-design-reviewer",
+        "api-test-suite-builder",
+        "api-security-patterns"
       ]
     },
     {
@@ -2316,7 +3126,9 @@
       "skills": [
         "omni-providers",
         "omni-models",
-        "nodejs-boas-praticas"
+        "nodejs-boas-praticas",
+        "code-reviewer",
+        "node-testing"
       ]
     },
     {
@@ -2325,7 +3137,10 @@
       "skills": [
         "api-security-patterns",
         "secrets-management",
-        "omni-auth"
+        "omni-auth",
+        "secret-scanning",
+        "testing-strategy",
+        "code-reviewer"
       ]
     },
     {
@@ -2334,7 +3149,10 @@
       "skills": [
         "omni-combos-routing",
         "omni-resilience",
-        "nodejs-boas-praticas"
+        "nodejs-boas-praticas",
+        "performance-optimization",
+        "node-testing",
+        "testing-strategy"
       ]
     },
     {
@@ -2343,7 +3161,10 @@
       "skills": [
         "omni-cache",
         "omni-context-rtk",
-        "nodejs-boas-praticas"
+        "nodejs-boas-praticas",
+        "performance-optimization",
+        "node-testing",
+        "testing-strategy"
       ]
     },
     {
@@ -2352,7 +3173,10 @@
       "skills": [
         "omni-proxies",
         "omni-sync-cloud",
-        "api-security-patterns"
+        "api-security-patterns",
+        "networking",
+        "cloudflare-one",
+        "secret-scanning"
       ]
     },
     {
@@ -2361,7 +3185,9 @@
       "skills": [
         "graceful-shutdown",
         "api-health-monitoring",
-        "nodejs-boas-praticas"
+        "nodejs-boas-praticas",
+        "networking",
+        "cloudflare-one"
       ]
     },
     {
@@ -2370,7 +3196,9 @@
       "skills": [
         "omni-usage-logs",
         "frontend-patterns",
-        "accessibility"
+        "accessibility",
+        "frontend-ui-engineering",
+        "frontend-a11y"
       ]
     },
     {
@@ -2379,7 +3207,9 @@
       "skills": [
         "nodejs-express-server",
         "graceful-shutdown",
-        "api-security-patterns"
+        "api-security-patterns",
+        "node-typescript",
+        "code-reviewer"
       ]
     },
     {
@@ -2388,7 +3218,9 @@
       "skills": [
         "perf-lighthouse",
         "frontend-patterns",
-        "responsive-patterns"
+        "responsive-patterns",
+        "performance-optimization",
+        "node-testing"
       ]
     },
     {
@@ -2397,7 +3229,9 @@
       "skills": [
         "github-ops",
         "github-actions-hardening",
-        "git-workflow"
+        "git-workflow",
+        "docs-sync-audit",
+        "writing-guidelines"
       ]
     },
     {
@@ -2406,7 +3240,10 @@
       "skills": [
         "secrets-management",
         "github-actions-hardening",
-        "api-security-patterns"
+        "api-security-patterns",
+        "secret-scanning",
+        "testing-strategy",
+        "code-reviewer"
       ]
     },
     {
@@ -2414,7 +3251,8 @@
       "caminho": "^/(?:\\.markdownlint\\.json|\\.prettierignore|\\.vale\\.ini)$",
       "skills": [
         "writing-guidelines",
-        "git-workflow"
+        "git-workflow",
+        "docs-sync-audit"
       ]
     },
     {
@@ -2423,7 +3261,9 @@
       "skills": [
         "nodejs-boas-praticas",
         "linux-administration",
-        "systemd-services"
+        "systemd-services",
+        "code-reviewer",
+        "testing-strategy"
       ]
     },
     {
@@ -2432,7 +3272,9 @@
       "skills": [
         "constraint-driven-development",
         "nodejs-boas-praticas",
-        "api-security-patterns"
+        "api-security-patterns",
+        "node-testing",
+        "testing-strategy"
       ]
     },
     {
@@ -2440,7 +3282,9 @@
       "caminho": "^/(?:\\.i18n-state\\.json|news\\.json)$",
       "skills": [
         "i18n-expert",
-        "writing-guidelines"
+        "writing-guidelines",
+        "docs-sync-audit",
+        "git-workflow"
       ]
     },
     {
@@ -2449,14 +3293,20 @@
       "skills": [
         "backend-patterns",
         "api-security-patterns",
-        "nodejs-boas-praticas"
+        "nodejs-boas-praticas",
+        "networking",
+        "cloudflare-one"
       ]
     },
     {
       "dominio": "shared-contratos-agnosticos",
       "caminho": "^/src/shared/(?:constants|contracts|discovery|http|lib|platform|providers|reasoning|resilience|schemas|types|utils|validation)/",
       "skills": [
-        "nodejs-boas-praticas"
+        "nodejs-boas-praticas",
+        "node-typescript",
+        "code-reviewer",
+        "node-testing",
+        "testing-strategy"
       ]
     }
   ],
@@ -2466,7 +3316,9 @@
       "comando": "(?:npm|pnpm)\\s+(?:run\\s+)?test:(?:unit|vitest|coverage|integration|scoped)",
       "skills": [
         "nodejs-boas-praticas",
-        "constraint-driven-development"
+        "constraint-driven-development",
+        "node-testing",
+        "testing-strategy"
       ]
     },
     {
@@ -2474,7 +3326,9 @@
       "comando": "(?:npm|pnpm)\\s+(?:run\\s+)?test:(?:e2e|protocols:e2e|ecosystem)|\\bnpx\\s+playwright\\b",
       "skills": [
         "playwright-skill",
-        "e2e-testing"
+        "e2e-testing",
+        "node-testing",
+        "testing-strategy"
       ]
     },
     {
@@ -2482,7 +3336,9 @@
       "comando": "(?:npm|pnpm)\\s+(?:run\\s+)?test:(?:bun:db|plan3)",
       "skills": [
         "sqlite-ops",
-        "sql-code-review"
+        "sql-code-review",
+        "node-testing",
+        "testing-strategy"
       ]
     },
     {
@@ -2490,7 +3346,9 @@
       "comando": "(?:npm|pnpm)\\s+(?:run\\s+)?(?:check:|quality:|lint\\b|typecheck:)",
       "skills": [
         "constraint-driven-development",
-        "nodejs-boas-praticas"
+        "nodejs-boas-praticas",
+        "node-testing",
+        "testing-strategy"
       ]
     },
     {
@@ -2498,7 +3356,9 @@
       "comando": "(?:npm|pnpm)\\s+(?:run\\s+)?(?:build|build:|electron:build)",
       "skills": [
         "nodejs-boas-praticas",
-        "linux-administration"
+        "linux-administration",
+        "code-reviewer",
+        "testing-strategy"
       ]
     },
     {
@@ -2506,7 +3366,9 @@
       "comando": "(?:npm|pnpm)\\s+(?:run\\s+)?i18n:",
       "skills": [
         "writing-guidelines",
-        "nodejs-boas-praticas"
+        "nodejs-boas-praticas",
+        "code-reviewer",
+        "testing-strategy"
       ]
     },
     {
@@ -2514,7 +3376,9 @@
       "comando": "(?:npm|pnpm)\\s+(?:run\\s+)?(?:release:|check:pack|check:install)",
       "skills": [
         "git-workflow",
-        "nodejs-boas-praticas"
+        "nodejs-boas-praticas",
+        "node-ci",
+        "node-supply-chain"
       ]
     },
     {
@@ -2522,7 +3386,9 @@
       "comando": "\\b(?:docker\\s+(?:build|compose|run)|docker-compose)\\b",
       "skills": [
         "linux-administration",
-        "secrets-management"
+        "secrets-management",
+        "networking",
+        "cloudflare-one"
       ]
     },
     {
@@ -2530,7 +3396,9 @@
       "comando": "\\b(?:bash|sh)\\s+scripts/",
       "skills": [
         "bats-testing-patterns",
-        "linux-administration"
+        "linux-administration",
+        "node-typescript",
+        "code-reviewer"
       ]
     },
     {
@@ -2538,7 +3406,9 @@
       "comando": "\\bpython3?\\s+(?:scripts|tests)/",
       "skills": [
         "python-code-style",
-        "python-anti-patterns"
+        "python-anti-patterns",
+        "node-typescript",
+        "code-reviewer"
       ]
     },
     {
@@ -2546,7 +3416,9 @@
       "comando": "\\b(?:git|gh)\\s+(?:pull|push|commit|merge|rebase|pr)\\b",
       "skills": [
         "git-workflow",
-        "github-ops"
+        "github-ops",
+        "code-reviewer",
+        "testing-strategy"
       ]
     },
     {
@@ -2554,7 +3426,9 @@
       "comando": "(?:npm|pnpm)\\s+(?:run\\s+)?(?:dev|start)\\b",
       "skills": [
         "nodejs-boas-praticas",
-        "graceful-shutdown"
+        "graceful-shutdown",
+        "node-typescript",
+        "code-reviewer"
       ]
     },
     {
@@ -2562,7 +3436,9 @@
       "comando": "(?:npm|pnpm)\\s+(?:run\\s+)?test:vitest\\b|\\bnpx\\s+vitest\\b",
       "skills": [
         "vitest-skill",
-        "nodejs-boas-praticas"
+        "nodejs-boas-praticas",
+        "node-testing",
+        "testing-strategy"
       ]
     },
     {
@@ -2570,7 +3446,9 @@
       "comando": "(?:npm|pnpm)\\s+(?:run\\s+)?(?:i18n:|check:ui-icu)|i18n_audit\\.py",
       "skills": [
         "i18n-expert",
-        "writing-guidelines"
+        "writing-guidelines",
+        "docs-sync-audit",
+        "git-workflow"
       ]
     }
   ],
