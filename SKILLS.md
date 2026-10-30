@@ -6,7 +6,7 @@ Este arquivo define as fontes, a disponibilidade e as regras de uso das skills a
 
 | Indicador | Resultado |
 | --- | ---: |
-| Domínios definidos no mapa | **296** |
+| Domínios definidos no mapa | **298** |
 | Padrões de comandos | **14** |
 | Skills nativas em `skills/<nome>/SKILL.md` | **46** |
 | Skills externas instaladas em `.claude/skills/<nome>/SKILL.md` | **37** |
@@ -43,6 +43,8 @@ Foram percorridas as árvores reais de `src/`, `open-sse/`, `tests/`, `scripts/`
 | `scripts/check/`, `scripts/quality/`, `.github/workflows/` | Ratchets, verificação, Actions, segurança e release: `constraint-driven-development`, `github-actions-hardening`, `github-actions-efficiency` |
 | `docker/`, `deploy/`, `bin/`, `scripts/ops/` | Operação, compilação, CLI, serviço e deployment: `linux-administration`, `systemd-services`, `omni-cli-tools` |
 | `skills/`, `.claude/skills/`, `SKILLS.md` | Skills de operação, documentação e auditoria do próprio mapa: `omni-github-skills`, `git-workflow`, `writing-guidelines` |
+
+A auditoria de correspondência corrigiu a classificação ampla de `src/shared/`: componentes e hooks seguem regras de interface, enquanto constantes, contratos, utilitários, serviços, rede, middleware e validações usam skills de backend/segurança. O mapa contém agora **298 domínios**. Também foram corrigidas duas referências quebradas: a referência compartilhada de TestMu utilizada pela `playwright-skill` foi incluída, e a orientação de release exclusiva do repositório ECC, sem pertinência ao OmniRoute, foi retirada da cópia de `github-ops`.
 
 As tabelas resumem famílias; as regras de correspondência por rota, arquivo, suíte de testes e comando estão integralmente no JSON. Em especial, os testes `tests/unit/*.test.ts` usam majoritariamente o **runner nativo do Node**, e não devem ser confundidos com suites Vitest ou Jest. A inclusão de `vitest-skill` não converte nenhum executor.
 
