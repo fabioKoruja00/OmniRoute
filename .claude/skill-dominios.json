@@ -88,10 +88,10 @@
       "caminho": "^/src/lib/(?:resilience|monitoring|credentialHealth|proxyHealth|tokenHealth)",
       "skills": [
         "omni-resilience",
-        "performance-optimization",
+        "api-health-monitoring",
+        "error-handling",
         "node-testing",
-        "testing-strategy",
-        "test-gap-audit"
+        "testing-strategy"
       ]
     },
     {
@@ -179,9 +179,9 @@
       "skills": [
         "nodejs-boas-praticas",
         "error-handling",
-        "networking",
-        "cloudflare-one",
-        "secret-scanning"
+        "api-security-patterns",
+        "node-typescript",
+        "testing-strategy"
       ]
     },
     {
@@ -361,9 +361,9 @@
         "python-code-style",
         "python-anti-patterns",
         "bats-testing-patterns",
-        "node-testing",
         "testing-strategy",
-        "test-gap-audit"
+        "test-gap-audit",
+        "code-reviewer"
       ]
     },
     {
@@ -373,7 +373,7 @@
         "linux-administration",
         "backup-recovery",
         "secrets-management",
-        "node-typescript",
+        "networking",
         "code-reviewer"
       ]
     },
@@ -1017,8 +1017,8 @@
         "backend-patterns",
         "nodejs-boas-praticas",
         "graceful-shutdown",
-        "networking",
-        "cloudflare-one"
+        "node-testing",
+        "testing-strategy"
       ]
     },
     {
@@ -1223,10 +1223,10 @@
       "skills": [
         "backend-patterns",
         "api-security-patterns",
-        "frontend-ui-engineering",
-        "frontend-a11y",
-        "nextjs-quality",
-        "responsiveness-check"
+        "api-design-reviewer",
+        "api-test-suite-builder",
+        "node-testing",
+        "testing-strategy"
       ]
     },
     {
@@ -1438,8 +1438,8 @@
         "nodejs-boas-praticas",
         "api-security-patterns",
         "graceful-shutdown",
-        "networking",
-        "cloudflare-one"
+        "node-typescript",
+        "testing-strategy"
       ]
     },
     {
@@ -1448,9 +1448,9 @@
       "skills": [
         "nodejs-boas-praticas",
         "secrets-management",
-        "networking",
-        "cloudflare-one",
-        "secret-scanning"
+        "node-supply-chain",
+        "secret-scanning",
+        "node-typescript"
       ]
     },
     {
@@ -1517,9 +1517,9 @@
         "omni-providers",
         "omni-resilience",
         "api-security-patterns",
-        "api-design-reviewer",
-        "api-test-suite-builder",
-        "testing-strategy"
+        "networking",
+        "node-testing",
+        "code-reviewer"
       ]
     },
     {
@@ -1529,9 +1529,9 @@
         "omni-providers",
         "omni-models",
         "nodejs-boas-praticas",
-        "api-design-reviewer",
-        "api-test-suite-builder",
-        "api-security-patterns"
+        "node-typescript",
+        "code-reviewer",
+        "node-testing"
       ]
     },
     {
@@ -1806,8 +1806,8 @@
         "constraint-driven-development",
         "docs-sync-audit",
         "git-workflow",
-        "i18n-expert",
-        "node-testing"
+        "testing-strategy",
+        "test-gap-audit"
       ]
     },
     {
@@ -1956,8 +1956,8 @@
         "linux-administration",
         "nodejs-boas-praticas",
         "systemd-services",
-        "node-typescript",
-        "code-reviewer"
+        "networking",
+        "secret-scanning"
       ]
     },
     {
@@ -1966,9 +1966,9 @@
       "skills": [
         "nodejs-boas-praticas",
         "constraint-driven-development",
-        "secret-scanning",
-        "api-security-patterns",
-        "testing-strategy"
+        "node-typescript",
+        "code-reviewer",
+        "node-testing"
       ]
     },
     {
@@ -1988,9 +1988,9 @@
       "skills": [
         "bats-testing-patterns",
         "linux-administration",
-        "node-typescript",
         "code-reviewer",
-        "node-testing"
+        "testing-strategy",
+        "secret-scanning"
       ]
     },
     {
@@ -1999,9 +1999,9 @@
       "skills": [
         "python-code-style",
         "python-anti-patterns",
-        "node-typescript",
         "code-reviewer",
-        "node-testing"
+        "testing-strategy",
+        "test-gap-audit"
       ]
     },
     {
@@ -2023,7 +2023,7 @@
         "graceful-shutdown",
         "linux-administration",
         "networking",
-        "cloudflare-one"
+        "secret-scanning"
       ]
     },
     {
@@ -2069,9 +2069,8 @@
         "github-ops",
         "git-workflow",
         "writing-guidelines",
-        "node-ci",
-        "node-supply-chain",
-        "secret-scanning"
+        "docs-sync-audit",
+        "agent-supply-chain"
       ]
     },
     {
@@ -2901,7 +2900,7 @@
         "node-testing",
         "testing-strategy",
         "test-gap-audit",
-        "code-reviewer"
+        "performance-optimization"
       ]
     },
     {
@@ -3262,8 +3261,8 @@
         "nodejs-boas-praticas",
         "linux-administration",
         "systemd-services",
-        "code-reviewer",
-        "testing-strategy"
+        "networking",
+        "secret-scanning"
       ]
     },
     {
