@@ -9,11 +9,11 @@ coverage, and reconciliation steps.
 
 ---
 
-## Mandatory skills and governance preflight
+## Mandatory skills and governance preflight (GRNET fork supplement)
 
-Before any code, documentation, test or maintenance contribution, follow [the repository-wide skills and contribution governance](AGENTS.md#skills-and-contribution-governance-repository-wide). `.claude/skill-dominios.json` selects skills by real file path and command; `SKILLS.md` records source and availability. The 46 product skills in `skills/` are different from the 57 externally sourced engineering skills in `.claude/skills/`.
+For contributions made in the owner's `fabioKoruja00/OmniRoute` fork, apply the [additive fork workflow](AGENTS.md#skills-and-contribution-governance-repository-wide) **alongside** the unchanged upstream Hard Rules and [Contribution Golden Path](docs/ops/CONTRIBUTION_GOLDEN_PATH.md). The original upstream instructions below take precedence in any conflict; do not export this owner-only addendum to upstream PRs.
 
-Sync the fork against upstream first; inspect the applicable skill sources and project/module rules; update related documentation in the same PR; run the relevant validation and obtain an actual independent review. Keep PRs Ready for review, finish the requested issue scope, and track CI to its final result. Add the provenance of newly installed external skills to the central `fabioKoruja00/grnet-monitor/SKILLS.md`. Preserve established OmniRoute build, testing, worktree and changelog rules.
+Before modifying files: verify upstream ancestry and fork synchronization; consult the central `grnet-monitor/SKILLS.md` catalog, the local domain map and actual `SKILL.md` instructions; implement and test in focused lots; keep documentation and central provenance in sync; record completed independent review and terminal CI before declaring Ready for review. Reuse the existing PR when the subject is the same. No CI runner modifications or deployment shortcuts.
 
 ---
 
