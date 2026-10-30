@@ -2445,7 +2445,7 @@
     },
     {
       "dominio": "shared-servicos-backend",
-      "caminho": "^/src/shared/(?:services/(?:bifrost/|cliRuntime\\.ts$|apiKeyResolver\\.ts$|backupService\\.ts$)|network/(?:dnsPinnedFetch|outboundUrlGuard|privateHost|providerNodeHost))",
+      "caminho": "^/src/shared/(?:services/(?:bifrost/|(?:cliRuntime|apiKeyResolver|backupService)\\.ts$)|network/(?:dnsPinnedFetch|outboundUrlGuard(?:Policy)?|privateHost|providerNodeHost)\\.ts$)",
       "skills": [
         "backend-patterns",
         "api-security-patterns",
