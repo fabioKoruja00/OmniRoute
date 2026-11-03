@@ -9,8 +9,9 @@ Este arquivo define as fontes, a disponibilidade e as regras de uso das skills a
 | Domínios definidos no mapa | **339** |
 | Padrões de comandos | **14** |
 | Skills nativas em `skills/<nome>/SKILL.md` | **46** |
-| Skills externas instaladas em `.claude/skills/<nome>/SKILL.md` | **69** |
-| Total de skills disponíveis | **115** |
+| Skills externas instaladas em `.claude/skills/<nome>/SKILL.md` | **73** |
+| Total de skills disponíveis | **119** |
+| Skills efetivamente referenciadas no mapa | **118** |
 | Referências de skills ausentes no mapa | **0** |
 | Elementos em `sem_arquivo` | **0** |
 
@@ -92,11 +93,11 @@ A auditoria começou no catálogo central do monitor, consultou o fluxo de desco
 | Desktop Electron | `electron-pro` | jshsakura/awesome-opencode-skills; MIT; metadados específicos de modelo/sandbox do OpenCode removidos apenas da cópia do fork |
 | Desempenho e carga | `performance-profiler`, `k6` | alirezarezvani/claude-skills (MIT) e grafana/skills (Apache-2.0); pacote k6 com documentação e 18 exemplos de protocolos/extensões; ferramentas não executadas |
 
-**Inventário atual:** 46 skills nativas + 69 externas = **115 skills**. Os 339 domínios de arquivos e os 14 padrões de comandos permanecem. O mapa foi semanticamente especializado em **56 domínios**, preservando 3–5 skills distintas por domínio e compilação das 339 expressões regulares. O recorte anterior de 27.622 arquivos é histórico e precisa ser repetido com os arquivos novos antes de declarar cobertura integral da árvore atual.
+**Inventário atual:** 46 skills nativas + 73 externas = **119 skills instaladas**. O mapa referencia **118 skills**; a skill externa `changelog-generator` não foi ativada, para não interferir nas diretrizes de changelog do OmniRoute. Os 339 domínios de arquivos e 14 padrões de comandos permanecem. A expansão especializou 66 associações de domínio, mantendo 3–5 skills distintas por domínio e as 339 expressões regulares compiláveis. O recorte anterior de 27.622 arquivos é histórico e precisa ser repetido com os arquivos novos antes de declarar cobertura integral da árvore atual.
 
 **Dependências e segurança:** copiar `SKILL.md` não equivale a instalar CLIs ou dependências opcionais. `k6` requer binário disponível e autorização para carga; nenhuma carga foi executada. `performance-profiler` e `monorepo-navigator` incluem scripts, não executados nesta rodada. Skills OWASP servem somente a testes autorizados. As regras principais do upstream continuam prioritárias e os repositórios originais não foram modificados.
 
-**Candidatas adiadas:** a skill `electron` de full-stack-skills/electron-skills foi preterida por referenciar arquivos que não existem na própria origem; `electron-pro` é a alternativa íntegra instalada. `changelog-generator` do catálogo continua parcial e exige validar scripts e compatibilidade com o período de retenção de 45 dias antes de incorporar. Outras especializações só entram se aumentarem a competência real do domínio.
+**Candidatas adiadas:** a skill `electron` de full-stack-skills/electron-skills foi preterida por referenciar arquivos que não existem na própria origem; `electron-pro` é a alternativa íntegra instalada. O pacote `changelog-generator` possui seus recursos auxiliares copiados ao fork, mas não foi ativado no mapa. Não adotar qualquer política de retenção ou automação externa; somente as diretrizes existentes no OmniRoute se aplicam. Outras especializações só entram se aumentarem a competência real do domínio.
 
 ### Candidatas rejeitadas ou adiadas
 
@@ -117,9 +118,9 @@ A comparação inicial identificou **21 arquivos de serviços compartilhados** s
 
 **Segunda rodada semântica:** arquivos de `src/shared/constants/`, `src/shared/utils/`, `schemas/`, `validation/` e serviços auxiliares eram cobertos principalmente por orientação genérica de Node/TypeScript. Foram acrescentados **20 domínios focalizados** para identidade, preços/cotas, catálogo de provedores/modelos, roteamento, multimodalidade, CLI, componentes de interface, autenticação, contratos, WebSocket/streaming e manutenção de agregações. Exemplo: `src/shared/constants/pricing/default-pricing.ts` ganha skills de custos/uso, enquanto `src/shared/utils/apiAuth.ts` ganha segurança e autenticação. Todos os 339 domínios correspondem a pelo menos um arquivo efetivo; não há regras sem uso nem arquivos sem domínio no snapshot de 27.622 itens.
 
-As **123 regras iniciais que tinham 6 skills** foram reduzidas para 5 por redundância semântica. A distribuição final é **12 domínios com 3**, **72 com 4** e **255 com 5** skills, totalizando **339 regras de arquivos**, **14 de comandos** e **115 skills únicas existentes**, sem referências órfãs; os comandos mantêm 4 skills. Regras são complementares: um arquivo pode combinar com vários domínios, mas o preflight seleciona apenas as skills realmente pertinentes à operação.
+As **123 regras iniciais que tinham 6 skills** foram reduzidas para 5 por redundância semântica. A distribuição final é **10 domínios com 3**, **74 com 4** e **255 com 5** skills, totalizando **339 regras de arquivos**, **14 de comandos** e **118 skills únicas referenciadas** (uma skill externa adicional não ativada, sem criar referências inválidas); os comandos mantêm 4 skills. Regras são complementares: um arquivo pode combinar com vários domínios, mas o preflight seleciona apenas as skills realmente pertinentes à operação.
 
-As 103 skills anteriores constam no catálogo central do monitor (PR #48 integrada); as 12 novas estão documentadas na PR #93, sem copiar arquivos de skills para o monitor. O `mermaid-expert` citado no catálogo externo é um **agente**, não um `SKILL.md` disponível para instalação direta, e portanto não é contado como skill instalada. Esta auditoria não executou scripts de terceiros e não alterou código funcional, workflows ou repositórios externos; resultados de CI/testes funcionais não são presumidos.
+As 103 skills anteriores constam no catálogo central do monitor (PR #48 integrada); as 16 novas referências estão documentadas na PR #93, sem copiar arquivos de skills para o monitor. O `mermaid-expert` citado no catálogo externo é um **agente**, não um `SKILL.md` disponível para instalação direta, e portanto não é contado como skill instalada. Esta auditoria não executou scripts de terceiros e não alterou código funcional, workflows ou repositórios externos; resultados de CI/testes funcionais não são presumidos.
 
 ## Pilhas complementares por domínio (ampliação de 30/10/2026)
 
@@ -152,11 +153,11 @@ A auditoria aprofundada constatou que as 298 regras iniciais eram insuficienteme
 
 **Licenças adicionais:** `cloudflare-one` (Apache-2.0), `frontend-a11y` (MIT) e `frontend-excellence` (Apache-2.0) tiveram os arquivos de licença originais incorporados após a revisão de proveniência.
 
-**Auditoria estrutural:** 46 `SKILL.md` nativos mais 69 externos associados ao mapa; todas as 115 skills são referenciadas em pelo menos uma regra ou comando. As 12 novas foram instaladas com sua entrada `SKILL.md` e recursos adequados, mas uma varredura integral da árvore atual ainda deve ser repetida. Os 339 padrões de caminho compilam. Isso não equivale à execução de todos os scripts, ao teste funcional do produto nem à aprovação de CI.
+**Auditoria estrutural:** 46 `SKILL.md` nativos e 73 externos estão instalados; 118 das 119 skills são referenciadas em regras ou comandos. A skill `changelog-generator` não foi ativada para preservar as normas do projeto. As 16 novas origens foram registradas no catálogo central, sem instalar pacotes no monitor. A varredura integral da árvore atual ainda deve ser repetida. Os 339 padrões de caminho compilam. Isso não equivale à execução de todos os scripts, ao teste funcional do produto nem à aprovação de CI.
 
 ## Governance and provenance synchronization
 
-The upstream project's original Hard Rules and module instructions remain authoritative, while the owner's **additive, fork-only workflow** is in [AGENTS.md](AGENTS.md#skills-and-contribution-governance-repository-wide); contributor preflight is in [CONTRIBUTING.md](CONTRIBUTING.md#mandatory-skills-and-governance-preflight). These apply to the current 46 product skills and 69 external engineering skills. Skills actually **installed** in a repository must be distinguished from skills referenced only in the monitor's catalog. A new installed skill requires a matching domain (or a justified `sem_arquivo` decision) and a traceable origin in the central monitor catalog. Always keep the map, this inventory, module governance and contribution documentation synchronized in the same PR. Verify current upstream state before editing; independent review and final CI must be reported accurately rather than assumed.
+The upstream project's original Hard Rules and module instructions remain authoritative, while the owner's **additive, fork-only workflow** is in [AGENTS.md](AGENTS.md#skills-and-contribution-governance-repository-wide); contributor preflight is in [CONTRIBUTING.md](CONTRIBUTING.md#mandatory-skills-and-governance-preflight). These apply to the current 46 product skills and 73 installed external engineering skills (72 referenced in the map). Skills actually **installed** in a repository must be distinguished from skills referenced only in the monitor's catalog. A new installed skill requires a matching domain (or a justified `sem_arquivo` decision) and a traceable origin in the central monitor catalog. Always keep the map, this inventory, module governance and contribution documentation synchronized in the same PR. Verify current upstream state before editing; independent review and final CI must be reported accurately rather than assumed.
 
 ## Regra de invocação
 
