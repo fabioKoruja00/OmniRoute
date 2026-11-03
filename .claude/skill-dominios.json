@@ -442,11 +442,11 @@
       "dominio": "monorepo",
       "caminho": "^/(?:packages/|pnpm-workspace\\.yaml$|package(?:-lock)?\\.json$)",
       "skills": [
-        "nodejs-boas-praticas",
-        "backend-patterns",
+        "monorepo-navigator",
+        "node-supply-chain",
         "node-typescript",
-        "code-reviewer",
-        "node-testing"
+        "node-testing",
+        "code-reviewer"
       ]
     },
     {
