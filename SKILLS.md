@@ -2,11 +2,11 @@
 
 Este arquivo define as fontes, a disponibilidade e as regras de uso das skills associadas ao código do OmniRoute. A seleção por **caminho real de arquivo** e por **comando** está em `.claude/skill-dominios.json`.
 
-## Inventário auditado em 30/10/2026
+## Inventário auditado em 03/11/2026
 
 | Indicador | Resultado |
 | --- | ---: |
-| Domínios definidos no mapa | **299** |
+| Domínios definidos no mapa | **319** |
 | Padrões de comandos | **14** |
 | Skills nativas em `skills/<nome>/SKILL.md` | **46** |
 | Skills externas instaladas em `.claude/skills/<nome>/SKILL.md` | **57** |
@@ -16,7 +16,7 @@ Este arquivo define as fontes, a disponibilidade e as regras de uso das skills a
 
 Foram percorridas as árvores reais de `src/`, `open-sse/`, `tests/`, `scripts/`, `docs/`, `packages/`, `bin/`, `config/`, `deploy/`, `docker/`, `.github/`, `electron/`, `@omniroute/`, `examples/`, `contrib/`, `changelog.d/` e `skills/`.
 
-**Evidência de abrangência:** todos os **27.088 arquivos textuais** da amostra de 17 árvores satisfizeram pelo menos uma expressão de domínio. Isso demonstra *cobertura de caminho*, não substitui revisão semântica do código, dos modelos de provedores nem a aplicação da skill correta a cada tarefa. Os arquivos na raiz, os ativos de imagem e as skills de `.claude/` também possuem regras de tratamento, mas não entram nessa contagem de 27.088. Padrões são validados como expressões regulares e a existência das skills é conferida pelo inventário da árvore. A conferência complementar também identificou e classificou os arquivos de configuração da raiz (segurança, Nix/Linux, tradução, métricas, revisão e governança), além dos recursos estáticos.
+**Evidência de abrangência integral (03/11/2026):** **27.622 arquivos versionados**, abrangendo os arquivos da raiz, **22 diretórios do upstream e `.claude/` do fork**, foram confrontados com as expressões do mapa; **0 arquivos sem domínio** e pelo menos **3 skills distintas disponíveis por arquivo**. Todas as árvores consultadas retornaram `truncated=false`. O snapshot de referência foi a release upstream `5a7292d9`, reconciliada com a PR #4 (inclusive os 217 arquivos em `.claude/` e o `SKILLS.md` adicional). A cobertura é estática: não garante que um arquivo futuro esteja coberto, nem prova adequação funcional de cada orientação ou substitui testes, revisão e CI.
 
 ## Áreas e correspondências principais
 
@@ -44,7 +44,7 @@ Foram percorridas as árvores reais de `src/`, `open-sse/`, `tests/`, `scripts/`
 | `docker/`, `deploy/`, `bin/`, `scripts/ops/` | Operação, compilação, CLI, serviço e deployment: `linux-administration`, `systemd-services`, `omni-cli-tools` |
 | `skills/`, `.claude/skills/`, `SKILLS.md` | Skills de operação, documentação e auditoria do próprio mapa: `omni-github-skills`, `git-workflow`, `writing-guidelines` |
 
-A auditoria de correspondência corrigiu a classificação ampla de `src/shared/`: componentes e hooks seguem regras de interface, enquanto contratos e utilitários agnósticos usam práticas Node/TypeScript, enquanto serviços e operações de rede identificados como backend recebem regras especializadas de segurança. O mapa contém agora **299 domínios**, incluindo o conjunto `src/shared/services/` que estava fora das regras. Também foram corrigidas duas referências quebradas: a referência compartilhada de TestMu utilizada pela `playwright-skill` foi incluída, e a orientação de release exclusiva do repositório ECC, sem pertinência ao OmniRoute, foi retirada da cópia de `github-ops`.
+A auditoria de correspondência corrigiu a classificação ampla de `src/shared/`: componentes e hooks seguem regras de interface, enquanto contratos e utilitários agnósticos usam práticas Node/TypeScript, enquanto serviços e operações de rede identificados como backend recebem regras especializadas de segurança. O mapa contém agora **319 domínios**, incluindo os serviços compartilhados e regras específicas para configurações, scripts, exemplos, documentação visual e integrações. Também foram corrigidas duas referências quebradas: a referência compartilhada de TestMu utilizada pela `playwright-skill` foi incluída, e a orientação de release exclusiva do repositório ECC, sem pertinência ao OmniRoute, foi retirada da cópia de `github-ops`.
 
 As tabelas resumem famílias; as regras de correspondência por rota, arquivo, suíte de testes e comando estão integralmente no JSON. Em especial, os testes `tests/unit/*.test.ts` usam majoritariamente o **runner nativo do Node**, e não devem ser confundidos com suites Vitest ou Jest. A inclusão de `vitest-skill` não converte nenhum executor.
 
@@ -83,11 +83,20 @@ Não foi instalada `a11y-audit` do catálogo central porque sua cópia local nã
 
 ## Reconciliação de domínio por arquivo (03/11/2026)
 
-Varredura da árvore versionada da PR #4: **27.713 arquivos em 19 diretórios**, sem contar arquivos da raiz. Encontrados **21 arquivos em `src/shared/services/`** (configurações de CLI e sincronizadores) sem correspondência; a regra transversal `shared-servicos-runtime` corrige essa lacuna sem rotular esses módulos como infraestrutura de rede. O conjunto atual possui **299 regras de arquivos**, **14 de comandos** e **103 skills**, sem referências ou skills órfãs.
+A comparação inicial identificou **21 arquivos de serviços compartilhados** sem correspondência no mapa anterior; `shared-servicos-runtime` cobriu o conjunto e foram acrescentadas regras especializadas para configurações de CLI e agendadores. Depois, a auditoria integral da árvore atual identificou **cobertura pouco específica**, apesar de correspondência formal, para arquivos Quadlet/Podman, scripts Windows, exemplos de API/plugins, diagramas, pacotes e política de dependências, validação HTTP, ações GitHub compostas e configurações da raiz. Foram adicionados **20 domínios específicos**, todos validados contra arquivos reais, sem qualquer ampliação genérica que faça todos os arquivos combinarem com todas as skills.
 
-As **123 regras que tinham 6 skills** foram reconciliadas para 5 por redundância semântica, preservando as competências mais específicas (produto, protocolos, segurança, Node/TypeScript, testes, frontend e redes). A distribuição final é **11 regras com 3**, **71 com 4** e **217 com 5**; comandos mantêm 4. Não se deve ativar indiscriminadamente todas as skills de regras sobrepostas: selecionar as relevantes após o preflight, mantendo as verificações obrigatórias.
+| Subsistema verificado | Especialização adicionada | Arquivo de controle |
+| --- | --- | --- |
+| Podman/Quadlet e operações VPS/Windows | Systemd, Linux, redes, segredos, inicialização CLI | `contrib/podman/omniroute.container`, `contrib/windows/launch-claude.bat` |
+| Plugins e exemplos de cliente | Cadeia de suprimentos de agentes, protocolos HTTP, segurança | `examples/plugins/langfuse/index.mjs`, `examples/quickstart/python_requests.py` |
+| Diagramas e documentação visual | Design, acessibilidade, revisão de diagramas e consistência documental | `docs/diagrams/authz-pipeline.mmd` |
+| Root, editor, dependências e linguagem | Segurança da distribuição npm, ignorados, licenças, Vale e VS Code | `.npmrc`, `SECURITY.md`, `.vale/styles/Vocab/OmniRoute/accept.txt` |
+| Testes, scripts e workspaces | Contratos de testes HTTP, GitHub Actions compostas, manifests de Node | `tests/manual/api.http`, `open-sse/package.json` |
+| Serviços compartilhados e core | CLI, sincronização, WebSocket, modelos e avaliações Promptfoo | `src/shared/services/cloudSyncScheduler.ts`, `src/lib/ws/handshake.ts` |
 
-A atualização usa somente as 103 skills existentes; **nenhuma skill nova foi instalada**, portanto não abre alteração desnecessária no catálogo do monitor, já reconciliado pela PR #48. A conferência é estática: caminhos e expressões regulares não substituem testes funcionais, CI, conferência de scripts externos ou inspeção semântica de cada arquivo.
+As **123 regras iniciais que tinham 6 skills** foram reduzidas para 5 por redundância semântica. A distribuição final é **12 domínios com 3**, **72 com 4** e **235 com 5** skills, totalizando **319 regras de arquivos**, **14 de comandos** e **103 skills únicas existentes**, sem referências órfãs; os comandos mantêm 4 skills. Regras são complementares: um arquivo pode combinar com vários domínios, mas o preflight seleciona apenas as skills realmente pertinentes à operação.
+
+Não foi instalada nenhuma skill nova: as **103 já estão referenciadas no catálogo central do monitor** (PR #48 integrada). O `mermaid-expert` citado no catálogo externo é um **agente**, não um `SKILL.md` disponível para instalação direta, e portanto não é contado como skill instalada. A auditoria não altera código funcional, scripts de skills, workflows nem repositórios externos; resultados de CI/testes funcionais não são presumidos.
 
 ## Pilhas complementares por domínio (ampliação de 30/10/2026)
 
@@ -120,7 +129,7 @@ A auditoria aprofundada constatou que as 298 regras iniciais eram insuficienteme
 
 **Licenças adicionais:** `cloudflare-one` (Apache-2.0), `frontend-a11y` (MIT) e `frontend-excellence` (Apache-2.0) tiveram os arquivos de licença originais incorporados após a revisão de proveniência.
 
-**Auditoria estrutural:** 46 `SKILL.md` nativos mais 57 externos encontrados na árvore atual; todas as 103 skills são referenciadas em pelo menos uma regra ou comando, e cada referência aponta para um arquivo real. Os 299 padrões de caminho compilam. Isso não equivale à execução de todos os scripts, ao teste funcional do produto nem à aprovação de CI.
+**Auditoria estrutural:** 46 `SKILL.md` nativos mais 57 externos encontrados na árvore atual; todas as 103 skills são referenciadas em pelo menos uma regra ou comando, e cada referência aponta para um arquivo real. Os 319 padrões de caminho compilam. Isso não equivale à execução de todos os scripts, ao teste funcional do produto nem à aprovação de CI.
 
 ## Governance and provenance synchronization
 
