@@ -5,7 +5,7 @@ description: "Write release notes and CHANGELOG.md from commits and pick the nex
 
 # Changelog Generator
 
-**Governança específica do fork OmniRoute:** prevalecem as regras atuais do repositório e do usuário, incluindo retenção dos changelogs locais por 45 dias quando aplicável, histórico completo em releases, não alterar Hard Rules do upstream e não dispensar testes/CI. Os exemplos de hotfix e SLAs da origem são orientativos, não autorização para publicação, rollback, alteração de arquivos ou execução de scripts sem revisão e confirmação.
+**Nota de compatibilidade:** seguir exclusivamente as diretrizes existentes no próprio repositório OmniRoute para changelog, releases, versionamento e CI. Os exemplos desta skill são referências técnicas e não alteram políticas ou concedem autorização para gerar, podar, reescrever ou publicar changelogs.
 
 **Tier:** POWERFUL  
 **Category:** Engineering  
