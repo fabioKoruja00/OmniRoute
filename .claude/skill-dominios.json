@@ -6,7 +6,7 @@
       "skills": [
         "omni-combos-routing",
         "omni-resilience",
-        "performance-optimization",
+        "site-reliability",
         "node-testing",
         "test-gap-audit"
       ]
@@ -50,7 +50,7 @@
       "skills": [
         "omni-mcp",
         "omni-agents-a2a",
-        "api-design-reviewer",
+        "mcp-server-review",
         "api-test-suite-builder",
         "api-security-patterns"
       ]
@@ -71,10 +71,10 @@
       "caminho": "^/src/lib/(?:cache|promptCache|semanticCache)",
       "skills": [
         "omni-cache",
+        "performance-profiler",
         "performance-optimization",
         "node-testing",
-        "test-gap-audit",
-        "api-health-monitoring"
+        "test-gap-audit"
       ]
     },
     {
@@ -82,10 +82,10 @@
       "caminho": "^/src/lib/(?:resilience|monitoring|credentialHealth|proxyHealth|tokenHealth)",
       "skills": [
         "omni-resilience",
-        "api-health-monitoring",
-        "error-handling",
+        "site-reliability",
+        "observability",
         "node-testing",
-        "testing-strategy"
+        "error-handling"
       ]
     },
     {
@@ -116,9 +116,9 @@
       "skills": [
         "omni-github-skills",
         "omni-agents-a2a",
+        "agent-security-audit",
         "agent-supply-chain",
-        "docs-sync-audit",
-        "writing-guidelines"
+        "docs-sync-audit"
       ]
     },
     {
@@ -169,10 +169,10 @@
       "dominio": "electron",
       "caminho": "^/electron/",
       "skills": [
-        "nodejs-boas-praticas",
-        "error-handling",
-        "api-security-patterns",
+        "electron-pro",
         "node-typescript",
+        "graceful-shutdown",
+        "api-security-patterns",
         "testing-strategy"
       ]
     },
@@ -299,11 +299,11 @@
       "dominio": "desktop-seguranca",
       "caminho": "^/electron/(?:main|preload|lib|processTree|sqlite-inspection)",
       "skills": [
-        "nodejs-boas-praticas",
+        "electron-pro",
         "secrets-management",
-        "error-handling",
         "secret-scanning",
-        "api-security-patterns"
+        "api-security-patterns",
+        "code-reviewer"
       ]
     },
     {
@@ -332,11 +332,11 @@
       "dominio": "testes-desempenho",
       "caminho": "^/tests/(?:load|benchmarks)/",
       "skills": [
-        "nodejs-boas-praticas",
-        "constraint-driven-development",
+        "k6",
+        "performance-profiler",
         "node-testing",
         "test-gap-audit",
-        "code-reviewer"
+        "performance-optimization"
       ]
     },
     {
@@ -735,10 +735,10 @@
       "dominio": "raiz-codigo-tipos",
       "caminho": "^/src/(?:types/|proxy\\.ts$|instrumentation[^/]*\\.ts$|scripts/)",
       "skills": [
-        "nodejs-boas-praticas",
+        "typescript-advanced-types",
+        "node-typescript",
         "backend-patterns",
         "api-security-patterns",
-        "node-typescript",
         "code-reviewer"
       ]
     },
@@ -746,9 +746,9 @@
       "dominio": "tipagem-compartilhada",
       "caminho": "^/src/(?:shared/(?:types|contracts|schemas|validation)/|types/)",
       "skills": [
-        "nodejs-boas-praticas",
-        "api-security-patterns",
+        "typescript-advanced-types",
         "node-typescript",
+        "api-security-patterns",
         "code-reviewer",
         "node-testing"
       ]
@@ -834,11 +834,11 @@
       "dominio": "observabilidade-node",
       "caminho": "^/src/(?:instrumentation(?:-node)?\\.ts$|lib/(?:monitoring|audit|logExport)/)",
       "skills": [
-        "nodejs-boas-praticas",
+        "observability",
         "api-health-monitoring",
         "error-handling",
         "node-typescript",
-        "code-reviewer"
+        "node-testing"
       ]
     },
     {
@@ -880,8 +880,8 @@
       "skills": [
         "omni-combos-routing",
         "omni-resilience",
-        "nodejs-boas-praticas",
-        "performance-optimization",
+        "site-reliability",
+        "performance-profiler",
         "node-testing"
       ]
     },
@@ -901,7 +901,7 @@
       "caminho": "^/src/lib/(?:cache|promptCache|semanticCache)(?:/|\\.|$)",
       "skills": [
         "omni-cache",
-        "nodejs-boas-praticas",
+        "performance-profiler",
         "performance-optimization",
         "node-testing",
         "test-gap-audit"
@@ -935,9 +935,9 @@
       "skills": [
         "omni-agents-a2a",
         "omni-mcp",
+        "agent-security-audit",
         "api-security-patterns",
-        "node-typescript",
-        "code-reviewer"
+        "node-typescript"
       ]
     },
     {
@@ -945,7 +945,7 @@
       "caminho": "^/src/lib/(?:memory|obsidian|notion|search|embeddings)(?:/|\\.|$)",
       "skills": [
         "omni-agents-a2a",
-        "backend-patterns",
+        "agent-security-audit",
         "api-security-patterns",
         "node-typescript",
         "code-reviewer"
@@ -956,8 +956,8 @@
       "caminho": "^/src/lib/(?:skills|plugins)(?:/|\\.|$)",
       "skills": [
         "omni-github-skills",
+        "agent-security-audit",
         "api-security-patterns",
-        "backend-patterns",
         "agent-supply-chain",
         "docs-sync-audit"
       ]
@@ -988,11 +988,11 @@
       "dominio": "lib-operacao-background",
       "caminho": "^/src/lib/(?:jobs|jobRegistry|batches|system|startup|runtime|deploy)(?:/|\\.|$)",
       "skills": [
-        "backend-patterns",
-        "nodejs-boas-praticas",
+        "site-reliability",
+        "observability",
         "graceful-shutdown",
-        "node-testing",
-        "testing-strategy"
+        "node-typescript",
+        "node-testing"
       ]
     },
     {
@@ -1021,11 +1021,11 @@
       "dominio": "lib-avaliacoes-chaos",
       "caminho": "^/src/lib/(?:evals|routerEval|chaos|inspector)(?:/|\\.|$)",
       "skills": [
-        "constraint-driven-development",
+        "site-reliability",
         "omni-resilience",
-        "nodejs-boas-praticas",
-        "node-typescript",
-        "code-reviewer"
+        "constraint-driven-development",
+        "node-testing",
+        "testing-strategy"
       ]
     },
     {
@@ -1122,7 +1122,7 @@
       "skills": [
         "omni-combos-routing",
         "omni-resilience",
-        "api-health-monitoring",
+        "site-reliability",
         "api-test-suite-builder",
         "api-security-patterns"
       ]
@@ -1155,7 +1155,7 @@
       "skills": [
         "omni-mcp",
         "omni-agents-a2a",
-        "omni-webhooks",
+        "mcp-server-review",
         "api-test-suite-builder",
         "api-security-patterns"
       ]
@@ -1254,7 +1254,7 @@
       "skills": [
         "omni-agents-a2a",
         "omni-mcp",
-        "omni-github-skills",
+        "agent-security-audit",
         "frontend-a11y",
         "nextjs-quality"
       ]
@@ -1384,22 +1384,22 @@
       "dominio": "electron-processos",
       "caminho": "^/electron/(?:main|preload|lib/|processTree|remoteServer|sqlite-inspection)",
       "skills": [
-        "nodejs-boas-praticas",
-        "api-security-patterns",
+        "electron-pro",
         "graceful-shutdown",
+        "api-security-patterns",
         "node-typescript",
-        "testing-strategy"
+        "node-testing"
       ]
     },
     {
       "dominio": "electron-pacotes",
       "caminho": "^/electron/(?:package(?:-lock)?\\.json|assets/|.*\\.html$)",
       "skills": [
-        "nodejs-boas-praticas",
-        "secrets-management",
+        "electron-pro",
         "node-supply-chain",
         "secret-scanning",
-        "node-typescript"
+        "node-typescript",
+        "testing-strategy"
       ]
     },
     {
@@ -1428,11 +1428,11 @@
       "dominio": "opencode-segredos",
       "caminho": "^/@omniroute/[^/]+/src/(?:credentials|auth|management|telemetry)",
       "skills": [
+        "agent-security-audit",
         "secrets-management",
         "api-security-patterns",
         "code-reviewer",
-        "node-testing",
-        "api-design-reviewer"
+        "node-testing"
       ]
     },
     {
@@ -1540,7 +1540,7 @@
       "skills": [
         "omni-mcp",
         "omni-agents-a2a",
-        "api-security-patterns",
+        "mcp-server-review",
         "api-design-reviewer",
         "api-test-suite-builder"
       ]
@@ -1648,9 +1648,9 @@
       "dominio": "node-unit-testes",
       "caminho": "^/tests/unit/",
       "skills": [
-        "nodejs-boas-praticas",
-        "constraint-driven-development",
         "node-testing",
+        "property-based-testing",
+        "constraint-driven-development",
         "test-gap-audit",
         "code-reviewer"
       ]
@@ -1672,7 +1672,7 @@
       "skills": [
         "omni-compression",
         "omni-combos-routing",
-        "nodejs-boas-praticas",
+        "property-based-testing",
         "node-testing",
         "test-gap-audit"
       ]
@@ -1705,7 +1705,7 @@
       "skills": [
         "omni-inference",
         "omni-mcp",
-        "nodejs-boas-praticas",
+        "mcp-server-review",
         "node-testing",
         "test-gap-audit"
       ]
@@ -1759,7 +1759,7 @@
       "caminho": "^/tests/(?:security|llm-security)/",
       "skills": [
         "prompt-injection-test",
-        "agent-supply-chain",
+        "agent-security-audit",
         "api-security-patterns",
         "node-testing",
         "test-gap-audit"
@@ -1769,31 +1769,31 @@
       "dominio": "testes-propriedades-mutation",
       "caminho": "^/tests/(?:golden-set|snapshots|fixtures)/",
       "skills": [
-        "constraint-driven-development",
-        "nodejs-boas-praticas",
+        "property-based-testing",
+        "mutation-testing",
         "node-testing",
         "test-gap-audit",
-        "code-reviewer"
+        "testing-strategy"
       ]
     },
     {
       "dominio": "testes-carga-benchmark",
       "caminho": "^/tests/(?:load|benchmarks)/",
       "skills": [
-        "nodejs-boas-praticas",
-        "constraint-driven-development",
+        "k6",
+        "performance-profiler",
+        "site-reliability",
         "node-testing",
-        "test-gap-audit",
-        "code-reviewer"
+        "testing-strategy"
       ]
     },
     {
       "dominio": "testes-harness-config",
       "caminho": "^/tests/(?:_setup|_helpers|helpers|_run|_cp_)/",
       "skills": [
-        "nodejs-boas-praticas",
-        "constraint-driven-development",
+        "testing-strategy",
         "node-testing",
+        "property-based-testing",
         "test-gap-audit",
         "code-reviewer"
       ]
@@ -1824,8 +1824,8 @@
       "dominio": "scripts-qualidade",
       "caminho": "^/scripts/(?:check|quality)/",
       "skills": [
+        "mutation-testing",
         "constraint-driven-development",
-        "nodejs-boas-praticas",
         "node-testing",
         "testing-strategy",
         "test-gap-audit"
@@ -1857,11 +1857,11 @@
       "dominio": "scripts-performance",
       "caminho": "^/scripts/(?:perf|router-eval|compression-eval|compression)/",
       "skills": [
-        "nodejs-boas-praticas",
-        "constraint-driven-development",
-        "omni-resilience",
+        "performance-profiler",
+        "k6",
         "performance-optimization",
-        "node-testing"
+        "node-testing",
+        "site-reliability"
       ]
     },
     {
@@ -1934,11 +1934,11 @@
       "dominio": "infra-servicos-processos",
       "caminho": "^/(?:deploy/|docker/|scripts/ops/).*?(?:service|systemd|pm2|init)",
       "skills": [
+        "site-reliability",
+        "observability",
         "systemd-services",
         "graceful-shutdown",
-        "linux-administration",
-        "networking",
-        "secret-scanning"
+        "linux-administration"
       ]
     },
     {
@@ -2000,9 +2000,9 @@
       "dominio": "typescript-config",
       "caminho": "^/(?:tsconfig[^/]*\\.json$|[^/]+\\.config\\.(?:ts|js|mjs|cjs)$|pnpm[^/]*|package(?:-lock)?\\.json$)",
       "skills": [
-        "nodejs-boas-praticas",
-        "constraint-driven-development",
+        "typescript-advanced-types",
         "node-typescript",
+        "constraint-driven-development",
         "code-reviewer",
         "node-testing"
       ]
@@ -2786,8 +2786,8 @@
       "caminho": "^/tests/unit/[^/]*(?:combo|Combo|routing|Routing|route|Route|fallback|Fallback|failover|Failover|round|Round|random|Random|priority|Priority|selector|Selector|pool|Pool|quota|Quota|balance|Balance|breaker|Breaker|resilience|Resilience|admission|Admission)[^/]*\\.(?:test|spec)\\.(?:ts|tsx|js|mjs)$",
       "skills": [
         "omni-combos-routing",
+        "property-based-testing",
         "omni-resilience",
-        "nodejs-boas-praticas",
         "node-testing",
         "test-gap-audit"
       ]
@@ -2797,7 +2797,7 @@
       "caminho": "^/tests/unit/[^/]*(?:cache|Cache|memoiz|Memoiz|ttl|TTL|lru|LRU)[^/]*\\.(?:test|spec)\\.(?:ts|tsx|js|mjs)$",
       "skills": [
         "omni-cache",
-        "nodejs-boas-praticas",
+        "property-based-testing",
         "node-testing",
         "test-gap-audit",
         "performance-optimization"
@@ -2830,8 +2830,8 @@
       "caminho": "^/tests/unit/[^/]*(?:mcp|Mcp|MCP|a2a|A2A|agent|Agent|skill|Skill|plugin|Plugin|tool|Tool|functionCall|FunctionCall)[^/]*\\.(?:test|spec)\\.(?:ts|tsx|js|mjs)$",
       "skills": [
         "omni-mcp",
-        "omni-github-skills",
-        "api-security-patterns",
+        "omni-agents-a2a",
+        "mcp-server-review",
         "node-testing",
         "test-gap-audit"
       ]
@@ -2862,11 +2862,11 @@
       "dominio": "testes-nome-conectividade",
       "caminho": "^/tests/unit/[^/]*(?:proxy|Proxy|tunnel|Tunnel|mitm|Mitm|tls|Tls|dns|Dns|network|Network|http|Http|egress|Egress)[^/]*\\.(?:test|spec)\\.(?:ts|tsx|js|mjs)$",
       "skills": [
-        "omni-proxies",
-        "omni-tunnels",
-        "api-security-patterns",
+        "site-reliability",
+        "networking",
         "node-testing",
-        "test-gap-audit"
+        "test-gap-audit",
+        "error-handling"
       ]
     },
     {
@@ -2906,9 +2906,9 @@
       "dominio": "testes-nome-telemetria",
       "caminho": "^/tests/unit/[^/]*(?:logger|Logger|logging|Logging|health|Health|monitor|Monitor|trace|Trace|observability|Observability|metric|Metric|audit|Audit|telemetry|Telemetry)[^/]*\\.(?:test|spec)\\.(?:ts|tsx|js|mjs)$",
       "skills": [
+        "observability",
         "api-health-monitoring",
         "omni-usage-logs",
-        "nodejs-boas-praticas",
         "node-testing",
         "test-gap-audit"
       ]
@@ -2917,9 +2917,9 @@
       "dominio": "testes-nome-concorrencia",
       "caminho": "^/tests/unit/[^/]*(?:race|Race|concurr|Concurr|retry|Retry|repro|Repro|stress|Stress|chaos|Chaos|parallel|Parallel|deadlock|Deadlock|timeout|Timeout|latency|Latency)[^/]*\\.(?:test|spec)\\.(?:ts|tsx|js|mjs)$",
       "skills": [
+        "site-reliability",
+        "property-based-testing",
         "omni-resilience",
-        "constraint-driven-development",
-        "nodejs-boas-praticas",
         "node-testing",
         "test-gap-audit"
       ]
@@ -3071,11 +3071,11 @@
       "dominio": "dash-telemetria-alertas",
       "caminho": "^/src/app/\\(dashboard\\)/dashboard/(?:tokens|quota|activity|logs|log-export|costs|analytics|usage)/",
       "skills": [
+        "observability",
         "omni-usage-logs",
-        "frontend-patterns",
-        "accessibility",
         "frontend-ui-engineering",
-        "frontend-a11y"
+        "frontend-a11y",
+        "accessibility"
       ]
     },
     {
@@ -3094,10 +3094,10 @@
       "caminho": "^/(?:scripts/perf/|tests/e2e/.*(?:perf|responsive|smoke)|src/app/landing/|src/app/page\\.tsx$)",
       "skills": [
         "perf-lighthouse",
-        "frontend-patterns",
+        "performance-profiler",
+        "frontend-ui-engineering",
         "responsive-patterns",
-        "performance-optimization",
-        "node-testing"
+        "nextjs-quality"
       ]
     },
     {
@@ -3146,10 +3146,10 @@
       "dominio": "config-cobertura-mutacao",
       "caminho": "^/(?:codecov\\.yml|\\.size-limit\\.json|knip\\.json|sonar-project\\.properties|stryker\\.(?:conf|disablebail)\\.json|promptfooconfig\\.yaml)$",
       "skills": [
-        "constraint-driven-development",
-        "nodejs-boas-praticas",
-        "api-security-patterns",
+        "mutation-testing",
+        "property-based-testing",
         "node-testing",
+        "test-gap-audit",
         "testing-strategy"
       ]
     },
@@ -3189,11 +3189,11 @@
       "dominio": "shared-contratos-agnosticos",
       "caminho": "^/src/shared/(?:constants|contracts|discovery|http|lib|platform|providers|reasoning|resilience|schemas|types|utils|validation)/",
       "skills": [
-        "nodejs-boas-praticas",
+        "typescript-advanced-types",
         "node-typescript",
-        "code-reviewer",
+        "api-design-reviewer",
         "node-testing",
-        "testing-strategy"
+        "code-reviewer"
       ]
     },
     {
@@ -3255,7 +3255,7 @@
       "dominio": "exemplos-plugins-extensoes",
       "caminho": "^/examples/plugins/",
       "skills": [
-        "backend-patterns",
+        "agent-security-audit",
         "agent-supply-chain",
         "api-security-patterns",
         "node-testing",
@@ -3385,7 +3385,7 @@
       "caminho": "^/src/lib/ws/",
       "skills": [
         "networking",
-        "backend-patterns",
+        "typescript-advanced-types",
         "api-security-patterns",
         "node-testing",
         "error-handling"
@@ -3396,8 +3396,8 @@
       "caminho": "^/src/models/",
       "skills": [
         "omni-models",
+        "typescript-advanced-types",
         "node-typescript",
-        "nodejs-boas-praticas",
         "node-testing",
         "code-reviewer"
       ]
@@ -3407,7 +3407,7 @@
       "caminho": "^/promptfooconfig\\.yaml$",
       "skills": [
         "prompt-injection-test",
-        "api-security-patterns",
+        "agent-security-audit",
         "testing-strategy",
         "test-gap-audit",
         "node-testing"
@@ -3419,7 +3419,7 @@
       "skills": [
         "omni-providers",
         "omni-models",
-        "node-typescript",
+        "typescript-advanced-types",
         "api-security-patterns",
         "node-testing"
       ]
@@ -3431,7 +3431,7 @@
         "omni-budget",
         "omni-usage-logs",
         "omni-models",
-        "node-typescript",
+        "typescript-advanced-types",
         "node-testing"
       ]
     },
@@ -3486,7 +3486,7 @@
         "frontend-patterns",
         "frontend-a11y",
         "responsive-patterns",
-        "node-typescript",
+        "typescript-advanced-types",
         "nextjs-quality"
       ]
     },
@@ -3527,9 +3527,9 @@
       "dominio": "shared-validacao-esquemas",
       "caminho": "^/src/shared/(?:validation|schemas)/",
       "skills": [
+        "typescript-advanced-types",
         "api-design-reviewer",
         "api-security-patterns",
-        "node-typescript",
         "node-testing",
         "code-reviewer"
       ]
@@ -3550,10 +3550,10 @@
       "caminho": "^/src/shared/resilience/",
       "skills": [
         "omni-resilience",
+        "site-reliability",
         "omni-combos-routing",
         "node-typescript",
-        "node-testing",
-        "code-reviewer"
+        "node-testing"
       ]
     },
     {
@@ -3593,11 +3593,11 @@
       "dominio": "shared-descoberta-sinais",
       "caminho": "^/src/shared/discovery/",
       "skills": [
-        "omni-resilience",
+        "observability",
+        "site-reliability",
         "api-health-monitoring",
         "node-typescript",
-        "node-testing",
-        "code-reviewer"
+        "node-testing"
       ]
     },
     {
