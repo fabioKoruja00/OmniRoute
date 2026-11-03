@@ -1923,8 +1923,8 @@
       "dominio": "infra-configuracoes",
       "caminho": "^/(?:config/|Dockerfile[^/]*$|docker/|deploy/|docker-compose[^/]*)",
       "skills": [
+        "linux-container-deployment",
         "linux-administration",
-        "nodejs-boas-praticas",
         "secrets-management",
         "networking",
         "cloudflare-one"
@@ -2011,11 +2011,11 @@
       "dominio": "conteiner-deploy",
       "caminho": "^/(?:Dockerfile(?:\\.[^/]*)?$|docker/|deploy/|(?:docker-)?compose[^/]*)",
       "skills": [
+        "linux-container-deployment",
         "linux-administration",
         "secrets-management",
         "systemd-services",
-        "networking",
-        "cloudflare-one"
+        "networking"
       ]
     },
     {
@@ -2053,6 +2053,7 @@
       "dominio": "documentacao-arquitetura",
       "caminho": "^/docs/(?:architecture|security|ops|guides|frameworks|comparison|compression)/",
       "skills": [
+        "architecture-decision-records",
         "writing-guidelines",
         "backend-patterns",
         "api-security-patterns"
@@ -2098,6 +2099,7 @@
       "dominio": "documentacao-tecnica-apoio",
       "caminho": "^/docs/",
       "skills": [
+        "architecture-decision-records",
         "writing-guidelines",
         "docs-sync-audit",
         "git-workflow"
@@ -2719,8 +2721,8 @@
       "dominio": "src-api-rotas-fallback",
       "caminho": "^/src/app/api/[^/]+/",
       "skills": [
+        "site-reliability",
         "api-security-patterns",
-        "backend-patterns",
         "error-handling",
         "api-design-reviewer",
         "api-test-suite-builder"
@@ -3211,9 +3213,9 @@
       "dominio": "contrib-podman-quadlet",
       "caminho": "^/contrib/podman/",
       "skills": [
+        "linux-container-deployment",
         "linux-administration",
         "systemd-services",
-        "networking",
         "secrets-management",
         "code-reviewer"
       ]
@@ -3222,10 +3224,10 @@
       "dominio": "contrib-vps-operacao",
       "caminho": "^/contrib/vps/",
       "skills": [
+        "linux-container-deployment",
         "linux-administration",
         "networking",
         "secrets-management",
-        "cloudflare-one",
         "code-reviewer"
       ]
     },
@@ -3277,9 +3279,9 @@
       "dominio": "documentacao-diagramas",
       "caminho": "^/docs/diagrams/",
       "skills": [
-        "frontend-design",
+        "mermaid-diagrams",
         "docs-sync-audit",
-        "web-design-guidelines",
+        "writing-guidelines",
         "accessibility",
         "code-reviewer"
       ]
@@ -3332,10 +3334,10 @@
       "dominio": "open-sse-workspace-manifests",
       "caminho": "^/open-sse/(?:package\\.json|tsconfig(?:\\.[^/]*)?\\.json)$",
       "skills": [
-        "node-typescript",
+        "monorepo-navigator",
         "node-supply-chain",
         "node-ci",
-        "nodejs-boas-praticas",
+        "node-typescript",
         "code-reviewer"
       ]
     },
@@ -3560,10 +3562,10 @@
       "dominio": "shared-http-erros",
       "caminho": "^/src/shared/http/",
       "skills": [
+        "site-reliability",
         "api-design-reviewer",
         "error-handling",
         "api-security-patterns",
-        "node-typescript",
         "node-testing"
       ]
     },
