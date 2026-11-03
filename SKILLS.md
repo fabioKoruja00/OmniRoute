@@ -6,7 +6,7 @@ Este arquivo define as fontes, a disponibilidade e as regras de uso das skills a
 
 | Indicador | Resultado |
 | --- | ---: |
-| Domínios definidos no mapa | **319** |
+| Domínios definidos no mapa | **339** |
 | Padrões de comandos | **14** |
 | Skills nativas em `skills/<nome>/SKILL.md` | **46** |
 | Skills externas instaladas em `.claude/skills/<nome>/SKILL.md` | **57** |
@@ -44,7 +44,7 @@ Foram percorridas as árvores reais de `src/`, `open-sse/`, `tests/`, `scripts/`
 | `docker/`, `deploy/`, `bin/`, `scripts/ops/` | Operação, compilação, CLI, serviço e deployment: `linux-administration`, `systemd-services`, `omni-cli-tools` |
 | `skills/`, `.claude/skills/`, `SKILLS.md` | Skills de operação, documentação e auditoria do próprio mapa: `omni-github-skills`, `git-workflow`, `writing-guidelines` |
 
-A auditoria de correspondência corrigiu a classificação ampla de `src/shared/`: componentes e hooks seguem regras de interface, enquanto contratos e utilitários agnósticos usam práticas Node/TypeScript, enquanto serviços e operações de rede identificados como backend recebem regras especializadas de segurança. O mapa contém agora **319 domínios**, incluindo os serviços compartilhados e regras específicas para configurações, scripts, exemplos, documentação visual e integrações. Também foram corrigidas duas referências quebradas: a referência compartilhada de TestMu utilizada pela `playwright-skill` foi incluída, e a orientação de release exclusiva do repositório ECC, sem pertinência ao OmniRoute, foi retirada da cópia de `github-ops`.
+A auditoria de correspondência corrigiu a classificação ampla de `src/shared/`: componentes e hooks seguem regras de interface, enquanto contratos e utilitários agnósticos usam práticas Node/TypeScript, enquanto serviços e operações de rede identificados como backend recebem regras especializadas de segurança. O mapa contém agora **339 domínios**, incluindo os serviços compartilhados e regras específicas para configurações, scripts, exemplos, documentação visual e integrações. Também foram corrigidas duas referências quebradas: a referência compartilhada de TestMu utilizada pela `playwright-skill` foi incluída, e a orientação de release exclusiva do repositório ECC, sem pertinência ao OmniRoute, foi retirada da cópia de `github-ops`.
 
 As tabelas resumem famílias; as regras de correspondência por rota, arquivo, suíte de testes e comando estão integralmente no JSON. Em especial, os testes `tests/unit/*.test.ts` usam majoritariamente o **runner nativo do Node**, e não devem ser confundidos com suites Vitest ou Jest. A inclusão de `vitest-skill` não converte nenhum executor.
 
@@ -83,7 +83,7 @@ Não foi instalada `a11y-audit` do catálogo central porque sua cópia local nã
 
 ## Reconciliação de domínio por arquivo (03/11/2026)
 
-A comparação inicial identificou **21 arquivos de serviços compartilhados** sem correspondência no mapa anterior; `shared-servicos-runtime` cobriu o conjunto e foram acrescentadas regras especializadas para configurações de CLI e agendadores. Depois, a auditoria integral da árvore atual identificou **cobertura pouco específica**, apesar de correspondência formal, para arquivos Quadlet/Podman, scripts Windows, exemplos de API/plugins, diagramas, pacotes e política de dependências, validação HTTP, ações GitHub compostas e configurações da raiz. Foram adicionados **20 domínios específicos**, todos validados contra arquivos reais, sem qualquer ampliação genérica que faça todos os arquivos combinarem com todas as skills.
+A comparação inicial identificou **21 arquivos de serviços compartilhados** sem correspondência no mapa anterior; `shared-servicos-runtime` cobriu o conjunto e foram acrescentadas regras especializadas para configurações de CLI e agendadores. Depois, a auditoria integral da árvore atual identificou **cobertura pouco específica**, apesar de correspondência formal, para arquivos Quadlet/Podman, scripts Windows, exemplos de API/plugins, diagramas, pacotes e política de dependências, validação HTTP, ações GitHub compostas e configurações da raiz. Foram adicionados **40 domínios específicos** em duas rodadas, todos validados contra arquivos reais, sem qualquer ampliação genérica que faça todos os arquivos combinarem com todas as skills.
 
 | Subsistema verificado | Especialização adicionada | Arquivo de controle |
 | --- | --- | --- |
@@ -94,7 +94,9 @@ A comparação inicial identificou **21 arquivos de serviços compartilhados** s
 | Testes, scripts e workspaces | Contratos de testes HTTP, GitHub Actions compostas, manifests de Node | `tests/manual/api.http`, `open-sse/package.json` |
 | Serviços compartilhados e core | CLI, sincronização, WebSocket, modelos e avaliações Promptfoo | `src/shared/services/cloudSyncScheduler.ts`, `src/lib/ws/handshake.ts` |
 
-As **123 regras iniciais que tinham 6 skills** foram reduzidas para 5 por redundância semântica. A distribuição final é **12 domínios com 3**, **72 com 4** e **235 com 5** skills, totalizando **319 regras de arquivos**, **14 de comandos** e **103 skills únicas existentes**, sem referências órfãs; os comandos mantêm 4 skills. Regras são complementares: um arquivo pode combinar com vários domínios, mas o preflight seleciona apenas as skills realmente pertinentes à operação.
+**Segunda rodada semântica:** arquivos de `src/shared/constants/`, `src/shared/utils/`, `schemas/`, `validation/` e serviços auxiliares eram cobertos principalmente por orientação genérica de Node/TypeScript. Foram acrescentados **20 domínios focalizados** para identidade, preços/cotas, catálogo de provedores/modelos, roteamento, multimodalidade, CLI, componentes de interface, autenticação, contratos, WebSocket/streaming e manutenção de agregações. Exemplo: `src/shared/constants/pricing/default-pricing.ts` ganha skills de custos/uso, enquanto `src/shared/utils/apiAuth.ts` ganha segurança e autenticação. Todos os 339 domínios correspondem a pelo menos um arquivo efetivo; não há regras sem uso nem arquivos sem domínio no snapshot de 27.622 itens.
+
+As **123 regras iniciais que tinham 6 skills** foram reduzidas para 5 por redundância semântica. A distribuição final é **12 domínios com 3**, **72 com 4** e **255 com 5** skills, totalizando **339 regras de arquivos**, **14 de comandos** e **103 skills únicas existentes**, sem referências órfãs; os comandos mantêm 4 skills. Regras são complementares: um arquivo pode combinar com vários domínios, mas o preflight seleciona apenas as skills realmente pertinentes à operação.
 
 Não foi instalada nenhuma skill nova: as **103 já estão referenciadas no catálogo central do monitor** (PR #48 integrada). O `mermaid-expert` citado no catálogo externo é um **agente**, não um `SKILL.md` disponível para instalação direta, e portanto não é contado como skill instalada. A auditoria não altera código funcional, scripts de skills, workflows nem repositórios externos; resultados de CI/testes funcionais não são presumidos.
 
@@ -129,7 +131,7 @@ A auditoria aprofundada constatou que as 298 regras iniciais eram insuficienteme
 
 **Licenças adicionais:** `cloudflare-one` (Apache-2.0), `frontend-a11y` (MIT) e `frontend-excellence` (Apache-2.0) tiveram os arquivos de licença originais incorporados após a revisão de proveniência.
 
-**Auditoria estrutural:** 46 `SKILL.md` nativos mais 57 externos encontrados na árvore atual; todas as 103 skills são referenciadas em pelo menos uma regra ou comando, e cada referência aponta para um arquivo real. Os 319 padrões de caminho compilam. Isso não equivale à execução de todos os scripts, ao teste funcional do produto nem à aprovação de CI.
+**Auditoria estrutural:** 46 `SKILL.md` nativos mais 57 externos encontrados na árvore atual; todas as 103 skills são referenciadas em pelo menos uma regra ou comando, e cada referência aponta para um arquivo real. Os 339 padrões de caminho compilam. Isso não equivale à execução de todos os scripts, ao teste funcional do produto nem à aprovação de CI.
 
 ## Governance and provenance synchronization
 
