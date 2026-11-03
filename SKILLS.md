@@ -6,7 +6,7 @@ Este arquivo define as fontes, a disponibilidade e as regras de uso das skills a
 
 | Indicador | Resultado |
 | --- | ---: |
-| Domínios definidos no mapa | **298** |
+| Domínios definidos no mapa | **299** |
 | Padrões de comandos | **14** |
 | Skills nativas em `skills/<nome>/SKILL.md` | **46** |
 | Skills externas instaladas em `.claude/skills/<nome>/SKILL.md` | **57** |
@@ -44,7 +44,7 @@ Foram percorridas as árvores reais de `src/`, `open-sse/`, `tests/`, `scripts/`
 | `docker/`, `deploy/`, `bin/`, `scripts/ops/` | Operação, compilação, CLI, serviço e deployment: `linux-administration`, `systemd-services`, `omni-cli-tools` |
 | `skills/`, `.claude/skills/`, `SKILLS.md` | Skills de operação, documentação e auditoria do próprio mapa: `omni-github-skills`, `git-workflow`, `writing-guidelines` |
 
-A auditoria de correspondência corrigiu a classificação ampla de `src/shared/`: componentes e hooks seguem regras de interface, enquanto contratos e utilitários agnósticos usam práticas Node/TypeScript, enquanto serviços e operações de rede identificados como backend recebem regras especializadas de segurança. O mapa contém agora **298 domínios**. Também foram corrigidas duas referências quebradas: a referência compartilhada de TestMu utilizada pela `playwright-skill` foi incluída, e a orientação de release exclusiva do repositório ECC, sem pertinência ao OmniRoute, foi retirada da cópia de `github-ops`.
+A auditoria de correspondência corrigiu a classificação ampla de `src/shared/`: componentes e hooks seguem regras de interface, enquanto contratos e utilitários agnósticos usam práticas Node/TypeScript, enquanto serviços e operações de rede identificados como backend recebem regras especializadas de segurança. O mapa contém agora **299 domínios**, incluindo o conjunto `src/shared/services/` que estava fora das regras. Também foram corrigidas duas referências quebradas: a referência compartilhada de TestMu utilizada pela `playwright-skill` foi incluída, e a orientação de release exclusiva do repositório ECC, sem pertinência ao OmniRoute, foi retirada da cópia de `github-ops`.
 
 As tabelas resumem famílias; as regras de correspondência por rota, arquivo, suíte de testes e comando estão integralmente no JSON. Em especial, os testes `tests/unit/*.test.ts` usam majoritariamente o **runner nativo do Node**, e não devem ser confundidos com suites Vitest ou Jest. A inclusão de `vitest-skill` não converte nenhum executor.
 
@@ -81,9 +81,17 @@ A referência de `vitest-skill` já existia no catálogo central. A origem de `i
 
 Não foi instalada `a11y-audit` do catálogo central porque sua cópia local não inclui as referências que anuncia. `api-test-suite-builder` e `api-design-reviewer` foram obtidas diretamente da origem com os arquivos de apoio necessários. A `jest-skill` não foi selecionada como padrão porque o projeto separa Node nativo e Vitest. `web-quality-audit` ainda exige corrigir recursos auxiliares ausentes antes de uma instalação íntegra; `frontend-ui-engineering` foi obtida diretamente da origem, que disponibiliza a skill como arquivo único. Esses nomes não constam no mapa como skills disponíveis e `sem_arquivo` está vazio.
 
+## Reconciliação de domínio por arquivo (03/11/2026)
+
+Varredura da árvore versionada da PR #4: **27.713 arquivos em 19 diretórios**, sem contar arquivos da raiz. Encontrados **21 arquivos em `src/shared/services/`** (configurações de CLI e sincronizadores) sem correspondência; a regra transversal `shared-servicos-runtime` corrige essa lacuna sem rotular esses módulos como infraestrutura de rede. O conjunto atual possui **299 regras de arquivos**, **14 de comandos** e **103 skills**, sem referências ou skills órfãs.
+
+As **123 regras que tinham 6 skills** foram reconciliadas para 5 por redundância semântica, preservando as competências mais específicas (produto, protocolos, segurança, Node/TypeScript, testes, frontend e redes). A distribuição final é **11 regras com 3**, **71 com 4** e **217 com 5**; comandos mantêm 4. Não se deve ativar indiscriminadamente todas as skills de regras sobrepostas: selecionar as relevantes após o preflight, mantendo as verificações obrigatórias.
+
+A atualização usa somente as 103 skills existentes; **nenhuma skill nova foi instalada**, portanto não abre alteração desnecessária no catálogo do monitor, já reconciliado pela PR #48. A conferência é estática: caminhos e expressões regulares não substituem testes funcionais, CI, conferência de scripts externos ou inspeção semântica de cada arquivo.
+
 ## Pilhas complementares por domínio (ampliação de 30/10/2026)
 
-A auditoria aprofundada constatou que as 298 regras eram insuficientemente especializadas: 79 apontavam para uma única skill e outras 70 para duas. A versão corrigida associa **3 a 6 skills por domínio** e **4 por padrão de comando**, sem referências ausentes ou skills órfãs. Isso é **cobertura de competências**, e não ordem para executar indiscriminadamente todas as skills de cada caminho. Selecionar apenas as adequadas à operação, preservando a regra de aplicar as essenciais de governança, segurança e testes. As skills de produto em `skills/` continuam preservadas e são complementadas por orientação de documentação, auditoria e integridade.
+A auditoria aprofundada constatou que as 298 regras iniciais eram insuficientemente especializadas: 79 apontavam para uma única skill e outras 70 para duas. A versão corrigida associa **3 a 5 skills por domínio** e **4 por padrão de comando**, sem referências ausentes ou skills órfãs. Isso é **cobertura de competências**, e não ordem para executar indiscriminadamente todas as skills de cada caminho. Selecionar apenas as adequadas à operação, preservando a regra de aplicar as essenciais de governança, segurança e testes. As skills de produto em `skills/` continuam preservadas e são complementadas por orientação de documentação, auditoria e integridade.
 
 | Competências | Complementos instalados | Função |
 | --- | --- | --- |
@@ -112,7 +120,7 @@ A auditoria aprofundada constatou que as 298 regras eram insuficientemente espec
 
 **Licenças adicionais:** `cloudflare-one` (Apache-2.0), `frontend-a11y` (MIT) e `frontend-excellence` (Apache-2.0) tiveram os arquivos de licença originais incorporados após a revisão de proveniência.
 
-**Auditoria estrutural:** 46 `SKILL.md` nativos mais 57 externos encontrados na árvore atual; todas as 103 skills são referenciadas em pelo menos uma regra ou comando, e cada referência aponta para um arquivo real. Os 298 padrões de caminho compilam. Isso não equivale à execução de todos os scripts, ao teste funcional do produto nem à aprovação de CI.
+**Auditoria estrutural:** 46 `SKILL.md` nativos mais 57 externos encontrados na árvore atual; todas as 103 skills são referenciadas em pelo menos uma regra ou comando, e cada referência aponta para um arquivo real. Os 299 padrões de caminho compilam. Isso não equivale à execução de todos os scripts, ao teste funcional do produto nem à aprovação de CI.
 
 ## Governance and provenance synchronization
 
