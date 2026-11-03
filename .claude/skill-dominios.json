@@ -8,7 +8,6 @@
         "omni-resilience",
         "performance-optimization",
         "node-testing",
-        "testing-strategy",
         "test-gap-audit"
       ]
     },
@@ -31,8 +30,7 @@
         "omni-auth",
         "api-design-reviewer",
         "api-test-suite-builder",
-        "api-security-patterns",
-        "testing-strategy"
+        "api-security-patterns"
       ]
     },
     {
@@ -43,7 +41,6 @@
         "omni-api-keys",
         "secret-scanning",
         "api-security-patterns",
-        "testing-strategy",
         "code-reviewer"
       ]
     },
@@ -55,8 +52,7 @@
         "omni-agents-a2a",
         "api-design-reviewer",
         "api-test-suite-builder",
-        "api-security-patterns",
-        "testing-strategy"
+        "api-security-patterns"
       ]
     },
     {
@@ -67,8 +63,7 @@
         "sqlite-ops",
         "sql-code-review",
         "backup-recovery",
-        "node-testing",
-        "testing-strategy"
+        "node-testing"
       ]
     },
     {
@@ -78,7 +73,6 @@
         "omni-cache",
         "performance-optimization",
         "node-testing",
-        "testing-strategy",
         "test-gap-audit",
         "api-health-monitoring"
       ]
@@ -135,8 +129,7 @@
         "omni-proxies",
         "networking",
         "cloudflare-one",
-        "secret-scanning",
-        "node-testing"
+        "secret-scanning"
       ]
     },
     {
@@ -147,8 +140,7 @@
         "omni-webhooks",
         "api-design-reviewer",
         "api-test-suite-builder",
-        "api-security-patterns",
-        "testing-strategy"
+        "api-security-patterns"
       ]
     },
     {
@@ -191,7 +183,6 @@
         "nodejs-boas-praticas",
         "constraint-driven-development",
         "node-testing",
-        "testing-strategy",
         "test-gap-audit",
         "code-reviewer"
       ]
@@ -215,7 +206,6 @@
         "github-actions-efficiency",
         "node-ci",
         "node-supply-chain",
-        "github-ops",
         "secret-scanning"
       ]
     },
@@ -302,8 +292,7 @@
         "api-ratelimit-helper",
         "api-health-monitoring",
         "api-design-reviewer",
-        "api-test-suite-builder",
-        "testing-strategy"
+        "api-test-suite-builder"
       ]
     },
     {
@@ -314,8 +303,7 @@
         "secrets-management",
         "error-handling",
         "secret-scanning",
-        "api-security-patterns",
-        "testing-strategy"
+        "api-security-patterns"
       ]
     },
     {
@@ -326,7 +314,6 @@
         "e2e-testing",
         "accessibility",
         "node-testing",
-        "testing-strategy",
         "test-gap-audit"
       ]
     },
@@ -337,7 +324,6 @@
         "api-security-patterns",
         "secrets-management",
         "node-testing",
-        "testing-strategy",
         "test-gap-audit",
         "code-reviewer"
       ]
@@ -349,7 +335,6 @@
         "nodejs-boas-praticas",
         "constraint-driven-development",
         "node-testing",
-        "testing-strategy",
         "test-gap-audit",
         "code-reviewer"
       ]
@@ -361,7 +346,6 @@
         "python-code-style",
         "python-anti-patterns",
         "bats-testing-patterns",
-        "testing-strategy",
         "test-gap-audit",
         "code-reviewer"
       ]
@@ -385,8 +369,7 @@
         "jwt-validate",
         "api-security-patterns",
         "env-secrets-manager",
-        "secret-scanning",
-        "testing-strategy"
+        "secret-scanning"
       ]
     },
     {
@@ -484,7 +467,6 @@
         "backend-patterns",
         "error-handling",
         "api-health-monitoring",
-        "api-design-reviewer",
         "api-test-suite-builder",
         "api-security-patterns"
       ]
@@ -790,7 +772,6 @@
         "api-security-patterns",
         "jwt-validate",
         "secret-scanning",
-        "testing-strategy",
         "code-reviewer"
       ]
     },
@@ -812,7 +793,6 @@
         "omni-inference",
         "error-handling",
         "nodejs-boas-praticas",
-        "api-design-reviewer",
         "api-test-suite-builder",
         "api-security-patterns"
       ]
@@ -825,7 +805,6 @@
         "secrets-management",
         "omni-proxies",
         "secret-scanning",
-        "testing-strategy",
         "code-reviewer"
       ]
     },
@@ -870,8 +849,7 @@
         "jwt-validate",
         "api-security-patterns",
         "secrets-management",
-        "secret-scanning",
-        "testing-strategy"
+        "secret-scanning"
       ]
     },
     {
@@ -904,8 +882,7 @@
         "omni-resilience",
         "nodejs-boas-praticas",
         "performance-optimization",
-        "node-testing",
-        "testing-strategy"
+        "node-testing"
       ]
     },
     {
@@ -927,7 +904,6 @@
         "nodejs-boas-praticas",
         "performance-optimization",
         "node-testing",
-        "testing-strategy",
         "test-gap-audit"
       ]
     },
@@ -939,8 +915,7 @@
         "sqlite-ops",
         "sql-code-review",
         "backup-recovery",
-        "node-testing",
-        "testing-strategy"
+        "node-testing"
       ]
     },
     {
@@ -995,8 +970,7 @@
         "omni-tunnels",
         "api-security-patterns",
         "networking",
-        "cloudflare-one",
-        "secret-scanning"
+        "cloudflare-one"
       ]
     },
     {
@@ -1117,8 +1091,7 @@
         "api-ratelimit-helper",
         "error-handling",
         "api-design-reviewer",
-        "api-test-suite-builder",
-        "testing-strategy"
+        "api-test-suite-builder"
       ]
     },
     {
@@ -1128,7 +1101,6 @@
         "omni-auth",
         "omni-api-keys",
         "jwt-validate",
-        "api-design-reviewer",
         "api-test-suite-builder",
         "api-security-patterns"
       ]
@@ -1141,8 +1113,7 @@
         "omni-models",
         "api-security-patterns",
         "api-design-reviewer",
-        "api-test-suite-builder",
-        "testing-strategy"
+        "api-test-suite-builder"
       ]
     },
     {
@@ -1152,7 +1123,6 @@
         "omni-combos-routing",
         "omni-resilience",
         "api-health-monitoring",
-        "api-design-reviewer",
         "api-test-suite-builder",
         "api-security-patterns"
       ]
@@ -1164,7 +1134,6 @@
         "omni-inference",
         "omni-providers",
         "error-handling",
-        "api-design-reviewer",
         "api-test-suite-builder",
         "api-security-patterns"
       ]
@@ -1177,8 +1146,7 @@
         "omni-cache",
         "api-security-patterns",
         "api-design-reviewer",
-        "api-test-suite-builder",
-        "testing-strategy"
+        "api-test-suite-builder"
       ]
     },
     {
@@ -1188,7 +1156,6 @@
         "omni-mcp",
         "omni-agents-a2a",
         "omni-webhooks",
-        "api-design-reviewer",
         "api-test-suite-builder",
         "api-security-patterns"
       ]
@@ -1201,8 +1168,7 @@
         "omni-db-backups",
         "api-security-patterns",
         "api-design-reviewer",
-        "api-test-suite-builder",
-        "testing-strategy"
+        "api-test-suite-builder"
       ]
     },
     {
@@ -1213,8 +1179,7 @@
         "omni-tunnels",
         "api-security-patterns",
         "api-design-reviewer",
-        "api-test-suite-builder",
-        "testing-strategy"
+        "api-test-suite-builder"
       ]
     },
     {
@@ -1225,15 +1190,13 @@
         "api-security-patterns",
         "api-design-reviewer",
         "api-test-suite-builder",
-        "node-testing",
-        "testing-strategy"
+        "node-testing"
       ]
     },
     {
       "dominio": "painel-dashboard",
       "caminho": "^/src/app/\\(dashboard\\)/dashboard/",
       "skills": [
-        "frontend-patterns",
         "accessibility",
         "responsive-patterns",
         "frontend-ui-engineering",
@@ -1247,7 +1210,6 @@
       "skills": [
         "omni-providers",
         "omni-models",
-        "frontend-patterns",
         "frontend-ui-engineering",
         "frontend-a11y",
         "nextjs-quality"
@@ -1259,7 +1221,6 @@
       "skills": [
         "omni-combos-routing",
         "omni-resilience",
-        "frontend-patterns",
         "frontend-ui-engineering",
         "frontend-a11y",
         "nextjs-quality"
@@ -1271,7 +1232,6 @@
       "skills": [
         "omni-usage-logs",
         "omni-budget",
-        "frontend-patterns",
         "frontend-ui-engineering",
         "frontend-a11y",
         "nextjs-quality"
@@ -1283,7 +1243,6 @@
       "skills": [
         "omni-context-rtk",
         "omni-compression",
-        "frontend-patterns",
         "frontend-ui-engineering",
         "frontend-a11y",
         "nextjs-quality"
@@ -1296,7 +1255,6 @@
         "omni-agents-a2a",
         "omni-mcp",
         "omni-github-skills",
-        "frontend-ui-engineering",
         "frontend-a11y",
         "nextjs-quality"
       ]
@@ -1307,7 +1265,6 @@
       "skills": [
         "omni-inference",
         "omni-webhooks",
-        "frontend-patterns",
         "frontend-ui-engineering",
         "frontend-a11y",
         "nextjs-quality"
@@ -1318,7 +1275,6 @@
       "caminho": "^/src/app/\\(dashboard\\)/dashboard/(?:settings|profile|onboarding|system|runtime)/",
       "skills": [
         "omni-settings",
-        "frontend-patterns",
         "accessibility",
         "frontend-ui-engineering",
         "frontend-a11y",
@@ -1331,7 +1287,6 @@
       "skills": [
         "omni-resilience",
         "api-security-patterns",
-        "frontend-patterns",
         "frontend-ui-engineering",
         "frontend-a11y",
         "nextjs-quality"
@@ -1341,7 +1296,6 @@
       "dominio": "painel-outros",
       "caminho": "^/src/app/\\(dashboard\\)/dashboard/(?:gamification|changelog)/",
       "skills": [
-        "frontend-patterns",
         "writing-guidelines",
         "frontend-ui-engineering",
         "frontend-a11y",
@@ -1354,7 +1308,6 @@
       "caminho": "^/src/app/(?:login|auth|authorize|callback|connect|forgot-password|forbidden)/",
       "skills": [
         "omni-auth",
-        "frontend-patterns",
         "accessibility",
         "frontend-ui-engineering",
         "frontend-a11y",
@@ -1369,7 +1322,6 @@
         "frontend-patterns",
         "accessibility",
         "docs-sync-audit",
-        "git-workflow",
         "i18n-expert"
       ]
     },
@@ -1378,7 +1330,6 @@
       "caminho": "^/src/app/(?:400|401|403|408|429|500|502|503|offline|maintenance|healthz|livez|readyz|status)/",
       "skills": [
         "omni-resilience",
-        "frontend-patterns",
         "accessibility",
         "frontend-ui-engineering",
         "frontend-a11y",
@@ -1390,7 +1341,6 @@
       "caminho": "^/src/app/(?:miniapp|a2a|\\.well-known)/",
       "skills": [
         "omni-mcp",
-        "frontend-patterns",
         "api-security-patterns",
         "frontend-ui-engineering",
         "frontend-a11y",
@@ -1403,7 +1353,6 @@
       "skills": [
         "frontend-design",
         "responsive-patterns",
-        "accessibility",
         "frontend-ui-engineering",
         "frontend-a11y",
         "nextjs-quality"
@@ -1471,7 +1420,6 @@
         "nodejs-boas-praticas",
         "constraint-driven-development",
         "node-testing",
-        "testing-strategy",
         "test-gap-audit",
         "code-reviewer"
       ]
@@ -1505,7 +1453,6 @@
         "omni-inference",
         "backend-patterns",
         "error-handling",
-        "api-design-reviewer",
         "api-test-suite-builder",
         "api-security-patterns"
       ]
@@ -1518,8 +1465,7 @@
         "omni-resilience",
         "api-security-patterns",
         "networking",
-        "node-testing",
-        "code-reviewer"
+        "node-testing"
       ]
     },
     {
@@ -1530,7 +1476,6 @@
         "omni-models",
         "nodejs-boas-praticas",
         "node-typescript",
-        "code-reviewer",
         "node-testing"
       ]
     },
@@ -1540,7 +1485,6 @@
       "skills": [
         "omni-models",
         "omni-providers",
-        "nodejs-boas-praticas",
         "api-design-reviewer",
         "api-test-suite-builder",
         "api-security-patterns"
@@ -1554,8 +1498,7 @@
         "error-handling",
         "api-security-patterns",
         "api-design-reviewer",
-        "api-test-suite-builder",
-        "testing-strategy"
+        "api-test-suite-builder"
       ]
     },
     {
@@ -1566,8 +1509,7 @@
         "omni-providers",
         "api-security-patterns",
         "api-design-reviewer",
-        "api-test-suite-builder",
-        "testing-strategy"
+        "api-test-suite-builder"
       ]
     },
     {
@@ -1578,8 +1520,7 @@
         "error-handling",
         "omni-inference",
         "api-design-reviewer",
-        "api-test-suite-builder",
-        "testing-strategy"
+        "api-test-suite-builder"
       ]
     },
     {
@@ -1589,7 +1530,6 @@
         "omni-inference",
         "omni-models",
         "error-handling",
-        "api-design-reviewer",
         "api-test-suite-builder",
         "api-security-patterns"
       ]
@@ -1602,8 +1542,7 @@
         "omni-agents-a2a",
         "api-security-patterns",
         "api-design-reviewer",
-        "api-test-suite-builder",
-        "testing-strategy"
+        "api-test-suite-builder"
       ]
     },
     {
@@ -1614,8 +1553,7 @@
         "api-security-patterns",
         "nodejs-boas-praticas",
         "api-design-reviewer",
-        "api-test-suite-builder",
-        "testing-strategy"
+        "api-test-suite-builder"
       ]
     },
     {
@@ -1625,7 +1563,6 @@
         "backend-patterns",
         "error-handling",
         "nodejs-boas-praticas",
-        "api-design-reviewer",
         "api-test-suite-builder",
         "api-security-patterns"
       ]
@@ -1636,7 +1573,6 @@
       "skills": [
         "omni-combos-routing",
         "omni-resilience",
-        "nodejs-boas-praticas",
         "api-design-reviewer",
         "api-test-suite-builder",
         "api-security-patterns"
@@ -1648,7 +1584,6 @@
       "skills": [
         "omni-compression",
         "omni-context-rtk",
-        "nodejs-boas-praticas",
         "api-design-reviewer",
         "api-test-suite-builder",
         "api-security-patterns"
@@ -1661,7 +1596,6 @@
         "omni-usage-logs",
         "omni-budget",
         "api-ratelimit-helper",
-        "api-design-reviewer",
         "api-test-suite-builder",
         "api-security-patterns"
       ]
@@ -1673,7 +1607,6 @@
         "omni-auth",
         "omni-resilience",
         "secrets-management",
-        "api-design-reviewer",
         "api-test-suite-builder",
         "api-security-patterns"
       ]
@@ -1686,8 +1619,7 @@
         "nodejs-boas-praticas",
         "api-design-reviewer",
         "api-test-suite-builder",
-        "api-security-patterns",
-        "testing-strategy"
+        "api-security-patterns"
       ]
     },
     {
@@ -1698,7 +1630,6 @@
         "api-security-patterns",
         "api-design-reviewer",
         "api-test-suite-builder",
-        "testing-strategy",
         "code-reviewer"
       ]
     },
@@ -1710,7 +1641,6 @@
         "constraint-driven-development",
         "vitest-skill",
         "node-testing",
-        "testing-strategy",
         "test-gap-audit"
       ]
     },
@@ -1721,7 +1651,6 @@
         "nodejs-boas-praticas",
         "constraint-driven-development",
         "node-testing",
-        "testing-strategy",
         "test-gap-audit",
         "code-reviewer"
       ]
@@ -1734,7 +1663,6 @@
         "accessibility",
         "nodejs-boas-praticas",
         "node-testing",
-        "testing-strategy",
         "test-gap-audit"
       ]
     },
@@ -1746,7 +1674,6 @@
         "omni-combos-routing",
         "nodejs-boas-praticas",
         "node-testing",
-        "testing-strategy",
         "test-gap-audit"
       ]
     },
@@ -1758,7 +1685,6 @@
         "jwt-validate",
         "secrets-management",
         "node-testing",
-        "testing-strategy",
         "test-gap-audit"
       ]
     },
@@ -1770,7 +1696,6 @@
         "sql-code-review",
         "nodejs-boas-praticas",
         "node-testing",
-        "testing-strategy",
         "test-gap-audit"
       ]
     },
@@ -1782,7 +1707,6 @@
         "omni-mcp",
         "nodejs-boas-praticas",
         "node-testing",
-        "testing-strategy",
         "test-gap-audit"
       ]
     },
@@ -1793,7 +1717,6 @@
         "nodejs-boas-praticas",
         "constraint-driven-development",
         "node-testing",
-        "testing-strategy",
         "test-gap-audit",
         "code-reviewer"
       ]
@@ -1806,7 +1729,6 @@
         "constraint-driven-development",
         "docs-sync-audit",
         "git-workflow",
-        "testing-strategy",
         "test-gap-audit"
       ]
     },
@@ -1818,7 +1740,6 @@
         "nodejs-boas-praticas",
         "api-security-patterns",
         "node-testing",
-        "testing-strategy",
         "test-gap-audit"
       ]
     },
@@ -1830,8 +1751,7 @@
         "e2e-testing",
         "accessibility",
         "responsive-design",
-        "node-testing",
-        "testing-strategy"
+        "node-testing"
       ]
     },
     {
@@ -1841,7 +1761,6 @@
         "api-security-patterns",
         "constraint-driven-development",
         "node-testing",
-        "testing-strategy",
         "test-gap-audit",
         "code-reviewer"
       ]
@@ -1853,7 +1772,6 @@
         "constraint-driven-development",
         "nodejs-boas-praticas",
         "node-testing",
-        "testing-strategy",
         "test-gap-audit",
         "code-reviewer"
       ]
@@ -1865,7 +1783,6 @@
         "nodejs-boas-praticas",
         "constraint-driven-development",
         "node-testing",
-        "testing-strategy",
         "test-gap-audit",
         "code-reviewer"
       ]
@@ -1877,7 +1794,6 @@
         "nodejs-boas-praticas",
         "constraint-driven-development",
         "node-testing",
-        "testing-strategy",
         "test-gap-audit",
         "code-reviewer"
       ]
@@ -1890,7 +1806,6 @@
         "playwright-skill",
         "vitest-skill",
         "node-testing",
-        "testing-strategy",
         "test-gap-audit"
       ]
     },
@@ -2034,7 +1949,6 @@
         "github-actions-efficiency",
         "node-ci",
         "node-supply-chain",
-        "github-ops",
         "secret-scanning"
       ]
     },
@@ -2046,7 +1960,6 @@
         "secrets-management",
         "api-security-patterns",
         "secret-scanning",
-        "testing-strategy",
         "code-reviewer"
       ]
     },
@@ -2056,7 +1969,6 @@
       "skills": [
         "github-actions-hardening",
         "git-workflow",
-        "nodejs-boas-praticas",
         "node-ci",
         "node-supply-chain",
         "github-ops"
@@ -2724,7 +2636,6 @@
         "vitest-skill",
         "nodejs-boas-praticas",
         "node-testing",
-        "testing-strategy",
         "test-gap-audit",
         "code-reviewer"
       ]
@@ -2736,7 +2647,6 @@
         "vitest-skill",
         "nodejs-boas-praticas",
         "node-testing",
-        "testing-strategy",
         "test-gap-audit",
         "code-reviewer"
       ]
@@ -2748,7 +2658,6 @@
         "vitest-skill",
         "frontend-patterns",
         "node-testing",
-        "testing-strategy",
         "test-gap-audit",
         "code-reviewer"
       ]
@@ -2757,7 +2666,6 @@
       "dominio": "painel-home-controle",
       "caminho": "^/src/app/\\(dashboard\\)/(?:home/|dashboard/(?:quota|tokens)/)",
       "skills": [
-        "frontend-patterns",
         "omni-usage-logs",
         "responsive-patterns",
         "frontend-ui-engineering",
@@ -2769,7 +2677,6 @@
       "dominio": "frontend-shell-main",
       "caminho": "^/src/app/(?:[^/]+\\.(?:tsx|ts|css)$|\\(dashboard\\)/[^/]+\\.tsx?$)",
       "skills": [
-        "frontend-patterns",
         "frontend-design",
         "accessibility",
         "frontend-ui-engineering",
@@ -2782,7 +2689,6 @@
       "caminho": "^/(?:public/|images/|docs/assets/|electron/assets/)",
       "skills": [
         "frontend-design",
-        "accessibility",
         "web-design-guidelines",
         "frontend-ui-engineering",
         "frontend-a11y",
@@ -2817,8 +2723,7 @@
         "backend-patterns",
         "error-handling",
         "api-design-reviewer",
-        "api-test-suite-builder",
-        "testing-strategy"
+        "api-test-suite-builder"
       ]
     },
     {
@@ -2851,7 +2756,6 @@
         "omni-models",
         "nodejs-boas-praticas",
         "node-testing",
-        "testing-strategy",
         "test-gap-audit"
       ]
     },
@@ -2863,7 +2767,6 @@
         "jwt-validate",
         "secrets-management",
         "node-testing",
-        "testing-strategy",
         "test-gap-audit"
       ]
     },
@@ -2875,7 +2778,6 @@
         "secrets-management",
         "nodejs-boas-praticas",
         "node-testing",
-        "testing-strategy",
         "test-gap-audit"
       ]
     },
@@ -2887,7 +2789,6 @@
         "omni-resilience",
         "nodejs-boas-praticas",
         "node-testing",
-        "testing-strategy",
         "test-gap-audit"
       ]
     },
@@ -2898,7 +2799,6 @@
         "omni-cache",
         "nodejs-boas-praticas",
         "node-testing",
-        "testing-strategy",
         "test-gap-audit",
         "performance-optimization"
       ]
@@ -2911,7 +2811,6 @@
         "omni-budget",
         "nodejs-boas-praticas",
         "node-testing",
-        "testing-strategy",
         "test-gap-audit"
       ]
     },
@@ -2923,7 +2822,6 @@
         "omni-models",
         "nodejs-boas-praticas",
         "node-testing",
-        "testing-strategy",
         "test-gap-audit"
       ]
     },
@@ -2935,7 +2833,6 @@
         "omni-github-skills",
         "api-security-patterns",
         "node-testing",
-        "testing-strategy",
         "test-gap-audit"
       ]
     },
@@ -2947,7 +2844,6 @@
         "omni-context-rtk",
         "nodejs-boas-praticas",
         "node-testing",
-        "testing-strategy",
         "test-gap-audit"
       ]
     },
@@ -2959,7 +2855,6 @@
         "error-handling",
         "nodejs-boas-praticas",
         "node-testing",
-        "testing-strategy",
         "test-gap-audit"
       ]
     },
@@ -2971,7 +2866,6 @@
         "omni-tunnels",
         "api-security-patterns",
         "node-testing",
-        "testing-strategy",
         "test-gap-audit"
       ]
     },
@@ -2983,7 +2877,6 @@
         "sql-code-review",
         "nodejs-boas-praticas",
         "node-testing",
-        "testing-strategy",
         "test-gap-audit"
       ]
     },
@@ -2995,7 +2888,6 @@
         "accessibility",
         "responsive-patterns",
         "node-testing",
-        "testing-strategy",
         "test-gap-audit"
       ]
     },
@@ -3006,7 +2898,6 @@
         "i18n-expert",
         "writing-guidelines",
         "docs-sync-audit",
-        "git-workflow",
         "node-testing",
         "testing-strategy"
       ]
@@ -3019,7 +2910,6 @@
         "omni-usage-logs",
         "nodejs-boas-praticas",
         "node-testing",
-        "testing-strategy",
         "test-gap-audit"
       ]
     },
@@ -3031,7 +2921,6 @@
         "constraint-driven-development",
         "nodejs-boas-praticas",
         "node-testing",
-        "testing-strategy",
         "test-gap-audit"
       ]
     },
@@ -3043,7 +2932,6 @@
         "github-actions-hardening",
         "git-workflow",
         "node-testing",
-        "testing-strategy",
         "test-gap-audit"
       ]
     },
@@ -3053,7 +2941,6 @@
       "skills": [
         "omni-combos-routing",
         "omni-resilience",
-        "nodejs-boas-praticas",
         "api-design-reviewer",
         "api-test-suite-builder",
         "api-security-patterns"
@@ -3067,8 +2954,7 @@
         "api-security-patterns",
         "secrets-management",
         "api-design-reviewer",
-        "api-test-suite-builder",
-        "testing-strategy"
+        "api-test-suite-builder"
       ]
     },
     {
@@ -3078,7 +2964,6 @@
         "omni-providers",
         "omni-models",
         "backend-patterns",
-        "api-design-reviewer",
         "api-test-suite-builder",
         "api-security-patterns"
       ]
@@ -3090,7 +2975,6 @@
         "omni-usage-logs",
         "omni-budget",
         "api-ratelimit-helper",
-        "api-design-reviewer",
         "api-test-suite-builder",
         "api-security-patterns"
       ]
@@ -3101,7 +2985,6 @@
       "skills": [
         "omni-inference",
         "error-handling",
-        "nodejs-boas-praticas",
         "api-design-reviewer",
         "api-test-suite-builder",
         "api-security-patterns"
@@ -3113,7 +2996,6 @@
       "skills": [
         "omni-cache",
         "omni-compression",
-        "nodejs-boas-praticas",
         "api-design-reviewer",
         "api-test-suite-builder",
         "api-security-patterns"
@@ -3138,7 +3020,6 @@
         "secrets-management",
         "omni-auth",
         "secret-scanning",
-        "testing-strategy",
         "code-reviewer"
       ]
     },
@@ -3150,8 +3031,7 @@
         "omni-resilience",
         "nodejs-boas-praticas",
         "performance-optimization",
-        "node-testing",
-        "testing-strategy"
+        "node-testing"
       ]
     },
     {
@@ -3162,8 +3042,7 @@
         "omni-context-rtk",
         "nodejs-boas-praticas",
         "performance-optimization",
-        "node-testing",
-        "testing-strategy"
+        "node-testing"
       ]
     },
     {
@@ -3174,8 +3053,7 @@
         "omni-sync-cloud",
         "api-security-patterns",
         "networking",
-        "cloudflare-one",
-        "secret-scanning"
+        "cloudflare-one"
       ]
     },
     {
@@ -3241,7 +3119,6 @@
         "github-actions-hardening",
         "api-security-patterns",
         "secret-scanning",
-        "testing-strategy",
         "code-reviewer"
       ]
     },
@@ -3295,6 +3172,17 @@
         "nodejs-boas-praticas",
         "networking",
         "cloudflare-one"
+      ]
+    },
+    {
+      "dominio": "shared-servicos-runtime",
+      "caminho": "^/src/shared/services/",
+      "skills": [
+        "node-typescript",
+        "nodejs-boas-praticas",
+        "api-security-patterns",
+        "node-testing",
+        "code-reviewer"
       ]
     },
     {
@@ -3452,5 +3340,5 @@
     }
   ],
   "sem_arquivo": [],
-  "revisado_em": "30/10/2026"
+  "revisado_em": "03/11/2026"
 }
