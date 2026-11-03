@@ -3286,7 +3286,7 @@
     },
     {
       "dominio": "root-npm-dependencias",
-      "caminho": "^/(?:\\.npmrc|\\.npmignore|package(?:-lock)?\\.json|pnpm(?:-workspace\\.yaml|\\.json)?)$",
+      "caminho": "^/(?:\\.npmrc|\\.npmignore|package(?:-lock)?\\.json|pnpm(?:-workspace\\.yaml|\\.json))$",
       "skills": [
         "node-supply-chain",
         "node-ci",
