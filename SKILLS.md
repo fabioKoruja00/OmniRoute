@@ -77,6 +77,19 @@ As 13 incorporações adicionais à versão inicial da PR incluem seus diretóri
 
 A referência de `vitest-skill` já existia no catálogo central. A origem de `i18n-expert` foi cadastrada por atualização documental na [PR #48 do grnet-monitor](https://github.com/fabioKoruja00/grnet-monitor/pull/48). As skills e os repositórios originais não foram modificados.
 
+### Especialização complementar após a busca externa (03/11/2026)
+
+Foram selecionadas duas skills que **não constavam como instaladas nem como referências específicas suficientes no catálogo central**. A busca partiu do mecanismo de descoberta `find-skill`, continuou na indexação pública de skills e confirmou conteúdo, materiais auxiliares e licenças nos repositórios de origem. Somente as duas candidatas abaixo foram copiadas nesta rodada, sempre para o branch existente da [PR #4](https://github.com/fabioKoruja00/OmniRoute/pull/4):
+
+| Skill instalada | Origem e licença | Domínios substituídos / finalidade |
+| --- | --- | --- |
+| `monorepo-navigator` | [alirezarezvani/claude-skills](https://github.com/alirezarezvani/claude-skills/tree/main/engineering/skills/monorepo-navigator), MIT | `monorepo`, `monorepo-pacotes`; análise dos workspaces pnpm, dependências internas e impacto de mudanças. Pacote: SKILL.md, duas referências, script Python de análise e LICENSE. |
+| `prompt-injection-test` | [OWASP Secure Agent Playbook](https://github.com/OWASP/secure-agent-playbook/tree/main/plugins/ai-security-skills), CC BY 4.0 declarada | `testes-seguranca-llm`, `config-promptfoo-avaliacao`; testes autorizados de prompt injection e guardrails. Pacote: SKILL.md, procedimento, modelo de achados e ATTRIBUTION.md. |
+
+**Contagem atualizada:** 46 skills nativas + 59 externas = **105** skills. Os 339 domínios e 14 padrões de comandos foram preservados. Os quatro domínios especializados continuam com cinco skills cada. As skills instaladas são instruções e recursos; os scripts não foram executados. A validação do JSON e dos caminhos foi realizada nesta rodada, mas a verificação funcional e o CI seguem pendentes.
+
+**Candidatas identificadas, não instaladas:** `electron` (full-stack-skills/electron-skills), `k6` (grafana/skills) e `agent-security-audit` (OWASP Secure Agent Playbook). A cobertura para Electron, benchmarks e segurança de agentes merece inspeção adicional antes de substituir o mapeamento; os pacotes e suas dependências devem ser auditados. As referências foram registradas no catálogo central do monitor na [PR #93](https://github.com/fabioKoruja00/grnet-monitor/pull/93). Não foi feita instalação de skill externa no monitor.
+
 ### Candidatas rejeitadas ou adiadas
 
 Não foi instalada `a11y-audit` do catálogo central porque sua cópia local não inclui as referências que anuncia. `api-test-suite-builder` e `api-design-reviewer` foram obtidas diretamente da origem com os arquivos de apoio necessários. A `jest-skill` não foi selecionada como padrão porque o projeto separa Node nativo e Vitest. `web-quality-audit` ainda exige corrigir recursos auxiliares ausentes antes de uma instalação íntegra; `frontend-ui-engineering` foi obtida diretamente da origem, que disponibiliza a skill como arquivo único. Esses nomes não constam no mapa como skills disponíveis e `sem_arquivo` está vazio.
