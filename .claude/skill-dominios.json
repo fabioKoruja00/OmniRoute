@@ -2022,11 +2022,11 @@
       "dominio": "monorepo-pacotes",
       "caminho": "^/(?:packages/|@omniroute/|pnpm-workspace\\.yaml$)",
       "skills": [
-        "nodejs-boas-praticas",
-        "backend-patterns",
+        "monorepo-navigator",
+        "node-supply-chain",
         "node-typescript",
-        "code-reviewer",
-        "node-testing"
+        "node-testing",
+        "api-design-reviewer"
       ]
     },
     {
