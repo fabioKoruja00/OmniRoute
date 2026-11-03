@@ -1,5 +1,9 @@
 # Changelog
 
+## [02/11/2026] — Dependência nova passa pela sessão do monitor
+
+- **Regra nova:** antes de instalar dependência, componente ou ferramenta, avisar a sessão "Sistema de Monitoramento (VM)", que avalia se entra no runner para todos.
+
 ## [Unreleased]
 
 ### ✨ New Features

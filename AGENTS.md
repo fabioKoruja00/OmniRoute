@@ -462,3 +462,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
 
 <!-- END:nextjs-agent-rules -->
+
+## Dependência, componente ou ferramenta nova
+
+Antes de instalar qualquer dependência, componente ou ferramenta, mandar mensagem à sessão **Sistema de Monitoramento (VM)** com nome, versão, tipo, para que serve e licença, e esperar a resposta. Ela avalia se dá para compartilhar: o que servir a outros sites e sistemas entra no runner (`/opt/ci-tools`) para todos; o resto fica no manifesto e no lock deste repositório. Nenhuma dependência volta de versão; alerta sem correção na versão atual espera o Dependabot. Ferramenta que ninguém mais usa sai sozinha pela limpeza do runner.
