@@ -1923,8 +1923,8 @@
       "dominio": "infra-configuracoes",
       "caminho": "^/(?:config/|Dockerfile[^/]*$|docker/|deploy/|docker-compose[^/]*)",
       "skills": [
-        "linux-container-deployment",
         "linux-administration",
+        "nodejs-boas-praticas",
         "secrets-management",
         "networking",
         "cloudflare-one"
@@ -2099,7 +2099,6 @@
       "dominio": "documentacao-tecnica-apoio",
       "caminho": "^/docs/",
       "skills": [
-        "architecture-decision-records",
         "writing-guidelines",
         "docs-sync-audit",
         "git-workflow"
@@ -3224,10 +3223,10 @@
       "dominio": "contrib-vps-operacao",
       "caminho": "^/contrib/vps/",
       "skills": [
-        "linux-container-deployment",
         "linux-administration",
         "networking",
         "secrets-management",
+        "cloudflare-one",
         "code-reviewer"
       ]
     },
