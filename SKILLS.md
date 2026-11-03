@@ -10,7 +10,7 @@ Este arquivo define as fontes, a disponibilidade e as regras de uso das skills a
 | Padrões de comandos | **14** |
 | Skills nativas em `skills/<nome>/SKILL.md` | **46** |
 | Skills externas instaladas em `.claude/skills/<nome>/SKILL.md` | **59** |
-| Total de skills disponíveis | **103** |
+| Total de skills disponíveis | **105** |
 | Referências de skills ausentes no mapa | **0** |
 | Elementos em `sem_arquivo` | **0** |
 
