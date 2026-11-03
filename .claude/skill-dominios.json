@@ -1758,11 +1758,11 @@
       "dominio": "testes-seguranca-llm",
       "caminho": "^/tests/(?:security|llm-security)/",
       "skills": [
+        "prompt-injection-test",
+        "agent-supply-chain",
         "api-security-patterns",
-        "constraint-driven-development",
         "node-testing",
-        "test-gap-audit",
-        "code-reviewer"
+        "test-gap-audit"
       ]
     },
     {
