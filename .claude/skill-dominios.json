@@ -3406,11 +3406,11 @@
       "dominio": "config-promptfoo-avaliacao",
       "caminho": "^/promptfooconfig\\.yaml$",
       "skills": [
+        "prompt-injection-test",
         "api-security-patterns",
         "testing-strategy",
         "test-gap-audit",
-        "node-testing",
-        "code-reviewer"
+        "node-testing"
       ]
     },
     {
