@@ -9,8 +9,8 @@ Este arquivo define as fontes, a disponibilidade e as regras de uso das skills a
 | Domínios definidos no mapa | **339** |
 | Padrões de comandos | **14** |
 | Skills nativas em `skills/<nome>/SKILL.md` | **46** |
-| Skills externas instaladas em `.claude/skills/<nome>/SKILL.md` | **59** |
-| Total de skills disponíveis | **105** |
+| Skills externas instaladas em `.claude/skills/<nome>/SKILL.md` | **69** |
+| Total de skills disponíveis | **115** |
 | Referências de skills ausentes no mapa | **0** |
 | Elementos em `sem_arquivo` | **0** |
 
@@ -77,18 +77,26 @@ As 13 incorporações adicionais à versão inicial da PR incluem seus diretóri
 
 A referência de `vitest-skill` já existia no catálogo central. A origem de `i18n-expert` foi cadastrada por atualização documental na [PR #48 do grnet-monitor](https://github.com/fabioKoruja00/grnet-monitor/pull/48). As skills e os repositórios originais não foram modificados.
 
-### Especialização complementar após a busca externa (03/11/2026)
+### Especialização por domínio e validação de origem (03/11/2026)
 
-Foram selecionadas duas skills que **não constavam como instaladas nem como referências específicas suficientes no catálogo central**. A busca partiu do mecanismo de descoberta `find-skill`, continuou na indexação pública de skills e confirmou conteúdo, materiais auxiliares e licenças nos repositórios de origem. Somente as duas candidatas abaixo foram copiadas nesta rodada, sempre para o branch existente da [PR #4](https://github.com/fabioKoruja00/OmniRoute/pull/4):
+A auditoria começou no catálogo central do monitor, consultou o fluxo de descoberta `find-skill` apenas para lacunas e conferiu os arquivos diretamente no GitHub de origem. **Todos os pacotes de skills desta seção foram instalados exclusivamente em `.claude/skills/` deste fork OmniRoute**, no branch da [PR #4](https://github.com/fabioKoruja00/OmniRoute/pull/4). O `grnet-monitor` recebeu **somente links, licenças e instruções de seleção** na [PR #93](https://github.com/fabioKoruja00/grnet-monitor/pull/93); nenhuma pasta de skill foi copiada para o monitor.
 
-| Skill instalada | Origem e licença | Domínios substituídos / finalidade |
+| Domínio técnico | Skills adicionadas (além do inventário original de 103) | Origem e ajustes |
 | --- | --- | --- |
-| `monorepo-navigator` | [alirezarezvani/claude-skills](https://github.com/alirezarezvani/claude-skills/tree/main/engineering/skills/monorepo-navigator), MIT | `monorepo`, `monorepo-pacotes`; análise dos workspaces pnpm, dependências internas e impacto de mudanças. Pacote: SKILL.md, duas referências, script Python de análise e LICENSE. |
-| `prompt-injection-test` | [OWASP Secure Agent Playbook](https://github.com/OWASP/secure-agent-playbook/tree/main/plugins/ai-security-skills), CC BY 4.0 declarada | `testes-seguranca-llm`, `config-promptfoo-avaliacao`; testes autorizados de prompt injection e guardrails. Pacote: SKILL.md, procedimento, modelo de achados e ATTRIBUTION.md. |
+| Monorepo e workspaces | `monorepo-navigator` | alirezarezvani/claude-skills; MIT; analisador e duas referências copiados, não executados |
+| Segurança de LLM | `prompt-injection-test` | OWASP Secure Agent Playbook; CC BY 4.0; play, modelo de achados e atribuição preservados |
+| Observabilidade e confiabilidade | `observability`, `site-reliability` | nimadorostkar/Claude-Skills-collection; MIT; instruções originais e licenças copiadas |
+| Tipagem e contratos | `typescript-advanced-types` | wshobson/agents; MIT; referência de tipos avançados e licença copiadas |
+| Testes de propriedades e mutação | `property-based-testing`, `mutation-testing` | aj-geddes/useful-ai-prompts; MIT; `SKILL.md`, referências e licenças; scripts `scaffold-tests.sh` não copiados por terem sintaxe inválida e corpo TODO |
+| Segurança de agentes e servidores MCP | `agent-security-audit`, `mcp-server-review` | OWASP Secure Agent Playbook; CC BY 4.0; plays, template de achado e atribuição por skill |
+| Desktop Electron | `electron-pro` | jshsakura/awesome-opencode-skills; MIT; metadados específicos de modelo/sandbox do OpenCode removidos apenas da cópia do fork |
+| Desempenho e carga | `performance-profiler`, `k6` | alirezarezvani/claude-skills (MIT) e grafana/skills (Apache-2.0); pacote k6 com documentação e 18 exemplos de protocolos/extensões; ferramentas não executadas |
 
-**Contagem atualizada:** 46 skills nativas + 59 externas = **105** skills. Os 339 domínios e 14 padrões de comandos foram preservados. Os quatro domínios especializados continuam com cinco skills cada. As skills instaladas são instruções e recursos; os scripts não foram executados. A validação do JSON e dos caminhos foi realizada nesta rodada, mas a verificação funcional e o CI seguem pendentes.
+**Inventário atual:** 46 skills nativas + 69 externas = **115 skills**. Os 339 domínios de arquivos e os 14 padrões de comandos permanecem. O mapa foi semanticamente especializado em **56 domínios**, preservando 3–5 skills distintas por domínio e compilação das 339 expressões regulares. O recorte anterior de 27.622 arquivos é histórico e precisa ser repetido com os arquivos novos antes de declarar cobertura integral da árvore atual.
 
-**Candidatas identificadas, não instaladas:** `electron` (full-stack-skills/electron-skills), `k6` (grafana/skills) e `agent-security-audit` (OWASP Secure Agent Playbook). A cobertura para Electron, benchmarks e segurança de agentes merece inspeção adicional antes de substituir o mapeamento; os pacotes e suas dependências devem ser auditados. As referências foram registradas no catálogo central do monitor na [PR #93](https://github.com/fabioKoruja00/grnet-monitor/pull/93). Não foi feita instalação de skill externa no monitor.
+**Dependências e segurança:** copiar `SKILL.md` não equivale a instalar CLIs ou dependências opcionais. `k6` requer binário disponível e autorização para carga; nenhuma carga foi executada. `performance-profiler` e `monorepo-navigator` incluem scripts, não executados nesta rodada. Skills OWASP servem somente a testes autorizados. As regras principais do upstream continuam prioritárias e os repositórios originais não foram modificados.
+
+**Candidatas adiadas:** a skill `electron` de full-stack-skills/electron-skills foi preterida por referenciar arquivos que não existem na própria origem; `electron-pro` é a alternativa íntegra instalada. `changelog-generator` do catálogo continua parcial e exige validar scripts e compatibilidade com o período de retenção de 45 dias antes de incorporar. Outras especializações só entram se aumentarem a competência real do domínio.
 
 ### Candidatas rejeitadas ou adiadas
 
@@ -109,9 +117,9 @@ A comparação inicial identificou **21 arquivos de serviços compartilhados** s
 
 **Segunda rodada semântica:** arquivos de `src/shared/constants/`, `src/shared/utils/`, `schemas/`, `validation/` e serviços auxiliares eram cobertos principalmente por orientação genérica de Node/TypeScript. Foram acrescentados **20 domínios focalizados** para identidade, preços/cotas, catálogo de provedores/modelos, roteamento, multimodalidade, CLI, componentes de interface, autenticação, contratos, WebSocket/streaming e manutenção de agregações. Exemplo: `src/shared/constants/pricing/default-pricing.ts` ganha skills de custos/uso, enquanto `src/shared/utils/apiAuth.ts` ganha segurança e autenticação. Todos os 339 domínios correspondem a pelo menos um arquivo efetivo; não há regras sem uso nem arquivos sem domínio no snapshot de 27.622 itens.
 
-As **123 regras iniciais que tinham 6 skills** foram reduzidas para 5 por redundância semântica. A distribuição final é **12 domínios com 3**, **72 com 4** e **255 com 5** skills, totalizando **339 regras de arquivos**, **14 de comandos** e **103 skills únicas existentes**, sem referências órfãs; os comandos mantêm 4 skills. Regras são complementares: um arquivo pode combinar com vários domínios, mas o preflight seleciona apenas as skills realmente pertinentes à operação.
+As **123 regras iniciais que tinham 6 skills** foram reduzidas para 5 por redundância semântica. A distribuição final é **12 domínios com 3**, **72 com 4** e **255 com 5** skills, totalizando **339 regras de arquivos**, **14 de comandos** e **115 skills únicas existentes**, sem referências órfãs; os comandos mantêm 4 skills. Regras são complementares: um arquivo pode combinar com vários domínios, mas o preflight seleciona apenas as skills realmente pertinentes à operação.
 
-Não foi instalada nenhuma skill nova: as **103 já estão referenciadas no catálogo central do monitor** (PR #48 integrada). O `mermaid-expert` citado no catálogo externo é um **agente**, não um `SKILL.md` disponível para instalação direta, e portanto não é contado como skill instalada. A auditoria não altera código funcional, scripts de skills, workflows nem repositórios externos; resultados de CI/testes funcionais não são presumidos.
+As 103 skills anteriores constam no catálogo central do monitor (PR #48 integrada); as 12 novas estão documentadas na PR #93, sem copiar arquivos de skills para o monitor. O `mermaid-expert` citado no catálogo externo é um **agente**, não um `SKILL.md` disponível para instalação direta, e portanto não é contado como skill instalada. Esta auditoria não executou scripts de terceiros e não alterou código funcional, workflows ou repositórios externos; resultados de CI/testes funcionais não são presumidos.
 
 ## Pilhas complementares por domínio (ampliação de 30/10/2026)
 
@@ -144,11 +152,11 @@ A auditoria aprofundada constatou que as 298 regras iniciais eram insuficienteme
 
 **Licenças adicionais:** `cloudflare-one` (Apache-2.0), `frontend-a11y` (MIT) e `frontend-excellence` (Apache-2.0) tiveram os arquivos de licença originais incorporados após a revisão de proveniência.
 
-**Auditoria estrutural:** 46 `SKILL.md` nativos mais 57 externos encontrados na árvore atual; todas as 103 skills são referenciadas em pelo menos uma regra ou comando, e cada referência aponta para um arquivo real. Os 339 padrões de caminho compilam. Isso não equivale à execução de todos os scripts, ao teste funcional do produto nem à aprovação de CI.
+**Auditoria estrutural:** 46 `SKILL.md` nativos mais 69 externos associados ao mapa; todas as 115 skills são referenciadas em pelo menos uma regra ou comando. As 12 novas foram instaladas com sua entrada `SKILL.md` e recursos adequados, mas uma varredura integral da árvore atual ainda deve ser repetida. Os 339 padrões de caminho compilam. Isso não equivale à execução de todos os scripts, ao teste funcional do produto nem à aprovação de CI.
 
 ## Governance and provenance synchronization
 
-The upstream project's original Hard Rules and module instructions remain authoritative, while the owner's **additive, fork-only workflow** is in [AGENTS.md](AGENTS.md#skills-and-contribution-governance-repository-wide); contributor preflight is in [CONTRIBUTING.md](CONTRIBUTING.md#mandatory-skills-and-governance-preflight). These apply to the current 46 product skills and 57 external engineering skills. Skills actually **installed** in a repository must be distinguished from skills referenced only in the monitor's catalog. A new installed skill requires a matching domain (or a justified `sem_arquivo` decision) and a traceable origin in the central monitor catalog. Always keep the map, this inventory, module governance and contribution documentation synchronized in the same PR. Verify current upstream state before editing; independent review and final CI must be reported accurately rather than assumed.
+The upstream project's original Hard Rules and module instructions remain authoritative, while the owner's **additive, fork-only workflow** is in [AGENTS.md](AGENTS.md#skills-and-contribution-governance-repository-wide); contributor preflight is in [CONTRIBUTING.md](CONTRIBUTING.md#mandatory-skills-and-governance-preflight). These apply to the current 46 product skills and 69 external engineering skills. Skills actually **installed** in a repository must be distinguished from skills referenced only in the monitor's catalog. A new installed skill requires a matching domain (or a justified `sem_arquivo` decision) and a traceable origin in the central monitor catalog. Always keep the map, this inventory, module governance and contribution documentation synchronized in the same PR. Verify current upstream state before editing; independent review and final CI must be reported accurately rather than assumed.
 
 ## Regra de invocação
 
