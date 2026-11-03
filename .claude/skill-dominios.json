@@ -3412,6 +3412,226 @@
         "node-testing",
         "code-reviewer"
       ]
+    },
+    {
+      "dominio": "shared-constantes-provedores-modelos",
+      "caminho": "^/src/shared/constants/(?:providers/|(?:providers|canonicalProviderOrder|reservedProviderPrefixes|providerRetirement|serviceKinds|cliCompatProviders|alibabaProviderRegions|antigravityClientProfile|modelCompat|modelConcurrency|modelSpecs|modelSupportedEndpoints|models)\\.ts$)",
+      "skills": [
+        "omni-providers",
+        "omni-models",
+        "node-typescript",
+        "api-security-patterns",
+        "node-testing"
+      ]
+    },
+    {
+      "dominio": "shared-constantes-custos-cotas",
+      "caminho": "^/src/shared/(?:constants/pricing/|constants/(?:pricing|quotaAutoPing)\\.ts$|contracts/quota\\.ts$)",
+      "skills": [
+        "omni-budget",
+        "omni-usage-logs",
+        "omni-models",
+        "node-typescript",
+        "node-testing"
+      ]
+    },
+    {
+      "dominio": "shared-constantes-identidade-seguranca",
+      "caminho": "^/src/shared/constants/(?:apiKeyIdentities|apiKeyPolicyScopes|clientIdentityProfiles|dashboardCsrf|managementScopes|mcpScopes|piiTypes|securityImpactingSettings|selfServiceScopes|spawnCapablePrefixes|anonymousOwner)\\.ts$",
+      "skills": [
+        "omni-auth",
+        "omni-api-keys",
+        "jwt-validate",
+        "api-security-patterns",
+        "node-typescript"
+      ]
+    },
+    {
+      "dominio": "shared-constantes-clientes-cli",
+      "caminho": "^/src/shared/constants/(?:claudeCodeClient|codexClient|codexServiceMode|geminiCliClient|cliTools(?:GrokBuild)?|cliIntegrationManifest|chatgptWebCodex|chatgptWebRetirement|designerWebRetirement)\\.ts$",
+      "skills": [
+        "omni-cli-tools",
+        "omni-providers",
+        "node-typescript",
+        "api-security-patterns",
+        "node-testing"
+      ]
+    },
+    {
+      "dominio": "shared-constantes-roteamento",
+      "caminho": "^/src/shared/constants/(?:routingStrategies|comboConfigMode|comboAccess|modelConcurrency|quotaAutoPing)\\.ts$",
+      "skills": [
+        "omni-combos-routing",
+        "omni-resilience",
+        "node-typescript",
+        "node-testing",
+        "code-reviewer"
+      ]
+    },
+    {
+      "dominio": "shared-constantes-multimodal",
+      "caminho": "^/src/shared/constants/(?:visionBridgeDefaults|visionModels|modalityBridgeDefaults)\\.ts$",
+      "skills": [
+        "omni-inference",
+        "omni-models",
+        "omni-providers",
+        "node-typescript",
+        "node-testing"
+      ]
+    },
+    {
+      "dominio": "shared-constantes-interface",
+      "caminho": "^/src/shared/constants/(?:sidebarVisibility/|(?:sidebarGroupVisibility|sidebarVisibility|pwaThemeColors|statusColors|colors|iconMap|modal)\\.ts$)",
+      "skills": [
+        "frontend-patterns",
+        "frontend-a11y",
+        "responsive-patterns",
+        "node-typescript",
+        "nextjs-quality"
+      ]
+    },
+    {
+      "dominio": "shared-utils-autenticacao",
+      "caminho": "^/src/shared/utils/[^/]*(?:apiKey|auth|credential|secret|csrf|sessionToken)[^/]*\\.ts$",
+      "skills": [
+        "omni-auth",
+        "api-security-patterns",
+        "secrets-management",
+        "node-typescript",
+        "node-testing"
+      ]
+    },
+    {
+      "dominio": "shared-utils-provedores",
+      "caminho": "^/src/shared/utils/[^/]*(?:provider|model|catalog|quota|pricing)[^/]*\\.ts$",
+      "skills": [
+        "omni-providers",
+        "omni-models",
+        "node-typescript",
+        "node-testing",
+        "code-reviewer"
+      ]
+    },
+    {
+      "dominio": "shared-utils-interface",
+      "caminho": "^/src/shared/utils/(?:a11yAudit|clipboard|categoricalPalette|formatting|formatRemaining)\\.ts$",
+      "skills": [
+        "frontend-patterns",
+        "accessibility",
+        "i18n-expert",
+        "node-typescript",
+        "code-reviewer"
+      ]
+    },
+    {
+      "dominio": "shared-validacao-esquemas",
+      "caminho": "^/src/shared/(?:validation|schemas)/",
+      "skills": [
+        "api-design-reviewer",
+        "api-security-patterns",
+        "node-typescript",
+        "node-testing",
+        "code-reviewer"
+      ]
+    },
+    {
+      "dominio": "shared-raciocinio",
+      "caminho": "^/src/shared/reasoning/",
+      "skills": [
+        "omni-inference",
+        "omni-combos-routing",
+        "node-typescript",
+        "node-testing",
+        "code-reviewer"
+      ]
+    },
+    {
+      "dominio": "shared-resiliencia",
+      "caminho": "^/src/shared/resilience/",
+      "skills": [
+        "omni-resilience",
+        "omni-combos-routing",
+        "node-typescript",
+        "node-testing",
+        "code-reviewer"
+      ]
+    },
+    {
+      "dominio": "shared-http-erros",
+      "caminho": "^/src/shared/http/",
+      "skills": [
+        "api-design-reviewer",
+        "error-handling",
+        "api-security-patterns",
+        "node-typescript",
+        "node-testing"
+      ]
+    },
+    {
+      "dominio": "shared-plataforma-windows",
+      "caminho": "^/src/shared/platform/windowsProcess\\.ts$",
+      "skills": [
+        "omni-cli-tools",
+        "nodejs-boas-praticas",
+        "graceful-shutdown",
+        "node-typescript",
+        "code-reviewer"
+      ]
+    },
+    {
+      "dominio": "shared-provedores-credenciais",
+      "caminho": "^/src/shared/providers/",
+      "skills": [
+        "omni-providers",
+        "omni-auth",
+        "secrets-management",
+        "node-typescript",
+        "node-testing"
+      ]
+    },
+    {
+      "dominio": "shared-descoberta-sinais",
+      "caminho": "^/src/shared/discovery/",
+      "skills": [
+        "omni-resilience",
+        "api-health-monitoring",
+        "node-typescript",
+        "node-testing",
+        "code-reviewer"
+      ]
+    },
+    {
+      "dominio": "shared-persistencia-idioma",
+      "caminho": "^/src/shared/lib/persistLocale\\.ts$",
+      "skills": [
+        "i18n-expert",
+        "writing-guidelines",
+        "node-typescript",
+        "node-testing",
+        "code-reviewer"
+      ]
+    },
+    {
+      "dominio": "lib-traducao-stream-responses",
+      "caminho": "^/src/lib/translator/",
+      "skills": [
+        "omni-inference",
+        "error-handling",
+        "node-typescript",
+        "node-testing",
+        "api-design-reviewer"
+      ]
+    },
+    {
+      "dominio": "script-backfill-uso",
+      "caminho": "^/src/scripts/backfillAggregation\\.ts$",
+      "skills": [
+        "omni-usage-logs",
+        "sqlite-ops",
+        "sql-code-review",
+        "node-typescript",
+        "node-testing"
+      ]
     }
   ],
   "comandos": [
