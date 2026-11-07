@@ -487,3 +487,9 @@ This version has breaking changes — APIs, conventions, and file structure may 
 This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
 
 <!-- END:nextjs-agent-rules -->
+
+## Estrelas das origens de skills adotadas
+
+- Ao instalar skill externa, registrar no inventário (`SKILLS.md` ou equivalente) o nome, a URL da origem no GitHub, o caminho do `SKILL.md` e o SHA completo do commit usado.
+- Cada origem adotada recebe uma `Star`, uma por repositório. A sessão dá a estrela na hora em que instala a skill, com `gh api -X PUT user/starred/<owner>/<repo>`, sem abrir pendência nem registro.
+- Nunca copiar, publicar ou armazenar credenciais.
