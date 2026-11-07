@@ -3637,6 +3637,15 @@
   ],
   "comandos": [
     {
+      "dominio": "commit",
+      "comando": "(?:^|[\\n;&|]|\\$\\()\\s*(?:sudo\\s+)?git\\s+(?:-C\\s+\\S+\\s+)?commit\\b",
+      "skills": [
+        "caveman-commit",
+        "git-workflow",
+        "github-ops"
+      ]
+    },
+    {
       "dominio": "testes-unitarios",
       "comando": "(?:npm|pnpm)\\s+(?:run\\s+)?test:(?:unit|vitest|coverage|integration|scoped)",
       "skills": [
