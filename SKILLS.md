@@ -1,0 +1,172 @@
+# Catálogo e mapa de skills do OmniRoute
+
+Este arquivo define as fontes, a disponibilidade e as regras de uso das skills associadas ao código do OmniRoute. A seleção por **caminho real de arquivo** e por **comando** está em `.claude/skill-dominios.json`.
+
+## Inventário auditado em 03/11/2026 (atualizado em 07/11/2026)
+
+| Indicador | Resultado |
+| --- | ---: |
+| Domínios definidos no mapa | **339** |
+| Padrões de comandos | **15** |
+| Skills nativas em `skills/<nome>/SKILL.md` | **46** |
+| Skills externas instaladas em `.claude/skills/<nome>/SKILL.md` | **73** |
+| Total de skills disponíveis | **119** |
+| Skills efetivamente referenciadas no mapa | **119** |
+| Referências de skills ausentes no mapa | **0** |
+| Elementos em `sem_arquivo` | **0** |
+
+Foram percorridas as árvores reais de `src/`, `open-sse/`, `tests/`, `scripts/`, `docs/`, `packages/`, `bin/`, `config/`, `deploy/`, `docker/`, `.github/`, `electron/`, `@omniroute/`, `examples/`, `contrib/`, `changelog.d/` e `skills/`.
+
+**Evidência de abrangência integral (03/11/2026):** **27.622 arquivos versionados**, abrangendo os arquivos da raiz, **22 diretórios do upstream e `.claude/` do fork**, foram confrontados com as expressões do mapa; **0 arquivos sem domínio** e pelo menos **3 skills distintas disponíveis por arquivo**. Todas as árvores consultadas retornaram `truncated=false`. O snapshot de referência foi a release upstream `5a7292d9`, reconciliada com a PR #4 (inclusive os 217 arquivos em `.claude/` e o `SKILLS.md` adicional). A cobertura é estática: não garante que um arquivo futuro esteja coberto, nem prova adequação funcional de cada orientação ou substitui testes, revisão e CI.
+
+## Áreas e correspondências principais
+
+| Área real do repositório | Domínios específicos e skills prioritárias |
+| --- | --- |
+| `open-sse/config/providers/`, `open-sse/executors/` | Catálogo e implementação dos provedores, `omni-providers`, `omni-models`, `api-security-patterns` |
+| `open-sse/handlers/`, `open-sse/translator/`, `src/sse/` | Chat, multimodal, respostas, transformação e streaming: `omni-inference`, `error-handling` |
+| `open-sse/services/combo/`, `autoCombo/`, `src/lib/combos/`, `routing/` | Seleção, ordem, fallback, quotas e balanceamento: `omni-combos-routing`, `omni-resilience` |
+| `open-sse/services/compression/`, `src/lib/compression/`, `contextWindowResolver*` | Compressão, janelas de contexto e workers: `omni-compression`, `omni-context-rtk` |
+| `open-sse/services/usage/`, `src/lib/usage/`, `src/lib/spend/` | Tarifação, quotas e telemetria: `omni-usage-logs`, `omni-budget` |
+| `src/lib/db/`, `*.sql` | Persistência, migração e desempenho de consultas: `omni-db-backups`, `sqlite-ops`, `sql-code-review` |
+| `src/lib/auth/`, `oauth/`, `security/`, `src/server/authz/` | Credenciais, autorização local, tokens e privacidade: `omni-auth`, `jwt-validate`, `api-security-patterns`, `secrets-management` |
+| `open-sse/mcp-server/`, `src/lib/a2a/`, `acp/`, `agentSkills/` | MCP, A2A, ferramentas e agentes: `omni-mcp`, `omni-agents-a2a`, `omni-github-skills` |
+| `src/lib/cache/`, `promptCache/`, `semanticCache*` | Caches e invalidação: `omni-cache`, `nodejs-boas-praticas` |
+| `src/lib/proxy*/`, `src/mitm/`, `*Tunnel.ts` | Proxy, túneis, certificados, transporte e interceptação: `omni-proxies`, `omni-tunnels`, `api-security-patterns` |
+| `src/app/api/` | APIs de identidade, inferência, provedores, modelos, dados, configuração e ferramentas: `api-ratelimit-helper`, `api-security-patterns` e skills do subsistema |
+| `src/app/(dashboard)/`, `src/shared/`, `packages/ui-kit/` | React/Next.js, design, acessibilidade, responsividade e recursos visuais: `frontend-patterns`, `accessibility`, `responsive-patterns` |
+| `electron/`, `packages/browser-pool/` | Desktop, IPC, ciclo de processos e automação de navegador: `nodejs-boas-praticas`, `graceful-shutdown`, `playwright-skill` |
+| `@omniroute/opencode-*/` | Plugins OpenCode, catálogo, credenciais, providers e testes: `omni-providers`, `omni-combos-routing`, `nodejs-boas-praticas` |
+| `tests/unit/`, `tests/integration/` | Node test runner e testes por subsistema; classificação de testes nomeados: `nodejs-boas-praticas`, `constraint-driven-development` |
+| `vitest*.config.ts`, `**/__tests__/`, `tests/unit/**/*.test.tsx` | Suítes Vitest explicitamente previstas no `vitest.config.ts`: `vitest-skill` |
+| `tests/e2e/` | E2E, Playwright, acessibilidade e resolução responsiva: `playwright-skill`, `e2e-testing` |
+| `docs/i18n/`, `src/i18n/`, `scripts/i18n/` | Traduções, pluralização, formatos, RTL e sincronização entre idiomas: `i18n-expert`, `writing-guidelines` |
+| `scripts/check/`, `scripts/quality/`, `.github/workflows/` | Ratchets, verificação, Actions, segurança e release: `constraint-driven-development`, `github-actions-hardening`, `github-actions-efficiency` |
+| `docker/`, `deploy/`, `bin/`, `scripts/ops/` | Operação, compilação, CLI, serviço e deployment: `linux-administration`, `systemd-services`, `omni-cli-tools` |
+| `skills/`, `.claude/skills/`, `SKILLS.md` | Skills de operação, documentação e auditoria do próprio mapa: `omni-github-skills`, `git-workflow`, `writing-guidelines` |
+
+A auditoria de correspondência corrigiu a classificação ampla de `src/shared/`: componentes e hooks seguem regras de interface, enquanto contratos e utilitários agnósticos usam práticas Node/TypeScript, enquanto serviços e operações de rede identificados como backend recebem regras especializadas de segurança. O mapa contém agora **339 domínios**, incluindo os serviços compartilhados e regras específicas para configurações, scripts, exemplos, documentação visual e integrações. Também foram corrigidas duas referências quebradas: a referência compartilhada de TestMu utilizada pela `playwright-skill` foi incluída, e a orientação de release exclusiva do repositório ECC, sem pertinência ao OmniRoute, foi retirada da cópia de `github-ops`.
+
+As tabelas resumem famílias; as regras de correspondência por rota, arquivo, suíte de testes e comando estão integralmente no JSON. Em especial, os testes `tests/unit/*.test.ts` usam majoritariamente o **runner nativo do Node**, e não devem ser confundidos com suites Vitest ou Jest. A inclusão de `vitest-skill` não converte nenhum executor.
+
+## Origens e integridade das skills
+
+### Skills nativas
+
+As **46** entradas existentes em `skills/<nome>/SKILL.md` permanecem intactas; incluem `omni-*`, `cli-*`, `config-codex-cli` e `ponytail`. Muitas são **manuais de uso do produto**, não revisores de implementação. Seus domínios podem se combinar com skills de engenharia, mas nunca substituí-las.
+
+### Skills externas já catalogadas no monitor
+
+Foram incorporadas **35** skills externas da biblioteca `fabioKoruja00/grnet-monitor/.claude/skills/`. O catálogo central `grnet-monitor/SKILLS.md` contém a procedência original. O conjunto agora inclui:
+
+- **Frontend e UX:** `accessibility`, `frontend-design`, `frontend-patterns`, `web-design-guidelines`, `responsive-design`, `responsive-patterns`, `perf-lighthouse`.
+- **Backend:** `backend-patterns`, `nodejs-boas-praticas`, `nodejs-express-server`, `error-handling`, `graceful-shutdown`.
+- **API e segurança:** `api-health-monitoring`, `api-ratelimit-helper`, `api-security-patterns`, `jwt-validate`, `secrets-management`, `env-secrets-manager`.
+- **Banco e recuperação:** `sql-code-review`, `sqlite-ops`, `backup-recovery`.
+- **Testes e qualidade:** `e2e-testing`, `playwright-skill`, `bats-testing-patterns`, `constraint-driven-development`, `python-code-style`, `python-anti-patterns`.
+- **GitHub, sistema e operações:** `github-actions-hardening`, `github-actions-efficiency`, `git-workflow`, `github-ops`, `linux-administration`, `systemd-services`.
+- **Documentação e migrações:** `writing-guidelines`, `deprecation-and-migration`.
+
+As 13 incorporações adicionais à versão inicial da PR incluem seus diretórios de apoio (referências, regras, exemplos e scripts), quando existentes na origem. **Três cópias** (`nodejs-boas-praticas`, `graceful-shutdown` e `nodejs-express-server`) tiveram removidas as instruções específicas do `grnet-monitor` sobre CommonJS, Vault, PM2, SCP e limites de linhas; no lugar há uma adaptação explícita ao OmniRoute, seus módulos TypeScript e `AGENTS.md`. Nenhum script auxiliar foi executado nesta auditoria.
+
+### Novas origens externas
+
+| Skill | Origem verificada | Segurança e finalidade |
+| --- | --- | --- |
+| `i18n-expert` | [`daymade/claude-code-skills/i18n-expert`](https://github.com/daymade/claude-code-skills/tree/main/i18n-expert) | MIT; `SKILL.md` + script Python de auditoria somente leitura + LICENSE. Usar os idiomas reais do projeto, não o par de exemplos `en-US`/`zh-CN`. |
+| `vitest-skill` | [`LambdaTest/agent-skills/vitest-skill`](https://github.com/LambdaTest/agent-skills/tree/main/vitest-skill) | MIT; `SKILL.md`, duas referências e LICENSE. Aplicar apenas nos caminhos/suítes configurados para Vitest. |
+
+A referência de `vitest-skill` já existia no catálogo central. A origem de `i18n-expert` foi cadastrada por atualização documental na [PR #48 do grnet-monitor](https://github.com/fabioKoruja00/grnet-monitor/pull/48). As skills e os repositórios originais não foram modificados.
+
+### Especialização por domínio e validação de origem (03/11/2026)
+
+A auditoria começou no catálogo central do monitor, consultou o fluxo de descoberta `find-skill` apenas para lacunas e conferiu os arquivos diretamente no GitHub de origem. **Todos os pacotes de skills desta seção foram instalados exclusivamente em `.claude/skills/` deste fork OmniRoute**, no branch da [PR #4](https://github.com/fabioKoruja00/OmniRoute/pull/4). O `grnet-monitor` recebeu **somente links, licenças e instruções de seleção** na [PR #93](https://github.com/fabioKoruja00/grnet-monitor/pull/93); nenhuma pasta de skill foi copiada para o monitor.
+
+| Domínio técnico | Skills adicionadas (além do inventário original de 103) | Origem e ajustes |
+| --- | --- | --- |
+| Monorepo e workspaces | `monorepo-navigator` | alirezarezvani/claude-skills; MIT; analisador e duas referências copiados, não executados |
+| Segurança de LLM | `prompt-injection-test` | OWASP Secure Agent Playbook; CC BY 4.0; play, modelo de achados e atribuição preservados |
+| Observabilidade e confiabilidade | `observability`, `site-reliability` | nimadorostkar/Claude-Skills-collection; MIT; instruções originais e licenças copiadas |
+| Tipagem e contratos | `typescript-advanced-types` | wshobson/agents; MIT; referência de tipos avançados e licença copiadas |
+| Testes de propriedades e mutação | `property-based-testing`, `mutation-testing` | aj-geddes/useful-ai-prompts; MIT; `SKILL.md`, referências e licenças; scripts `scaffold-tests.sh` não copiados por terem sintaxe inválida e corpo TODO |
+| Segurança de agentes e servidores MCP | `agent-security-audit`, `mcp-server-review` | OWASP Secure Agent Playbook; CC BY 4.0; plays, template de achado e atribuição por skill |
+| Desktop Electron | `electron-pro` | jshsakura/awesome-opencode-skills; MIT; metadados específicos de modelo/sandbox do OpenCode removidos apenas da cópia do fork |
+| Desempenho e carga | `performance-profiler`, `k6` | alirezarezvani/claude-skills (MIT) e grafana/skills (Apache-2.0); pacote k6 com documentação e 18 exemplos de protocolos/extensões; ferramentas não executadas |
+
+**Inventário atual:** 46 skills nativas + 73 externas = **119 skills instaladas e referenciadas no mapa**. Os 339 domínios de arquivos e 15 padrões de comandos permanecem. A expansão especializou 63 associações de domínio, sem aplicar competências específicas a diretórios genéricos incompatíveis, mantendo 3–5 skills distintas por domínio e as 339 expressões regulares compiláveis. O recorte anterior de 27.622 arquivos é histórico e precisa ser repetido com os arquivos novos antes de declarar cobertura integral da árvore atual.
+
+**Dependências e segurança:** copiar `SKILL.md` não equivale a instalar CLIs ou dependências opcionais. `k6` requer binário disponível e autorização para carga; nenhuma carga foi executada. `performance-profiler` e `monorepo-navigator` incluem scripts, não executados nesta rodada. Skills OWASP servem somente a testes autorizados. As regras principais do upstream continuam prioritárias e os repositórios originais não foram modificados.
+
+**Candidatas adiadas:** a skill `electron` de full-stack-skills/electron-skills foi preterida por referenciar arquivos que não existem na própria origem; `electron-pro` é a alternativa íntegra instalada. Não adotar qualquer política de retenção ou automação externa; somente as diretrizes existentes no OmniRoute se aplicam. Outras especializações só entram se aumentarem a competência real do domínio.
+
+### Candidatas rejeitadas ou adiadas
+
+Não foi instalada `a11y-audit` do catálogo central porque sua cópia local não inclui as referências que anuncia. `api-test-suite-builder` e `api-design-reviewer` foram obtidas diretamente da origem com os arquivos de apoio necessários. A `jest-skill` não foi selecionada como padrão porque o projeto separa Node nativo e Vitest. `web-quality-audit` ainda exige corrigir recursos auxiliares ausentes antes de uma instalação íntegra; `frontend-ui-engineering` foi obtida diretamente da origem, que disponibiliza a skill como arquivo único. Esses nomes não constam no mapa como skills disponíveis e `sem_arquivo` está vazio.
+
+## Reconciliação de domínio por arquivo (03/11/2026)
+
+A comparação inicial identificou **21 arquivos de serviços compartilhados** sem correspondência no mapa anterior; `shared-servicos-runtime` cobriu o conjunto e foram acrescentadas regras especializadas para configurações de CLI e agendadores. Depois, a auditoria integral da árvore atual identificou **cobertura pouco específica**, apesar de correspondência formal, para arquivos Quadlet/Podman, scripts Windows, exemplos de API/plugins, diagramas, pacotes e política de dependências, validação HTTP, ações GitHub compostas e configurações da raiz. Foram adicionados **40 domínios específicos** em duas rodadas, todos validados contra arquivos reais, sem qualquer ampliação genérica que faça todos os arquivos combinarem com todas as skills.
+
+| Subsistema verificado | Especialização adicionada | Arquivo de controle |
+| --- | --- | --- |
+| Podman/Quadlet e operações VPS/Windows | Systemd, Linux, redes, segredos, inicialização CLI | `contrib/podman/omniroute.container`, `contrib/windows/launch-claude.bat` |
+| Plugins e exemplos de cliente | Cadeia de suprimentos de agentes, protocolos HTTP, segurança | `examples/plugins/langfuse/index.mjs`, `examples/quickstart/python_requests.py` |
+| Diagramas e documentação visual | Design, acessibilidade, revisão de diagramas e consistência documental | `docs/diagrams/authz-pipeline.mmd` |
+| Root, editor, dependências e linguagem | Segurança da distribuição npm, ignorados, licenças, Vale e VS Code | `.npmrc`, `SECURITY.md`, `.vale/styles/Vocab/OmniRoute/accept.txt` |
+| Testes, scripts e workspaces | Contratos de testes HTTP, GitHub Actions compostas, manifests de Node | `tests/manual/api.http`, `open-sse/package.json` |
+| Serviços compartilhados e core | CLI, sincronização, WebSocket, modelos e avaliações Promptfoo | `src/shared/services/cloudSyncScheduler.ts`, `src/lib/ws/handshake.ts` |
+
+**Segunda rodada semântica:** arquivos de `src/shared/constants/`, `src/shared/utils/`, `schemas/`, `validation/` e serviços auxiliares eram cobertos principalmente por orientação genérica de Node/TypeScript. Foram acrescentados **20 domínios focalizados** para identidade, preços/cotas, catálogo de provedores/modelos, roteamento, multimodalidade, CLI, componentes de interface, autenticação, contratos, WebSocket/streaming e manutenção de agregações. Exemplo: `src/shared/constants/pricing/default-pricing.ts` ganha skills de custos/uso, enquanto `src/shared/utils/apiAuth.ts` ganha segurança e autenticação. Todos os 339 domínios correspondem a pelo menos um arquivo efetivo; não há regras sem uso nem arquivos sem domínio no snapshot de 27.622 itens.
+
+As **123 regras iniciais que tinham 6 skills** foram reduzidas para 5 por redundância semântica. A distribuição final é **11 domínios com 3**, **73 com 4** e **255 com 5** skills, totalizando **339 regras de arquivos**, **15 de comandos** e **119 skills únicas referenciadas** (sem referências inválidas); 14 comandos têm 4 skills e o comando `commit` tem 3. Regras são complementares: um arquivo pode combinar com vários domínios, mas o preflight seleciona apenas as skills realmente pertinentes à operação.
+
+As 103 skills anteriores constam no catálogo central do monitor (PR #48 integrada); as referências históricas das especializações estão documentadas na PR #93, sem copiar arquivos de skills para o monitor. O `mermaid-expert` citado no catálogo externo é um **agente**, não um `SKILL.md` disponível para instalação direta, e portanto não é contado como skill instalada. Esta auditoria não executou scripts de terceiros e não alterou código funcional, workflows ou repositórios externos; resultados de CI/testes funcionais não são presumidos.
+
+## Pilhas complementares por domínio (ampliação de 30/10/2026)
+
+A auditoria aprofundada constatou que as 298 regras iniciais eram insuficientemente especializadas: 79 apontavam para uma única skill e outras 70 para duas. A versão corrigida associa **3 a 5 skills por domínio** e **4 por padrão de comando**, sem referências ausentes ou skills órfãs. Isso é **cobertura de competências**, e não ordem para executar indiscriminadamente todas as skills de cada caminho. Selecionar apenas as adequadas à operação, preservando a regra de aplicar as essenciais de governança, segurança e testes. As skills de produto em `skills/` continuam preservadas e são complementadas por orientação de documentação, auditoria e integridade.
+
+| Competências | Complementos instalados | Função |
+| --- | --- | --- |
+| Revisão de mudanças | `code-reviewer`, `testing-strategy`, `test-gap-audit` | Contratos de revisão, estratégia e lacunas de testes |
+| API e contratos | `api-design-reviewer`, `api-test-suite-builder` | Compatibilidade, design e testes de endpoints |
+| Node e tipagem | `node-testing`, `node-typescript`, `node-ci` | Runners Node/Vitest, TypeScript e CI |
+| Dependências e skills | `node-supply-chain`, `agent-supply-chain`, `secret-scanning` | Integridade, riscos de dependências e segredos |
+| Next.js e UI | `nextjs-quality`, `frontend-ui-engineering`, `frontend-a11y`, `frontend-excellence`, `responsiveness-check` | RSC, acessibilidade, integração visual, responsividade |
+| Performance | `performance-optimization` | Gargalos de frontend/backend, métricas e consultas |
+| Redes e Zero Trust | `networking`, `cloudflare-one` | Diagnóstico de DNS, túneis, proxy e segurança perimetral |
+| Documentação | `docs-sync-audit` | Comparação sistemática de documentação com código |
+
+**Procedência das 20 skills externas adicionadas nesta ampliação:**
+
+- `google-gemini/gemini-cli` (Apache-2.0): `code-reviewer`, origem `.gemini/skills/code-reviewer/`.
+- `shinpr/agentic-code` (MIT): `testing-strategy`, origem `.agents/skills/testing-strategy/`.
+- `alirezarezvani/claude-skills` (MIT): `api-design-reviewer` e `api-test-suite-builder`; scripts e referências originais preservados.
+- `github/awesome-copilot` (MIT): `secret-scanning`, `test-gap-audit`, `docs-sync-audit` e `agent-supply-chain`; recursos auxiliares preservados quando existentes.
+- `Paldom/node-skills` (MIT): `node-ci`, `node-testing`, `node-typescript`, `nextjs-quality`, `node-supply-chain`, com playbooks, scripts e avaliações empacotados.
+- `addyosmani/agent-skills`: `frontend-ui-engineering` e `performance-optimization`; referência de otimizações incluída.
+- `cloudflare/skills` via catálogo central: `cloudflare-one`.
+- `iuliandita/skills` via catálogo central: `networking`, com referências de DNS, VPN, proxy, rede e diagnóstico.
+- `jezweb/claude-skills` via catálogo central: `responsiveness-check`, com critérios de breakpoints e relatório.
+- `ysyecust/everything-claude-code` (MIT): `frontend-a11y`; cópia identificada por blob SHA exato da origem, com LICENSE recuperada.
+- `rohitg00/awesome-claude-code-toolkit` (Apache-2.0): `frontend-excellence`; cópia identificada por blob SHA exato da origem, com LICENSE recuperada.
+
+**Licenças adicionais:** `cloudflare-one` (Apache-2.0), `frontend-a11y` (MIT) e `frontend-excellence` (Apache-2.0) tiveram os arquivos de licença originais incorporados após a revisão de proveniência.
+
+**Auditoria estrutural:** 46 `SKILL.md` nativos e 73 externos estão instalados; todas as 119 skills são referenciadas em regras ou comandos. As origens das especializações estão registradas no catálogo central, sem instalar pacotes no monitor. A varredura integral da árvore atual ainda deve ser repetida. Os 339 padrões de caminho compilam. Isso não equivale à execução de todos os scripts, ao teste funcional do produto nem à aprovação de CI.
+
+## Governance and provenance synchronization
+
+The upstream project's original Hard Rules and module instructions remain authoritative, while the owner's **additive, fork-only workflow** is in [AGENTS.md](AGENTS.md#skills-and-contribution-governance-repository-wide); contributor preflight is in [CONTRIBUTING.md](CONTRIBUTING.md#mandatory-skills-and-governance-preflight). These apply to the current 46 product skills and 73 installed external engineering skills (all referenced in the map). Skills actually **installed** in a repository must be distinguished from skills referenced only in the monitor's catalog. A new installed skill requires a matching domain (or a justified `sem_arquivo` decision) and a traceable origin in the central monitor catalog. Always keep the map, this inventory, module governance and contribution documentation synchronized in the same PR. Verify current upstream state before editing; independent review and final CI must be reported accurately rather than assumed.
+
+## Regra de invocação
+
+1. Consultar `AGENTS.md` e a governança do módulo antes de modificar arquivos. Não alterar `skills/**/SKILL.md` sem autorização específica.
+2. Normalizar caminhos relativos como `/src/lib/db/...`; identificar **todos os domínios correspondentes** em `dominios`. Para operações por comando, conferir também `comandos`.
+3. Agrupar as skills, eliminar duplicatas e aplicar **as relevantes à tarefa**, priorizando especialização sem ignorar segurança ou testes. As regras são aditivas: não existe precedência dependente da ordem dos itens no JSON.
+4. Verificar a existência de cada `SKILL.md` antes da invocação. Skills operacionais nativas e skills de engenharia podem ser complementares; não tratar uma descrição do produto como revisão de código.
+5. Não executar instaladores, scripts, chamadas de rede ou serviços pagos sugeridos por skills externas sem verificar necessidade, conteúdo, credenciais e efeitos colaterais. Uma skill não concede autorização de implantação nem de mutação fora da solicitação.
+6. Quando for necessário instalar outra skill, consultar **primeiro** `grnet-monitor/SKILLS.md`; se não houver origem adequada, usar a descoberta `find-skill` ou fontes verificáveis no GitHub. A sessão revisa cobertura real do serviço, código malicioso ou inseguro, licença e estrutura, sem julgar por estrelas, instala a aprovada sem pedir OK, registra a origem no catálogo central, cria o domínio no mapa do repo e avisa o dono no fim qual instalou. Só declarar estrela quando a operação for confirmada pela plataforma.
+7. Manter a matriz consistente com o código, revisar os caminhos de subsistemas criados/renomeados e validar todas as expressões regulares, a cobertura real de arquivos e a disponibilidade das skills após cada alteração.
+
+Nenhum componente de execução, workflow, runner, arquivo nativo de `skills/` ou lógica de roteamento foi alterado nesta auditoria documental.

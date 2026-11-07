@@ -6,6 +6,30 @@
 > and point back here. When a rule needs to change, change it HERE — never re-fork it into an
 > assistant-specific file.
 
+## Skills and contribution governance (repository-wide)
+
+**GRNET fork-only supplement.** Applies to the owner's `fabioKoruja00/OmniRoute` fork and its contribution branches, **not** as a replacement for or modification to `cheaper-inference/OmniRoute`. All original upstream text, the 23 numbered Hard Rules, nearest-module `AGENTS.md` files, the Contribution Golden Path, safety gates, worktree policy and maintainer decisions remain in force. If a supplement conflicts with upstream, **upstream wins**; stop the conflicting action. Do not export fork-specific instructions to an upstream PR unless maintainers request them.
+
+### Before reading, running or changing project files
+
+1. **Project authority first:** read the original upstream `AGENTS.md` and nearest module-specific rules, including its worktree and security restrictions; check the relevant Golden Path before any operation that can mutate Git or files. An existing PR for the same coherent work must be continued, not duplicated.
+2. **Skills preflight, before project commands:** consult the central `fabioKoruja00/grnet-monitor/SKILLS.md` catalog for sources, then `.claude/skill-dominios.json` for **all** matching paths and commands, then read the relevant `SKILL.md` in `.claude/skills/` or `skills/`. Announce each actually used skill as `skill: name — short purpose` when the tool interface supports it. If the map or skill cannot be accessed, disclose the limitation rather than claiming compliance.
+3. **Verify ownership, then synchronize upstream:** confirm the worktree/branch is yours to change, there are no uncommitted changes at risk, and the intended PR's true current upstream base (normally `release/vX.Y.Z`). Fetch and incorporate the upstream tip into the matching fork base, verifying that tip is an ancestor of the fork base and that it is zero commits behind; then reconcile the existing PR branch. If branches are absent, worktrees belong to someone else, or histories conflict, stop and preserve state rather than reset, stash, rewrite history or force-push. Never silently change another session's checkout; use an isolated authorized worktree.
+4. **Missing skills:** when a competency is absent, check `grnet-monitor/SKILLS.md`, then `find-skill` or a verified GitHub source. The session reviews it alone: real coverage of the service and malicious or unsafe code, never stars; license, instructions, supplementary files, dependencies and any script/network effects before installation or execution. Install the approved skill without asking, record it in the central monitor catalog, create its domain in the repo map and tell the owner at the end which one was installed. Never conflate a mere catalog reference, an installed engineering skill and a product-facing `skills/` manifest; regex coverage alone never proves semantic correctness.
+
+### Changes, reviews and delivery
+
+5. **Measured and limited scope:** start from the issue/PR and confirmed behavior. Keep one coherent subject in its existing PR, split substantial work into small, independently verifiable modules/commits, and close concrete related reviewer findings within that subject. File unrelated findings separately; do not broaden or abandon the requested change.
+6. **Documentation parity:** when behavior, configs or skills change, update the relevant usage, API, architecture and quality documentation in the same PR. For `.claude/skill-dominios.json`, verify real paths, valid patterns, command associations, all installed `SKILL.md` entries, `sem_arquivo`, and no orphan references. Update `SKILLS.md` and central catalog when required. Honor the upstream `changelog.d/` process; never edit generated `CHANGELOG.md` solely for this fork policy.
+7. **Independent review is evidence-based:** send each coherent lot (or small document excerpt) to the separate OmniRoute reviewer via `revisar_entrega`; if pending, resolve it via `status_revisao`. Keep the request ID, final status, substantive findings and corrections in the PR report. An incomplete, unavailable or self-asserted review is not approval. The main contributor is responsible for edits, commits and pushes; deployment, releases and merges require the permissions and decisions specified by the original upstream governance and applicable owner authorization.
+8. **Validation and CI:** run focused tests and applicable lint, typecheck, docs and coverage checks; changed production behavior needs regression tests under upstream Hard Rules. UI changes need desktop coverage through 4K plus tablet and mobile layouts. Follow every triggered CI to a terminal result, fix introduced failures and rerun; disclose inherited base failures and respect base-green and release-freeze protocols. Never weaken CI, bypass hooks or change runner setup without explicit approval.
+9. **Ready-for-review PRs:** implement the coherent change, prepare its relevant documentation, run available focused tests and request independent review **before opening** the PR. Open as **Ready for review**, never Draft. CI may run on the PR or after branch pushes; follow it to a terminal result, resolve failures and only then claim the PR is truly **merge-ready**. Existing PRs stay open while corrections and CI are completed; Ready for review is a GitHub state, not evidence that gates passed. Include issue reference, why/what, changed tests, review evidence and explicit limitations. Fork-owned PR titles/descriptions use PT-BR; upstream-facing contributions follow maintainer conventions. Do not autonomously merge upstream contributions or release software.
+10. **No monitor-specific imports:** do not copy the monitor's PM2, Vault, SCP, VM, router, Cloudflare purging, backup/Drive mirror or runner procedures into OmniRoute. These owner checks are strictly additive to this repository's original security, packaging, build, deployment and contributor constraints.
+
+**Owner close-out:** prove synchronized ancestry and branch ownership; show actual relevant skill reads, documentation/catalog consistency, completed focused review with request ID, tests run and terminal CI results. Anything unverified must be reported as incomplete, never silently checked off.
+
+---
+
 ## Quick Start
 
 ```bash
@@ -336,6 +360,23 @@ Steps + baseline-freeze check: `docs/ops/WORKTREE_ISOLATION.md` → "Sync-back l
 
 This checkout is the canonical `cheaper-inference/OmniRoute` repository (formerly `diegosouzapw/OmniRoute`; the old name redirects). Keep fork-only deployment and personal automation changes out of upstream PRs. Start upstream work from the active upstream default branch, not `main` (`git fetch upstream && git switch -c <branch-name> upstream/<default-branch>`), target that same release branch in the PR, stage only the intended files, run the focused checks, and use a Conventional Commit message (for example, `docs: slim AGENTS.md`).
 
+
+**Mandatory upstream-first fork preflight (every contribution, including PR follow-ups):**
+Before creating a branch, modifying any source/documentation, committing, pushing, or opening or
+updating an upstream PR, discover the current **active release branch** and fetch its latest tip
+from `cheaper-inference/OmniRoute`. First synchronize the corresponding branch in
+`fabioKoruja00/OmniRoute` to include that upstream tip, then verify that the fork is
+**zero commits behind** upstream. Perform the same preflight at the beginning of every new
+work session and before resuming an existing PR; do not assume yesterday's base is current.
+If it is already synchronized, verify and proceed without making an empty merge commit.
+Preserve fork-only deployment protections, unmerged contributor branches, and branch history:
+never force-push or destructively reset an active branch. If synchronization cannot be
+verified or completed, **stop all mutation** until it is fixed. Once the fork base is current,
+reconcile the dedicated issue/PR branch with the matching upstream release tip before edits.
+Exclude this fork-specific instruction and other fork-only artifacts from upstream PR diffs.
+
+This checkout is a fork of `cheaper-inference/OmniRoute`. Keep fork-only deployment and personal automation changes out of upstream PRs. Start upstream work from the active upstream default branch, not `main` (`git fetch upstream && git switch -c <branch-name> upstream/<default-branch>`), target that same release branch in the PR, stage only the intended files, run the focused checks, and use a Conventional Commit message (for example, `docs: slim AGENTS.md`).
+
 ---
 
 ## Environment
@@ -446,3 +487,9 @@ This version has breaking changes — APIs, conventions, and file structure may 
 This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
 
 <!-- END:nextjs-agent-rules -->
+
+## Estrelas das origens de skills adotadas
+
+- Ao instalar skill externa, registrar no inventário (`SKILLS.md` ou equivalente) o nome, a URL da origem no GitHub, o caminho do `SKILL.md` e o SHA completo do commit usado.
+- Cada origem adotada recebe uma `Star`, uma por repositório. A sessão dá a estrela na hora em que instala a skill, com `gh api -X PUT user/starred/<owner>/<repo>`, sem abrir pendência nem registro.
+- Nunca copiar, publicar ou armazenar credenciais.
