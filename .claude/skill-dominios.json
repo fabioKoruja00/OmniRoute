@@ -158,11 +158,11 @@
       "dominio": "interface",
       "caminho": "^/(src/app/(?!api/)|src/(?:hooks|store|i18n)/|packages/ui-kit/|public/)",
       "skills": [
-        "frontend-patterns",
-        "frontend-design",
-        "accessibility",
-        "responsive-patterns",
-        "frontend-ui-engineering"
+        "react-patterns",
+        "react-performance",
+        "frontend-ui-engineering",
+        "frontend-a11y",
+        "nextjs-quality"
       ]
     },
     {
@@ -387,21 +387,21 @@
       "dominio": "design-system",
       "caminho": "^/(?:src/shared/components/|packages/ui-kit/)",
       "skills": [
-        "frontend-patterns",
-        "accessibility",
-        "responsive-patterns",
+        "react-patterns",
+        "frontend-design",
         "frontend-ui-engineering",
-        "frontend-a11y"
+        "frontend-a11y",
+        "responsive-patterns"
       ]
     },
     {
       "dominio": "internacionalizacao",
       "caminho": "^/(?:src/i18n/|scripts/i18n/|src/app/.*/messages/)",
       "skills": [
-        "frontend-patterns",
-        "writing-guidelines",
+        "i18n-sync",
         "i18n-expert",
         "docs-sync-audit",
+        "writing-guidelines",
         "git-workflow"
       ]
     },
@@ -409,11 +409,11 @@
       "dominio": "nextjs-react",
       "caminho": "^/src/app/(?!api/)",
       "skills": [
-        "frontend-patterns",
-        "accessibility",
-        "frontend-design",
-        "nextjs-quality",
-        "frontend-excellence"
+        "react-patterns",
+        "react-performance",
+        "frontend-excellence",
+        "frontend-a11y",
+        "nextjs-quality"
       ]
     },
     {
@@ -757,11 +757,11 @@
       "dominio": "componentes-compartilhados",
       "caminho": "^/src/(?:shared/(?:components|hooks)/|hooks/|store/)",
       "skills": [
-        "frontend-patterns",
-        "accessibility",
-        "responsive-patterns",
+        "react-patterns",
+        "react-performance",
         "frontend-ui-engineering",
-        "frontend-a11y"
+        "frontend-a11y",
+        "responsive-patterns"
       ]
     },
     {
@@ -823,11 +823,11 @@
       "dominio": "internacionalizacao-interface",
       "caminho": "^/src/i18n/",
       "skills": [
-        "frontend-patterns",
-        "writing-guidelines",
+        "i18n-sync",
         "i18n-expert",
+        "react-patterns",
         "docs-sync-audit",
-        "git-workflow"
+        "frontend-a11y"
       ]
     },
     {
@@ -1197,8 +1197,8 @@
       "dominio": "painel-dashboard",
       "caminho": "^/src/app/\\(dashboard\\)/dashboard/",
       "skills": [
-        "accessibility",
-        "responsive-patterns",
+        "react-patterns",
+        "react-performance",
         "frontend-ui-engineering",
         "frontend-a11y",
         "nextjs-quality"
@@ -1210,7 +1210,7 @@
       "skills": [
         "omni-providers",
         "omni-models",
-        "frontend-ui-engineering",
+        "react-patterns",
         "frontend-a11y",
         "nextjs-quality"
       ]
@@ -1221,7 +1221,7 @@
       "skills": [
         "omni-combos-routing",
         "omni-resilience",
-        "frontend-ui-engineering",
+        "react-patterns",
         "frontend-a11y",
         "nextjs-quality"
       ]
@@ -1232,7 +1232,7 @@
       "skills": [
         "omni-usage-logs",
         "omni-budget",
-        "frontend-ui-engineering",
+        "react-patterns",
         "frontend-a11y",
         "nextjs-quality"
       ]
@@ -1243,7 +1243,7 @@
       "skills": [
         "omni-context-rtk",
         "omni-compression",
-        "frontend-ui-engineering",
+        "react-patterns",
         "frontend-a11y",
         "nextjs-quality"
       ]
@@ -1254,7 +1254,7 @@
       "skills": [
         "omni-agents-a2a",
         "omni-mcp",
-        "agent-security-audit",
+        "react-patterns",
         "frontend-a11y",
         "nextjs-quality"
       ]
@@ -1265,7 +1265,7 @@
       "skills": [
         "omni-inference",
         "omni-webhooks",
-        "frontend-ui-engineering",
+        "react-patterns",
         "frontend-a11y",
         "nextjs-quality"
       ]
@@ -1275,8 +1275,8 @@
       "caminho": "^/src/app/\\(dashboard\\)/dashboard/(?:settings|profile|onboarding|system|runtime)/",
       "skills": [
         "omni-settings",
-        "accessibility",
-        "frontend-ui-engineering",
+        "react-patterns",
+        "react-performance",
         "frontend-a11y",
         "nextjs-quality"
       ]
@@ -1287,7 +1287,7 @@
       "skills": [
         "omni-resilience",
         "api-security-patterns",
-        "frontend-ui-engineering",
+        "react-patterns",
         "frontend-a11y",
         "nextjs-quality"
       ]
@@ -1296,11 +1296,11 @@
       "dominio": "painel-outros",
       "caminho": "^/src/app/\\(dashboard\\)/dashboard/(?:gamification|changelog)/",
       "skills": [
-        "writing-guidelines",
+        "react-patterns",
+        "responsiveness-check",
         "frontend-ui-engineering",
         "frontend-a11y",
-        "nextjs-quality",
-        "responsiveness-check"
+        "nextjs-quality"
       ]
     },
     {
@@ -1308,8 +1308,8 @@
       "caminho": "^/src/app/(?:login|auth|authorize|callback|connect|forgot-password|forbidden)/",
       "skills": [
         "omni-auth",
-        "accessibility",
-        "frontend-ui-engineering",
+        "api-security-patterns",
+        "react-patterns",
         "frontend-a11y",
         "nextjs-quality"
       ]
@@ -1318,11 +1318,11 @@
       "dominio": "frontend-documentacao-rotas",
       "caminho": "^/src/app/(?:docs|privacy|terms|landing)/",
       "skills": [
-        "writing-guidelines",
-        "frontend-patterns",
-        "accessibility",
         "docs-sync-audit",
-        "i18n-expert"
+        "i18n-expert",
+        "react-patterns",
+        "frontend-a11y",
+        "nextjs-quality"
       ]
     },
     {
@@ -1330,8 +1330,8 @@
       "caminho": "^/src/app/(?:400|401|403|408|429|500|502|503|offline|maintenance|healthz|livez|readyz|status)/",
       "skills": [
         "omni-resilience",
-        "accessibility",
-        "frontend-ui-engineering",
+        "react-patterns",
+        "react-performance",
         "frontend-a11y",
         "nextjs-quality"
       ]
@@ -1342,7 +1342,7 @@
       "skills": [
         "omni-mcp",
         "api-security-patterns",
-        "frontend-ui-engineering",
+        "react-patterns",
         "frontend-a11y",
         "nextjs-quality"
       ]
@@ -1351,22 +1351,22 @@
       "dominio": "frontend-estilos",
       "caminho": "^/(?:src/app/[^/]*\\.css$|packages/ui-kit/.*\\.css$|src/app/globals\\.css$)",
       "skills": [
+        "react-patterns",
+        "react-performance",
         "frontend-design",
-        "responsive-patterns",
-        "frontend-ui-engineering",
         "frontend-a11y",
-        "nextjs-quality"
+        "responsive-patterns"
       ]
     },
     {
       "dominio": "ui-kit-componentes",
       "caminho": "^/packages/ui-kit/",
       "skills": [
-        "frontend-patterns",
+        "react-patterns",
         "frontend-design",
-        "accessibility",
-        "responsive-patterns",
-        "frontend-ui-engineering"
+        "frontend-ui-engineering",
+        "frontend-a11y",
+        "responsive-patterns"
       ]
     },
     {
@@ -1659,9 +1659,9 @@
       "dominio": "testes-ui-componentes",
       "caminho": "^/tests/unit/(?:ui|dashboard|shared)/",
       "skills": [
-        "frontend-patterns",
-        "accessibility",
-        "nodejs-boas-praticas",
+        "react-testing",
+        "vitest-skill",
+        "frontend-a11y",
         "node-testing",
         "test-gap-audit"
       ]
@@ -1846,11 +1846,11 @@
       "dominio": "scripts-docs-i18n",
       "caminho": "^/scripts/(?:i18n|docs)/",
       "skills": [
-        "writing-guidelines",
-        "nodejs-boas-praticas",
+        "i18n-sync",
         "i18n-expert",
         "docs-sync-audit",
-        "git-workflow"
+        "node-typescript",
+        "node-testing"
       ]
     },
     {
@@ -2033,9 +2033,9 @@
       "dominio": "documentacao-i18n",
       "caminho": "^/docs/i18n/",
       "skills": [
+        "i18n-expert",
         "writing-guidelines",
-        "frontend-patterns",
-        "i18n-expert"
+        "docs-sync-audit"
       ]
     },
     {
@@ -2363,9 +2363,9 @@
       "dominio": "localizacao-traducoes",
       "caminho": "^/(?:docs/i18n/|src/i18n/|scripts/i18n/|tests/unit/i18n|src/app/.*(?:locale|i18n|translation|intl))",
       "skills": [
+        "i18n-sync",
         "i18n-expert",
         "writing-guidelines",
-        "nodejs-boas-praticas",
         "docs-sync-audit",
         "git-workflow"
       ]
@@ -2396,11 +2396,11 @@
       "dominio": "vitest-setup",
       "caminho": "^/tests/_setup/vitestUiPolyfills\\.ts$",
       "skills": [
+        "react-testing",
         "vitest-skill",
-        "frontend-patterns",
         "node-testing",
         "test-gap-audit",
-        "code-reviewer"
+        "testing-strategy"
       ]
     },
     {
@@ -2408,8 +2408,8 @@
       "caminho": "^/src/app/\\(dashboard\\)/(?:home/|dashboard/(?:quota|tokens)/)",
       "skills": [
         "omni-usage-logs",
-        "responsive-patterns",
-        "frontend-ui-engineering",
+        "react-patterns",
+        "react-performance",
         "frontend-a11y",
         "nextjs-quality"
       ]
@@ -2418,8 +2418,8 @@
       "dominio": "frontend-shell-main",
       "caminho": "^/src/app/(?:[^/]+\\.(?:tsx|ts|css)$|\\(dashboard\\)/[^/]+\\.tsx?$)",
       "skills": [
-        "frontend-design",
-        "accessibility",
+        "react-patterns",
+        "react-performance",
         "frontend-ui-engineering",
         "frontend-a11y",
         "nextjs-quality"
@@ -2431,7 +2431,7 @@
       "skills": [
         "frontend-design",
         "web-design-guidelines",
-        "frontend-ui-engineering",
+        "react-performance",
         "frontend-a11y",
         "nextjs-quality"
       ]
@@ -2482,11 +2482,11 @@
       "dominio": "src-lib-documentacao-helper",
       "caminho": "^/src/lib/(?:docs|log|console|dataPaths|source|wellKnown)",
       "skills": [
-        "nodejs-boas-praticas",
-        "writing-guidelines",
+        "i18n-sync",
+        "i18n-expert",
         "docs-sync-audit",
-        "git-workflow",
-        "i18n-expert"
+        "node-typescript",
+        "node-testing"
       ]
     },
     {
@@ -2625,9 +2625,9 @@
       "dominio": "testes-nome-ui",
       "caminho": "^/tests/unit/[^/]*(?:dashboard|Dashboard|sidebar|Sidebar|layout|Layout|component|Component|a11y|A11y|responsive|Responsive|viewport|Viewport|theme|Theme|homePage|HomePage|accessib|Accessib)[^/]*\\.(?:test|spec)\\.(?:ts|tsx|js|mjs)$",
       "skills": [
-        "frontend-patterns",
-        "accessibility",
-        "responsive-patterns",
+        "react-testing",
+        "vitest-skill",
+        "frontend-a11y",
         "node-testing",
         "test-gap-audit"
       ]
@@ -2636,11 +2636,11 @@
       "dominio": "testes-nome-i18n",
       "caminho": "^/tests/unit/[^/]*(?:i18n|I18n|locale|Locale|translation|Translation|rtl|Rtl|icu|ICU|language|Language)[^/]*\\.(?:test|spec)\\.(?:ts|tsx|js|mjs)$",
       "skills": [
+        "i18n-sync",
         "i18n-expert",
-        "writing-guidelines",
-        "docs-sync-audit",
         "node-testing",
-        "testing-strategy"
+        "vitest-skill",
+        "test-gap-audit"
       ]
     },
     {
@@ -2814,9 +2814,9 @@
       "skills": [
         "observability",
         "omni-usage-logs",
-        "frontend-ui-engineering",
+        "react-patterns",
         "frontend-a11y",
-        "accessibility"
+        "nextjs-quality"
       ]
     },
     {
@@ -2898,10 +2898,10 @@
       "dominio": "config-noticias-traducoes",
       "caminho": "^/(?:\\.i18n-state\\.json|news\\.json)$",
       "skills": [
+        "i18n-sync",
         "i18n-expert",
         "writing-guidelines",
-        "docs-sync-audit",
-        "git-workflow"
+        "docs-sync-audit"
       ]
     },
     {
@@ -3345,8 +3345,8 @@
       "dominio": "shared-persistencia-idioma",
       "caminho": "^/src/shared/lib/persistLocale\\.ts$",
       "skills": [
+        "i18n-sync",
         "i18n-expert",
-        "writing-guidelines",
         "node-typescript",
         "node-testing",
         "code-reviewer"
@@ -3383,6 +3383,49 @@
         "typescript-advanced-types",
         "api-security-patterns",
         "frontend-ui-engineering"
+      ]
+    },
+    {
+      "dominio": "react-componentes-typescript",
+      "caminho": "^/src/(?:app|components|ui)/.*\\.(?:tsx|jsx)$",
+      "skills": [
+        "react-patterns",
+        "react-performance",
+        "frontend-ui-engineering",
+        "frontend-a11y",
+        "nextjs-quality"
+      ]
+    },
+    {
+      "dominio": "react-hooks-compartilhados",
+      "caminho": "^/src/hooks/.*\\.(?:ts|tsx)$",
+      "skills": [
+        "react-patterns",
+        "react-performance",
+        "react-testing",
+        "node-typescript",
+        "nextjs-quality"
+      ]
+    },
+    {
+      "dominio": "react-testes-componentes-tsx",
+      "caminho": "^/(?:tests/.*\\.(?:test|spec)\\.tsx|src/.*(?:__tests__/.*\\.(?:test|spec)\\.tsx|\\.(?:test|spec)\\.tsx))$",
+      "skills": [
+        "react-testing",
+        "vitest-skill",
+        "frontend-a11y",
+        "node-testing",
+        "test-gap-audit"
+      ]
+    },
+    {
+      "dominio": "i18n-json-locales",
+      "caminho": "^/(?:bin/cli/locales/|src/i18n/.*|src/.*/(?:locales|translations|messages)/).*\\.json$",
+      "skills": [
+        "i18n-sync",
+        "i18n-expert",
+        "writing-guidelines",
+        "docs-sync-audit"
       ]
     }
   ],
