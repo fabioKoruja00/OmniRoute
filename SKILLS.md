@@ -1,23 +1,23 @@
 # Catálogo e mapa de skills do OmniRoute
 
-Este arquivo define as fontes, a disponibilidade e as regras de uso das skills associadas ao código do OmniRoute. A seleção por **caminho real de arquivo** e por **comando** está em `.claude/skill-dominios.json`.
+Este arquivo descreve a disponibilidade e as regras locais de seleção de skills associadas ao código do OmniRoute. A seleção por **caminho real de arquivo** e por **comando** está em `.claude/skill-dominios.json`. A **fonte central exclusiva de procedência, licença e links de origem**, inclusive para skills novas, é o catálogo `grnet-monitor/SKILLS.md`; registros históricos abaixo não substituem o catálogo.
 
-## Inventário auditado em 03/11/2026 (atualizado em 07/11/2026)
+## Inventário revalidado em 10/11/2026, após sincronização com upstream
 
 | Indicador | Resultado |
 | --- | ---: |
-| Domínios definidos no mapa | **339** |
+| Domínios definidos no mapa | **318** |
 | Padrões de comandos | **15** |
 | Skills nativas em `skills/<nome>/SKILL.md` | **46** |
-| Skills externas instaladas em `.claude/skills/<nome>/SKILL.md` | **73** |
-| Total de skills disponíveis | **119** |
-| Skills efetivamente referenciadas no mapa | **119** |
+| Skills externas instaladas em `.claude/skills/<nome>/SKILL.md` | **77** |
+| Total de skills disponíveis | **123** |
+| Skills efetivamente referenciadas no mapa | **123** |
 | Referências de skills ausentes no mapa | **0** |
 | Elementos em `sem_arquivo` | **0** |
 
 Foram percorridas as árvores reais de `src/`, `open-sse/`, `tests/`, `scripts/`, `docs/`, `packages/`, `bin/`, `config/`, `deploy/`, `docker/`, `.github/`, `electron/`, `@omniroute/`, `examples/`, `contrib/`, `changelog.d/` e `skills/`.
 
-**Evidência de abrangência integral (03/11/2026):** **27.622 arquivos versionados**, abrangendo os arquivos da raiz, **22 diretórios do upstream e `.claude/` do fork**, foram confrontados com as expressões do mapa; **0 arquivos sem domínio** e pelo menos **3 skills distintas disponíveis por arquivo**. Todas as árvores consultadas retornaram `truncated=false`. O snapshot de referência foi a release upstream `5a7292d9`, reconciliada com a PR #4 (inclusive os 217 arquivos em `.claude/` e o `SKILLS.md` adicional). A cobertura é estática: não garante que um arquivo futuro esteja coberto, nem prova adequação funcional de cada orientação ou substitui testes, revisão e CI.
+**Evidência atual de cobertura (10/11/2026):** a árvore completa da branch de auditoria baseada no merge upstream `9a61e05` contém **28.776 arquivos versionados** (`truncated=false`). Todos foram confrontados com as **318 regras de caminho**: **zero arquivos sem domínio**, pelo menos **3 skills distintas por arquivo**, 123 nomes instalados e vinculados, zero curingas e zero grupos fora do limite de 3–5 skills. O conjunto inclui o código do upstream sincronizado, as quatro skills específicas novas e suas licenças. Este teste é estático e não substitui validações do produto nem CI.
 
 ## Áreas e correspondências principais
 
@@ -34,7 +34,7 @@ Foram percorridas as árvores reais de `src/`, `open-sse/`, `tests/`, `scripts/`
 | `src/lib/cache/`, `promptCache/`, `semanticCache*` | Caches e invalidação: `omni-cache`, `nodejs-boas-praticas` |
 | `src/lib/proxy*/`, `src/mitm/`, `*Tunnel.ts` | Proxy, túneis, certificados, transporte e interceptação: `omni-proxies`, `omni-tunnels`, `api-security-patterns` |
 | `src/app/api/` | APIs de identidade, inferência, provedores, modelos, dados, configuração e ferramentas: `api-ratelimit-helper`, `api-security-patterns` e skills do subsistema |
-| `src/app/(dashboard)/`, `src/shared/`, `packages/ui-kit/` | React/Next.js, design, acessibilidade, responsividade e recursos visuais: `frontend-patterns`, `accessibility`, `responsive-patterns` |
+| `src/app/(dashboard)/`, `src/components/`, `src/hooks/`, `packages/ui-kit/` | React/Next.js: `react-patterns`, `react-performance`, `frontend-a11y`, `nextjs-quality` e práticas de UI adequadas ao módulo |
 | `electron/`, `packages/browser-pool/` | Desktop, IPC, ciclo de processos e automação de navegador: `nodejs-boas-praticas`, `graceful-shutdown`, `playwright-skill` |
 | `@omniroute/opencode-*/` | Plugins OpenCode, catálogo, credenciais, providers e testes: `omni-providers`, `omni-combos-routing`, `nodejs-boas-praticas` |
 | `tests/unit/`, `tests/integration/` | Node test runner e testes por subsistema; classificação de testes nomeados: `nodejs-boas-praticas`, `constraint-driven-development` |
@@ -45,7 +45,7 @@ Foram percorridas as árvores reais de `src/`, `open-sse/`, `tests/`, `scripts/`
 | `docker/`, `deploy/`, `bin/`, `scripts/ops/` | Operação, compilação, CLI, serviço e deployment: `linux-administration`, `systemd-services`, `omni-cli-tools` |
 | `skills/`, `.claude/skills/`, `SKILLS.md` | Skills de operação, documentação e auditoria do próprio mapa: `omni-github-skills`, `git-workflow`, `writing-guidelines` |
 
-A auditoria de correspondência corrigiu a classificação ampla de `src/shared/`: componentes e hooks seguem regras de interface, enquanto contratos e utilitários agnósticos usam práticas Node/TypeScript, enquanto serviços e operações de rede identificados como backend recebem regras especializadas de segurança. O mapa contém agora **339 domínios**, incluindo os serviços compartilhados e regras específicas para configurações, scripts, exemplos, documentação visual e integrações. Também foram corrigidas duas referências quebradas: a referência compartilhada de TestMu utilizada pela `playwright-skill` foi incluída, e a orientação de release exclusiva do repositório ECC, sem pertinência ao OmniRoute, foi retirada da cópia de `github-ops`.
+A auditoria de correspondência corrigiu a classificação ampla de `src/shared/`: componentes e hooks seguem regras de interface, enquanto contratos e utilitários agnósticos usam práticas Node/TypeScript, enquanto serviços e operações de rede identificados como backend recebem regras especializadas de segurança. O mapa contém agora **318 domínios**, incluindo os serviços compartilhados e regras específicas para configurações, scripts, exemplos, documentação visual e integrações. Também foram corrigidas duas referências quebradas: a referência compartilhada de TestMu utilizada pela `playwright-skill` foi incluída, e a orientação de release exclusiva do repositório ECC, sem pertinência ao OmniRoute, foi retirada da cópia de `github-ops`.
 
 As tabelas resumem famílias; as regras de correspondência por rota, arquivo, suíte de testes e comando estão integralmente no JSON. Em especial, os testes `tests/unit/*.test.ts` usam majoritariamente o **runner nativo do Node**, e não devem ser confundidos com suites Vitest ou Jest. A inclusão de `vitest-skill` não converte nenhum executor.
 
@@ -93,7 +93,7 @@ A auditoria começou no catálogo central do monitor, consultou o fluxo de desco
 | Desktop Electron | `electron-pro` | jshsakura/awesome-opencode-skills; MIT; metadados específicos de modelo/sandbox do OpenCode removidos apenas da cópia do fork |
 | Desempenho e carga | `performance-profiler`, `k6` | alirezarezvani/claude-skills (MIT) e grafana/skills (Apache-2.0); pacote k6 com documentação e 18 exemplos de protocolos/extensões; ferramentas não executadas |
 
-**Inventário atual:** 46 skills nativas + 73 externas = **119 skills instaladas e referenciadas no mapa**. Os 339 domínios de arquivos e 15 padrões de comandos permanecem. A expansão especializou 63 associações de domínio, sem aplicar competências específicas a diretórios genéricos incompatíveis, mantendo 3–5 skills distintas por domínio e as 339 expressões regulares compiláveis. O recorte anterior de 27.622 arquivos é histórico e precisa ser repetido com os arquivos novos antes de declarar cobertura integral da árvore atual.
+**Inventário revalidado (10/11/2026):** 46 skills nativas + 77 externas = **123 skills instaladas e referenciadas no mapa**, com 318 domínios e 15 padrões de comandos. A auditoria retirou 26 duplicações estritamente idênticas de regex + lista ordenada de skills, especializou 72 associações de domínio e criou regras específicas para componentes React, testes React, localização JSON e persistência/submissão fal.ai. Não foram apagadas skills usadas em outros módulos. Nenhum nome ficou em `sem_arquivo`; 28.776 arquivos foram checados sem lacunas. Os valores de 03/11 nesta documentação são apenas marcos históricos.
 
 **Dependências e segurança:** copiar `SKILL.md` não equivale a instalar CLIs ou dependências opcionais. `k6` requer binário disponível e autorização para carga; nenhuma carga foi executada. `performance-profiler` e `monorepo-navigator` incluem scripts, não executados nesta rodada. Skills OWASP servem somente a testes autorizados. As regras principais do upstream continuam prioritárias e os repositórios originais não foram modificados.
 
@@ -157,7 +157,15 @@ A auditoria aprofundada constatou que as 298 regras iniciais eram insuficienteme
 
 ## Governance and provenance synchronization
 
-The upstream project's original Hard Rules and module instructions remain authoritative, while the owner's **additive, fork-only workflow** is in [AGENTS.md](AGENTS.md#skills-and-contribution-governance-repository-wide); contributor preflight is in [CONTRIBUTING.md](CONTRIBUTING.md#mandatory-skills-and-governance-preflight). These apply to the current 46 product skills and 73 installed external engineering skills (all referenced in the map). Skills actually **installed** in a repository must be distinguished from skills referenced only in the monitor's catalog. A new installed skill requires a matching domain (or a justified `sem_arquivo` decision) and a traceable origin in the central monitor catalog. Always keep the map, this inventory, module governance and contribution documentation synchronized in the same PR. Verify current upstream state before editing; independent review and final CI must be reported accurately rather than assumed.
+The upstream project's original Hard Rules and module instructions remain authoritative, while the owner's **additive, fork-only workflow** is in [AGENTS.md](AGENTS.md#skills-and-contribution-governance-repository-wide); contributor preflight is in [CONTRIBUTING.md](CONTRIBUTING.md#mandatory-skills-and-governance-preflight). These apply to the current 46 native product skills and 77 installed external engineering skills (all referenced in the map). Skills actually **installed** in a repository must be distinguished from skills referenced only in the monitor's catalog. A new installed skill requires a matching domain (or a justified `sem_arquivo` decision) and a traceable origin in the central monitor catalog. Always keep the map, this inventory, module governance and contribution documentation synchronized in the same PR. Verify current upstream state before editing; independent review and final CI must be reported accurately rather than assumed.
+
+## Critério de especialização e integração desta auditoria
+
+A seleção exige **3 a 5 skills concretas** por domínio/comando. Em um arquivo com várias regex aplicáveis, priorizar primeiro a orientação **mais específica para o subsistema e a tecnologia** (`omni-*`, `cli-*`, React, Vitest, segurança, i18n), usando skills genéricas apenas como apoio efetivo. A presença de uma regex ampla é uma rede de segurança para arquivos novos, não justificativa para substituir o especialista; combinar somente as skills relevantes à tarefa.
+
+A reauditoria preserva 119 skills anteriores e adiciona quatro especialistas versionados para **padrões React, testes React, desempenho React/Next.js e sincronização i18n**. O mapa contém as correspondências locais. **Origens e licenças novas ficam exclusivamente no [catálogo central do GRNET Monitor](https://github.com/fabioKoruja00/grnet-monitor/blob/main/SKILLS.md)**, em consolidação na [PR #172](https://github.com/fabioKoruja00/grnet-monitor/pull/172), cujo merge permanece bloqueado até todas as auditorias da [issue #171](https://github.com/fabioKoruja00/grnet-monitor/issues/171) estarem concluídas.
+
+A sincronização upstream foi feita apenas no fork pela [PR #6](https://github.com/fabioKoruja00/OmniRoute/pull/6), como **merge de dois pais**, preservando os dois históricos. A PR de reauditoria usa essa base e não modifica código de produto, rotas, workflows, runners nem os arquivos nativos gerados de `skills/`.
 
 ## Regra de invocação
 
@@ -169,4 +177,4 @@ The upstream project's original Hard Rules and module instructions remain author
 6. Quando for necessário instalar outra skill, consultar **primeiro** `grnet-monitor/SKILLS.md`; se não houver origem adequada, usar a descoberta `find-skill` ou fontes verificáveis no GitHub. A sessão revisa cobertura real do serviço, código malicioso ou inseguro, licença e estrutura, sem julgar por estrelas, instala a aprovada sem pedir OK, registra a origem no catálogo central, cria o domínio no mapa do repo e avisa o dono no fim qual instalou. Só declarar estrela quando a operação for confirmada pela plataforma.
 7. Manter a matriz consistente com o código, revisar os caminhos de subsistemas criados/renomeados e validar todas as expressões regulares, a cobertura real de arquivos e a disponibilidade das skills após cada alteração.
 
-Nenhum componente de execução, workflow, runner, arquivo nativo de `skills/` ou lógica de roteamento foi alterado nesta auditoria documental.
+Nenhum componente de execução, workflow, runner, arquivo nativo gerado de `skills/` ou lógica de roteamento é alterado pela PR documental de auditoria; a sincronização do upstream foi concluída separadamente na PR #6.
