@@ -323,9 +323,9 @@
       "skills": [
         "api-security-patterns",
         "secret-scanning",
+        "secrets-management",
         "node-testing",
-        "test-gap-audit",
-        "agent-security-audit"
+        "test-gap-audit"
       ]
     },
     {
@@ -2517,7 +2517,7 @@
       "skills": [
         "api-security-patterns",
         "secret-scanning",
-        "agent-security-audit",
+        "secrets-management",
         "node-testing",
         "test-gap-audit"
       ]
