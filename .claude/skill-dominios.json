@@ -180,11 +180,11 @@
       "dominio": "testes",
       "caminho": "^/tests/",
       "skills": [
-        "nodejs-boas-praticas",
-        "constraint-driven-development",
+        "vitest-skill",
         "node-testing",
         "test-gap-audit",
-        "code-reviewer"
+        "testing-strategy",
+        "constraint-driven-development"
       ]
     },
     {
@@ -322,10 +322,10 @@
       "caminho": "^/tests/(?:security|llm-security)/",
       "skills": [
         "api-security-patterns",
-        "secrets-management",
+        "secret-scanning",
         "node-testing",
         "test-gap-audit",
-        "code-reviewer"
+        "agent-security-audit"
       ]
     },
     {
@@ -1417,11 +1417,11 @@
       "dominio": "opencode-testes",
       "caminho": "^/@omniroute/[^/]+/tests/",
       "skills": [
-        "nodejs-boas-praticas",
-        "constraint-driven-development",
+        "omni-providers",
+        "vitest-skill",
         "node-testing",
         "test-gap-audit",
-        "code-reviewer"
+        "constraint-driven-development"
       ]
     },
     {
@@ -1551,9 +1551,9 @@
       "skills": [
         "omni-providers",
         "api-security-patterns",
-        "nodejs-boas-praticas",
         "api-design-reviewer",
-        "api-test-suite-builder"
+        "node-typescript",
+        "node-testing"
       ]
     },
     {
@@ -1637,10 +1637,10 @@
       "dominio": "sse-servicos-testes",
       "caminho": "^/open-sse/(?:services|mcp-server)/__tests__/",
       "skills": [
-        "nodejs-boas-praticas",
-        "constraint-driven-development",
+        "omni-inference",
         "vitest-skill",
         "node-testing",
+        "api-test-suite-builder",
         "test-gap-audit"
       ]
     },
@@ -1648,11 +1648,11 @@
       "dominio": "node-unit-testes",
       "caminho": "^/tests/unit/",
       "skills": [
+        "vitest-skill",
         "node-testing",
         "property-based-testing",
-        "constraint-driven-development",
         "test-gap-audit",
-        "code-reviewer"
+        "testing-strategy"
       ]
     },
     {
@@ -1681,9 +1681,9 @@
       "dominio": "testes-autenticacao-seguranca",
       "caminho": "^/tests/unit/(?:guardrails|security|auth|authz|cors)/",
       "skills": [
-        "api-security-patterns",
+        "omni-auth",
         "jwt-validate",
-        "secrets-management",
+        "api-security-patterns",
         "node-testing",
         "test-gap-audit"
       ]
@@ -1714,22 +1714,22 @@
       "dominio": "testes-build-cli",
       "caminho": "^/tests/unit/(?:build|cli|cli-helper|runtime|settings)/",
       "skills": [
-        "nodejs-boas-praticas",
-        "constraint-driven-development",
+        "omni-cli-tools",
         "node-testing",
+        "node-ci",
         "test-gap-audit",
-        "code-reviewer"
+        "deprecation-and-migration"
       ]
     },
     {
       "dominio": "testes-documentacao",
       "caminho": "^/tests/unit/(?:docs|feature-triage)/",
       "skills": [
-        "writing-guidelines",
-        "constraint-driven-development",
         "docs-sync-audit",
-        "git-workflow",
-        "test-gap-audit"
+        "writing-guidelines",
+        "i18n-expert",
+        "test-gap-audit",
+        "vitest-skill"
       ]
     },
     {
@@ -1737,10 +1737,10 @@
       "caminho": "^/tests/(?:integration|live|boundary|system|homolog)/",
       "skills": [
         "e2e-testing",
-        "nodejs-boas-praticas",
-        "api-security-patterns",
+        "api-test-suite-builder",
         "node-testing",
-        "test-gap-audit"
+        "test-gap-audit",
+        "api-security-patterns"
       ]
     },
     {
@@ -1791,11 +1791,11 @@
       "dominio": "testes-harness-config",
       "caminho": "^/tests/(?:_setup|_helpers|helpers|_run|_cp_)/",
       "skills": [
-        "testing-strategy",
+        "vitest-skill",
         "node-testing",
         "property-based-testing",
         "test-gap-audit",
-        "code-reviewer"
+        "testing-strategy"
       ]
     },
     {
@@ -1825,10 +1825,10 @@
       "caminho": "^/scripts/(?:check|quality)/",
       "skills": [
         "mutation-testing",
-        "constraint-driven-development",
+        "vitest-skill",
         "node-testing",
-        "testing-strategy",
-        "test-gap-audit"
+        "test-gap-audit",
+        "property-based-testing"
       ]
     },
     {
@@ -1879,11 +1879,11 @@
       "dominio": "scripts-desenv",
       "caminho": "^/scripts/(?:dev|ad-hoc|features|research|test)/",
       "skills": [
-        "nodejs-boas-praticas",
-        "constraint-driven-development",
+        "omni-cli-tools",
         "node-typescript",
-        "code-reviewer",
-        "node-testing"
+        "node-testing",
+        "git-workflow",
+        "deprecation-and-migration"
       ]
     },
     {
@@ -2088,11 +2088,11 @@
       "dominio": "artefatos-projeto",
       "caminho": "^/(?:\\.cbmignore|\\.dockerignore|\\.npmignore|\\.nvmrc|\\.npmrc|\\.vale/|\\.vscode/|\\.editorconfig|\\.gitignore)",
       "skills": [
-        "nodejs-boas-praticas",
+        "node-supply-chain",
+        "secret-scanning",
         "git-workflow",
-        "code-reviewer",
-        "testing-strategy",
-        "node-testing"
+        "node-typescript",
+        "docs-sync-audit"
       ]
     },
     {
@@ -2132,11 +2132,11 @@
       "dominio": "scripts-operacionais-raiz",
       "caminho": "^/(?:scripts/|bin/)",
       "skills": [
-        "nodejs-boas-praticas",
-        "constraint-driven-development",
+        "linux-administration",
         "node-typescript",
-        "code-reviewer",
-        "node-testing"
+        "node-ci",
+        "site-reliability",
+        "git-workflow"
       ]
     },
     {
@@ -2375,8 +2375,8 @@
       "caminho": "^/vitest(?:\\.[^/]*)?\\.config\\.(?:ts|mts|js|mjs)$",
       "skills": [
         "vitest-skill",
-        "nodejs-boas-praticas",
         "node-testing",
+        "testing-strategy",
         "test-gap-audit",
         "code-reviewer"
       ]
@@ -2386,10 +2386,10 @@
       "caminho": "^/(?:src/(?:app|shared|lib)/.*?/__tests__/.*\\.test\\.tsx?$|open-sse/.*?/__tests__/.*\\.test\\.ts$|tests/unit/.*\\.test\\.tsx$|tests/unit/encryption\\.test\\.ts$)",
       "skills": [
         "vitest-skill",
-        "nodejs-boas-praticas",
         "node-testing",
+        "property-based-testing",
         "test-gap-audit",
-        "code-reviewer"
+        "testing-strategy"
       ]
     },
     {
@@ -2516,8 +2516,8 @@
       "caminho": "^/tests/unit/[^/]*(?:security|Security|guard|Guard|pii|Pii|saniti|Saniti|cors|Cors|xss|Xss|csrf|Csrf|injection|Injection|policy|Policy|secret|Secret|validation|Validation|permission|Permission|vuln|Vuln)[^/]*\\.(?:test|spec)\\.(?:ts|tsx|js|mjs)$",
       "skills": [
         "api-security-patterns",
-        "secrets-management",
-        "nodejs-boas-praticas",
+        "secret-scanning",
+        "agent-security-audit",
         "node-testing",
         "test-gap-audit"
       ]
@@ -2603,8 +2603,8 @@
       "dominio": "testes-nome-conectividade",
       "caminho": "^/tests/unit/[^/]*(?:proxy|Proxy|tunnel|Tunnel|mitm|Mitm|tls|Tls|dns|Dns|network|Network|http|Http|egress|Egress)[^/]*\\.(?:test|spec)\\.(?:ts|tsx|js|mjs)$",
       "skills": [
-        "site-reliability",
         "networking",
+        "site-reliability",
         "node-testing",
         "test-gap-audit",
         "error-handling"
@@ -2669,9 +2669,9 @@
       "dominio": "testes-nome-build-release",
       "caminho": "^/tests/unit/[^/]*(?:release|Release|build|Build|package|Package|docker|Docker|electron|Electron|installer|Installer|cli|Cli|npm|Npm|check|Check)[^/]*\\.(?:test|spec)\\.(?:ts|tsx|js|mjs)$",
       "skills": [
-        "nodejs-boas-praticas",
+        "node-ci",
+        "node-supply-chain",
         "github-actions-hardening",
-        "git-workflow",
         "node-testing",
         "test-gap-audit"
       ]
@@ -3066,7 +3066,7 @@
         "api-test-suite-builder",
         "api-security-patterns",
         "node-testing",
-        "testing-strategy"
+        "test-gap-audit"
       ]
     },
     {
