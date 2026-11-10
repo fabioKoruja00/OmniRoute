@@ -244,11 +244,11 @@
       "dominio": "mapa",
       "caminho": "^/\\.claude/skill-dominios\\.json$|^/SKILLS\\.md$",
       "skills": [
-        "git-workflow",
-        "writing-guidelines",
+        "omni-github-skills",
         "agent-supply-chain",
         "docs-sync-audit",
-        "code-reviewer"
+        "writing-guidelines",
+        "git-workflow"
       ]
     },
     {
@@ -266,11 +266,11 @@
       "dominio": "configuracao",
       "caminho": "^/(config/|package(?:-lock)?\\.json$|pnpm|.*\\.config\\.)",
       "skills": [
-        "nodejs-boas-praticas",
+        "omni-settings",
+        "secrets-management",
+        "node-supply-chain",
         "node-typescript",
-        "code-reviewer",
-        "node-testing",
-        "testing-strategy"
+        "node-testing"
       ]
     },
     {
@@ -779,11 +779,11 @@
       "dominio": "servidor-middleware",
       "caminho": "^/src/(?:middleware/|shared/(?:middleware|http|network|platform)/|proxy\\.ts$)",
       "skills": [
+        "omni-auth",
         "api-security-patterns",
-        "error-handling",
-        "nodejs-boas-praticas",
+        "api-ratelimit-helper",
         "node-typescript",
-        "code-reviewer"
+        "error-handling"
       ]
     },
     {
@@ -856,10 +856,10 @@
       "dominio": "lib-pii-guardrails",
       "caminho": "^/src/lib/(?:pii|guardrails|audit)(?:/|\\.|$)",
       "skills": [
-        "api-security-patterns",
-        "secrets-management",
-        "error-handling",
+        "agent-security-audit",
         "secret-scanning",
+        "api-security-patterns",
+        "error-handling",
         "testing-strategy"
       ]
     },
@@ -1032,11 +1032,11 @@
       "dominio": "lib-config-runtime",
       "caminho": "^/src/lib/(?:config|build-profile|middleware|services|display)(?:/|\\.|$)",
       "skills": [
-        "nodejs-boas-praticas",
-        "backend-patterns",
-        "error-handling",
+        "omni-settings",
+        "env-secrets-manager",
         "node-typescript",
-        "code-reviewer"
+        "error-handling",
+        "node-testing"
       ]
     },
     {
@@ -1076,10 +1076,10 @@
       "dominio": "lib-arquivos-isolados",
       "caminho": "^/src/lib/[^/]+\\.(?:ts|tsx|js|mjs|cjs)$",
       "skills": [
-        "backend-patterns",
-        "nodejs-boas-praticas",
+        "secrets-management",
+        "api-security-patterns",
         "node-typescript",
-        "code-reviewer",
+        "error-handling",
         "node-testing"
       ]
     },
@@ -1087,10 +1087,10 @@
       "dominio": "api-rotas-seguranca",
       "caminho": "^/src/app/api/",
       "skills": [
+        "omni-auth",
+        "omni-api-keys",
         "api-security-patterns",
         "api-ratelimit-helper",
-        "error-handling",
-        "api-design-reviewer",
         "api-test-suite-builder"
       ]
     },
@@ -1186,9 +1186,9 @@
       "dominio": "api-painel-operacao",
       "caminho": "^/src/app/api/(?:settings|playground|gamification|version-manager|omniroute|api-endpoints)/",
       "skills": [
-        "backend-patterns",
+        "omni-settings",
+        "omni-usage-logs",
         "api-security-patterns",
-        "api-design-reviewer",
         "api-test-suite-builder",
         "node-testing"
       ]
@@ -1516,11 +1516,11 @@
       "dominio": "open-sse-sanitizacao",
       "caminho": "^/open-sse/handlers/(?:responseSanitizer|sseParser)/",
       "skills": [
+        "omni-inference",
+        "agent-security-audit",
         "api-security-patterns",
         "error-handling",
-        "omni-inference",
-        "api-design-reviewer",
-        "api-test-suite-builder"
+        "node-testing"
       ]
     },
     {
@@ -1560,11 +1560,11 @@
       "dominio": "open-sse-services",
       "caminho": "^/open-sse/services/",
       "skills": [
-        "backend-patterns",
-        "error-handling",
-        "nodejs-boas-praticas",
-        "api-test-suite-builder",
-        "api-security-patterns"
+        "omni-inference",
+        "omni-resilience",
+        "omni-providers",
+        "api-security-patterns",
+        "api-test-suite-builder"
       ]
     },
     {
@@ -1616,7 +1616,7 @@
       "caminho": "^/open-sse/services/(?:cache)(?:/|\\.|$)",
       "skills": [
         "omni-cache",
-        "nodejs-boas-praticas",
+        "omni-context-rtk",
         "api-design-reviewer",
         "api-test-suite-builder",
         "api-security-patterns"
@@ -1942,17 +1942,6 @@
       ]
     },
     {
-      "dominio": "ci-pipelines",
-      "caminho": "^/\\.github/workflows/",
-      "skills": [
-        "github-actions-hardening",
-        "github-actions-efficiency",
-        "node-ci",
-        "node-supply-chain",
-        "secret-scanning"
-      ]
-    },
-    {
       "dominio": "ci-seguranca-codeql",
       "caminho": "^/\\.github/(?:workflows/(?:codeql|semgrep|scorecard|dast-smoke|nightly-llm-security)\\.yml|dependabot\\.yml)$",
       "skills": [
@@ -2087,15 +2076,6 @@
       ]
     },
     {
-      "dominio": "documentacao-governanca",
-      "caminho": "^/(?:AGENTS|CLAUDE|GEMINI|CONTRIBUTING|README|SKILLS)\\.md$",
-      "skills": [
-        "writing-guidelines",
-        "git-workflow",
-        "docs-sync-audit"
-      ]
-    },
-    {
       "dominio": "documentacao-tecnica-apoio",
       "caminho": "^/docs/",
       "skills": [
@@ -2119,11 +2099,11 @@
       "dominio": "skills-externas-instale",
       "caminho": "^/\\.claude/skills/",
       "skills": [
-        "git-workflow",
-        "writing-guidelines",
+        "omni-github-skills",
         "agent-supply-chain",
+        "secret-scanning",
         "docs-sync-audit",
-        "code-reviewer"
+        "git-workflow"
       ]
     },
     {
@@ -2157,226 +2137,6 @@
         "node-typescript",
         "code-reviewer",
         "node-testing"
-      ]
-    },
-    {
-      "dominio": "skill-nativa-cli-a2a",
-      "caminho": "^/skills/cli-a2a/",
-      "skills": [
-        "cli-a2a",
-        "writing-guidelines",
-        "agent-supply-chain",
-        "docs-sync-audit"
-      ]
-    },
-    {
-      "dominio": "skill-nativa-cli-backup-sync",
-      "caminho": "^/skills/cli-backup-sync/",
-      "skills": [
-        "cli-backup-sync",
-        "writing-guidelines",
-        "agent-supply-chain",
-        "docs-sync-audit"
-      ]
-    },
-    {
-      "dominio": "skill-nativa-cli-batches",
-      "caminho": "^/skills/cli-batches/",
-      "skills": [
-        "cli-batches",
-        "writing-guidelines",
-        "agent-supply-chain",
-        "docs-sync-audit"
-      ]
-    },
-    {
-      "dominio": "skill-nativa-cli-chat",
-      "caminho": "^/skills/cli-chat/",
-      "skills": [
-        "cli-chat",
-        "writing-guidelines",
-        "agent-supply-chain",
-        "docs-sync-audit"
-      ]
-    },
-    {
-      "dominio": "skill-nativa-cli-compression",
-      "caminho": "^/skills/cli-compression/",
-      "skills": [
-        "cli-compression",
-        "writing-guidelines",
-        "agent-supply-chain",
-        "docs-sync-audit"
-      ]
-    },
-    {
-      "dominio": "skill-nativa-cli-contexts",
-      "caminho": "^/skills/cli-contexts/",
-      "skills": [
-        "cli-contexts",
-        "writing-guidelines",
-        "agent-supply-chain",
-        "docs-sync-audit"
-      ]
-    },
-    {
-      "dominio": "skill-nativa-cli-cost-usage",
-      "caminho": "^/skills/cli-cost-usage/",
-      "skills": [
-        "cli-cost-usage",
-        "writing-guidelines",
-        "agent-supply-chain",
-        "docs-sync-audit"
-      ]
-    },
-    {
-      "dominio": "skill-nativa-cli-eval",
-      "caminho": "^/skills/cli-eval/",
-      "skills": [
-        "cli-eval",
-        "writing-guidelines",
-        "agent-supply-chain",
-        "docs-sync-audit"
-      ]
-    },
-    {
-      "dominio": "skill-nativa-cli-health",
-      "caminho": "^/skills/cli-health/",
-      "skills": [
-        "cli-health",
-        "writing-guidelines",
-        "agent-supply-chain",
-        "docs-sync-audit"
-      ]
-    },
-    {
-      "dominio": "skill-nativa-cli-keys",
-      "caminho": "^/skills/cli-keys/",
-      "skills": [
-        "cli-keys",
-        "writing-guidelines",
-        "agent-supply-chain",
-        "docs-sync-audit"
-      ]
-    },
-    {
-      "dominio": "skill-nativa-cli-mcp",
-      "caminho": "^/skills/cli-mcp/",
-      "skills": [
-        "cli-mcp",
-        "writing-guidelines",
-        "agent-supply-chain",
-        "docs-sync-audit"
-      ]
-    },
-    {
-      "dominio": "skill-nativa-cli-models",
-      "caminho": "^/skills/cli-models/",
-      "skills": [
-        "cli-models",
-        "writing-guidelines",
-        "agent-supply-chain",
-        "docs-sync-audit"
-      ]
-    },
-    {
-      "dominio": "skill-nativa-cli-plugins-skills",
-      "caminho": "^/skills/cli-plugins-skills/",
-      "skills": [
-        "cli-plugins-skills",
-        "writing-guidelines",
-        "agent-supply-chain",
-        "docs-sync-audit"
-      ]
-    },
-    {
-      "dominio": "skill-nativa-cli-policy-audit",
-      "caminho": "^/skills/cli-policy-audit/",
-      "skills": [
-        "cli-policy-audit",
-        "writing-guidelines",
-        "agent-supply-chain",
-        "docs-sync-audit"
-      ]
-    },
-    {
-      "dominio": "skill-nativa-cli-providers",
-      "caminho": "^/skills/cli-providers/",
-      "skills": [
-        "cli-providers",
-        "writing-guidelines",
-        "agent-supply-chain",
-        "docs-sync-audit"
-      ]
-    },
-    {
-      "dominio": "skill-nativa-cli-resilience",
-      "caminho": "^/skills/cli-resilience/",
-      "skills": [
-        "cli-resilience",
-        "writing-guidelines",
-        "agent-supply-chain",
-        "docs-sync-audit"
-      ]
-    },
-    {
-      "dominio": "skill-nativa-cli-routing",
-      "caminho": "^/skills/cli-routing/",
-      "skills": [
-        "cli-routing",
-        "writing-guidelines",
-        "agent-supply-chain",
-        "docs-sync-audit"
-      ]
-    },
-    {
-      "dominio": "skill-nativa-cli-serve",
-      "caminho": "^/skills/cli-serve/",
-      "skills": [
-        "cli-serve",
-        "writing-guidelines",
-        "agent-supply-chain",
-        "docs-sync-audit"
-      ]
-    },
-    {
-      "dominio": "skill-nativa-cli-setup",
-      "caminho": "^/skills/cli-setup/",
-      "skills": [
-        "cli-setup",
-        "writing-guidelines",
-        "agent-supply-chain",
-        "docs-sync-audit"
-      ]
-    },
-    {
-      "dominio": "skill-nativa-cli-skill-collector",
-      "caminho": "^/skills/cli-skill-collector/",
-      "skills": [
-        "cli-skill-collector",
-        "writing-guidelines",
-        "agent-supply-chain",
-        "docs-sync-audit"
-      ]
-    },
-    {
-      "dominio": "skill-nativa-cli-tunnel",
-      "caminho": "^/skills/cli-tunnel/",
-      "skills": [
-        "cli-tunnel",
-        "writing-guidelines",
-        "agent-supply-chain",
-        "docs-sync-audit"
-      ]
-    },
-    {
-      "dominio": "skill-nativa-config-codex-cli",
-      "caminho": "^/skills/config-codex-cli/",
-      "skills": [
-        "config-codex-cli",
-        "writing-guidelines",
-        "agent-supply-chain",
-        "docs-sync-audit"
       ]
     },
     {
@@ -2550,16 +2310,6 @@
       ]
     },
     {
-      "dominio": "skill-nativa-omni-settings",
-      "caminho": "^/skills/omni-settings/",
-      "skills": [
-        "omni-settings",
-        "writing-guidelines",
-        "agent-supply-chain",
-        "docs-sync-audit"
-      ]
-    },
-    {
       "dominio": "skill-nativa-omni-sync-cloud",
       "caminho": "^/skills/omni-sync-cloud/",
       "skills": [
@@ -2604,16 +2354,6 @@
       "caminho": "^/skills/omni-webhooks/",
       "skills": [
         "omni-webhooks",
-        "writing-guidelines",
-        "agent-supply-chain",
-        "docs-sync-audit"
-      ]
-    },
-    {
-      "dominio": "skill-nativa-ponytail",
-      "caminho": "^/skills/ponytail/",
-      "skills": [
-        "ponytail",
         "writing-guidelines",
         "agent-supply-chain",
         "docs-sync-audit"
@@ -2720,10 +2460,10 @@
       "dominio": "src-api-rotas-fallback",
       "caminho": "^/src/app/api/[^/]+/",
       "skills": [
+        "omni-resilience",
         "site-reliability",
+        "api-health-monitoring",
         "api-security-patterns",
-        "error-handling",
-        "api-design-reviewer",
         "api-test-suite-builder"
       ]
     },
@@ -3179,11 +2919,11 @@
       "dominio": "shared-servicos-runtime",
       "caminho": "^/src/shared/services/",
       "skills": [
+        "graceful-shutdown",
+        "site-reliability",
         "node-typescript",
-        "nodejs-boas-praticas",
-        "api-security-patterns",
-        "node-testing",
-        "code-reviewer"
+        "error-handling",
+        "node-testing"
       ]
     },
     {
@@ -3632,6 +3372,17 @@
         "sql-code-review",
         "node-typescript",
         "node-testing"
+      ]
+    },
+    {
+      "dominio": "fal-submission-state",
+      "caminho": "^/src/shared/fal/",
+      "skills": [
+        "omni-providers",
+        "omni-inference",
+        "typescript-advanced-types",
+        "api-security-patterns",
+        "frontend-ui-engineering"
       ]
     }
   ],
